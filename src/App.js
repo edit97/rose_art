@@ -1,7 +1,9 @@
+
+import Layauot from "./conteiners/Layauot";
+
 function App() {
-  return <div className="App">
-     <h1>Rose Art</h1>
-    </div>
+  return <Layauot/>
 }
 
 export default App;
+
