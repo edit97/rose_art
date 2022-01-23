@@ -1,7 +1,7 @@
 
 
 function Homepage() {
-    return <div>homepage</div>
+    return <div></div>
 
 }
 export default Homepage;

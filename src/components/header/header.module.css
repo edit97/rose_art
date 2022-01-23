@@ -1,0 +1,48 @@
+.items{
+    width: 1240px;
+    text-align: center;
+    display: flex;
+    justify-content: space-evenly;
+}
+.user{
+    width: 50px;
+    margin-left: 10px;
+}
+.btn{
+    background-color: #A6398E;
+    color:white;
+    border: 0;
+    margin-right: 50px;
+    width: 80px;
+}
+
+.search{
+    height: 46px;
+    display: flex;
+    justify-content: space-evenly;
+
+}
+.put{
+    width: 400px;
+    border: 3px solid #A6398E;
+    border-right: none;
+    border-radius: 5px 0 0 5px;
+    outline: none;
+    margin-left: 10px;
+}
+.menu{
+    background-color: #A6398E;
+    border-radius: 2px;
+    height: 46px;
+    padding: 6px;
+    width: 46px;
+}
+.bitmap{
+  margin-right: 60px;
+    height: 44px;
+}
+
+
+
+
+
