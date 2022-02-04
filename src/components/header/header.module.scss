@@ -1,0 +1,121 @@
+@import "../../assets/styles/mixins";
+@import "../../assets/styles/varieibls";
+
+
+.header{
+    width:$contentWidth;
+    height: 70px;
+    @include spaceBetween;
+    align-items: center;
+}
+.burgerMenu{
+    display: none;
+}
+.head{
+    width: 60%;
+    @include spaceBetween;
+    align-items: center;
+    div{
+        &:hover{
+            border-bottom: #A7093C solid 3px;
+        }
+    }
+}
+.search{
+    width: 25%;
+    @include spaceBetween;
+    align-items: center;
+    .productCount{
+        @include color;
+        display: flex;
+        justify-content: center;
+        color: white;
+        width: 25px;
+        height: 25px;
+        border-radius: 50%;
+
+    }
+}
+.whiteLogo{
+    display: none;
+}
+//.wrapper{
+//    @include display(flex);
+//    align-items: baseline;
+//}
+//.user{
+//    @include width(50px);
+//    margin: 0 20px 0 20px;
+//    @include display(flex);
+//    flex-direction: column;
+//    align-items: baseline;
+//}
+//.btn{
+//    @include color;
+//    color:white;
+//    border: 0;
+//    margin-right: 50px;
+//    @include width(80px);
+//    border-radius:0 5px 5px 0 ;
+//}
+//
+//.search{
+//    height: 46px;
+//    @include display(flex);
+//    justify-content: space-evenly;
+//
+//}
+//.put{
+//    @include width(400px);
+//    border: 3px solid #A6398E;
+//    border-right: none;
+//    border-radius: 5px 0 0 5px;
+//    outline: none;
+//    margin-left: 10px;
+//    padding: 10px;
+//}
+//
+//
+//.bitmap{
+//   margin:0 60px 0 30px;
+//    height: 44px;
+//}
+
+
+@media screen and(max-width: 800px){
+    .header{
+        width: 100%;
+        @include spaceBetween;
+        color: white;
+        @include color;
+    }
+    .head{
+      div{
+          display: none;
+      }
+        .logo{
+            display: none;
+        }
+        .whiteLogo{
+            display: flex;
+    }
+}
+    .search{
+        width: 100%;
+    }
+    .burgerMenu {
+        display: flex;
+    }
+}
+@media screen and (max-width: 400px){
+    .header{
+        width: 100%;
+        @include spaceBetween;
+        @include color;
+    }
+    .search{
+        display: none;
+    }
+}
+
+

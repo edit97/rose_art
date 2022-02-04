@@ -1,7 +1,10 @@
 
+import MainSlider from "./slider/Slider";
 
 function Homepage() {
-    return <div></div>
+    return <div>
+        <MainSlider/>
+    </div>
 
 }
 export default Homepage;

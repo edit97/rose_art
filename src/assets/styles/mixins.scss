@@ -1,0 +1,25 @@
+
+@mixin display($display){
+  display: $display;
+}
+@mixin background-color($color){
+  background-color: $color;
+}
+@mixin width($width){
+  width: $width;
+}
+
+@mixin color {
+  background-color: #A7093C;
+}
+@mixin background-color{
+  background-color: #F6F6F6;
+}
+@mixin max-width{
+  width: 1440px;
+}
+@mixin spaceBetween{
+  display: flex;
+  justify-content: space-between;
+}
+

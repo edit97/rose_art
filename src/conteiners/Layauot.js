@@ -1,13 +1,11 @@
 import Header from '../components/header/Header';
-import Homepage from "./homepage/Homepage";
-import Navbar from "../components/navbar/Navbar";
-import stayle from "./layauot.module.css"
+import stayle from "./layauot.module.scss"
+import Main from "../components/main/Main";
 
 function   Layauot () {
-    return <div className={stayle.head}>
+    return <div className={stayle.layauot}>
         <Header/>
-        <Homepage/>
-        <Navbar/>
+        <Main/>
     </div>
 }
 export default Layauot;

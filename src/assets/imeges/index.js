@@ -1,9 +1,11 @@
 export {default as Bitmap} from "./icons/Bitmap.png";
+export {default as Lukas} from "./icons/pexels-lukas.png";
+export {default as Ready} from "./icons/ready-made.png";
+export {default as BitmapWhite} from "./icons/Bitmap-white.png";
 
-// export {ReactComponent as MainLogo} from "./header-logo.svg";
- export {ReactComponent as User} from  "./icons/ic_user.svg";
- export {ReactComponent as Notific} from  "./icons/ic_notific.svg";
- export {ReactComponent as Heart} from "./icons/ic_heart_hider.svg";
- export {ReactComponent as Shape} from  "./icons/Shape.svg";
- export {ReactComponent as Menu} from  "./icons/ic_menu_category.svg";
-export  {ReactComponent as Map} from  "./icons/ic_map.svg";
+ export {ReactComponent as Man} from "./icons/MAN.svg";
+ export {ReactComponent as Search} from "./icons/Search.svg"
+ export {ReactComponent as Menu} from "./icons/menu.svg"
+// export {ReactComponent as WhiteSearch} from "./icons/SE-white.svg"
+// export {ReactComponent as MenWhite} from "./icons/MAN-white.png"
+

@@ -1,0 +1,14 @@
+:root {
+  --contentWidth: 1440px;
+}
+
+
+$contentWidth:var(--contentWidth);
+
+
+@media (max-width: 1440px){
+  :root {
+    --contentWidth: 1200px;
+  }
+}
+

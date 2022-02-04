@@ -1,27 +1,35 @@
-import {Bitmap, Menu, Shape,User,Heart,Notific } from "../../assets/imeges";
-import stayle from "./header.module.css"
+import {Bitmap,Man,Search,Menu,BitmapWhite } from "../../assets/imeges";
+import stayle from "./header.module.scss";
 
 function  Header() {
 
-return <div className={stayle.items}>
-    <div className={stayle.search}>
-        <img className={stayle.bitmap} src={Bitmap} alt="logo"/>
-        <Menu title={''} className={stayle.menu}/>
-        <input className={stayle.put} type="text" placeholder="Search by name and by category..."/>
-        <button className={stayle.btn}>Search</button>
+return <div className={stayle.header}>
+    <div className={stayle.head}>
+        <div className={stayle.whiteLogo}><img src={BitmapWhite} /></div>
+        <div className={stayle.logo}><img src={Bitmap} /></div>
+            <div>Главный</div>
+            <div>О нас</div>
+            <div>Контакт</div>
+            <div>Продукт</div>
+            <div>Перевозки</div>
     </div>
-    <div className={stayle.user}>
-        <User title={''} />
-        Sign in</div>
-    <div className={stayle.user}>
-        <Notific title={''}/>
-        Notification</div>
-    <div  className={stayle.user}>
-        <Heart title={''}/>
-        Favorite</div>
-    <div className={stayle.user}>
-        <Shape title={''} />
-        My cart</div>
+    <div className={stayle.search}>
+        <div><Search/> Поиск</div> <span> | </span>
+        <div> <Man/>Boйти</div> <span> | </span>
+        <div>Корзина </div> <span className={stayle.productCount}>0</span>
+    </div>
+    <div className={stayle.burgerMenu}><Menu/>
+        {/*<div className={stayle.dropdown}>*/}
+        {/*    <div>Главный</div>*/}
+        {/*    <div>О нас</div>*/}
+        {/*    <div>Контакт</div>*/}
+        {/*    <div>Продукт</div>*/}
+        {/*    <div>Перевозки</div>*/}
+        {/*    <div><Search/> Поиск</div>*/}
+        {/*    <div> <Man/>Boйти</div>*/}
+        {/*    <div>Корзина </div>*/}
+        {/*</div>*/}
+    </div>
 
 </div>
 }
