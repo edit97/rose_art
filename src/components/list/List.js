@@ -1,4 +1,4 @@
-import {Rose1,Rose2,Rose3,Rose4,Rose5,Sale,Heart,Basket,New} from "../../assets/imeges";
+import {Rose1,Rose2,Rose3,Rose4,Sale,Heart,Basket,New} from "../../assets/imeges";
 import stayle from "./list.module.scss"
 import React, { Component } from "react";
 import Slider from "react-slick";
@@ -67,7 +67,7 @@ export default class List extends Component {
                         </div>
                         <div className={stayle.rose}>
                             <div className={stayle.product}>
-                            <Rose5/>
+                            <Rose2/>
                             <p>Классический букет Голландская
                                 красных роз</p>
                             <span>246000֏ </span>

@@ -7,7 +7,7 @@ function   Layauot () {
     return <div className={stayle.layauot}>
         <Header/>
         {/*<Main/>*/}
-        <List/>
+        {/*<List/>*/}
     </div>
 }
 export default Layauot;

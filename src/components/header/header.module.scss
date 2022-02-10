@@ -4,19 +4,35 @@
 
 .header{
     width:$contentWidth;
+    margin: 0 auto;
     height: 70px;
     @include spaceBetween;
     align-items: center;
+}
+.dropdown{
+    display: none;
 }
 .burgerMenu{
     display: none;
 }
 .head{
+    cursor: pointer;
     width: 60%;
+    height: 70px;
     @include spaceBetween;
     align-items: center;
-    div{
-        &:hover{
+    .text{
+        width: 65%;
+        height: 100%;
+        align-items: center;
+        @include spaceBetween;
+        div{
+            height: 70px;
+            align-items: center;
+            @include spaceBetween;
+            border-bottom:transparent solid 3px;
+        }
+        :hover{
             border-bottom: #A7093C solid 3px;
         }
     }
@@ -25,6 +41,10 @@
     width: 25%;
     @include spaceBetween;
     align-items: center;
+    svg{
+        width: 15px;
+        height: 15px;
+    }
     .productCount{
         @include color;
         display: flex;
@@ -39,50 +59,9 @@
 .whiteLogo{
     display: none;
 }
-//.wrapper{
-//    @include display(flex);
-//    align-items: baseline;
-//}
-//.user{
-//    @include width(50px);
-//    margin: 0 20px 0 20px;
-//    @include display(flex);
-//    flex-direction: column;
-//    align-items: baseline;
-//}
-//.btn{
-//    @include color;
-//    color:white;
-//    border: 0;
-//    margin-right: 50px;
-//    @include width(80px);
-//    border-radius:0 5px 5px 0 ;
-//}
-//
-//.search{
-//    height: 46px;
-//    @include display(flex);
-//    justify-content: space-evenly;
-//
-//}
-//.put{
-//    @include width(400px);
-//    border: 3px solid #A6398E;
-//    border-right: none;
-//    border-radius: 5px 0 0 5px;
-//    outline: none;
-//    margin-left: 10px;
-//    padding: 10px;
-//}
-//
-//
-//.bitmap{
-//   margin:0 60px 0 30px;
-//    height: 44px;
-//}
 
 
-@media screen and(max-width: 800px){
+@media screen and(max-width: 1024px){
     .header{
         width: 100%;
         @include spaceBetween;
@@ -90,6 +69,7 @@
         @include color;
     }
     .head{
+        margin: 10px;
       div{
           display: none;
       }
@@ -99,15 +79,58 @@
         .whiteLogo{
             display: flex;
     }
+        .text{
+            display: none;
+        }
 }
-    .search{
+    .menu{
         width: 100%;
+        background-color: rgba(0,0,0, 0.9);
+        opacity: 0.8;
+    }
+    .dropdown{
+        width: 320px;
+        margin-left: auto;
+        height: calc(100vh - 70px);
+       display: flex;
+        justify-content: right;
+        flex-direction: column;
+        @include color;
+        color: white;
+        div{
+            width: 80px;
+            height: 30px;
+            margin: 10px;
+            margin-left: auto;
+            svg{
+                width: 15px;
+                height: 15px;
+                margin-right: 5px;
+            }
+        }
+    }
+    .search{
+        width: 40%;
+        .productCount{
+            margin-right: 10px;
+            background-color: white;
+            color: black;
+        }
     }
     .burgerMenu {
+        cursor: pointer;
+        border: 0;
+        @include color;
         display: flex;
+        margin: 10px;
+    }
+    svg{
+        path{
+            fill: white;
+        }
     }
 }
-@media screen and (max-width: 400px){
+@media screen and (max-width: 650px){
     .header{
         width: 100%;
         @include spaceBetween;
