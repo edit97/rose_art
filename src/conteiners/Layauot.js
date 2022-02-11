@@ -6,7 +6,7 @@ import List from "../components/list/List";
 function   Layauot () {
     return <div className={style.layauot}>
         <Header/>
-        <Main/>
+        {/*<Main/>*/}
         {/*<List/>*/}
     </div>
 }

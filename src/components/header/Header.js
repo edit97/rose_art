@@ -10,7 +10,7 @@ function  Header() {
     };
 return <div className={style.headerWrapper}>
     <div className={style.header}>
-    <div className={style.head}>
+    <div className={style.navigation}>
         <div className={style.whiteLogo}><img src={BitmapWhite} /></div>
         <div className={style.logo}><img src={Bitmap} /></div>
         <div className={style.text}>
@@ -21,15 +21,18 @@ return <div className={style.headerWrapper}>
             <div>Перевозки</div>
         </div>
     </div>
-    <div className={style.search}>
-        <div className={style.searchlogo}><Search/></div>Поиск <span> | </span>
-        <div className={style.searchlogo}> <Man/></div>Boйти <span> | </span>
-        <div>Корзина </div> <span className={style.productCount}>0</span>
+    <div className={style.headerActions}>
+        <div className={style.searchlogo}><Search/>Поиск <span> | </span></div>
+        <div className={style.searchlogo}> <Man/>Boйти <span> | </span></div>
+        <span>Корзина </span> <div className={style.productCount}>0</div>
+        <button onClick={handleClick} ><Menu/>
+        </button>
     </div>
-    <button onClick={handleClick} className={style.burgerMenu}><Menu/>
-    </button>
+        <button onClick={handleClick} className={style.burgerMenu}><Menu/>
+        </button>
 </div>
     {click && <div className={style.menu}>
+        <div className={style.opacity}></div>
         <div className={style.dropdown}>
         <div>Главный</div>
         <div>О нас</div>

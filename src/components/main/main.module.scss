@@ -10,7 +10,6 @@
   height: 400px;
 }
 .backWhite{
-  //width: $contentWidth;
   @include background-color;
   width: 600px;
   height: 460px;
@@ -18,7 +17,8 @@
   z-index: -1;
 }
 .product{
-  width:100%;
+  width: $contentWidth;
+  margin: auto;
   @include spaceBetween;
   height: 500px;
   .rose{
@@ -29,10 +29,9 @@
       top: 60px;
     }
 
-
   }
 }
-.choos{
+.mainText{
   width: 450px;
   height: 100%;
   margin-top: 60px;

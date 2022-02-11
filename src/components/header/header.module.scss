@@ -15,21 +15,23 @@
 .burgerMenu{
     display: none;
 }
-.head{
+.navigation{
     cursor: pointer;
     width: 60%;
     height: 70px;
-    @include spaceBetween;
-    align-items: center;
+    display: flex;
+    align-items: baseline;
     .text{
-        width: 65%;
+        width: 60%;
         height: 100%;
         align-items: center;
-        @include spaceBetween;
+        display: flex;
+        margin-left: 45px;
         div{
             height: 70px;
             align-items: center;
-            @include spaceBetween;
+            display: flex;
+            margin-left: 30px;
             border-bottom:transparent solid 3px;
         }
         :hover{
@@ -37,21 +39,35 @@
         }
     }
 }
-.search{
+.headerActions{
     width: 25%;
-    @include spaceBetween;
+    display: flex;
     align-items: center;
-    svg{
-        width: 15px;
-        height: 15px;
+    button{
+        display: none;
     }
+    div{
+        height: 100%;
+        display: flex;
+        svg{
+            width: 20px;
+            height: 20px;
+            margin-right: 10px;
+        }
+        span{
+            margin: 0 10px;
+        }
+    }
+
     .productCount{
         @include color;
         display: flex;
         justify-content: center;
+        margin-left: 10px;
+        padding: 3px;
         color: white;
-        width: 25px;
-        height: 25px;
+        width: 30px;
+        height: 30px;
         border-radius: 50%;
 
     }
@@ -59,17 +75,23 @@
 .whiteLogo{
     display: none;
 }
-
+.searchWrapper{
+    align-items: center;
+    width: 40%;
+    height: 100%;
+}
 
 @media screen and(max-width: 1024px){
     .header{
         width: 100%;
-        @include spaceBetween;
+        display: flex;
         color: white;
         @include color;
+       position: fixed;
+        align-items: center;
     }
-    .head{
-        margin: 10px;
+    .navigation{
+        margin-left: 30px;
       div{
           display: none;
       }
@@ -77,6 +99,9 @@
             display: none;
         }
         .whiteLogo{
+            width: 200px;
+            height: 75px;
+            align-items: center;
             display: flex;
     }
         .text{
@@ -86,10 +111,16 @@
     .menu{
        width: 100%;
         height: 100%;
-        position: absolute;
-        opacity: 0.8;
-        background: black;
         cursor: pointer;
+        position: fixed;
+        top: 70px;
+    }
+    .opacity{
+        width: calc(100% - 300px);
+        height: calc(100vh - 70px);
+        position: fixed;
+        background-color: black;
+        opacity: 0.4;
     }
     .dropdown{
         width: 300px;
@@ -112,20 +143,27 @@
             }
         }
     }
-    .search{
-        width: 40%;
+    .headerActions{
+        width: calc(100% - 300px);
+        display: flex;
+        justify-content:flex-end;
         .productCount{
-            margin-right: 10px;
+            width: 30px;
+            height: 30px;
+            padding: 3px;
             background-color: white;
             color: black;
+            margin-left: 10px;
+        }
+        button{
+            display: flex;
+            margin: 20px;
+            border: 0;
+            @include color;
         }
     }
     .burgerMenu {
-        cursor: pointer;
-        border: 0;
-        @include color;
-        display: flex;
-        margin: 10px;
+        display: none;
     }
     svg{
         path{
@@ -133,14 +171,24 @@
         }
     }
 }
-@media screen and (max-width: 650px){
+@media screen and (max-width: 700px){
     .header{
         width: 100%;
         @include spaceBetween;
         @include color;
     }
-    .search{
+    .headerActions{
         display: none;
+    }
+    .burgerMenu{
+            cursor: pointer;
+            border: 0;
+            @include color;
+            display: flex;
+            margin: 20px;
+        svg{
+            display: flex;
+        }
     }
 }
 
