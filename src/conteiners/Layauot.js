@@ -1,12 +1,12 @@
 import Header from '../components/header/Header';
-import stayle from "./layauot.module.scss"
+import style from "./layauot.module.scss"
 import Main from "../components/main/Main";
 import List from "../components/list/List";
 
 function   Layauot () {
-    return <div className={stayle.layauot}>
+    return <div className={style.layauot}>
         <Header/>
-        {/*<Main/>*/}
+        <Main/>
         {/*<List/>*/}
     </div>
 }

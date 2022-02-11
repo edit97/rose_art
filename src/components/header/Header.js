@@ -1,6 +1,6 @@
 import React, {useState} from "react";
 import {Bitmap,Man,Search,Menu,BitmapWhite } from "../../assets/imeges";
-import stayle from "./header.module.scss";
+import style from "./header.module.scss";
 
 function  Header() {
     const [click, setClick] = useState(false);
@@ -8,12 +8,12 @@ function  Header() {
         event.preventDefault();
         setClick(!click);
     };
-return <div className={stayle.headerWrapper}>
-    <div className={stayle.header}>
-    <div className={stayle.head}>
-        <div className={stayle.whiteLogo}><img src={BitmapWhite} /></div>
-        <div className={stayle.logo}><img src={Bitmap} /></div>
-        <div className={stayle.text}>
+return <div className={style.headerWrapper}>
+    <div className={style.header}>
+    <div className={style.head}>
+        <div className={style.whiteLogo}><img src={BitmapWhite} /></div>
+        <div className={style.logo}><img src={Bitmap} /></div>
+        <div className={style.text}>
             <div>Главный</div>
             <div>О нас</div>
             <div>Контакт</div>
@@ -21,16 +21,16 @@ return <div className={stayle.headerWrapper}>
             <div>Перевозки</div>
         </div>
     </div>
-    <div className={stayle.search}>
-        <div className={stayle.searchlogo}><Search/></div>Поиск <span> | </span>
-        <div className={stayle.searchlogo}> <Man/></div>Boйти <span> | </span>
-        <div>Корзина </div> <span className={stayle.productCount}>0</span>
+    <div className={style.search}>
+        <div className={style.searchlogo}><Search/></div>Поиск <span> | </span>
+        <div className={style.searchlogo}> <Man/></div>Boйти <span> | </span>
+        <div>Корзина </div> <span className={style.productCount}>0</span>
     </div>
-    <button onClick={handleClick} className={stayle.burgerMenu}><Menu/>
+    <button onClick={handleClick} className={style.burgerMenu}><Menu/>
     </button>
 </div>
-    {click && <div className={stayle.menu}>
-        <div className={stayle.dropdown}>
+    {click && <div className={style.menu}>
+        <div className={style.dropdown}>
         <div>Главный</div>
         <div>О нас</div>
         <div>Контакт</div>

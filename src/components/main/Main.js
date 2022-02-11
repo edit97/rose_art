@@ -1,12 +1,12 @@
 import {Lukas,Ready,RoseImg,RoseArt} from "../../assets/imeges";
-import stayle from "./main.module.scss";
+import style from "./main.module.scss";
 
 function Main() {
 
-    return <div className={stayle.main}>
-        <div className={stayle.product}>
-        <div className={stayle.backWhite}>
-                <div className={stayle.choos}>
+    return <div className={style.main}>
+        <div className={style.product}>
+        <div className={style.backWhite}>
+                <div className={style.choos}>
                     <h1>ВЫБЕРИ СВОЕ СЧАСТЬЕ</h1>
                     <p>С нашими опытными разработчиками вы сможете воплотить
                         в реальность ваши: опытная разработка может сделать
@@ -14,14 +14,14 @@ function Main() {
                     <button>Продукт</button>
                 </div>
             </div>
-            <div className={stayle.roseImg}><img src={RoseImg} alt=""/></div>
-             <div className={stayle.rose}><img src={Ready} alt=""/></div>
+            <div className={style.roseImg}><img src={RoseImg} alt=""/></div>
+             <div className={style.rose}><img src={Ready} alt=""/></div>
         </div>
-            <div className={stayle.aboutUs}>
-                <div className={stayle.backRed}>
-                <div className={stayle.more}>
-                    <div className={stayle.roseArt}><img src={Lukas} alt=""/></div>
-                    <div className={stayle.text}>
+            <div className={style.aboutUs}>
+                <div className={style.backRed}>
+                <div className={style.more}>
+                    <div className={style.roseArt}><img src={Lukas} alt=""/></div>
+                    <div className={style.text}>
                     <h1>О нас</h1>
                     <p>Наши опытные разработчики могут воплотить любую вашу идею в реальность:
                         Опытная разработка может воплотить в жизнь все ваши идеи разработчиков и:
@@ -29,7 +29,7 @@ function Main() {
                         разработчики могут воплотить в жизнь все ваши идеи в конце проекта.</p>
                     <button>БОЛЬШЕ ></button>
                     </div>
-                    <div className={stayle.art}><img src={RoseArt} alt=""/></div>
+                    <div className={style.art}><img src={RoseArt} alt=""/></div>
                 </div>
             </div>
         </div>
