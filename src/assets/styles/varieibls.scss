@@ -11,4 +11,13 @@ $contentWidth:var(--contentWidth);
     --contentWidth: 1200px;
   }
 }
-
+@media (max-width: 1240px){
+  :root {
+    --contentWidth: 1100px;
+  }
+}
+@media (max-width: 1140px){
+  :root {
+    --contentWidth: 1000px;
+  }
+}

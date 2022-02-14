@@ -3,41 +3,37 @@
 
 .main{
   //width:$contentWidth;
-  display: flex;
-  flex-direction: column;
   align-items: center;
   width: 100%;
-  height: 400px;
+  height: 100%;
 }
 .backWhite{
   @include background-color;
-  width: 600px;
+  width: calc(100% - 150px);
   height: 460px;
   position: absolute;
   z-index: -1;
 }
 .product{
-  width: $contentWidth;
-  margin: auto;
+ width: 100%;
   @include spaceBetween;
-  height: 500px;
+  height: 460px;
   .rose{
+    margin-top: 40px;
+    width: 640px;
+    height: 419px;
     img{
-      width: 650px;
-      height: 400px;
-      left: 60px;
-      top: 60px;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
     }
-
   }
 }
 .mainText{
-  width: 450px;
+  align-items: center;
+  width:50%;
   height: 100%;
-  margin-top: 60px;
-  h1{
-    font-size: 55px;
-  }
+  margin: 40px;
   button{
     width: 120px;
     height: 40px;
@@ -46,6 +42,14 @@
     border: 0;
     color: white;
   }
+  .aniText{
+    width: 70%;
+  }
+}
+.title{
+  width: 70%;
+ font-size: 50px;
+  margin-bottom: 20px;
 }
 .roseImg{
   img{
@@ -56,30 +60,23 @@
 .backRed{
   @include color;
   width: 100%;
-  height: 100%;
-  //position: absolute;
-}
-.aboutUs{
-  width:100%;
-  margin-top: 60px;
   height: 400px;
-  img{
-    width: 400px;
-    height: 450px;
-  }
+  //position: absolute;
+  //img{
+  //  width: 400px;
+  //  height: 450px;
+  //}
 }
 .more{
   width: 100%;
-  @include spaceBetween;
-  height: 100%;
+  display: flex;
   margin-left: 30px;
   color: white;
-  align-items: center;
 }
 .text{
-  width: 550px;
+  width: 40%;
   height: 100%;
-  margin-top: 60px;
+  margin:60px 0 0 110px;
   h1{
     font-size: 40px;
     color: white;
@@ -91,31 +88,40 @@
   }
 }
 
-@media screen and (max-width: 800px){
+@media screen and (max-width: 1024px){
   .product{
     width: 100%;
     @include spaceBetween;
     align-items: center;
     .backWhite{
-      width: 60%;
-      .choos{
-        width: 50%;
-        height: 100px;
-        margin: 0 auto;
-        h1{
-          font-size: 40px;
-        }
-      }
+      width: 50%;
+      //.choos{
+      //  width: 50%;
+      //  height: 100px;
+      //  margin: 0 auto;
+      //  h1{
+      //    font-size: 40px;
+      //  }
+      //}
     }
-    .roseImg{
-      img{
-        width: 50%;
-        display: flex;
-      }
+    .title{
+      height: 63px;
+      overflow: hidden;
+      font-size: 20px;
     }
+  .rose{
+    width: 50%;
+    height: 100%;
     img{
-      display: none;
+      width:479px;
+      height: 419px;
     }
+  }
+  .aniText{
+    height: 63px;
+    overflow: hidden;
+  }
+
   }
 }
 .art{
@@ -123,30 +129,60 @@
     display: none;
   }
 }
-@media screen  and (max-width: 800px){
+@media screen and (max-width: 700px){
+  .product{
+    width: 100%;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+  }
+}
+@media screen  and (max-width: 1024px){
+  .main{
+    width: 100%;
+  }
+  .backRed{
+    width: 100%;
+    height: 420px;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+  }
   .more{
     width:100%;
-    flex-direction: column;
-    margin: 0;
+    align-items: center;
   }
   .roseArt{
     img{
       display: none;
     }
   }
+  .text{
+    width: 100%;
+    height: 100%;
+    margin: 20px;
+    align-items: center;
+  }
+
   .art{
     img{
-      width: 100%;
+
       display: flex;
-      margin-top: 20px;
+      align-items: center;
+      //margin: 20px;
     }
   }
 }
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 700px) {
+  .backRed{
+    width: 100%;
+  }
   .more{
     width:100%;
     flex-direction: column;
-    margin: 0;
+    align-items: center;
   }
-
+  .text{
+    margin: 20px;
+  }
 }
