@@ -1,50 +1,55 @@
 @import "../../assets/styles/mixins";
 @import "../../assets/styles/varieibls";
 
+
 .main{
-  //width:$contentWidth;
   align-items: center;
   width: 100%;
   height: 100%;
 }
-.backWhite{
+.bgkGray{
   @include background-color;
-  width: calc(100% - 150px);
-  height: 460px;
+  width: calc(100% - 400px);
+  height: 100%;
   position: absolute;
   z-index: -1;
 }
 .product{
  width: 100%;
   @include spaceBetween;
-  height: 460px;
-  .rose{
-    margin-top: 40px;
-    width: 640px;
-    height: 419px;
-    img{
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
+  align-items: center;
+  height: 100%;
+  position: relative;
+    .rose{
+      margin-top: 40px;
+      width: 640px;
+      height: 419px;
+        img{
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          display: flex;
+          justify-content: flex-end;
+        }
     }
-  }
 }
 .mainText{
-  align-items: center;
-  width:50%;
+  width:80%;
   height: 100%;
-  margin: 40px;
-  button{
-    width: 120px;
-    height: 40px;
-    @include color;
-    margin-top: 20px;
-    border: 0;
-    color: white;
-  }
-  .aniText{
-    width: 70%;
-  }
+  //margin: 40px 0 0 40px;
+  margin-left: calc((100vw - #{$contentWidth}) / 2);
+  margin-top: 30px;
+    button{
+      width: 120px;
+      height: 40px;
+      @include color;
+      margin-top: 20px;
+      border: 0;
+      color: white;
+    }
+    .aniText{
+      width: 60%;
+    }
 }
 .title{
   width: 70%;
@@ -57,24 +62,19 @@
   }
 }
 
-.backRed{
+.bgkRed{
   @include color;
   width: 100%;
   height: 400px;
-  //position: absolute;
-  //img{
-  //  width: 400px;
-  //  height: 450px;
-  //}
 }
 .more{
-  width: 100%;
+  width: $contentWidth;
+  margin: 0 auto;
   display: flex;
-  margin-left: 30px;
   color: white;
 }
 .text{
-  width: 40%;
+  width: 100%;
   height: 100%;
   margin:60px 0 0 110px;
   h1{
@@ -90,38 +90,48 @@
 
 @media screen and (max-width: 1024px){
   .product{
+    position: unset;
     width: 100%;
+    height: 500px;
+    margin-top: 70px;
     @include spaceBetween;
     align-items: center;
-    .backWhite{
-      width: 50%;
-      //.choos{
-      //  width: 50%;
-      //  height: 100px;
-      //  margin: 0 auto;
-      //  h1{
-      //    font-size: 40px;
-      //  }
-      //}
+    .bgkGray{
+      width: 100%;
+      height: 100%;
+      position: unset;
+      display: flex;
+    }
+    .mainText{
+      width: 100%;
+      height: 100%;
+      margin: 35px;
+      position: unset;
+      flex-direction: column;
+      align-items: center;
     }
     .title{
-      height: 63px;
-      overflow: hidden;
-      font-size: 20px;
+      width: 70%;
+      position: unset;
+      font-size: 35px;
     }
   .rose{
-    width: 50%;
-    height: 100%;
-    img{
-      width:479px;
-      height: 419px;
+    display: none;
+  }
+    .roseImg{
+      width: 100%;
+      height: 100%;
+      img{
+        width: 100%;
+        height: 100%;
+        display: flex;
+      }
     }
-  }
-  .aniText{
-    height: 63px;
-    overflow: hidden;
-  }
-
+      .aniText{
+        width: 100%;
+        height: 85px;
+        overflow: hidden;
+      }
   }
 }
 .art{
@@ -136,20 +146,36 @@
     display: flex;
     flex-direction: column;
   }
+  .mainText{
+    width: 100%;
+    height: 100%;
+
+    .title{
+      width: 50%;
+      position: unset;
+      font-size: 30px;
+    }
+    .aniText{
+      width: 80%;
+      height: 70px;
+      overflow: hidden;
+    }
+  }
+
 }
 @media screen  and (max-width: 1024px){
   .main{
     width: 100%;
   }
-  .backRed{
+  .bgkRed{
     width: 100%;
     height: 420px;
     align-items: center;
-    display: flex;
-    flex-direction: column;
   }
   .more{
     width:100%;
+    align-items: center;
+    flex-direction: column;
     align-items: center;
   }
   .roseArt{
@@ -158,31 +184,64 @@
     }
   }
   .text{
-    width: 100%;
+    width: 85%;
     height: 100%;
-    margin: 20px;
+    padding: 20px;
+    margin: 0 auto;
     align-items: center;
   }
 
   .art{
+    margin: 20px;
     img{
-
+      width: 100%;
+      height: 100%;
       display: flex;
       align-items: center;
-      //margin: 20px;
     }
   }
 }
 @media screen and (max-width: 700px) {
-  .backRed{
+  .product{
     width: 100%;
+    height: 100%;
+  }
+  .bgkGray{
+    width: 100%;
+    height: 100%;
+  }
+  .art{
+    margin: 20px;
+    img{
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+    }
+  }
+  .bgkRed{
+    width: 100%;
+    height: 420px;
   }
   .more{
     width:100%;
+    height: 100%;
     flex-direction: column;
     align-items: center;
   }
   .text{
-    margin: 20px;
+    width: 90%;
+    p{
+      height: 63px;
+      overflow: hidden;
+    }
+  }
+}
+@media screen and (max-width: 824px){
+  .title{
+    width: 60%;
+    font-size: 30px;
+    height: 100px;
+    overflow: hidden;
   }
 }
