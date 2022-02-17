@@ -7,7 +7,7 @@ function   Layauot () {
     return <div className={style.layauot}>
         <Header/>
         <Main/>
-        {/*<List/>*/}
+        <List/>
     </div>
 }
 export default Layauot;

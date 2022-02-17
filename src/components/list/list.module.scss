@@ -3,50 +3,182 @@
 
 .list{
   width:$contentWidth;
-  height: 320px;
-  margin-top: 50px;
+  height: 100%;
+  margin: 0 auto;
   //@include spaceBetween;
   align-items: center;
 }
 .slider{
-  width:$contentWidth;
-  margin: 0 auto;
-  @include spaceBetween;
-  align-items: center;
+  width: 100%;
   height: 100%;
-  border: 1px solid #d5d5d5;
-  .rose{
-    width: 100%;
-    height: 320px;
-    align-items: center;
-    border: 1px solid #d5d5d5;
-
+  display: flex;
+  margin-top: 30px;
+}
+.blok{
+  border-left: #F8F8F8 solid 1px;
+}
+.blok4,.blok2,.blok3,.blok1,.blok{
+  width: 250px;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-right: #F8F8F8 solid 1px;
+  border-top: #F8F8F8 solid 1px;
+  border-bottom: #F8F8F8 solid 1px;
+  &:hover{
+    transform-origin:top;
+    transform: scale(1.05);
+    box-shadow: 3px 10px 7px #dadada;
   }
 }
-.icons{
-  width:100%;
-  @include spaceBetween;
+.heart {
+ width: 100%;
+  height: 40px;
+  margin-top: 18px;
+  //padding: 20px;
+  position: relative;
+  svg{
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    right: 20px;
+  }
+}
+.rose{
+  width: 160px;
+  height: 160px;
+}
+.text{
+  width: 204px;
+  height: 90px;
+  display: flex;
+  flex-direction: column;
+  align-items: baseline;
+  margin-top: 30px;
+  div{
+    font-size: 15px;
+    font-weight: 500;
+    margin-bottom: 10px;
+  }
+  .price{
+    color: #FF4E4E;
+    font-size: 20px;
+  }
+  .price2{
+    color: #A7A7A7;
+    text-decoration:line-through;
+    margin-left: 4px;
+  }
+  .sale{
+    background-color: #FF4E4E;
+    margin-left: 10px;
+    padding: 3px;
+    width: 30px;
+    height: 15px;
+    color: #F6F6F6;
+  }
+}
+.btn{
+  width: 204px;
+  height: 36px;
+  margin-top: 15px;
+  border: 0;
+  font-size: 18px;
+  display: flex;
   align-items: center;
-  height: 50px;
-  span{
-    text-align: center;
-    width: 100%;
-    height: 50px;
-    border: 1px solid #d5d5d5;
-    &:hover{
-      @include color;
-      color: white;
+  &:hover{
+    @include color;
+    color: white;
+    svg{
+      path{
+        fill: white;
+      }
     }
   }
+  svg{
+    width:22px;
+    height: 22px;
+    margin:0 10px 0 40px;
+  }
 }
-.product{
+.price3{
+  font-size: 18px;
+}
+.icon{
   width: 100%;
-  height: 270px;
-  align-items: center;
+  height: 40px;
+  margin-top: 18px;
+  position: relative;
+    @include spaceBetween;
+    .heart2{
+      svg{
+        position: absolute;
+        right: 20px;
+        width: 20px;
+        height: 20px;
+      }
+    }
+  .news{
+    width: 70px;
+    height: 21px;
+    position: absolute;
+    background-color:#07D148;
+    color: white;
+    padding-left: 10px;
+  }
+  }
+.more{
+  display: none;
 }
-
-@media screen and (max-width: 800px){
+@media screen and (max-width: 1024px){
     .list{
       width: 100%;
+      height: 100%;
+      margin: 0 auto;
     }
+  .header{
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+  }
+  .more{
+    display: flex;
+    align-items: center;
+    color: #A7093C;
+    font-size: 20px;
+  }
+  .slider{
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+  }
+  .blok4{
+    display: none;
+  }
+}
+@media screen and (max-width: 800px){
+  .blok3{
+    display: none;
+  }
+}
+@media screen and(max-width: 640px){
+.blok2{
+  display: none;
+}
+  .slider{
+    display:flex;
+    justify-content: space-between;
+  }
+}
+@media screen and (max-width: 440px){
+  .blok1{
+    display:none;
+  }
+  .blok{
+   margin: 0 auto;
+  }
 }
