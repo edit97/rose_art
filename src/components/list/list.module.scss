@@ -20,6 +20,7 @@
 .blok4,.blok2,.blok3,.blok1,.blok{
   width: 250px;
   height: 400px;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -160,9 +161,12 @@
     display: none;
   }
 }
-@media screen and (max-width: 800px){
+@media screen and (max-width: 840px){
   .blok3{
     display: none;
+  }
+  .blok,.blok1,.blok2{
+    margin: 0 auto;
   }
 }
 @media screen and(max-width: 640px){
