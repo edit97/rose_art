@@ -28,6 +28,8 @@
   border-top: #F8F8F8 solid 1px;
   border-bottom: #F8F8F8 solid 1px;
   &:hover{
+    overflow: hidden;
+    transition: none;
     transform-origin:top;
     transform: scale(1.05);
     box-shadow: 3px 10px 7px #dadada;
@@ -88,6 +90,7 @@
   font-size: 18px;
   display: flex;
   align-items: center;
+  cursor: pointer;
   &:hover{
     @include color;
     color: white;

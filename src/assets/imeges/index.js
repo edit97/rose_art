@@ -4,6 +4,11 @@ export {default as Ready} from "./icons/ready-made.png";
 export {default as BitmapWhite} from "./icons/Bitmap-white.png";
 export {default as RoseImg} from "./icons/rose-img.png";
 export {default as RoseArt} from "./icons/rose-art.png";
+export {default as Rosers} from "./icons/Rosers.png";
+export {default as Rosers1} from "./icons/Rosers1.png";
+export {default as Rosers2} from "./icons/Rosers2.png";
+export {default as Rosers3} from "./icons/Rosers3.png";
+export {default as RoseWhite} from "./icons/Rose-white.png";
 
  export {ReactComponent as Man} from "./icons/MAN.svg";
  export {ReactComponent as Search} from "./icons/ic_search.svg"
@@ -15,8 +20,5 @@ export {ReactComponent as Rose4} from "./icons/Bitmap-4.svg"
 export {ReactComponent as Basket} from "./icons/basket.svg"
 export {ReactComponent as Group} from "./icons/Group-3.svg"
 export {ReactComponent as Heart} from "./icons/Heart.svg"
-export {ReactComponent as New} from "./icons/New.svg"
-export {ReactComponent as Sale} from "./icons/sale.svg"
-// export {ReactComponent as WhiteSearch} from "./icons/SE-white.svg"
-// export {ReactComponent as MenWhite} from "./icons/MAN-white.png"
+
 
