@@ -11,7 +11,7 @@ function Offer(){
                 <div className={style.text}>
                     <span>26 октября 2021 г</span>
                     <span className={style.work}>Фотоотчет о ходе</span>
-                    <button className={style.seeBtn}>посмотреть></button>
+                    <div className={style.seeBtn}>посмотреть></div>
                 </div>
                 <div className={style.icon}>
                     <Group/>
@@ -25,7 +25,7 @@ function Offer(){
                     <div className={style.text}>
                         <span>дружелюбно</span>
                         <span className={style.work}>Фотоотчет о ходе</span>
-                        <button className={style.btn}>посмотреть></button>
+                        <div className={style.btn}>посмотреть></div>
                     </div>
                 </div>
                 <div className={style.rose}>
@@ -33,7 +33,7 @@ function Offer(){
                     <div className={style.text}>
                         <span>дружелюбно</span>
                         <span className={style.work}>Фотоотчет о ходе</span>
-                        <button className={style.btn}>посмотреть></button>
+                        <div className={style.btn}>посмотреть></div>
                     </div>
                 </div>
             </div>
@@ -56,7 +56,7 @@ function Offer(){
                         <div className={style.text}>
                             <span>дружелюбно</span>
                             <span className={style.work}>Фотоотчет о ходе</span>
-                            <button className={style.btn}>посмотреть ></button>
+                            <div className={style.btn}>посмотреть ></div>
                         </div>
                 </div>
             </div>
@@ -67,7 +67,7 @@ function Offer(){
             <div className={style.responsivText}>
                 <span>дружелюбно</span>
                 <span className={style.work}>Фотоотчет о ходе</span>
-                <button className={style.responsivBtn}>посмотреть></button>
+                <div className={style.responsivBtn}>посмотреть></div>
             </div>
         </div>
     </div>
