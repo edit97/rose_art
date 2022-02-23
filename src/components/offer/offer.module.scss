@@ -199,7 +199,7 @@
   }
   .sale{
     width: 100%;
-    height: 100%;
+    height: 240px;
   }
   .roseGroup{
     display: none;
@@ -214,6 +214,8 @@
   .group{
     display: flex;
     justify-content: space-between;
+    flex-direction: row;
+    margin-top: 20px;
     width: 100%;
   }
   .sale{
@@ -223,11 +225,24 @@
   .firstRose{
     width: 100%;
   }
-  .rose{
-    display: flex;
+  .blok{
     width: 50%;
-    img{
+    padding-right: 20px;
+    .rose{
       width: 100%;
+      img{
+        width: 100%;
+      }
+    }
+  }
+  .blok1{
+    width: 50%;
+    .sale{
+      width: 100%;
+      height: 240px;
+      img{
+        width: 100%;
+      }
     }
   }
 }
