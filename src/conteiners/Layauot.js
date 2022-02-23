@@ -4,6 +4,7 @@ import Main from "../components/main/Main";
 import List from "../components/list/List";
 import Offer from "../components/offer/Offer";
 import Contact from "../components/contact/Contact";
+import Footer from "../components/footer/Footer";
 
 function   Layauot () {
     return <div className={style.layauot}>
@@ -12,6 +13,7 @@ function   Layauot () {
         <List/>
         <Offer/>
         <Contact/>
+        {/*<Footer/>*/}
     </div>
 }
 export default Layauot;

@@ -1,0 +1,28 @@
+@import "../../assets/styles/mixins";
+@import "../../assets/styles/varieibls";
+
+.footer{
+  width: 100%;
+  border: 1px solid #979797;
+  background-color: #F3F4F6;
+}
+.group{
+  width: $contentWidth;
+  margin: 0 auto;
+}
+.aboutUs{
+  width: 100%;
+  @include spaceBetween;
+}
+.comapny{
+  display: flex;
+}
+.date{
+  width: 100%;
+  margin: auto;
+  height: 70px;
+  @include spaceBetween;
+}
+.line{
+  border: 2px solid #B9BCCF;
+}

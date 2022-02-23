@@ -15,30 +15,32 @@
 
 .bloks{
   width: 60%;
+  height: 100%;
   margin-top: auto;
+  position: relative;
   display: flex;
   justify-content: flex-end;
 }
 .bgkRed{
-  width:500px;
-  height: 100%;
+  width:70%;
+  height: 300px;
+  margin-top: auto;
   @include color;
 }
 .adress{
   color: white;
-  display: flex;
-  justify-content: flex-end;
-  margin-right: 30px;
-  padding-bottom: 30px;
+  position: absolute;
+  bottom: 24px;
+  right: 20px;
 }
 .map{
-  width: 600px;
-  height: 400px;
+  width: 90%;
+  height: calc(100% - 100px);
   display: flex;
   justify-content: right;
-  position: relative;
-  bottom: 20px;
-  right: 140px;
+  position: absolute;
+  top:30px;
+  left: 0;
   img{
     width: 100%;
     height: 100%;
@@ -61,22 +63,31 @@
   border: 0;
   color: white;
 }
-.line{
-  border-bottom: 2px solid #171A1E;
-}
-.lineGrey{
-  border-bottom: 2px solid #B3B3B3;
-}
+//.line{
+//  border-bottom: 2px solid #171A1E;
+//}
+//.lineGrey{
+//  border-bottom: 2px solid #B3B3B3;
+//}
 .name{
   color: #171A1E;
   height: 70px;
   margin-top: 30px;
 }
 .blok{
+  background-color: transparent;
+  border: 0;
+  border-bottom: 2px solid #B3B3B3;
   color: #B3B3B3;
   height: 70px;
+  cursor: pointer;
 }
-
+.blok:focus{
+  color: #171A1E;
+  outline: none;
+  background-color: transparent;
+  border-bottom: 2px solid #171A1E;
+}
 @media screen and (max-width: 1024px) {
   .contact {
     width: 100%;
@@ -95,5 +106,8 @@
   .bloks {
     padding-top: 40px;
     width: 100%;
+  }
+  .bgkRed{
+    width: calc(100% - 150px);
   }
 }

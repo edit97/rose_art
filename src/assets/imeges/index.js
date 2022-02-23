@@ -21,5 +21,12 @@ export {ReactComponent as Rose4} from "./icons/Bitmap-4.svg"
 export {ReactComponent as Basket} from "./icons/basket (1).svg"
 export {ReactComponent as Group} from "./icons/Group-3.svg"
 export {ReactComponent as Heart} from "./icons/Heart.svg"
+export {ReactComponent as Flag} from "./icons/fleg.svg"
+export {ReactComponent as Steps} from "./icons/icon_4steps.svg"
+export {ReactComponent as Facebook} from "./icons/icon_facebook.svg"
+export {ReactComponent as Instagram} from "./icons/icon_instagram.svg"
+export {ReactComponent as Linkedin} from "./icons/icon_linkdin.svg"
+export {ReactComponent as Arrow} from "./icons/arrow.svg"
+
 
 
