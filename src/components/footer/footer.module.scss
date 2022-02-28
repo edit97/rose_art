@@ -5,24 +5,183 @@
   width: 100%;
   border: 1px solid #979797;
   background-color: #F3F4F6;
-}
-.group{
-  width: $contentWidth;
-  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .aboutUs{
-  width: 100%;
+  width: $contentWidth;
+  margin: 0 auto;
+  height: 260px;
+  align-items: center;
   @include spaceBetween;
 }
 .comapny{
-  display: flex;
-}
-.date{
-  width: 100%;
-  margin: auto;
-  height: 70px;
+  width: 35%;
   @include spaceBetween;
 }
+.date{
+  width: $contentWidth;
+  margin: auto;
+  height: 70px;
+  align-items: center;
+  @include spaceBetween;
+  .text{
+    color: #767E8F;
+  }
+}
 .line{
-  border: 2px solid #B9BCCF;
+  width: 100%;
+  border-bottom: 2px solid #B9BCCF;
+}
+.underLine{
+  border-bottom: 2px solid #B9BCCF;
+}
+.follow{
+  height: 40px;
+  @include spaceBetween;
+  align-items: baseline;
+}
+.title{
+  font-size: 15px;
+}
+.sub{
+  width: 100%;
+  margin: 12px 0;
+  span{
+    color: #767E8F;
+  }
+}
+.adress{
+  width: 20%;
+  img{
+    margin-bottom: 15px;
+  }
+  .txt{
+    margin-bottom: 10px;
+    color: #767E8F;
+  }
+}
+.subscribe{
+  width: 32%;
+}
+.components{
+  color: #767E8F;
+  cursor: pointer;
+  div:hover{
+    color: #A6398E;
+  }
+}
+.btn{
+  width: 30%;
+  height: 100%;
+  background-color: #A7093C;
+  border: 0;
+  color: white;
+}
+.input{
+  width: 70%;
+  height: 100%;
+  border: 0;
+  outline: none;
+  input::placeholder{
+    color: #767E8F;
+  }
+}
+.arr{
+  display: none;
+}
+.scribe{
+  width: 100%;
+  height: 40px;
+  display: flex;
+}
+.icons{
+  width: 100px;
+  @include spaceBetween;
+}
+.flag{
+  width: 70px;
+  @include spaceBetween;
+  align-items: center;
+}
+.responsivLine{
+  display: none;
+}
+.responsivSub{
+  display: none;
+}
+@media screen and (max-width: 1024px){
+ .footer{
+   width: 100%;
+ }
+  .aboutUs{
+    margin-top: 280px;
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .subscribe{
+    width: 100%;
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .comapny{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  .responsivLine{
+    display: flex;
+    border-bottom: 1px solid #B9BCCF;
+  }
+  .underLine{
+    display: none;
+  }
+  .date{
+    width: 100%;
+    padding: 20px;
+  }
+  .title{
+    height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .sub{
+    display: none;
+  }
+  .responsivSub{
+    height: 150px;
+    display: flex;
+    @include column;
+  }
+  .arr{
+    display: flex;
+  }
+  .place{
+    display: none;
+  }
+  .adress{
+    display: none;
+  }
+  .components{
+    display: none;
+  }
+  .iconComapny{
+    svg{
+      fill: none;
+    }
+  }
+  .follow{
+    height: 70px;
+  }
+}
+@media screen and (max-width: 600px){
+    .date{
+      display: flex;
+      flex-direction: column;
+      align-items: baseline;
+    }
 }

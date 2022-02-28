@@ -13,7 +13,7 @@ function   Layauot () {
         <List/>
         <Offer/>
         <Contact/>
-        {/*<Footer/>*/}
+        <Footer/>
     </div>
 }
 export default Layauot;

@@ -39,8 +39,8 @@ return <div className={style.headerWrapper}>
         <div>Контакт</div>
         <div>Продукт</div>
         <div>Перевозки</div>
-        <div><Search/> Поиск</div>
-        <div><Man/>Boйти</div>
+        <div className={style.search}><Search/> Поиск</div>
+        <div className={style.manicon}><Man/>Boйти</div>
         <div>Корзина</div>
     </div>
     </div>}

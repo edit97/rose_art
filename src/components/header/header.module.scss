@@ -150,6 +150,18 @@
             }
         }
     }
+    .searchlogo{
+        path{
+            fill: white;
+        }
+    }
+    .search{
+        svg{
+            path{
+                fill: white;
+            }
+        }
+    }
     .headerActions{
         width: calc(100% - 300px);
         display: flex;
@@ -172,11 +184,7 @@
     .burgerMenu {
         display: none;
     }
-    svg{
-        path{
-            fill: white;
-        }
-    }
+
 }
 @media screen and (max-width: 700px){
     .header{

@@ -27,6 +27,7 @@ export {ReactComponent as Facebook} from "./icons/icon_facebook.svg"
 export {ReactComponent as Instagram} from "./icons/icon_instagram.svg"
 export {ReactComponent as Linkedin} from "./icons/icon_linkdin.svg"
 export {ReactComponent as Arrow} from "./icons/arrow.svg"
+export {ReactComponent as Arr} from "./icons/arr-icon.svg"
 
 
 
