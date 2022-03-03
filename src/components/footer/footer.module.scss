@@ -4,9 +4,8 @@
 .footer{
   width: 100%;
   border: 1px solid #979797;
-  background-color: #F3F4F6;
-  display: flex;
-  flex-direction: column;
+  background-color: $greybgColor;
+ @include column;
   align-items: center;
 }
 .aboutUs{
@@ -27,15 +26,15 @@
   align-items: center;
   @include spaceBetween;
   .text{
-    color: #767E8F;
+    color: $greyColor;
   }
 }
 .line{
   width: 100%;
-  border-bottom: 2px solid #B9BCCF;
+  border-bottom: 2px solid $greyborderColor;
 }
 .underLine{
-  border-bottom: 2px solid #B9BCCF;
+  border-bottom: 2px solid $greyborderColor;
 }
 .follow{
   height: 40px;
@@ -49,7 +48,7 @@
   width: 100%;
   margin: 12px 0;
   span{
-    color: #767E8F;
+    color: $greyColor;
   }
 }
 .adress{
@@ -59,23 +58,23 @@
   }
   .txt{
     margin-bottom: 10px;
-    color: #767E8F;
+    color: $greyColor;
   }
 }
 .subscribe{
   width: 32%;
 }
 .components{
-  color: #767E8F;
+  color: $greyColor;
   cursor: pointer;
   div:hover{
-    color: #A6398E;
+    color: $pinkColor;
   }
 }
 .btn{
   width: 30%;
   height: 100%;
-  background-color: #A7093C;
+  background-color: $ferstColor;
   border: 0;
   color: white;
 }
@@ -85,7 +84,7 @@
   border: 0;
   outline: none;
   input::placeholder{
-    color: #767E8F;
+    color: $greyColor;
   }
 }
 .arr{
@@ -129,12 +128,11 @@
   }
   .comapny{
     width: 100%;
-    display: flex;
-    flex-direction: column;
+   @include column;
   }
   .responsivLine{
     display: flex;
-    border-bottom: 1px solid #B9BCCF;
+    border-bottom: 1px solid $greyborderColor;
   }
   .underLine{
     display: none;
@@ -145,8 +143,7 @@
   }
   .title{
     height: 70px;
-    display: flex;
-    justify-content: space-between;
+    @include spaceBetween;
     align-items: center;
   }
   .sub{
@@ -154,7 +151,6 @@
   }
   .responsivSub{
     height: 150px;
-    display: flex;
     @include column;
   }
   .arr{
@@ -180,8 +176,7 @@
 }
 @media screen and (max-width: 600px){
     .date{
-      display: flex;
-      flex-direction: column;
+      @include column;
       align-items: baseline;
     }
 }

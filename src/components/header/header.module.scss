@@ -24,26 +24,23 @@
     .text{
         width: 60%;
         height: 100%;
-        align-items: center;
-        display: flex;
+        @include aline-items;
         margin-left: 45px;
         div{
             height: 70px;
-            align-items: center;
-            display: flex;
+            @include aline-items;
             margin-left: 20px;
             border-bottom:transparent solid 3px;
         }
         :hover{
-            border-bottom: #A7093C solid 3px;
+            border-bottom: $ferstColor solid 3px;
         }
     }
 }
 .headerActions{
     width: 30%;
-    display: flex;
+    @include aline-items;
     justify-content: flex-end;
-    align-items: center;
     button{
         display: none;
     }
@@ -61,7 +58,7 @@
     }
 
     .productCount{
-        @include color;
+        background-color:$ferstColor;
         display: flex;
         justify-content: center;
         margin-left: 10px;
@@ -85,16 +82,15 @@
 @media screen and(max-width: 1024px){
     .header{
         width: 100%;
-        display: flex;
+        @include itemsCenter;
         color: white;
-        @include color;
+       background-color: $ferstColor;
        position: fixed;
         z-index: 8;
         top: 0;
         bottom: 0;
         left: 0;
         right: 0;
-        align-items: center;
     }
     .navigation{
         margin-left: 30px;
@@ -107,16 +103,14 @@
         .whiteLogo{
             width: 200px;
             height: 75px;
-            align-items: center;
-            display: flex;
+            @include aline-items;
     }
         .text{
             display: none;
         }
 }
     .menu{
-       width: 100%;
-        height: 100%;
+       @include widthHeight;
         cursor: pointer;
         position: fixed;
         z-index: 8;
@@ -133,10 +127,9 @@
         width: 300px;
         margin-left: auto;
         height: calc(100vh - 70px);
-       display: flex;
+       @include column;
         justify-content: right;
-        flex-direction: column;
-        @include color;
+        background-color: $ferstColor;
         color: white;
         div{
             width: 80px;
@@ -178,7 +171,7 @@
             display: flex;
             margin: 20px;
             border: 0;
-            @include color;
+            background-color: $ferstColor;
         }
     }
     .burgerMenu {
@@ -190,7 +183,7 @@
     .header{
         width: 100%;
         @include spaceBetween;
-        @include color;
+        background-color: $ferstColor;
     }
     .headerActions{
         display: none;
@@ -198,7 +191,7 @@
     .burgerMenu{
             cursor: pointer;
             border: 0;
-            @include color;
+            background-color: $ferstColor;
             display: flex;
             margin: 20px;
         svg{

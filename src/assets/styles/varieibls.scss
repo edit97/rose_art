@@ -1,9 +1,27 @@
 :root {
   --contentWidth: 1440px;
+  --ferstColor:#A7093C;
+  --secColor:#F6F6F6
 }
 
 
 $contentWidth:var(--contentWidth);
+
+
+//-------Color-------
+$ferstColor:var(--ferstColor);
+$secColor:var(--secColor);
+$whiteColor:#F8F8F8;
+$greyColor:#767E8F;
+$greybgColor:#F3F4F6;
+$greyborderColor:#B9BCCF;
+$grColor:#B3B3B3;
+$pinkColor:#A6398E;
+$blackColor:#171A1E;
+$greenColor:#07D148;
+$redColor:#FF4E4E;
+
+
 
 
 @media (max-width: 1500px){

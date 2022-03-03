@@ -5,9 +5,8 @@
   width: 100%;
   height: 500px;
   margin-top: 70px;
-  background-color: #FBFBFB;
-  display: flex;
-  justify-content: space-between;
+  background-color: $whiteColor;
+ @include spaceBetween;
 
 }
 
@@ -23,7 +22,7 @@
   width:70%;
   height: 300px;
   margin-top: auto;
-  @include color;
+  background-color: $ferstColor;
 }
 .adress{
   color: white;
@@ -40,8 +39,7 @@
   top:30px;
   left: 0;
   img{
-    width: 100%;
-    height: 100%;
+    @include widthHeight;
   }
 
 }
@@ -49,26 +47,19 @@
   width: 30%;
   height: 430px;
   padding-top: 20px;
-  display: flex;
-  flex-direction: column;
+  @include column;
   margin-left: calc((100vw - #{$contentWidth}) / 2);
 }
 .btn{
   width: 120px;
   height: 40px;
-  background-color: #A7093C;
+  background-color: $ferstColor;
   margin-top: 20px;
   border: 0;
   color: white;
 }
-//.line{
-//  border-bottom: 2px solid #171A1E;
-//}
-//.lineGrey{
-//  border-bottom: 2px solid #B3B3B3;
-//}
 .name{
-  color: #171A1E;
+  color: $blackColor;
   height: 70px;
   margin-top: 30px;
 }
@@ -76,28 +67,26 @@
   background-color: transparent;
   border: 0;
   outline: none;
-  border-bottom: 2px solid #B3B3B3;
-  color: #B3B3B3;
+  border-bottom: 2px solid $grColor;
+  color: $grColor;
   height: 70px;
   cursor: pointer;
 }
 .blok:focus{
-  border-bottom: 2px solid #171A1E;
+  border-bottom: 2px solid $blackColor;
 }
 .blok:focus::placeholder{
-  color: #171A1E;
+  color: $blackColor;
   outline: none;
   background-color: transparent;
 }
 @media screen and (max-width: 1024px) {
   .contact {
-    width: 100%;
-    height: 100%;
+    @include widthHeight;
     border: 0;
     margin: 0 auto;
-    display: flex;
+    @include column;
     align-items: center;
-    flex-direction: column;
   }
   .registration {
     width: 100%;
