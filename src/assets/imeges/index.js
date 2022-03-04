@@ -28,6 +28,9 @@ export {ReactComponent as Instagram} from "./icons/icon_instagram.svg"
 export {ReactComponent as Linkedin} from "./icons/icon_linkdin.svg"
 export {ReactComponent as Arrow} from "./icons/arrow.svg"
 export {ReactComponent as Arr} from "./icons/arr-icon.svg"
+export {ReactComponent as Delete} from "./icons/ic_close.svg"
+export {ReactComponent as Minuse} from "./icons/ic-mines.svg"
+export {ReactComponent as Pluse} from "./icons/ic-pluse.svg"
 
 
 
