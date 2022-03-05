@@ -5,7 +5,12 @@ function Offer(){
     return <div className={style.offer}>
         <h1 className={style.title}>Лучшее предложение</h1>
         <div className={style.list}>
+
         <div className={style.firstRose}>
+            {/*
+            todo
+             պետք է լինի առանձին կոմպոնենտ
+            */}
             <img src={Rosers} alt=""/>
             <div className={style.txt}>
                 <div className={style.text}>
@@ -20,6 +25,11 @@ function Offer(){
         </div>
         <div className={style.group}>
             <div className={style.blok}>
+                {/*
+                    todo
+                     1․ պետք է լինի առանձին կոմպոնենտ
+                     2․ посмотреть> սլաքը լինի icon
+                  */}
                 <div className={style.rosers}>
                     <img src={Rosers1} alt=""/>
                     <div className={style.text}>

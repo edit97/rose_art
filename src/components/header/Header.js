@@ -23,6 +23,13 @@ return <div className={style.headerWrapper}>
         </div>
     </div>
     <div className={style.headerActions}>
+        {/*todo
+                    <span> | </span>-ը div-ից դւրս դնել style-երը ուղել
+                    icon-ները նույն չափով դնել
+                    սթայլեր գրել className-երով, և անունները ըստ իմաստի
+                     className={style.opacity} անունը overlay
+                     <Man/> ուզել սև գույնով և փոխել, գույնը փոխել hover-ի ժամանակ
+                */}
         <div className={style.searchlogo}><Search/>Поиск <span> | </span></div>
         <div className={style.searchlogo}> <Man/>Boйти <span> | </span></div>
         {/*<Link to="/basket" >*/}

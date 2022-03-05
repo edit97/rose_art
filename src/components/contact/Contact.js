@@ -12,7 +12,9 @@ function Contact (){
                 <button className={style.btn}>Отправить</button>
             </div>
         <div className={style.bloks}>
-            <div className={style.map}><img src={Map} alt=""/></div>
+            <div className={style.map}>
+                <img src={Map} alt=""/>
+            </div>
             <div className={style.bgkRed}>
                 <div className={style.adress}>Адрес: 0010 Goght Kotayk Province, Armenia</div>
             </div>

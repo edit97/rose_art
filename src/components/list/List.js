@@ -2,7 +2,11 @@ import {Rose1,Rose2,Rose3,Rose4,Heart,Basket } from "../../assets/imeges";
 import style from "./list.module.scss"
 import React from "react";
 
-
+/*
+* todo
+*  1․ փոխել կոմպոնենտի անունը ProductList-ի
+*  2․ առանձնացնել ProductCard-ը
+* */
 function List() {
     return <div className={style.list}>
         <div className={style.header}>
