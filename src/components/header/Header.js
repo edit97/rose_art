@@ -12,7 +12,6 @@ function  Header() {
 return <div className={style.headerWrapper}>
     <div className={style.header}>
     <div className={style.navigation}>
-
         <div className={style.whiteLogo}><img src={BitmapWhite} /></div>
         <div className={style.logo}><img src={Bitmap} /></div>
         <div className={style.text}>
@@ -26,9 +25,9 @@ return <div className={style.headerWrapper}>
     <div className={style.headerActions}>
         <div className={style.searchlogo}><Search/>Поиск <span> | </span></div>
         <div className={style.searchlogo}> <Man/>Boйти <span> | </span></div>
-        <Link to="/basket" >
+        {/*<Link to="/basket" >*/}
             <span>Корзина </span>
-        </Link>
+        {/*</Link>*/}
          <div className={style.productCount}>0</div>
         <button onClick={handleClick} ><Menu/>
         </button>
