@@ -1,8 +1,10 @@
 import {Rose1,Rose2,Rose3,Rose4,Delete,Pluse,Minuse} from "../../assets/imeges";
-import style from "./products.module.scss";
+import style from "./basket.module.scss";
+import {Link} from "react-router-dom";
 
-function Products() {
-    return <div className={style.products}>
+function Basket() {
+    return(
+    <div className={style.products}>
         <div className={style.nav}>Home  /    All rose   /  Rose spray  /  My cart</div>
         <h1 className={style.title}>There are 4 products</h1>
         <div className={style.product}>
@@ -85,4 +87,6 @@ function Products() {
             </div>
         </div>
     </div>
-}export default Products;
+    )
+}
+export default { Basket};

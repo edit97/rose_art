@@ -29,6 +29,7 @@
   margin-left: auto;
   color: $redColor;
   padding: 30px;
+  cursor: pointer;
 }
 .blok{
   @include spaceBetween;
@@ -79,9 +80,9 @@
     .icon{
       font-size: 12px;
       cursor: pointer;
-      &:hover{
-        color: $redColor;
-      }
+    }
+    svg:hover{
+      color: $redColor;
     }
   }
 }
@@ -155,6 +156,11 @@
     @include column;
   }
   .summery{
+    width: 100%;
     @include itemsCenter;
   }
+  .orderPlace{
+    width: 100%;
+  }
+
 }

@@ -1,6 +1,7 @@
 import React, {useState} from "react";
 import {Bitmap,Man,Search,Menu,BitmapWhite } from "../../assets/imeges";
 import style from "./header.module.scss";
+import {Link} from "react-router-dom";
 
 function  Header() {
     const [click, setClick] = useState(false);
@@ -11,6 +12,7 @@ function  Header() {
 return <div className={style.headerWrapper}>
     <div className={style.header}>
     <div className={style.navigation}>
+
         <div className={style.whiteLogo}><img src={BitmapWhite} /></div>
         <div className={style.logo}><img src={Bitmap} /></div>
         <div className={style.text}>
@@ -24,7 +26,10 @@ return <div className={style.headerWrapper}>
     <div className={style.headerActions}>
         <div className={style.searchlogo}><Search/>Поиск <span> | </span></div>
         <div className={style.searchlogo}> <Man/>Boйти <span> | </span></div>
-        <span>Корзина </span> <div className={style.productCount}>0</div>
+        <Link to="/basket" >
+            <span>Корзина </span>
+        </Link>
+         <div className={style.productCount}>0</div>
         <button onClick={handleClick} ><Menu/>
         </button>
     </div>
