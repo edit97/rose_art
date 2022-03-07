@@ -4,7 +4,7 @@
 .footer{
   width: 100%;
   border: 1px solid #979797;
-  background-color: $greybgColor;
+  background-color: $greyBgcolor;
  @include column;
   align-items: center;
 }
@@ -14,10 +14,88 @@
   height: 260px;
   align-items: center;
   @include spaceBetween;
+  .adress{
+    width: 20%;
+    img{
+      margin-bottom: 15px;
+    }
+    .txt{
+      margin-bottom: 10px;
+      color: $greyColor;
+
+    }
+    .flag{
+      width: 70px;
+      @include spaceBetween;
+      align-items: center;
+    }
+  }
+  .title{
+    font-size: 15px;
+    .arr{
+      display: none;
+    }
+  }
+  .comapny{
+    width: 35%;
+    @include spaceBetween;
+  }
+  .components{
+    color: $greyColor;
+    cursor: pointer;
+    div:hover{
+      color: $pinkColor;
+      transition:none;
+    }
+  }
 }
-.comapny{
-  width: 35%;
-  @include spaceBetween;
+
+.line{
+  width: 100%;
+  border-bottom: 2px solid $greyBrcolor;
+}
+.underLine{
+  border-bottom: 2px solid $greyBrcolor;
+}
+
+.subscribe{
+  width: 32%;
+  .sub{
+    width: 100%;
+    margin: 12px 0;
+    span{
+      color: $greyColor;
+    }
+  }
+  .scribe{
+    width: 100%;
+    height: 40px;
+    display: flex;
+    .input{
+      width: 70%;
+      height: 100%;
+      border: 0;
+      outline: none;
+      input::placeholder{
+        color: $greyColor;
+      }
+    }
+    .btn{
+      width: 30%;
+      height: 100%;
+      background-color: $firstColor;
+      border: 0;
+      color: white;
+    }
+  }
+  .follow{
+    @include spaceBetween;
+    align-items: baseline;
+    .icons{
+      width: 100px;
+      @include spaceBetween;
+    }
+  }
 }
 .date{
   width: $contentWidth;
@@ -29,81 +107,6 @@
     color: $greyColor;
   }
 }
-.line{
-  width: 100%;
-  border-bottom: 2px solid $greyborderColor;
-}
-.underLine{
-  border-bottom: 2px solid $greyborderColor;
-}
-.follow{
-  height: 40px;
-  @include spaceBetween;
-  align-items: baseline;
-}
-.title{
-  font-size: 15px;
-}
-.sub{
-  width: 100%;
-  margin: 12px 0;
-  span{
-    color: $greyColor;
-  }
-}
-.adress{
-  width: 20%;
-  img{
-    margin-bottom: 15px;
-  }
-  .txt{
-    margin-bottom: 10px;
-    color: $greyColor;
-  }
-}
-.subscribe{
-  width: 32%;
-}
-.components{
-  color: $greyColor;
-  cursor: pointer;
-  div:hover{
-    color: $pinkColor;
-  }
-}
-.btn{
-  width: 30%;
-  height: 100%;
-  background-color: $ferstColor;
-  border: 0;
-  color: white;
-}
-.input{
-  width: 70%;
-  height: 100%;
-  border: 0;
-  outline: none;
-  input::placeholder{
-    color: $greyColor;
-  }
-}
-.arr{
-  display: none;
-}
-.scribe{
-  width: 100%;
-  height: 40px;
-  display: flex;
-}
-.icons{
-  width: 100px;
-  @include spaceBetween;
-}
-.flag{
-  width: 70px;
-  @include spaceBetween;
-  align-items: center;
-}
 .responsivLine{
   display: none;
 }
@@ -114,38 +117,48 @@
  .footer{
    width: 100%;
  }
+  .date{
+    width: 100%;
+    padding: 20px;
+  }
   .aboutUs{
     margin-top: 280px;
     width: 100%;
     padding: 20px;
     display: flex;
     flex-direction: column-reverse;
+    .comapny{
+      width: 100%;
+      @include column;
+    }
+    .subscribe{
+      width: 100%;
+      display: flex;
+      flex-direction: column-reverse;
+    }
+    .iconComapny{
+      svg{
+        fill: none;
+      }
+    }
+    .follow{
+      height: 70px;
+    }
+    .title{
+      height: 70px;
+      @include spaceBetween;
+      align-items: center;
+    }
   }
-  .subscribe{
-    width: 100%;
-    display: flex;
-    flex-direction: column-reverse;
-  }
-  .comapny{
-    width: 100%;
-   @include column;
-  }
+
   .responsivLine{
     display: flex;
-    border-bottom: 1px solid $greyborderColor;
+    border-bottom: 1px solid $greyBrcolor;
   }
   .underLine{
     display: none;
   }
-  .date{
-    width: 100%;
-    padding: 20px;
-  }
-  .title{
-    height: 70px;
-    @include spaceBetween;
-    align-items: center;
-  }
+
   .sub{
     display: none;
   }
@@ -165,14 +178,7 @@
   .components{
     display: none;
   }
-  .iconComapny{
-    svg{
-      fill: none;
-    }
-  }
-  .follow{
-    height: 70px;
-  }
+
 }
 @media screen and (max-width: 600px){
     .date{

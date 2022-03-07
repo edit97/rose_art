@@ -1,8 +1,8 @@
 import {Rose1,Rose2,Rose3,Rose4,Delete,Pluse,Minuse} from "../../assets/imeges";
-import style from "./basket.module.scss";
+import style from "./products.module.scss";
 import {Link} from "react-router-dom";
 
-function Basket() {
+function Products() {
     return(
     <div className={style.products}>
         <div className={style.nav}>Home  /    All rose   /  Rose spray  /  My cart</div>
@@ -17,8 +17,8 @@ function Basket() {
                         </div>
                         <div className={style.delet}>
                             <div className={style.number}><Minuse/><span>1</span><Pluse/></div>
-                            <div className={style.price}>13900֏ </div>
-                            <div className={style.icon}><Delete/></div>
+                                <div className={style.price}>13900֏ </div>
+                                <div className={style.icon}><Delete/></div>
                         </div>
                     </div>
                     <div className={style.blok}>
@@ -64,29 +64,35 @@ function Basket() {
                 </div>
                 <div className={style.remov}> Clear All Product</div>
             </div>
-            <div className={style.order}>
                 <div className={style.summery}>
                     <h1 className={style.name}>Order summary</h1>
                     <div className={style.orderPlace}>
                         <div className={style.amount}><span>All products </span>
-                            <span className={style.line}></span><p>3 product</p></div>
+                            <span className={style.line}></span><p>3 product</p>
+                        </div>
                         <div className={style.amount}><span>Order amount</span>
-                            <span className={style.line}></span><p>36900 ֏</p></div>
+                            <span className={style.line}></span><p>36900 ֏</p>
+                        </div>
                         <div className={style.amount}><span>Shoping</span>
-                            <span className={style.line}></span><p className={style.colorRed}>Free</p></div>
+                            <span className={style.line}></span><p className={style.colorRed}>Free</p>
+                        </div>
                         <div className={style.amount}><span>Discound</span>
-                            <span className={style.line}></span><p className={style.colorRed}>-6900 ֏</p></div>
+                            <span className={style.line}></span><p className={style.colorRed}>-6900 ֏</p>
+                        </div>
                         <div className={style.totalPrice}><span>Total Price</span>
-                            <span className={style.line}></span><span>26900 ֏</span></div>
-                        <button className={style.btnOrder}>PLACE AN ORDER</button>
+                            <span className={style.line}></span><span>26900 ֏</span>
+                        </div>
+                        <Link to={"/order"}>
+                            <button className={style.btnOrder}>PLACE AN ORDER</button>
+                        </Link>
                         <div className={style.txt}>If there are products in the order, on which there is
                             a promotion, the final value will be confirmed after
-                            the order by the employee of theorganization.</div>
+                            the order by the employee of theorganization.
+                        </div>
                     </div>
                 </div>
-            </div>
         </div>
     </div>
     )
 }
-export default { Basket};
+export default Products;

@@ -1,15 +1,13 @@
 import Header from '../components/header/Header';
-import { Routes,Route, Link} from 'react-router-dom';
 import style from "./layauot.module.scss"
-import Main from "../components/main/Main";
-import List from "../components/list/List";
-import Offer from "../components/offer/Offer";
-import Contact from "../components/contact/Contact";
 import Footer from "../components/footer/Footer";
-// import Products from "../components/products/Basket"
+import {Routes,Route} from "react-router-dom";
+import Homepage from "./homepage/Homepage";
+import Basket from "./basket/Basket";
+import BasketOrder from "./basket/BasketOrder";
 
 /*
-* todo
+*  todo
 *  container-ի մեջ պետքե գրել առանձին էջերը
 *  component-ում էջի հատվածներ
 *  կոմպոնենտները դասավորել ճիշտ folder-ներում
@@ -19,11 +17,11 @@ function   Layauot () {
     return (
     <div className={style.layauot}>
         <Header/>
-        <Main/>
-        <List/>
-        <Offer/>
-        <Contact/>
-        {/*<Products/>*/}
+            <Routes>
+                <Route path={"/"} element={<Homepage/>}/>
+                <Route path={"/basket"} element={<Basket/>}/>
+                <Route path={"/order"} element={<BasketOrder/>}/>
+            </Routes>
         <Footer/>
     </div>
     )

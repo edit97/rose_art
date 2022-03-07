@@ -9,16 +9,19 @@ todo
  4. hover-ի ժամանակ տալ transition
  բացի 1-ից բոլոր կետերը ուղել մնացած բոլոր կոմպոնենտներում
 */
-
+.headerWrapper{
+    width: $contentWidth;
+    margin: 0 auto;
+}
 .header{
     width:$contentWidth;
     margin: 0 auto;
     height: 70px;
     @include spaceBetween;
     align-items: center;
-}
-.dropdown{
-    display: none;
+    .dropdown{
+        display: none;
+    }
 }
 .burgerMenu{
     display: none;
@@ -30,11 +33,9 @@ todo
      2․ height-ը նաել դիզայնով
      3. align-items: baseline; ինչի՞
     */
-    cursor: pointer;
     width: 70%;
     height: 70px;
-    display: flex;
-    align-items: baseline;
+    @include itemsCenter;
     .text{
         width: 60%;
         height: 100%;
@@ -45,38 +46,56 @@ todo
             todo
             height էստեղ պետք չի ֆիքսել
             */
-            height: 70px;
+            cursor: pointer;
+            height: 100%;
             @include aline-items;
             margin-left: 20px;
             border-bottom:transparent solid 3px;
         }
         :hover{
-            border-bottom: $ferstColor solid 3px;
+            border-bottom: $firstColor solid 3px;
+            transition: inherit;
         }
+    }
+    .whiteLogo{
+        display: none;
     }
 }
 .headerActions{
-    width: 30%;
+    width: 35%;
     @include aline-items;
     justify-content: flex-end;
     button{
         display: none;
     }
     div{
+        cursor: pointer;
+        margin: 14px;
         height: 100%;
-        display: flex;
+        @include spaceBetween;
         svg{
-            width: 20px;
             height: 20px;
             margin-right: 10px;
+            :hover{
+                path{
+                    fill: $firstColor;
+                }
+            }
         }
+        //.comehLogo{
+        //    svg:hover{
+        //        path{
+        //            fill: $firstColor;
+        //        }
+        //    }
+        //}
         span{
             margin: 0 10px;
         }
     }
 
     .productCount{
-        background-color:$ferstColor;
+        background-color:$firstColor;
         display: flex;
         justify-content: center;
         margin-left: 10px;
@@ -87,22 +106,20 @@ todo
         border-radius: 50%;
 
     }
+    .basket{
+        margin: 14px;
+        color: black;
+    }
 }
-.whiteLogo{
-    display: none;
-}
-.searchWrapper{
-    align-items: center;
-    width: 40%;
-    height: 100%;
-}
+
+
 
 @media screen and(max-width: 1024px){
     .header{
         width: 100%;
         @include itemsCenter;
         color: white;
-       background-color: $ferstColor;
+       background-color: $firstColor;
        position: fixed;
         z-index: 8;
         top: 0;
@@ -122,57 +139,53 @@ todo
             width: 200px;
             height: 75px;
             @include aline-items;
-    }
+        }
         .text{
             display: none;
         }
-}
+    }
     .menu{
        @include widthHeight;
         cursor: pointer;
         position: fixed;
         z-index: 8;
         top: 70px;
-    }
-    .opacity{
-        width: calc(100% - 300px);
-        height: calc(100vh - 70px);
-        position: fixed;
-        background-color: black;
-        opacity: 0.4;
-    }
-    .dropdown{
-        width: 300px;
-        margin-left: auto;
-        height: calc(100vh - 70px);
-       @include column;
-        justify-content: right;
-        background-color: $ferstColor;
-        color: white;
-        div{
-            width: 80px;
-            height: 30px;
-            margin: 10px;
+        .overlay{
+            width: calc(100% - 300px);
+            height: calc(100vh - 70px);
+            position: fixed;
+            background-color: black;
+            opacity: 0.4;
+        }
+        .dropdown{
+            width: 300px;
             margin-left: auto;
+            height: calc(100vh - 70px);
+            @include column;
+            justify-content: right;
+            background-color: $firstColor;
+            color: white;
+            div{
+                width: 80px;
+                height: 30px;
+                margin: 10px;
+                margin-left: auto;
+                svg{
+                    width: 15px;
+                    height: 15px;
+                    margin-right: 5px;
+                }
+            }
+        }
+        .search{
             svg{
-                width: 15px;
-                height: 15px;
-                margin-right: 5px;
+                path{
+                    fill: white;
+                }
             }
         }
     }
-    .searchlogo{
-        path{
-            fill: white;
-        }
-    }
-    .search{
-        svg{
-            path{
-                fill: white;
-            }
-        }
-    }
+
     .headerActions{
         width: calc(100% - 300px);
         display: flex;
@@ -189,19 +202,28 @@ todo
             display: flex;
             margin: 20px;
             border: 0;
-            background-color: $ferstColor;
+            background-color: $firstColor;
+        }
+        .searchLogo{
+            path{
+                fill: white;
+            }
+        }
+        .basket{
+            color: white;
         }
     }
+
     .burgerMenu {
         display: none;
     }
-
 }
 @media screen and (max-width: 700px){
     .header{
         width: 100%;
         @include spaceBetween;
-        background-color: $ferstColor;
+        background-color: $firstColor;
+
     }
     .headerActions{
         display: none;
@@ -209,7 +231,7 @@ todo
     .burgerMenu{
             cursor: pointer;
             border: 0;
-            background-color: $ferstColor;
+            background-color: $firstColor;
             display: flex;
             margin: 20px;
         svg{

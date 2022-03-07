@@ -1,0 +1,206 @@
+@import "../../assets/styles/mixins";
+@import "../../assets/styles/varieibls";
+
+.products{
+  width: $contentWidth;
+  @include column;
+  margin: 0 auto;
+  padding:40px 0;
+}
+.nav{
+  width: 300px;
+  @include spaceBetween;
+  color: $lightColor;
+  margin-bottom: 30px;
+}
+.product{
+  width: 100%;
+  @include spaceBetween;
+}
+.group{
+  width:100% ;
+  @include column;
+  border: 1px solid $lightColor;
+  .total{
+    @include column;
+    .blok{
+      @include spaceBetween;
+      border-bottom: 1px solid $lightColor;
+      height: 86px;
+      width: 100%;
+      .rose{
+        width: 34%;
+        @include itemsCenter;
+        @include spaceBetween;
+        svg{
+          margin-left: 20px;
+          width: 60px;
+          height: 60px;
+        }
+        .text{
+          width: 160px;
+          font-weight: bold;
+          span{
+            color: #A7A7A7;
+            text-decoration:line-through;
+            margin-left: 4px;
+          }
+        }
+      }
+      .delet{
+        width: 50%;
+        @include spaceBetween;
+        @include itemsCenter;
+        margin-right: 10px;
+        .number{
+          background-color: $greyBgcolor;
+          width: 140px;
+          height: 40px;
+          @include itemsCenter;
+          padding: 10px;
+          span{
+            width: 100%;
+            display: flex;
+            justify-content: space-around;
+            font-weight: bold;
+            font-size: 18px;
+          }
+        }
+        .price{
+          color: $firstColor;
+        }
+        .icon{
+          font-size: 12px;
+          cursor: pointer;
+          svg:hover{
+              path{
+                fill: $redColor;
+              }
+            }
+
+        }
+
+      }
+  }
+}
+
+  .remov{
+    margin-left: auto;
+    color: $redColor;
+    padding: 30px;
+    cursor: pointer;
+  }
+}
+
+
+.summery{
+  height: 500px;
+  @include column;
+
+  border: 1px solid $lightColor;
+  background-color: $greyBgcolor;
+  .name{
+    font-size: 15px;
+    padding: 20px 20px 0;
+  }
+  .orderPlace{
+    width: 340px;
+    height: 360px;
+    margin: 20px;
+    padding: 30px 0;
+    background-color: white;
+    @include column;
+    align-items: center;
+    .amount{
+      width: 280px;
+      height: 40px;
+      @include spaceBetween;
+      span{
+        color: $greyColor;
+      }
+    }
+
+    .totalPrice{
+      width: 280px;
+      @include spaceBetween;
+      margin-bottom: 30px;
+      font-weight: bold;
+    }
+    //.line{
+    //  border: dotted 1px $greyColor;
+    //}
+    p{
+      font-weight: bold;
+    }
+    .colorRed{
+      color: $firstColor;
+    }
+  }
+  .btnOrder{
+    cursor: pointer;
+    width: 280px;
+    height: 46px;
+    background-color: $firstColor;
+    border: 0;
+    color: white;
+  }
+  .txt{
+    width: 280px;
+    color: $greyColor;
+    font-size: 10px;
+    margin-top: 20px;
+  }
+}
+@media screen  and (max-width: 1024px){
+.products{
+  width: 100%;
+  @include column;
+  margin: 0 auto;
+  padding: 20px;
+}
+  .product{
+    width: 100%;
+    @include column;
+    .group{
+      width: 100%;
+      .blok{
+        width: 100%;
+        .text{
+          height: 40px;
+          overflow: hidden;
+        }
+      }
+    }
+    .summery{
+      width: 100%;
+      @include itemsCenter;
+    }
+
+  }
+
+}
+@media screen and (max-width: 700px){
+  .summery{
+    width: 100%;
+    @include itemsCenter;
+    .orderPlace{
+      width: 100%;
+      .amount{
+        width: 100%;
+        @include spaceBetween;
+        padding: 10px;
+      }
+      .totalPrice{
+        width: 100%;
+        @include spaceBetween;
+        padding: 10px;
+      }
+      .btnOrder{
+        width: 100%;
+      }
+      .txt{
+        display: none;
+      }
+    }
+  }
+}

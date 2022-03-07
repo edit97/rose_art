@@ -11,13 +11,7 @@ todo
   align-items: center;
  @include widthHeight;
 }
-.bgkGray{
-  background-color: $secColor;
-  width: calc(100% - 400px);
-  height: 100%;
-  position: absolute;
-  z-index: -1;
-}
+
 .product{
  width: 100%;
   @include spaceBetween;
@@ -35,6 +29,13 @@ todo
           justify-content: flex-end;
         }
     }
+  .bgkGray{
+    background-color: $secondColor;
+    width: calc(100% - 400px);
+    height: 100%;
+    position: absolute;
+    z-index: -1;
+  }
 }
 .mainText{
   width:80%;
@@ -44,18 +45,19 @@ todo
     button{
       width: 120px;
       height: 40px;
-     background-color: $ferstColor;
+     background-color: $firstColor;
       margin-top: 20px;
       border: 0;
       color: white;
     }
     .aniText{
+      font-size: $secFontsize;
       width: 60%;
     }
 }
 .title{
   width: 70%;
- font-size: 50px;
+ font-size: $fontSize;
   margin-bottom: 20px;
 }
 .roseImg{
@@ -66,31 +68,34 @@ todo
 .about{
   width: 100%;
   height: 650px;
-}
-.bgkRed{
-  background-color: $ferstColor;
-  width: 100%;
-  height:400px;
-}
-.more{
-  width: $contentWidth;
-  height: 100%;
-  margin: 0 auto;
-  display: flex;
-  color: white;
-  .roseArt{
-    @include widthHeight;
-    img{
-      width: 500px;
-      height: 590px;
+  .bgkRed{
+    background-color: $firstColor;
+    width: 100%;
+    height:400px;
+    .more{
+      width: $contentWidth;
+      height: 100%;
+      margin: 0 auto;
+      display: flex;
+      color: white;
+      .roseArt{
+        @include widthHeight;
+        img{
+          width: 500px;
+          height: 590px;
+        }
+      }
     }
   }
 }
+
+
 .text{
   @include widthHeight;
-  margin:40px 0 0 30px;
+  margin:0 0 0 30px;
+  font-size: $secFontsize;
   h1{
-    font-size: 40px;
+    font-size: $fontSize;
     color: white;
   }
   button{
@@ -145,6 +150,7 @@ todo
   img{
     display: none;
   }
+
 }
 @media screen and (max-width: 700px){
   .product{
@@ -169,23 +175,24 @@ todo
 
 }
 @media screen  and (max-width: 1024px){
-  .about{
-    width: 100%;
-    height: 870px;
-  }
   .main{
     width: 100%;
   }
-  .bgkRed{
+  .about{
     width: 100%;
-    height: 420px;
-    @include itemsCenter;
+    height: 870px;
+    .bgkRed{
+      width: 100%;
+      height: 420px;
+      @include itemsCenter;
+      .more{
+        width:100%;
+        align-items: center;
+        @include column;
+      }
+    }
   }
-  .more{
-    width:100%;
-    align-items: center;
-    @include column;
-  }
+
   .roseArt{
     img{
       display: none;
@@ -197,6 +204,10 @@ todo
     padding: 20px;
     margin: 0 auto;
     @include column;
+    button{
+      display: flex;
+      justify-content: flex-start;
+    }
   }
 
   .art{

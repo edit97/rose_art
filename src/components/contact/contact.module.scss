@@ -15,75 +15,74 @@
   todo
    padding-top տալ էստեղ
   */
-  width: 60%;
+  width: 50%;
   height: 100%;
-  margin-top: auto;
+  padding-top: 0;
   position: relative;
   display: flex;
   justify-content: flex-end;
-}
-.bgkRed{
-  width:70%;
-  height: 300px;
-  margin-top: auto;
-  background-color: $ferstColor;
-}
-.adress{
-  color: white;
-  position: absolute;
-  bottom: 24px;
-  right: 20px;
-}
-.map{
-  width: 90%;
-  height: calc(100% - 100px);
-  display: flex;
-  justify-content: right;
-  position: absolute;
-  top:30px;
-  left: 0;
-  img{
-    @include widthHeight;
+  .bgkRed{
+    width:64%;
+    height: 300px;
+    margin-top: auto;
+    background-color: $firstColor;
+    .adress{
+      color: white;
+      position: absolute;
+      bottom: 24px;
+      right: 20px;
+    }
   }
+  .map{
+    width: 90%;
+    height: calc(100% - 100px);
+    display: flex;
+    justify-content: right;
+    position: absolute;
+    top:30px;
+    left: 0;
+    img{
+      @include widthHeight;
+    }
 
+  }
 }
+
 .registration{
   width: 30%;
   height: 430px;
   padding-top: 20px;
   @include column;
   margin-left: calc((100vw - #{$contentWidth}) / 2);
+  .blok{
+    background-color: transparent;
+    border: 0;
+    outline: none;
+    border-bottom: 2px solid $grColor;
+    color: $grColor;
+    height: 70px;
+    cursor: pointer;
+  }
+  .blok:focus{
+    border-bottom: 2px solid $blackColor;
+  }
+  .blok:focus::placeholder{
+    color: $blackColor;
+    outline: none;
+    background-color: transparent;
+  }
+  .btn{
+    width: 120px;
+    height: 40px;
+    background-color: $firstColor;
+    margin-top: 20px;
+    border: 0;
+    color: white;
+  }
+
 }
-.btn{
-  width: 120px;
-  height: 40px;
-  background-color: $ferstColor;
-  margin-top: 20px;
-  border: 0;
-  color: white;
-}
-.name{
-  color: $blackColor;
-  height: 70px;
-  margin-top: 30px;
-}
-.blok{
-  background-color: transparent;
-  border: 0;
-  outline: none;
-  border-bottom: 2px solid $grColor;
-  color: $grColor;
-  height: 70px;
-  cursor: pointer;
-}
-.blok:focus{
-  border-bottom: 2px solid $blackColor;
-}
-.blok:focus::placeholder{
-  color: $blackColor;
-  outline: none;
-  background-color: transparent;
-}
+
+
 @media screen and (max-width: 1024px) {
   .contact {
     @include widthHeight;
@@ -100,8 +99,9 @@
   .bloks {
     padding-top: 40px;
     width: 100%;
+    .bgkRed{
+      width: calc(100% - 150px);
+    }
   }
-  .bgkRed{
-    width: calc(100% - 150px);
-  }
+
 }

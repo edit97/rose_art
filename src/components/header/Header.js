@@ -1,5 +1,5 @@
 import React, {useState} from "react";
-import {Bitmap,Man,Search,Menu,BitmapWhite } from "../../assets/imeges";
+import {Bitmap,Man,Search,Menu,BitmapWhite,IconMan } from "../../assets/imeges";
 import style from "./header.module.scss";
 import {Link} from "react-router-dom";
 
@@ -12,8 +12,10 @@ function  Header() {
 return <div className={style.headerWrapper}>
     <div className={style.header}>
     <div className={style.navigation}>
-        <div className={style.whiteLogo}><img src={BitmapWhite} /></div>
-        <div className={style.logo}><img src={Bitmap} /></div>
+        <Link to={"/"}>
+            <div className={style.whiteLogo}><img src={BitmapWhite} /></div>
+            <div className={style.logo}><img src={Bitmap} /></div>
+        </Link>
         <div className={style.text}>
             <div>Главный</div>
             <div>О нас</div>
@@ -30,11 +32,11 @@ return <div className={style.headerWrapper}>
                      className={style.opacity} անունը overlay
                      <Man/> ուզել սև գույնով և փոխել, գույնը փոխել hover-ի ժամանակ
                 */}
-        <div className={style.searchlogo}><Search/>Поиск <span> | </span></div>
-        <div className={style.searchlogo}> <Man/>Boйти <span> | </span></div>
-        {/*<Link to="/basket" >*/}
-            <span>Корзина </span>
-        {/*</Link>*/}
+        <div className={style.searchLogo}><Search/>Поиск </div><span> | </span>
+        <div className={style.comehLogo}> <IconMan/>Boйти </div><span> | </span>
+        <Link to="/basket" >
+            <span className={style.basket}>Корзина </span>
+        </Link>
          <div className={style.productCount}>0</div>
         <button onClick={handleClick} ><Menu/>
         </button>
@@ -43,16 +45,20 @@ return <div className={style.headerWrapper}>
         </button>
 </div>
     {click && <div className={style.menu}>
-        <div className={style.opacity}></div>
+        <div className={style.overlay}></div>
         <div className={style.dropdown}>
-        <div>Главный</div>
+            <Link to={"/"}>
+                <div>Главный</div>
+            </Link>
         <div>О нас</div>
         <div>Контакт</div>
         <div>Продукт</div>
         <div>Перевозки</div>
         <div className={style.search}><Search/> Поиск</div>
         <div className={style.manicon}><Man/>Boйти</div>
-        <div>Корзина</div>
+            <Link to={"/basket"}>
+                <div>Корзина</div>
+            </Link>
     </div>
     </div>}
 </div>

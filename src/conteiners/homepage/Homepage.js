@@ -1,14 +1,17 @@
-import {Routes,Route} from "react-router-dom";
 import style from "./homepage.module.css";
-import {Basket} from "../../components/products/Basket";
+import ProductList from "../../components/productList/ProductList";
+import Main from "../../components/main/Main";
+import Offer from "../../components/offer/Offer";
+import Contact from "../../components/contact/Contact";
 
 
 function Homepage() {
     return (
     <div className={style.homepage}>
-    <Routes>
-        <Route path="/basket" element={<Basket/>}/>
-    </Routes>
+        <Main/>
+        <ProductList/>
+        <Offer/>
+        <Contact/>
     </div>
     )
 }

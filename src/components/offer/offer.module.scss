@@ -41,6 +41,11 @@
     @include itemsCenter;
     border: 0;
     background-color: transparent;
+    svg{
+      width: 10px;
+      height: 10px;
+      margin-left: 4px;
+    }
   }
 }
 .work{
@@ -75,7 +80,7 @@
 .sale{
   width: 32%;
   height: 240px;
-  background-color: $ferstColor;
+  background-color: $firstColor;
   @include column;
   color: white;
 }

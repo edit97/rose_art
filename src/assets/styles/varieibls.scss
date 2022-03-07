@@ -1,11 +1,15 @@
 :root {
   --contentWidth: 1440px;
   --ferstColor:#A7093C;
-  --secColor:#F6F6F6
+  --secColor:#F6F6F6;
+  --fontSize:60px;
+  --secFontsize:15px;
 }
 
 
 $contentWidth:var(--contentWidth);
+$fontSize:var(--fontSize);
+$secFontsize:var(--secFontsize);
 
 /*
 todo
@@ -14,13 +18,13 @@ camelCase պահել
 */
 
 //-------Color-------
-$ferstColor:var(--ferstColor);
-$secColor:var(--secColor);
+$firstColor:var(--ferstColor);
+$secondColor:var(--secColor);
 $whiteColor:#F8F8F8;
-$liteColor:#C3C3C3;
+$lightColor:#C3C3C3;
 $greyColor:#767E8F;
-$greybgColor:#F3F4F6;
-$greyborderColor:#B9BCCF;
+$greyBgcolor:#F3F4F6;
+$greyBrcolor:#B9BCCF;
 $grColor:#B3B3B3;
 $pinkColor:#A6398E;
 $blackColor:#171A1E;
@@ -28,11 +32,18 @@ $greenColor:#07D148;
 $redColor:#FF4E4E;
 
 
-
+@media (max-width: 1540px) {
+  :root {
+    --fontSize: 54px;
+    --secFontsize: 26px;
+  }
+}
 
 @media (max-width: 1500px){
   :root {
     --contentWidth: 1200px;
+    --fontSize: 50px;
+    --secFontsize: 16px;
   }
 }
 @media (max-width: 1240px){
@@ -43,5 +54,6 @@ $redColor:#FF4E4E;
 @media (max-width: 1140px){
   :root {
     --contentWidth: 1000px;
+    --secFontsize: 14px;
   }
 }

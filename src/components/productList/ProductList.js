@@ -1,13 +1,13 @@
 import {Rose1,Rose2,Rose3,Rose4,Heart,Basket } from "../../assets/imeges";
-import style from "./list.module.scss"
+import style from "./productList.module.scss"
 import React from "react";
 
 /*
 * todo
-*  1․ փոխել կոմպոնենտի անունը ProductList-ի
+*  1․ փոխել կոմպոնենտի անունը -ի
 *  2․ առանձնացնել ProductCard-ը
 * */
-function List() {
+function ProductList() {
     return <div className={style.list}>
         <div className={style.header}>
             <h1>Новая коллекция</h1>
@@ -85,5 +85,5 @@ function List() {
         </div>
     </div>
 }
-export default List
+export default ProductList
 

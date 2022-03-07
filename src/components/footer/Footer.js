@@ -6,7 +6,7 @@ function Footer(){
     return <div className={style.footer}>
         <div className={style.aboutUs}>
             <div className={style.adress}>
-              <img src={Bitmap} alt=""/>
+              <img src={Bitmap} alt="logo"/>
                 <div className={style.place}>
                     <h1 className={style.title}>Address</h1>
                     <div className={style.txt}>Margaryan 1st alley 4/2 building Yerevan Armenia</div>

@@ -12,8 +12,8 @@ export {default as RoseWhite} from "./icons/Rose-white.png";
 export {default as Map} from "./icons/map.png";
 
  export {ReactComponent as Man} from "./icons/MAN.svg";
- export {ReactComponent as Search} from "./icons/ic_search.svg"
- export {ReactComponent as Menu} from "./icons/menu.svg"
+ export {ReactComponent as Search} from "./icons/icon-search.svg"
+export {ReactComponent as Menu} from "./icons/menu.svg"
 export {ReactComponent as Rose1} from "./icons/Bitmap-1.svg"
 export {ReactComponent as Rose2} from "./icons/Bitmap-2.svg"
 export {ReactComponent as Rose3} from "./icons/Bitmap-3.svg"
@@ -31,6 +31,8 @@ export {ReactComponent as Arr} from "./icons/arr-icon.svg"
 export {ReactComponent as Delete} from "./icons/ic_close.svg"
 export {ReactComponent as Minuse} from "./icons/ic-mines.svg"
 export {ReactComponent as Pluse} from "./icons/ic-pluse.svg"
+export {ReactComponent as See} from "./icons/ic-slek.svg"
+export {ReactComponent as IconMan} from "./icons/icon-man.svg"
 
 
 

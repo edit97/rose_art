@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="15px" height="15px" viewBox="0 0 15 15" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>SE</title>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="new-copy-2" transform="translate(-1037.000000, -42.000000)">
+            <g id="Group-18" transform="translate(100.000000, 29.000000)">
+                <g id="SE" transform="translate(935.000000, 11.000000)">
+                    <circle id="Oval" cx="8.49975" cy="8.49975" r="6.24975"></circle>
+                    <circle id="Oval" stroke="#333333" stroke-width="1.6" stroke-linecap="round" cx="8.49975" cy="8.49975" r="5.49975"></circle>
+                    <line x1="12.92625" y1="12.92625" x2="15.5865" y2="15.375" id="Line_1" stroke="#333333" stroke-width="1.6" stroke-linecap="square"></line>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
