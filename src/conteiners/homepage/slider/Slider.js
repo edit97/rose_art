@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import Slider from "3";
+import Slider from "react-slick";
 
 export default class MainSlider extends Component {
     render() {

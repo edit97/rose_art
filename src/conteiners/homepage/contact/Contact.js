@@ -1,4 +1,4 @@
-import {Map} from "../../assets/imeges";
+import {Map} from "../../../assets/imeges";
 import style from "./contact.module.scss";
 
 function Contact (){

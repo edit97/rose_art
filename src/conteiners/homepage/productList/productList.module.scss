@@ -1,0 +1,70 @@
+@import "../../../assets/styles/mixins";
+@import "../../../assets/styles/varieibls";
+
+.list{
+  width:$contentWidth;
+  height: 100%;
+  margin: 0 auto;
+  .slider{
+    @include widthHeight;
+    display: flex;
+    margin-top: 30px;
+
+  }
+}
+
+
+.more{
+  display: none;
+}
+@media screen and (max-width: 1024px){
+    .list{
+      @include widthHeight;
+      margin: 0 auto;
+      .header{
+        @include widthHeight;
+        padding: 20px;
+        @include spaceBetween;
+        align-items: baseline;
+        .more{
+          @include itemsCenter;
+          color: $firstColor;
+          font-size: 20px;
+        }
+      }
+      .slider{
+        @include widthHeight;
+        padding: 20px;
+        .blok4{
+          display: none;
+        }
+      }
+    }
+
+
+}
+@media screen and (max-width: 840px){
+  .blok3{
+    display: none;
+  }
+  .blok,.blok1,.blok2{
+    margin: 0 auto;
+  }
+}
+@media screen and(max-width: 640px){
+
+  .slider{
+  @include spaceBetween;
+  }
+  .blok2{
+    display: none;
+  }
+}
+@media screen and (max-width: 440px){
+  .blok1{
+    display:none;
+  }
+  .blok{
+   margin: 0 auto;
+  }
+}

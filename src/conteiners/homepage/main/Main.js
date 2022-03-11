@@ -1,4 +1,4 @@
-import {Lukas,Ready,RoseImg,RoseArt} from "../../assets/imeges";
+import {Lukas,Ready,RoseImg,RoseArt} from "../../../assets/imeges";
 import style from "./main.module.scss";
 
 function Main() {

@@ -1,7 +1,7 @@
-import {Rosers,Rosers1,Rosers2,Rosers3,Group,See} from "../../assets/imeges";
+import {Rosers,Rosers1,Rosers2,Rosers3,Group,See} from "../../../assets/imeges";
 import style from "./offer.module.scss";
-import RoseSlider from "../roseSlider/RoseSlider";
-import RoseGroup from "../roseGroup/RoseGroup";
+import RoseSlider from "../../../components/roseSlider/RoseSlider";
+import RoseGroup from "../../../components/roseGroup/RoseGroup";
 
 function Offer(){
     return <div className={style.offer}>

@@ -1,4 +1,4 @@
-import style from "../offer/offer.module.scss";
+import style from "../../conteiners/homepage/offer/offer.module.scss";
 import {Rosers1, Rosers2, Rosers3, See} from "../../assets/imeges";
 
 function RoseGroup(){

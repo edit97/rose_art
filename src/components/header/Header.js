@@ -33,7 +33,7 @@ return <div className={style.headerWrapper}>
                      <Man/> ուզել սև գույնով և փոխել, գույնը փոխել hover-ի ժամանակ
                 */}
         <div className={style.searchLogo}><Search/>Поиск </div><span> | </span>
-        <div className={style.comehLogo}> <IconMan/>Boйти </div><span> | </span>
+        <div className={style.searchLogo}> <IconMan/>Boйти </div><span> | </span>
         <Link to="/basket" >
             <span className={style.basket}>Корзина </span>
         </Link>

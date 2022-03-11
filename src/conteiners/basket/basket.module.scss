@@ -72,7 +72,7 @@
         .icon{
           font-size: 12px;
           cursor: pointer;
-          svg:hover{
+          :hover{
               path{
                 fill: $redColor;
               }
@@ -96,7 +96,6 @@
 .summery{
   height: 500px;
   @include column;
-
   border: 1px solid $lightColor;
   background-color: $greyBgcolor;
   .name{

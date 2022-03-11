@@ -1,0 +1,18 @@
+@import "../../assets/styles/mixins";
+@import "../../assets/styles/varieibls";
+
+.roseSlide{
+  .imgSlider{
+    position: relative;
+  }
+  .sliderText{
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+  }
+  .sliderDots{
+    position: absolute;
+    right: 20px;
+    bottom: 40px;
+  }
+}

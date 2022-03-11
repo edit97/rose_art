@@ -1,0 +1,123 @@
+@import "../../../assets/styles/mixins";
+@import "../../../assets/styles/varieibls";
+
+.basketOrder{
+  width: $contentWidth;
+  @include column;
+  margin: 0 auto;
+  padding:40px 0;
+  .nav{
+    width: 300px;
+    @include spaceBetween;
+    color: $lightColor;
+    margin-bottom: 30px;
+  }
+  .item{
+    width: 100%;
+    @include spaceBetween;
+    margin: 0 auto;
+  }
+}
+.shiping{
+  width: 100%;
+  height: 100%;
+  @include column;
+  border: 1px solid $lightColor;
+  .orderig{
+    width: 720px;
+    padding-top: 20px;
+    margin: 0 auto;
+    .title{
+      font-weight: bold;
+      font-size: 15px;
+      margin-bottom: 10px;
+    }
+    .addres{
+      height: 80px;
+      input{
+        color: $lightColor;
+        border: 1px solid $lightColor;
+        width: 100%;
+        height: 44px;
+      }
+    }
+    .map{
+      width: 720px;
+      height: 290px;
+      img{
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+
+}
+.peymant{
+  width: 34%;
+  height: 100%;
+  @include column;
+  border: 1px solid $lightColor;
+  .peymantTitle{
+    font-size: 15px;
+    font-weight: bold;
+    padding: 20px 20px 0;
+    display: flex;
+    justify-content: flex-start;
+  }
+  .inputItems{
+    width: 340px;
+    height: 460px;
+    margin:0  30px;
+    background-color: white;
+    @include column;
+    align-items: center;
+    .registration{
+      width: 360px;
+      height: 80px;
+      input{
+        width: 100%;
+        color: $lightColor;
+        height: 44px;
+       border: 1px solid $lightColor;
+      }
+      .nameTitle{
+        font-size: 15px;
+        height: 20px;
+        margin-bottom: 10px;
+      }
+
+    }
+    .peymantSistem{
+      width: 100%;
+      display: flex;
+      .paymantInput{
+        margin: 20px;
+      }
+    }
+    .line{
+      width: 100%;
+      border: 1px solid $lightColor;
+    }
+    .btnPayment{
+      cursor: pointer;
+      width: 100%;
+      height: 46px;
+      background-color: $firstColor;
+      border: 0;
+      color: white;
+    }
+    .checkboxValue{
+      margin: 40px 0;
+    }
+  }
+
+}
+@media screen and (max-width: 1024px) {
+  .basketOrder{
+    width: 100%;
+    .item{
+      width: 100%;
+      @include column;
+    }
+  }
+}

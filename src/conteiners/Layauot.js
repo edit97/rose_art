@@ -4,7 +4,7 @@ import Footer from "../components/footer/Footer";
 import {Routes,Route} from "react-router-dom";
 import Homepage from "./homepage/Homepage";
 import Basket from "./basket/Basket";
-import BasketOrder from "./basket/BasketOrder";
+import BasketOrder from "./basket/basketOrder/BasketOrder";
 
 /*
 *  todo
