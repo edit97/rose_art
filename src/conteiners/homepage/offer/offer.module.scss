@@ -1,5 +1,6 @@
 @import "../../../assets/styles/mixins";
 @import "../../../assets/styles/varieibls";
+@import "../../../components/roseSlider/roseslider.module";
 
 .offer{
   width: $contentWidth;
@@ -128,7 +129,8 @@
   width: 38%;
   height: 500px;
   img{
-    @include widthHeight;
+    width: 100%;
+    height: 500px;
   }
 }
 .responsivRose{

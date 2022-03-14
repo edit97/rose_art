@@ -16,21 +16,24 @@ function ProductList() {
         slidesToShow: 5,
         responsive: [
             {
-                breakpoint: 1124,
+                breakpoint: 2400,
                 settings: {
-                    slidesToShow: 4,
-                    // centerPadding: '40px',
+                    slidesToShow: 6,
                 }
             },
             {
-                breakpoint: 960,
+                breakpoint: 1524,
                 settings: {
-                    slidesToShow: 3,
+                    slidesToShow: 5,
+                }
+            },
+            {
+                breakpoint: 1200,
+                settings: {
+                    slidesToShow: 4,
                     infinite: window.innerWidth < 1050,
                     centerMode: window.innerWidth < 1050,
                     centerPadding: ' 60px 0 0',
-                    // centerPadding: '40px',
-
                 }
             },
             {
@@ -40,8 +43,6 @@ function ProductList() {
                     infinite: window.innerWidth < 1050,
                     centerMode: window.innerWidth < 1050,
                     centerPadding: ' 60px 0 0',
-                    // centerMode: false,
-                    // centerPadding: '0 0 80px',
                 }
             },
             {

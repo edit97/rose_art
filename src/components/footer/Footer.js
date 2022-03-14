@@ -1,5 +1,8 @@
 import {Flag,Steps,Facebook,Instagram,Linkedin,Arrow,Bitmap,Arr} from "../../assets/imeges";
 import style from "./footer.module.scss";
+import { Collapse } from 'antd';
+
+const { Panel } = Collapse;
 
 
 function Footer(){
@@ -51,6 +54,41 @@ function Footer(){
                      </div>
                 </div>
             </div>
+            <div className={style.responsivBlok}>
+            <div className={style.responsivCollapse}>
+                <Collapse  defaultActiveKey={['1']} expandIconPosition={'right'} className={'collapseBlock'}>
+                    <Panel  header="Comapny" key="1">
+                        <div className={style.resComponents}>
+                            <div>Home</div>
+                            <div>About</div>
+                            <div>Contact</div>
+                            <div>Blog</div>
+                            <div>Apps</div>
+                            <div>Sine in</div>
+                        </div>
+                    </Panel>
+                    <Panel header="About us" key="2">
+                        <div className={style.resComponents}>
+                            <div>Home</div>
+                            <div>About</div>
+                            <div>Contact</div>
+                            <div>Blog</div>
+                            <div>Apps</div>
+                            <div>Sine in</div>
+                        </div>
+                    </Panel>
+                    <Panel header="Category" key="3">
+                        <div className={style.resComponents}>
+                            <div>Home</div>
+                            <div>About</div>
+                            <div>Contact</div>
+                            <div>Blog</div>
+                            <div>Apps</div>
+                            <div>Sine in</div>
+                        </div>
+                    </Panel>
+                </Collapse>
+            </div>
             <div className={style.subscribe}>
                 <div className={style.responsivLine}></div>
                 <div className={style.follow}>
@@ -75,6 +113,7 @@ function Footer(){
                     <h1 className={style.title}>Subscribe</h1>
                     <span>Subscribe, find out about discounts, deals, new products.</span>
                 </div>
+            </div>
             </div>
         </div>
         <div className={style.line}></div>

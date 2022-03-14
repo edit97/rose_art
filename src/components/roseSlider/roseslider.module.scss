@@ -1,18 +1,25 @@
 @import "../../assets/styles/mixins";
 @import "../../assets/styles/varieibls";
 
-.roseSlide{
-  .imgSlider{
-    position: relative;
-  }
-  .sliderText{
+.firstRose{
+  .textSlider{
     position: absolute;
-    right: 20px;
-    bottom: 20px;
-  }
-  .sliderDots{
-    position: absolute;
-    right: 20px;
-    bottom: 40px;
+    bottom: 30px;
+    color: white;
+    z-index: 10;
+    left: 20px;
+    display: flex;
+    flex-direction: column;
+    .btnSlider{
+      padding-top: 10px;
+      display: flex;
+      align-items: center;
+      svg{
+        margin-left: 10px;
+        polygon{
+          fill: white;
+        }
+      }
+    }
   }
 }

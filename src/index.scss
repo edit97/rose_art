@@ -17,8 +17,30 @@ code {
 .slick-slider{
   width: 100% ;
 }
+.roseSlide{
+  position: relative;
+}
 .sliderDots{
   position: absolute;
   right: 20px;
-  bottom: 40px;
+  bottom: 20px;
+  button{
+    display: none;
+  }
+
+}
+::marker{
+  color:#A7093C;
+}
+.collapseBlock{
+  width: 100%;
+ background-color: #979797;
+}
+.mapBlock{
+  width: 100%;
+  height: 100%;
+  .ymaps-2-1-79-map{
+    width: 100%;
+    height: 100%;
+  }
 }

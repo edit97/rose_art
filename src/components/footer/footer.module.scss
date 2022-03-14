@@ -59,7 +59,7 @@
 }
 
 .subscribe{
-  width: 32%;
+  width: 100%;
   .sub{
     width: 100%;
     margin: 12px 0;
@@ -113,72 +113,79 @@
 .responsivSub{
   display: none;
 }
+.responsivCollapse{
+  display: none;
+}
 @media screen and (max-width: 1024px){
  .footer{
    width: 100%;
+   @include column;
+   .place{
+     display: none;
+   }
+   .adress{
+     display: none;
+   }
+   .underLine{
+     display: none;
+   }
+
+   .sub{
+     display: none;
+   }
+   .components{
+     display: none;
+   }
+   .comapny{
+     display: none;
+     .title{
+       display: none;
+     }
+   }
+   .arr{
+     display: flex;
+   }
+   .aboutUs{
+    @include widthHeight;
+   }
  }
   .date{
     width: 100%;
     padding: 20px;
   }
-  .aboutUs{
-    margin-top: 280px;
-    width: 100%;
-    padding: 20px;
+  .responsivBlok{
     display: flex;
     flex-direction: column-reverse;
-    .comapny{
+    width: 100%;
+    padding: 20px;
+    .responsivCollapse{
+      display: flex;
       width: 100%;
+      color: $greyColor;
+    }
+    .responsivSub{
       @include column;
+      width: 100%;
     }
     .subscribe{
       width: 100%;
       display: flex;
       flex-direction: column-reverse;
     }
-    .iconComapny{
-      svg{
-        fill: none;
-      }
+    .ant-collapse {
+      width: 100%;
     }
     .follow{
       height: 70px;
     }
+    .scribe{
+      height: 50px;
+      margin-top: 16px;
+    }
     .title{
-      height: 70px;
-      @include spaceBetween;
-      align-items: center;
+      margin-top: 20px;
     }
   }
-
-  .responsivLine{
-    display: flex;
-    border-bottom: 1px solid $greyBrcolor;
-  }
-  .underLine{
-    display: none;
-  }
-
-  .sub{
-    display: none;
-  }
-  .responsivSub{
-    height: 150px;
-    @include column;
-  }
-  .arr{
-    display: flex;
-  }
-  .place{
-    display: none;
-  }
-  .adress{
-    display: none;
-  }
-  .components{
-    display: none;
-  }
-
 }
 @media screen and (max-width: 600px){
     .date{
