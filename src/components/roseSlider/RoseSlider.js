@@ -31,10 +31,5 @@ function RoseSlider(){
                 <div className={style.imgSlider}><img src={Rosers} alt=""/></div>
             </div>
         </Slider>
-        {/*
-            todo
-             պետք է լինի առանձին կոմպոնենտ
-            */}
-
     </div>
 } export default RoseSlider

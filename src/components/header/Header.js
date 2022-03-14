@@ -26,11 +26,8 @@ return <div className={style.headerWrapper}>
     </div>
     <div className={style.headerActions}>
         {/*todo
-                    <span> | </span>-ը div-ից դւրս դնել style-երը ուղել
-                    icon-ները նույն չափով դնել
                     սթայլեր գրել className-երով, և անունները ըստ իմաստի
-                     className={style.opacity} անունը overlay
-                     <Man/> ուզել սև գույնով և փոխել, գույնը փոխել hover-ի ժամանակ
+                    օրինակ searchLogo փոխել
                 */}
         <div className={style.searchLogo}><Search/>Поиск </div><span> | </span>
         <div className={style.searchLogo}> <IconMan/>Boйти </div><span> | </span>
@@ -45,7 +42,7 @@ return <div className={style.headerWrapper}>
         </button>
 </div>
     {click && <div className={style.menu}>
-        <div className={style.overlay}></div>
+        <div className={style.overlay}/>
         <div className={style.dropdown}>
             <Link to={"/"}>
                 <div>Главный</div>

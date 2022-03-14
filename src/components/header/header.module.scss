@@ -3,7 +3,6 @@
 
 /*
 todo
- 1. օգտագործել headerWrapper
  2. էլեմենտների սթայլերը կառուցել child-Ը parent-ի մեջ և ըստ հերթականության
  3. ստուգել և բոլոր անհրաժեշտ էլեմենտներին դնել cursor: pointer
  4. hover-ի ժամանակ տալ transition
@@ -29,9 +28,7 @@ todo
 .navigation{
     /*
     todo
-     1․ cursor: pointer; պետք է դնել միայն այն էլեմենտներին որոնք սեղմվում են
-     2․ height-ը նաել դիզայնով
-     3. align-items: baseline; ինչի՞
+     2․ height-ը նաել Փոխել
     */
     width: 70%;
     height: 70px;
@@ -42,10 +39,6 @@ todo
         @include aline-items;
         margin-left: 45px;
         div{
-            /*
-            todo
-            height էստեղ պետք չի ֆիքսել
-            */
             cursor: pointer;
             height: 100%;
             @include aline-items;

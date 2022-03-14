@@ -7,7 +7,7 @@ function RoseGroup(){
             {/*
                     todo
                      1․ պետք է լինի առանձին կոմպոնենտ
-                     2․ посмотреть> սլաքը լինի icon
+                     2․ <See/> Փոխել ArrowRight
                   */}
             <div className={style.rosers}>
                 <img src={Rosers1} alt=""/>

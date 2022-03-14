@@ -6,13 +6,6 @@ import Homepage from "./homepage/Homepage";
 import Basket from "./basket/Basket";
 import BasketOrder from "./basket/basketOrder/BasketOrder";
 
-/*
-*  todo
-*  container-ի մեջ պետքե գրել առանձին էջերը
-*  component-ում էջի հատվածներ
-*  կոմպոնենտները դասավորել ճիշտ folder-ներում
-*  homepage-ի ուղել հիմա դատարկա
-* */
 function   Layauot () {
     return (
     <div className={style.layauot}>

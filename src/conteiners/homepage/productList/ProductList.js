@@ -4,11 +4,6 @@ import React from "react";
 import Slider from "react-slick"
 import ProductCard from "../../../components/uiItem/cards/productcard/ProductCard";
 
-/*
-* todo
-*  1․ փոխել կոմպոնենտի անունը -ի
-*  2․ առանձնացնել ProductCard-ը
-* */
 function ProductList() {
     const settings = {
         dots: false,

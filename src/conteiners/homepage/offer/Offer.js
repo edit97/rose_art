@@ -10,6 +10,10 @@ function Offer(){
                     <RoseSlider/>
                     <RoseGroup/>
             </div>
+        {/*
+        todo
+         տեղաջփոխել <RoseGroup/>-ի մեջ
+        */}
         <div className={style.responsivRose}>
             <img src={Rosers1} alt=""/>
             <div className={style.responsivText}>
