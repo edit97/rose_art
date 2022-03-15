@@ -1,4 +1,4 @@
-import {Rosers,Rosers1,Rosers2,Rosers3,Group,See} from "../../../assets/imeges";
+import {Rosers1,ArrowRight} from "../../../assets/imeges";
 import style from "./offer.module.scss";
 import RoseSlider from "../../../components/roseSlider/RoseSlider";
 import RoseGroup from "../../../components/roseGroup/RoseGroup";
@@ -19,7 +19,7 @@ function Offer(){
             <div className={style.responsivText}>
                 <span>дружелюбно</span>
                 <span className={style.work}>Фотоотчет о ходе</span>
-                <div className={style.responsivBtn}>посмотреть<See/></div>
+                <div className={style.responsivBtn}>посмотреть<ArrowRight/></div>
             </div>
         </div>
     </div>

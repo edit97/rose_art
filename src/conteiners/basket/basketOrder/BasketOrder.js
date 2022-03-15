@@ -1,16 +1,15 @@
-// import {Map} from "../../../assets/imeges";
 import style from "./basketOrder.module.scss"
 import { YMaps, Map, Placemark } from "react-yandex-maps";
 
 function BasketOrder() {
     const mapData = {
-        center: [40.1051, 44.3048],
-        zoom: 10,
+        center: [40.180843465756496,44.51673113111903],
+        zoom: 12,
     };
 
     const coordinates = [
-        [40.1051, 44.3048],
-        [40.1051, 44.3048],
+        [40.180843465756496,44.51673113111903],
+        [40.180843465756496,44.51673113111903],
     ];
 
     return <div className={style.basketOrder}>
@@ -29,8 +28,8 @@ function BasketOrder() {
                     <input type="text" placeholder={"Your addres"}/>
                 </div>
                 <div className={style.map}>
-                    <YMaps>
-                        <Map defaultState={mapData}>
+                    <YMaps className={style.orderMap}>
+                        <Map defaultState={mapData} className={style.yandexMap}>
                             {coordinates.map(coordinate => <Placemark geometry={coordinate} />)}
                         </Map>
                     </YMaps>

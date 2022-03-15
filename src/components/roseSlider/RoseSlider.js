@@ -1,5 +1,5 @@
 import style from "../../conteiners/homepage/offer/offer.module.scss";
-import {Group, Rosers, See} from "../../assets/imeges";
+import {Rosers,ArrowRight} from "../../assets/imeges";
 import Slider from "react-slick"
 
 
@@ -18,7 +18,7 @@ function RoseSlider(){
         <div className={style.textSlider}>
         <span>дружелюбно</span>
         <span className={style.workSlider}>Фотоотчет о ходе</span>
-        <div className={style.btnSlider}>посмотреть<See/></div>
+        <div className={style.btnSlider}>посмотреть<ArrowRight/></div>
     </div>
         <Slider {...settings}>
             <div className={style.roseSlide}>

@@ -1,17 +1,16 @@
-// import {Map} from "../../../assets/imeges";
 import { YMaps, Map, Placemark } from "react-yandex-maps";
 import style from "./contact.module.scss";
 
 function Contact (){
 
     const mapData = {
-        center: [40.1051, 44.3048],
-        zoom: 10,
+        center: [40.180843465756496,44.51673113111903],
+        zoom: 12,
     };
 
     const coordinates = [
-        [40.1051, 44.3048],
-        [40.1051, 44.3048],
+        [40.180843465756496,44.51673113111903],
+        [40.180843465756496,44.51673113111903],
     ];
     return <div className={style.contact}>
             <div className={style.registration}>

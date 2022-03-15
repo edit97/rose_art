@@ -37,7 +37,8 @@
   height: 100%;
   margin-left: calc((100vw - #{$contentWidth}) / 2);
   margin-top: 30px;
-    button{
+  .btnProducts{
+      cursor: pointer;
       width: 120px;
       height: 40px;
      background-color: $firstColor;
@@ -89,11 +90,12 @@
   @include widthHeight;
   margin:0 0 0 30px;
   font-size: $secFontsize;
-  h1{
+  .textTitle{
     font-size: $fontSize;
     color: white;
   }
-  button{
+  .btnText{
+    cursor: pointer;
     border: 0;
     background-color: transparent;
     margin-top: 50px;

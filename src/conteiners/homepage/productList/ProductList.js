@@ -32,6 +32,15 @@ function ProductList() {
                 }
             },
             {
+                breakpoint: 986,
+                settings: {
+                    slidesToShow: 3,
+                    infinite: window.innerWidth < 1050,
+                    centerMode: window.innerWidth < 1050,
+                    centerPadding: ' 60px 0 0',
+                }
+            },
+            {
                 breakpoint: 780,
                 settings: {
                     slidesToShow: 2,

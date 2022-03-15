@@ -1,7 +1,8 @@
 import style from "../../conteiners/homepage/offer/offer.module.scss";
-import {Rosers1, Rosers2, Rosers3, See} from "../../assets/imeges";
+import {Rosers1, Rosers2, Rosers3,ArrowRight} from "../../assets/imeges";
+import RoseCard from "../uiItem/cards/rosecard/RoseCard";
 
-function RoseGroup(){
+function RoseGroup(props){
     return  <div className={style.group}>
         <div className={style.blok}>
             {/*
@@ -9,22 +10,10 @@ function RoseGroup(){
                      1․ պետք է լինի առանձին կոմպոնենտ
                      2․ <See/> Փոխել ArrowRight
                   */}
-            <div className={style.rosers}>
-                <img src={Rosers1} alt=""/>
-                <div className={style.text}>
-                    <span>дружелюбно</span>
-                    <span className={style.work}>Фотоотчет о ходе</span>
-                    <div className={style.btn}>посмотреть<See/></div>
-                </div>
-            </div>
-            <div className={style.rose}>
-                <img src={Rosers2} alt=""/>
-                <div className={style.text}>
-                    <span>дружелюбно</span>
-                    <span className={style.work}>Фотоотчет о ходе</span>
-                    <div className={style.btn}>посмотреть<See/></div>
-                </div>
-            </div>
+            <RoseCard/>
+           <div className={style.roseItem}>
+               <RoseCard />
+           </div>
         </div>
         <div className={style.blok1}>
             <div className={style.sale}>
@@ -40,14 +29,7 @@ function RoseGroup(){
                     <div>Свадебние цветы</div>
                 </div>
             </div>
-            <div className={style.roseGroup}>
-                <img src={Rosers3} alt=""/>
-                <div className={style.text}>
-                    <span>дружелюбно</span>
-                    <span className={style.work}>Фотоотчет о ходе</span>
-                    <div className={style.btn}>посмотреть<See/></div>
-                </div>
-            </div>
+            <RoseCard/>
         </div>
     </div>
 

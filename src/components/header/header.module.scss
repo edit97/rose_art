@@ -31,7 +31,7 @@ todo
      2․ height-ը նաել Փոխել
     */
     width: 70%;
-    height: 70px;
+    height: 100%;
     @include itemsCenter;
     .text{
         width: 60%;
@@ -47,10 +47,10 @@ todo
         }
         :hover{
             border-bottom: $firstColor solid 3px;
-            transition: inherit;
+            transition: top 1s ease-out 0.5s;
         }
     }
-    .whiteLogo{
+    .responsiveLogo{
         display: none;
     }
 }
@@ -75,13 +75,6 @@ todo
                 }
             }
         }
-        //.comehLogo{
-        //    svg:hover{
-        //        path{
-        //            fill: $firstColor;
-        //        }
-        //    }
-        //}
         span{
             margin: 0 10px;
         }
@@ -128,7 +121,7 @@ todo
         .logo{
             display: none;
         }
-        .whiteLogo{
+        .responsiveLogo{
             width: 200px;
             height: 75px;
             @include aline-items;
@@ -167,14 +160,15 @@ todo
                     width: 15px;
                     height: 15px;
                     margin-right: 5px;
+                    path{
+                        fill: #F3F4F6;
+                    }
                 }
             }
         }
         .search{
             svg{
-                path{
-                    fill: white;
-                }
+                fill: white;
             }
         }
     }
@@ -197,7 +191,7 @@ todo
             border: 0;
             background-color: $firstColor;
         }
-        .searchLogo{
+        .items{
             path{
                 fill: white;
             }

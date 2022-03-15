@@ -12,52 +12,52 @@ function Basket(){
                     <div className={style.total}>
                         <div className={style.blok}>
                             <div className={style.rose}>
-                                <Rose1/>
+                                <Rose1 title={''}/>
                                 <div className={style.text}>Stick Up Cam Plug-In 13900֏ <span>1200֏</span></div>
                             </div>
                             <div className={style.delet}>
                                 <div className={style.number}><Minuse/><span>1</span><Pluse/></div>
                                 <div className={style.price}>13900֏ </div>
-                                <div className={style.icon}><Delete/></div>
+                                <div className={style.icon}><Delete title={''}/></div>
                             </div>
                         </div>
                         <div className={style.blok}>
                             <div className={style.rose}>
-                                <Rose2/>
+                                <Rose2 title={''}/>
                                 <div className={style.text}>Stick Up Cam Plug-In 13900֏ <span>1200֏</span></div>
                             </div>
                             <div className={style.delet}>
                                 <div className={style.number}>
-                                    <Minuse/><span>2</span><Pluse/>
+                                    <Minuse title={''}/><span>2</span><Pluse title={''}/>
                                 </div>
                                 <div className={style.price}>13900֏ </div>
-                                <div className={style.icon}><Delete/></div>
+                                <div className={style.icon}><Delete title={''}/></div>
                             </div>
                         </div>
                         <div className={style.blok}>
                             <div className={style.rose}>
-                                <Rose3/>
+                                <Rose3 title={''}/>
                                 <div className={style.text}>Stick Up Cam Plug-In 13900֏ <span>1200֏</span></div>
                             </div>
                             <div className={style.delet}>
                                 <div className={style.number}>
-                                    <Minuse/><span>1</span><Pluse/>
+                                    <Minuse title={''}/><span>1</span><Pluse title={''}/>
                                 </div>
                                 <div className={style.price}>13900֏ </div>
-                                <div className={style.icon}><Delete/></div>
+                                <div className={style.icon}><Delete title={''}/></div>
                             </div>
                         </div>
                         <div className={style.blok}>
                             <div className={style.rose}>
-                                <Rose4/>
+                                <Rose4 title={''}/>
                                 <div className={style.text}>Stick Up Cam Plug-In 13900֏ <span>1200֏</span></div>
                             </div>
                             <div className={style.delet}>
                                 <div className={style.number}>
-                                    <Minuse/><span>1</span><Pluse/>
+                                    <Minuse title={''}/><span>1</span><Pluse title={''}/>
                                 </div>
                                 <div className={style.price}>13900֏ </div>
-                                <div className={style.icon}><Delete/></div>
+                                <div className={style.icon}><Delete title={''}/></div>
                             </div>
                         </div>
 

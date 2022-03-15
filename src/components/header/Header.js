@@ -13,7 +13,7 @@ return <div className={style.headerWrapper}>
     <div className={style.header}>
     <div className={style.navigation}>
         <Link to={"/"}>
-            <div className={style.whiteLogo}><img src={BitmapWhite} /></div>
+            <div className={style.responsiveLogo}><img src={BitmapWhite} /></div>
             <div className={style.logo}><img src={Bitmap} /></div>
         </Link>
         <div className={style.text}>
@@ -29,8 +29,8 @@ return <div className={style.headerWrapper}>
                     սթայլեր գրել className-երով, և անունները ըստ իմաստի
                     օրինակ searchLogo փոխել
                 */}
-        <div className={style.searchLogo}><Search/>Поиск </div><span> | </span>
-        <div className={style.searchLogo}> <IconMan/>Boйти </div><span> | </span>
+        <div className={style.item}><Search title={''}/>Поиск </div><span> | </span>
+        <div className={style.items}> <IconMan title={''}/>Boйти </div><span> | </span>
         <Link to="/basket" >
             <span className={style.basket}>Корзина </span>
         </Link>
@@ -51,8 +51,8 @@ return <div className={style.headerWrapper}>
         <div>Контакт</div>
         <div>Продукт</div>
         <div>Перевозки</div>
-        <div className={style.search}><Search/> Поиск</div>
-        <div className={style.manicon}><Man/>Boйти</div>
+        <div className={style.search}><Search title={''}/> Поиск</div>
+        <div className={style.manicon}><Man title={''}/>Boйти</div>
             <Link to={"/basket"}>
                 <div>Корзина</div>
             </Link>
