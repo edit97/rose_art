@@ -3,8 +3,7 @@
 
 .footer{
   width: 100%;
-  border: 1px solid #979797;
-  background-color: $greyBgcolor;
+  background-color: $greyFirstcolor;
  @include column;
   align-items: center;
 }
@@ -57,10 +56,10 @@
 
 .line{
   width: 100%;
-  border-bottom: 2px solid $greyBrcolor;
+  border-bottom: 2px solid $greySecondcolor;
 }
 .underLine{
-  border-bottom: 2px solid $greyBrcolor;
+  border-bottom: 2px solid $greySecondcolor;
 }
 
 .subscribe{
@@ -81,9 +80,10 @@
       height: 100%;
       border: 0;
       outline: none;
-      input::placeholder{
-        color: $greyColor;
-      }
+    }
+    .input::placeholder{
+      padding:10px;
+      color: $greyColor;
     }
     .btn{
       cursor: pointer;
@@ -97,6 +97,7 @@
   .follow{
     @include spaceBetween;
     align-items: baseline;
+    border-bottom: 2px solid $greySecondcolor;
     .icons{
       width: 100px;
       @include spaceBetween;
@@ -141,6 +142,12 @@
 }
 .responsivCollapse{
   display: none;
+}
+.menuItem{
+
+  svg{
+    width: 20px;
+  }
 }
 @media screen and (max-width: 1024px){
  .footer{

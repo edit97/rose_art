@@ -9,6 +9,7 @@ function RoseSlider(){
         dotsClass:'sliderDots',
         className:'roseSlide',
         infinite: true,
+        vertical: true,
         autoplay:true,
         speed: 500,
         slidesToShow: 1,

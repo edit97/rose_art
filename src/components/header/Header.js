@@ -45,7 +45,7 @@ return <div className={style.headerWrapper}>
         <div className={style.overlay}/>
         <div className={style.dropdown}>
             <Link to={"/"}>
-                <div>Главный</div>
+                <div className={style.headerPage}>Главный</div>
             </Link>
         <div>О нас</div>
         <div>Контакт</div>
@@ -54,7 +54,7 @@ return <div className={style.headerWrapper}>
         <div className={style.search}><Search title={''}/> Поиск</div>
         <div className={style.manicon}><Man title={''}/>Boйти</div>
             <Link to={"/basket"}>
-                <div>Корзина</div>
+                <div className={style.basketPage}>Корзина</div>
             </Link>
     </div>
     </div>}

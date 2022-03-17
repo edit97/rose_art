@@ -58,6 +58,14 @@ todo
     width: 35%;
     @include aline-items;
     justify-content: flex-end;
+    :hover{
+        color: #A7093C;
+        svg{
+                path{
+                    fill: $firstColor;
+                }
+        }
+    }
     button{
         display: none;
     }
@@ -69,11 +77,6 @@ todo
         svg{
             height: 20px;
             margin-right: 10px;
-            :hover{
-                path{
-                    fill: $firstColor;
-                }
-            }
         }
         span{
             margin: 0 10px;
@@ -95,9 +98,17 @@ todo
     .basket{
         margin: 14px;
         color: black;
+        :active{
+            color: $firstColor;
+        }
+    }
+    .headerPage{
+        color: white;
+    }
+    .basketPage{
+        color: white;
     }
 }
-
 
 
 @media screen and(max-width: 1024px){

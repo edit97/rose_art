@@ -58,8 +58,8 @@
     background-color: transparent;
     border: 0;
     outline: none;
-    border-bottom: 2px solid $grColor;
-    color: $grColor;
+    border-bottom: 2px solid $greyТhirdcolor;
+    color: $greyТhirdcolor;
     height: 70px;
     cursor: pointer;
   }
@@ -82,7 +82,14 @@
   }
 
 }
-
+.mapSize{
+  width: 100%;
+  height: 100%;
+  .iconMap{
+    position: relative;
+    bottom: 20px;
+  }
+}
 
 @media screen and (max-width: 1024px) {
   .contact {

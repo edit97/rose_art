@@ -33,6 +33,9 @@ export {ReactComponent as Minuse} from "./icons/ic-mines.svg"
 export {ReactComponent as Pluse} from "./icons/ic-pluse.svg"
 export {ReactComponent as ArrowRight} from "./icons/ic-slek.svg"
 export {ReactComponent as IconMan} from "./icons/icon-man.svg"
+export {ReactComponent as RuIcon} from "./icons/ru.svg"
+export {ReactComponent as UsIcon} from "./icons/us.svg"
+export {ReactComponent as MapIcon} from "./icons/Map-icon.svg"
 
 
 

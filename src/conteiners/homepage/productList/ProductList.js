@@ -19,7 +19,19 @@ function ProductList() {
             {
                 breakpoint: 1524,
                 settings: {
+                    slidesToShow: 6,
+                    infinite: window.innerWidth < 1050,
+                    centerMode: window.innerWidth < 1050,
+                    centerPadding: ' 20px 0 0',
+                }
+            },
+            {
+                breakpoint: 1488,
+                settings: {
                     slidesToShow: 5,
+                    infinite: window.innerWidth < 1050,
+                    centerMode: window.innerWidth < 1050,
+                    centerPadding: ' 20px 0 0',
                 }
             },
             {
@@ -28,20 +40,29 @@ function ProductList() {
                     slidesToShow: 4,
                     infinite: window.innerWidth < 1050,
                     centerMode: window.innerWidth < 1050,
-                    centerPadding: ' 60px 0 0',
+                    centerPadding: ' 80px 0 0',
                 }
             },
             {
-                breakpoint: 986,
+                breakpoint: 1000,
+                settings: {
+                    slidesToShow: 4,
+                    infinite: window.innerWidth < 1050,
+                    centerMode: window.innerWidth < 1050,
+                    centerPadding: ' 10px 0 0',
+                }
+            },
+            {
+                breakpoint: 890,
                 settings: {
                     slidesToShow: 3,
                     infinite: window.innerWidth < 1050,
                     centerMode: window.innerWidth < 1050,
-                    centerPadding: ' 60px 0 0',
+                    centerPadding: ' 24px 0 0',
                 }
             },
             {
-                breakpoint: 780,
+                breakpoint: 694,
                 settings: {
                     slidesToShow: 2,
                     infinite: window.innerWidth < 1050,
@@ -56,7 +77,6 @@ function ProductList() {
                     infinite: window.innerWidth < 1050,
                     centerMode: window.innerWidth < 1050,
                     centerPadding: ' 120px 0 0',
-                    // centerMode: false,
                 }
             },
             {
@@ -65,11 +85,11 @@ function ProductList() {
                     slidesToShow: 1,
                     infinite: window.innerWidth < 1050,
                     centerMode: window.innerWidth < 1050,
-                    centerPadding: ' 60px 0 0',
+                    centerPadding: ' 80px 0 0',
                 }
             },
             {
-                breakpoint: 360,
+                breakpoint: 406,
                 settings: {
                     slidesToShow: 1,
 

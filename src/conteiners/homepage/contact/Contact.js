@@ -5,7 +5,7 @@ function Contact (){
 
     const mapData = {
         center: [40.180843465756496,44.51673113111903],
-        zoom: 12,
+        zoom: 14,
     };
 
     const coordinates = [
@@ -23,8 +23,8 @@ function Contact (){
             </div>
         <div className={style.bloks}>
             <div className={style.map}>
-                <YMaps className={'mapBlock'}>
-                    <Map defaultState={mapData}>
+                <YMaps className={style.mapBlock}>
+                    <Map defaultState={mapData}  className={style.mapSize}>
                         {coordinates.map(coordinate => <Placemark geometry={coordinate} />)}
                     </Map>
                 </YMaps>

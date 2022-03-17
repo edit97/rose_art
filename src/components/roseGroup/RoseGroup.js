@@ -1,8 +1,8 @@
 import style from "../../conteiners/homepage/offer/offer.module.scss";
-import {Rosers1, Rosers2, Rosers3,ArrowRight} from "../../assets/imeges";
 import RoseCard from "../uiItem/cards/rosecard/RoseCard";
 
-function RoseGroup(props){
+function RoseGroup(){
+
     return  <div className={style.group}>
         <div className={style.blok}>
             {/*
@@ -10,10 +10,8 @@ function RoseGroup(props){
                      1․ պետք է լինի առանձին կոմպոնենտ
                      2․ <See/> Փոխել ArrowRight
                   */}
-            <RoseCard/>
-           <div className={style.roseItem}>
-               <RoseCard />
-           </div>
+            <RoseCard />
+            <RoseCard isBig={true} />
         </div>
         <div className={style.blok1}>
             <div className={style.sale}>
@@ -29,7 +27,7 @@ function RoseGroup(props){
                     <div>Свадебние цветы</div>
                 </div>
             </div>
-            <RoseCard/>
+            <RoseCard />
         </div>
     </div>
 

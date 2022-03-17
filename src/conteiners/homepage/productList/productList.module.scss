@@ -17,6 +17,7 @@
 .more{
   display: none;
 }
+
 @media screen and (max-width: 1024px){
     .list{
       @include widthHeight;
@@ -38,6 +39,9 @@
         .blok4{
           display: none;
         }
+      }
+      .textSlider{
+        width:100%;
       }
     }
 

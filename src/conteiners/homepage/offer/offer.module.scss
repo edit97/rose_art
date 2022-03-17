@@ -19,14 +19,12 @@
   @include column;
 }
 .blok{
-  width: 100%;
-  height: 100%;
+  @include widthHeight;
   @include spaceBetween;
   padding-bottom: 20px;
 }
 .blok1{
-  width: 100%;
-  height: 100%;
+  @include widthHeight;
   @include spaceBetween;
 }
 .text{
@@ -58,8 +56,7 @@
     width: 100%;
     height: 240px;
   img{
-    width: 100%;
-    height: 100%;
+    @include widthHeight;
   }
 
 }
@@ -70,6 +67,9 @@
   img{
     @include widthHeight;
   }
+}
+.roseGroupNew{
+  width: 33%;
 }
 .rose{
   position: relative;

@@ -53,7 +53,7 @@
         @include itemsCenter;
         margin-right: 10px;
         .number{
-          background-color: $greyBgcolor;
+          background-color: $greyFirstcolor;
           width: 140px;
           height: 40px;
           @include itemsCenter;
@@ -99,7 +99,7 @@
   height: 500px;
   @include column;
   border: 1px solid $lightColor;
-  background-color: $greyBgcolor;
+  background-color: $greyFirstcolor;
   .name{
     font-size: 15px;
     padding: 20px 20px 0;
