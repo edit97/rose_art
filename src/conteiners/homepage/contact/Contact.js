@@ -1,11 +1,11 @@
-import { YMaps, Map, Placemark } from "react-yandex-maps";
+import {YMaps, Map, Placemark, GeolocationControl, ZoomControl} from "react-yandex-maps";
 import style from "./contact.module.scss";
 
 function Contact (){
 
     const mapData = {
         center: [40.180843465756496,44.51673113111903],
-        zoom: 14,
+        zoom: 13,
     };
 
     const coordinates = [
@@ -26,6 +26,20 @@ function Contact (){
                 <YMaps className={style.mapBlock}>
                     <Map defaultState={mapData}  className={style.mapSize}>
                         {coordinates.map(coordinate => <Placemark geometry={coordinate} />)}
+                        <GeolocationControl options={{
+                            float: 'left',
+                            position: {
+                                top: 230,
+                                left: 10,
+                            },
+                        }}/>
+                        <ZoomControl options={{
+                            float: 'left',
+                            position: {
+                                top: 10,
+                                left: 10,
+                            },
+                        }}/>
                     </Map>
                 </YMaps>
             </div>

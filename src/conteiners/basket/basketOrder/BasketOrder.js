@@ -1,5 +1,6 @@
 import style from "./basketOrder.module.scss"
-import { YMaps, Map, Placemark } from "react-yandex-maps";
+import { YMaps, Map, Placemark,ZoomControl,GeolocationControl } from "react-yandex-maps";
+import React  from "react";
 
 function BasketOrder() {
     const mapData = {
@@ -31,6 +32,20 @@ function BasketOrder() {
                     <YMaps className={style.orderMap}>
                         <Map defaultState={mapData} className={style.yandexMap}>
                             {coordinates.map(coordinate => <Placemark geometry={coordinate} />)}
+                            <GeolocationControl options={{
+                                float: 'left',
+                                position: {
+                                    top: 78,
+                                    left: 10,
+                                },
+                            }}/>
+                            <ZoomControl options={{
+                                float: 'left',
+                                position: {
+                                    top: 12,
+                                    left: 10,
+                                },
+                            }}/>
                         </Map>
                     </YMaps>
                 </div>
