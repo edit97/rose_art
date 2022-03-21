@@ -40,9 +40,33 @@
   padding-top: 20px;
   margin: 0 auto;
 }
+@media screen and (max-width: 1024px){
+  .blok{
+    padding: 0;
+  }
+.blok1{
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  width: 100%;
+  .sale{
+    width: 100%;
+    margin-left: 10px;
+    margin-top: 20px;
+  }
+}
+}
 @media screen and (max-width: 700px){
   .group{
     width: 100%;
     margin-top: 20px;
+    .blok1{
+      display: flex!important;
+      flex-direction: initial;
+      align-items: end;
+      .sale{
+        margin: 0;
+      }
+    }
   }
 }

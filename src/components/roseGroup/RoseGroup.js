@@ -11,7 +11,7 @@ function RoseGroup(){
                      2․ <See/> Փոխել ArrowRight
                   */}
             <RoseCard />
-            <RoseCard isBig={true} />
+            <RoseCard isBig={true} className={"responsivCard"}/>
         </div>
         <div className={style.blok1}>
             <div className={style.sale}>

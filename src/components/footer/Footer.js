@@ -97,7 +97,7 @@ function Footer(){
                                   isActive ? <Arr  className={style.rigthArr}/> :  <Arr/>}
                     >
                         <Panel  header="Comapny" key="1" className={'collapseItme'}>
-                            <div className={style.resComponents}>
+                            <div className={style.components}>
                                 <div>Home</div>
                                 <div>About</div>
                                 <div>Contact</div>

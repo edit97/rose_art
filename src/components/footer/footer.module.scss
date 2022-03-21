@@ -81,9 +81,8 @@
       border: 0;
       outline: none;
     }
-    .input::placeholder{
-      padding:10px;
-      color: $greyColor;
+    input:placeholder-shown {
+     padding: 8px;
     }
     .btn{
       cursor: pointer;

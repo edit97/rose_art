@@ -58,15 +58,15 @@ function BasketOrder() {
                 <div className={style.inputItems}>
                 <div className={style.registration}>
                     <div className={style.nameTitle}>Full Name </div>
-                    <input type="text" placeholder={"Name"} className={style.registrationInput}/>
+                    <input type="text" placeholder="Name" className={style.registrationInput}/>
                 </div>
                 <div className={style.registration}>
                     <div className={style.nameTitle}>E-mail</div>
-                    <input type="email" placeholder={"Email"} className={style.registrationInput}/>
+                    <input type="email" placeholder="Email" className={style.registrationInput}/>
                 </div>
                 <div className={style.registration}>
                     <div className={style.nameTitle}>Phone number</div>
-                    <input type="text" placeholder={"Number"} className={style.registrationInput}/>
+                    <input type="text" placeholder="Number" className={style.registrationInput}/>
                 </div>
                 <div className={style.peymantSistem}>
                     <Radio.Group name="radiogroup" defaultValue={1}>
@@ -75,8 +75,10 @@ function BasketOrder() {
                     </Radio.Group>
                 </div>
                 <span className={style.line}></span>
-                <div>
-                    <input className={style.checkboxValue} type="checkbox" />
+                <div className={style.checkboxText}>
+                    <input className={style.checkboxValue} type="checkbox" id="checked"/>
+                    <label htmlFor="checked">
+                    </label>
                     I agree to the terms of the sale, the privacy policy.
                 </div>
                     <button className={style.btnPayment}>PAYMENT</button>
