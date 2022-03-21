@@ -13,8 +13,7 @@
   border-bottom: $whiteColor solid 1px;
   &:hover{
     overflow: hidden;
-    transition: none;
-    transform-origin:top;
+    transition: margin-top 2s;
     transform: scale(1.05);
     box-shadow: 3px 10px 7px $whiteColor;
   }
@@ -113,5 +112,11 @@
       height: 15px;
       color: $secondColor;
     }
+  }
+}
+
+@media screen and (max-width: 400px){
+  .blok{
+    margin: 0 auto;
   }
 }

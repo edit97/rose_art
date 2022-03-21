@@ -3,6 +3,7 @@ import {Bitmap,Man,Search,Menu,BitmapWhite,IconMan } from "../../assets/imeges";
 import style from "./header.module.scss";
 import {Link} from "react-router-dom";
 
+
 function  Header() {
     const [click, setClick] = useState(false);
     const handleClick =(event)=> {

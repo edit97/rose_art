@@ -3,7 +3,7 @@
 
 .footer{
   width: 100%;
-  background-color: $greyFirstcolor;
+  background-color: $greyFirstColor;
  @include column;
   align-items: center;
 }
@@ -56,10 +56,10 @@
 
 .line{
   width: 100%;
-  border-bottom: 2px solid $greySecondcolor;
+  border-bottom: 2px solid $greySecondColor;
 }
 .underLine{
-  border-bottom: 2px solid $greySecondcolor;
+  border-bottom: 2px solid $greySecondColor;
 }
 
 .subscribe{
@@ -97,7 +97,7 @@
   .follow{
     @include spaceBetween;
     align-items: baseline;
-    border-bottom: 2px solid $greySecondcolor;
+    border-bottom: 2px solid $greySecondColor;
     .icons{
       width: 100px;
       @include spaceBetween;
@@ -144,11 +144,15 @@
   display: none;
 }
 .menuItem{
-
+width: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   svg{
-    width: 20px;
+    width: 30px;
   }
 }
+
 @media screen and (max-width: 1024px){
  .footer{
    width: 100%;

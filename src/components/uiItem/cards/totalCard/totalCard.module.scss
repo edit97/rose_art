@@ -1,0 +1,64 @@
+@import "../../../../assets/styles/varieibls";
+@import "../../../../assets/styles/mixins";
+
+.blok{
+  @include spaceBetween;
+  border-bottom: 1px solid $lightColor;
+  height: 86px;
+  width: 100%;
+  .rose{
+    width: 34%;
+    @include itemsCenter;
+    @include spaceBetween;
+    svg{
+      margin-left: 20px;
+      width: 60px;
+      height: 60px;
+    }
+    .text{
+      width: 160px;
+      font-weight: bold;
+      span{
+        color: #A7A7A7;
+        text-decoration:line-through;
+        margin-left: 4px;
+      }
+    }
+  }
+  .delet{
+    width: 50%;
+    @include spaceBetween;
+    @include itemsCenter;
+    margin-right: 10px;
+    .number{
+      background-color: $greyFirstColor;
+      width: 140px;
+      height: 40px;
+      @include itemsCenter;
+      padding: 10px;
+      svg{
+        cursor: pointer;
+      }
+      span{
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        font-weight: bold;
+        font-size: 18px;
+      }
+    }
+    .price{
+      color: $firstColor;
+    }
+    .icon{
+      font-size: 12px;
+      cursor: pointer;
+      svg{
+        :hover{
+          fill: $redColor;
+        }
+      }
+    }
+
+  }
+}

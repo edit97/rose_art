@@ -177,11 +177,6 @@ todo
                 }
             }
         }
-        .search{
-            svg{
-                fill: white;
-            }
-        }
     }
 
     .headerActions{
@@ -209,6 +204,13 @@ todo
         }
         .basket{
             color: white;
+        }
+        div{
+            svg{
+                path{
+                    fill: white;
+                }
+            }
         }
     }
 

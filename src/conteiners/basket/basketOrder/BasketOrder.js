@@ -1,8 +1,10 @@
 import style from "./basketOrder.module.scss"
 import { YMaps, Map, Placemark,ZoomControl,GeolocationControl } from "react-yandex-maps";
 import React  from "react";
+import { Radio } from 'antd';
 
 function BasketOrder() {
+
     const mapData = {
         center: [40.180843465756496,44.51673113111903],
         zoom: 12,
@@ -22,11 +24,11 @@ function BasketOrder() {
                 <div className={style.title}>Select Shiping Addres</div>
                 <div className={style.addres}>
                     <div className={style.addresTitle}>City , Street</div>
-                    <input type="text" placeholder={"Street"}/>
+                    <input type="text" placeholder={"Street"} className={style.streetAdress}/>
                 </div>
                 <div className={style.addres}>
                     <div className={style.addresTittle}>Delivery Adres</div>
-                    <input type="text" placeholder={"Your addres"}/>
+                    <input type="text" placeholder={"Your addres"} className={style.streetAdress}/>
                 </div>
                 <div className={style.map}>
                     <YMaps className={style.orderMap}>
@@ -56,19 +58,21 @@ function BasketOrder() {
                 <div className={style.inputItems}>
                 <div className={style.registration}>
                     <div className={style.nameTitle}>Full Name </div>
-                    <input type="text" placeholder={"Name"}/>
+                    <input type="text" placeholder={"Name"} className={style.registrationInput}/>
                 </div>
                 <div className={style.registration}>
                     <div className={style.nameTitle}>E-mail</div>
-                    <input type="email" placeholder={"Email"}/>
+                    <input type="email" placeholder={"Email"} className={style.registrationInput}/>
                 </div>
                 <div className={style.registration}>
                     <div className={style.nameTitle}>Phone number</div>
-                    <input type="text" placeholder={"Number"}/>
+                    <input type="text" placeholder={"Number"} className={style.registrationInput}/>
                 </div>
                 <div className={style.peymantSistem}>
-                    <div className={style.paymantInput}><input type="radio" />Online payment</div>
-                    <div className={style.paymantInput}><input type="radio"/>Cash payment</div>
+                    <Radio.Group name="radiogroup" defaultValue={1}>
+                        <Radio value={1}>Online payment</Radio>
+                        <Radio value={2}>Cash payment</Radio>
+                    </Radio.Group>
                 </div>
                 <span className={style.line}></span>
                 <div>

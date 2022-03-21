@@ -1,5 +1,5 @@
-import style from "../../../../conteiners/homepage/offer/offer.module.scss";
 import {ArrowRight, Rosers1} from "../../../../assets/imeges";
+import style from './roseCard.module.scss'
 
 
 function RoseCard(props) {

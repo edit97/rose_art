@@ -1,5 +1,5 @@
-import style from "../../conteiners/homepage/offer/offer.module.scss";
 import RoseCard from "../uiItem/cards/rosecard/RoseCard";
+import style from './roseGroup.module.scss';
 
 function RoseGroup(){
 

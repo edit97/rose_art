@@ -34,12 +34,17 @@
     }
     .addres{
       height: 80px;
-      input{
+      .streetAdress{
+        border-radius: 3px;
         color: $lightColor;
         border: 1px solid $lightColor;
         width: 100%;
         height: 44px;
       }
+    }
+    .streetAdress:focus{
+       outline: none;
+        border:1px solid #A7093C;
     }
     .map{
       width: 720px;
@@ -71,33 +76,50 @@
     @include column;
     align-items: center;
     .registration{
-      width: 340px;
+      width: 320px;
       height: 80px;
-      input{
+      .registrationInput{
+        border-radius: 3px;
         width: 100%;
         color: $lightColor;
         height: 44px;
        border: 1px solid $lightColor;
+        :checked{
+            border: 6px solid black;
+        }
       }
+
       .nameTitle{
         font-size: 15px;
         height: 20px;
         margin-bottom: 10px;
       }
-
+      .registrationInput:focus{
+        outline: none;
+        border:1px solid #A7093C;
+      }
     }
     .peymantSistem{
       width: 100%;
       display: flex;
+      justify-content: space-between;
+      margin: 20px 0 20px 0;
       .paymantInput{
-        margin: 20px;
+        cursor: pointer;
+        width: 120px;
+        @include spaceBetween;
+        align-items: center;
       }
+    }
+    .ant-radio-group{
+      display: contents;
     }
     .line{
       width: 100%;
       border: 1px solid $lightColor;
     }
     .btnPayment{
+      border-radius: 5px;
       cursor: pointer;
       width: 100%;
       height: 46px;
@@ -116,12 +138,35 @@
   height: 100%;
   padding-bottom: 20px;
 }
+
 @media screen and (max-width: 1024px) {
   .basketOrder{
     width: 100%;
+    h1{
+      padding: 20px;
+    }
     .item{
       width: 100%;
       @include column;
+      .orderig{
+        width: 100%;
+        padding: 20px;
+        .map{
+          width: 100%;
+        }
+      }
+    }
+    .peymantTitle{
+      margin:  0 auto;
+    }
+    .btnPayment{
+      width: 34% !important;
+    }
+    .peymantSistem{
+      width: 34%!important;
+    }
+    .peymant{
+      width: 100%;
     }
   }
 }

@@ -1,0 +1,48 @@
+@import "../../assets/styles/mixins";
+@import "../../assets/styles/varieibls";
+
+
+.group{
+  width: 60%;
+  height: 100%;
+  @include column;
+}
+.blok{
+  @include widthHeight;
+  @include spaceBetween;
+  padding-bottom: 20px;
+}
+.blok1{
+  @include widthHeight;
+  @include spaceBetween;
+}
+.sale{
+  width: 32%;
+  height: 240px;
+  background-color: $firstColor;
+  @include column;
+  color: white;
+}
+.count{
+  width: 160px;
+  margin-top: 50px;
+  height: 100px;
+  @include spaceBetween;
+  align-items: center;
+  .number{
+    font-size: 90px;
+  }
+  .iconPrsent{
+    font-size: 40px;
+  }
+}
+.saleTxt{
+  padding-top: 20px;
+  margin: 0 auto;
+}
+@media screen and (max-width: 700px){
+  .group{
+    width: 100%;
+    margin-top: 20px;
+  }
+}

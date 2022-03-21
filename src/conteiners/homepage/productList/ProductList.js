@@ -37,14 +37,14 @@ function ProductList() {
             {
                 breakpoint: 1200,
                 settings: {
-                    slidesToShow: 4,
+                    slidesToShow: 5,
                     infinite: window.innerWidth < 1050,
                     centerMode: window.innerWidth < 1050,
-                    centerPadding: ' 80px 0 0',
+                    centerPadding: ' 20px 0 0',
                 }
             },
             {
-                breakpoint: 1000,
+                breakpoint: 1140,
                 settings: {
                     slidesToShow: 4,
                     infinite: window.innerWidth < 1050,

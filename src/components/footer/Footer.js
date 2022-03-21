@@ -32,7 +32,6 @@ function Footer(){
                    <UsIcon/> EN
                 </div>
             </Menu.Item>
-            <Menu.Divider />
         </Menu>
     )
     return <div className={style.footer}>

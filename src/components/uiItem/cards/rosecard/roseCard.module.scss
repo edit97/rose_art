@@ -1,0 +1,69 @@
+@import "../../../../assets/styles/varieibls";
+@import "../../../../assets/styles/mixins";
+
+
+.roseGroup{
+  position: relative;
+  width: 65%;
+  height: 240px;
+  img{
+    @include widthHeight;
+  }
+}
+.roseGroupNew{
+  width: 33%;
+}
+.rosers{
+  position: relative;
+  width: 100%;
+  height: 240px;
+  img{
+    @include widthHeight;
+  }
+
+}
+.text{
+  width: 100%;
+  height: 74px;
+  @include column;
+  position: absolute;
+  bottom: 8px;
+  left: 16px;
+  .btn{
+    cursor: pointer;
+    width: 100%;
+    margin-top: 5px;
+    @include itemsCenter;
+    border: 0;
+    background-color: transparent;
+    svg{
+      width: 10px;
+      height: 10px;
+      margin-left: 4px;
+    }
+  }
+}
+.work{
+  font-size: 16px;
+}
+@media screen and (max-width: 1024px){
+  .text{
+    width: 80%;
+    overflow: hidden;
+    span{
+      width: 100%;
+    }
+    .work{
+      width: 100%;
+    }
+    .btn{
+      width: 100%;
+    }
+  }
+  //.roseGroup{
+  //  display: none;
+  //}
+  //.roseGroupNew{
+  //  width: 100%;
+  //}
+}
