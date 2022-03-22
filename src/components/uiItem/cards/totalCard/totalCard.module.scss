@@ -18,7 +18,7 @@
     .text{
       width: 160px;
       font-weight: bold;
-      span{
+      .priceNumber{
         color: #A7A7A7;
         text-decoration:line-through;
         margin-left: 4px;
@@ -60,5 +60,11 @@
       }
     }
 
+  }
+}
+@media screen and (max-width: 1024px){
+  .priceText{
+    height: 40px;
+    overflow: hidden;
   }
 }

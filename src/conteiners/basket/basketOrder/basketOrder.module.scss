@@ -11,6 +11,10 @@
     @include spaceBetween;
     color: $lightColor;
     margin-bottom: 30px;
+    &:hover{
+      cursor: pointer;
+      color: $firstColor;
+    }
   }
   .item{
     width: 100%;
@@ -212,6 +216,18 @@
     }
     .peymant{
       width: 100%;
+    }
+    .checkboxText{
+      width: 60% !important;
+    }
+    .peymantSistem{
+      width: 60% !important;
+    }
+    .registration{
+      width: 60% !important;
+    }
+    .btnPayment{
+      width: 60% !important;
     }
   }
 }

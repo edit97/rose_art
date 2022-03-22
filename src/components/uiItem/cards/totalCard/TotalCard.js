@@ -6,7 +6,9 @@ function TotalCard() {
         <div className={style.blok}>
             <div className={style.rose}>
                 <Rose2 title={''}/>
-                <div className={style.text}>Stick Up Cam Plug-In 13900֏ <span>1200֏</span></div>
+                <div className={style.text}>
+                    <span className={style.priceText}>Stick Up Cam Plug-In 13900֏ </span>
+                    <span className={style.priceNumber}>1200֏</span></div>
             </div>
             <div className={style.delet}>
                 <div className={style.number}>

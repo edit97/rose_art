@@ -14,6 +14,7 @@ import {
 import style from "./footer.module.scss";
 import { Collapse } from 'antd';
 import { Menu, Dropdown } from 'antd';
+import FooterCard from "../uiItem/cards/footercard/FooterCard";
 
 
 const { Panel } = Collapse;
@@ -55,36 +56,15 @@ function Footer(){
             <div className={style.comapny}>
                 <div className={style.blok}>
                     <h1 className={style.title}>Comapny <div className={style.arr}><Arr/></div></h1>
-                    <div className={style.components}>
-                        <div>Home</div>
-                        <div>About</div>
-                        <div>Contact</div>
-                        <div>Blog</div>
-                        <div>Apps</div>
-                        <div>Sine in</div>
-                    </div>
+                    <FooterCard/>
                 </div>
                 <div className={style.blok}>
                     <h1 className={style.title}>About us</h1>
-                    <div className={style.components}>
-                        <div>Home</div>
-                        <div>About</div>
-                        <div>Contact</div>
-                        <div>Blog</div>
-                        <div>Apps</div>
-                        <div>Sine in</div>
-                    </div>
+                    <FooterCard/>
                 </div>
                 <div className={style.blok}>
                     <h1 className={style.title}>Category <div className={style.arr}><Arr/></div></h1>
-                    <div className={style.components}>
-                        <div>Home</div>
-                        <div>About</div>
-                        <div>Contact</div>
-                        <div>Blog</div>
-                        <div>Apps</div>
-                        <div>Sine in</div>
-                     </div>
+                    <FooterCard/>
                 </div>
             </div>
             <div className={style.responsivBlok}>
@@ -94,10 +74,10 @@ function Footer(){
                               expandIconPosition={'right'}
                               className={'collapseBlock'}
                               expandIcon={({ isActive }) =>
-                                  isActive ? <Arr  className={style.rigthArr}/> :  <Arr/>}
+                                  isActive ? <Arr/> :  <Arr className={style.rightArr}/>}
                     >
-                        <Panel  header="Comapny" key="1" className={'collapseItme'}>
-                            <div className={style.components}>
+                        <Panel  header="Comapny" key="1" className={'collapseItme'} >
+                            <div className={style.resComponents}>
                                 <div>Home</div>
                                 <div>About</div>
                                 <div>Contact</div>

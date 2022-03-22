@@ -1,7 +1,7 @@
 import React, {useState} from "react";
 import {Bitmap,Man,Search,Menu,BitmapWhite,IconMan } from "../../assets/imeges";
 import style from "./header.module.scss";
-import {Link} from "react-router-dom";
+import {Link, NavLink} from "react-router-dom";
 
 
 function  Header() {
@@ -13,10 +13,10 @@ function  Header() {
 return <div className={style.headerWrapper}>
     <div className={style.header}>
     <div className={style.navigation}>
-        <Link to={"/"}>
+        <NavLink to={"/"}>
             <div className={style.responsiveLogo}><img src={BitmapWhite} /></div>
             <div className={style.logo}><img src={Bitmap} /></div>
-        </Link>
+        </NavLink>
         <div className={style.text}>
             <div>Главный</div>
             <div>О нас</div>
@@ -32,9 +32,9 @@ return <div className={style.headerWrapper}>
                 */}
         <div className={style.item}><Search title={''}/>Поиск </div><span> | </span>
         <div className={style.items}> <IconMan title={''}/>Boйти </div><span> | </span>
-        <Link to="/basket" >
+        <NavLink to="/basket">
             <span className={style.basket}>Корзина </span>
-        </Link>
+        </NavLink>
          <div className={style.productCount}>0</div>
         <button onClick={handleClick} ><Menu/>
         </button>
@@ -45,18 +45,19 @@ return <div className={style.headerWrapper}>
     {click && <div className={style.menu}>
         <div className={style.overlay}/>
         <div className={style.dropdown}>
-            <Link to={"/"}>
+            <NavLink to={"/"}>
                 <div className={style.headerPage}>Главный</div>
-            </Link>
+            </NavLink>
         <div>О нас</div>
         <div>Контакт</div>
         <div>Продукт</div>
         <div>Перевозки</div>
         <div className={style.search}><Search title={''}/> Поиск</div>
         <div className={style.manicon}><Man title={''}/>Boйти</div>
-            <Link to={"/basket"}>
+            <NavLink to={"/basket"}
+            >
                 <div className={style.basketPage}>Корзина</div>
-            </Link>
+            </NavLink>
     </div>
     </div>}
 </div>

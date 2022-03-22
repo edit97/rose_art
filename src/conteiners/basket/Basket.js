@@ -1,9 +1,9 @@
-
 import style from "./basket.module.scss";
-import {Link} from "react-router-dom";
+import {NavLink} from "react-router-dom";
 import TotalCard from "../../components/uiItem/cards/totalCard/TotalCard";
 
 function Basket(){
+
     return (
         <div className={style.products}>
             <div className={style.nav}>Home  /    All rose   /  Rose spray  /  My cart</div>
@@ -22,23 +22,23 @@ function Basket(){
                     <h1 className={style.name}>Order summary</h1>
                     <div className={style.orderPlace}>
                         <div className={style.amount}><span>All products </span>
-                            <span className={style.line}></span><p>3 product</p>
+                            <div className={style.line}></div><div>3 product</div>
                         </div>
                         <div className={style.amount}><span>Order amount</span>
-                            <span className={style.line}></span><p>36900 ֏</p>
+                            <div className={style.line}></div><div>36900 ֏</div>
                         </div>
                         <div className={style.amount}><span>Shoping</span>
-                            <span className={style.line}></span><p className={style.colorRed}>Free</p>
+                            <div className={style.line}></div><div className={style.colorRed}>Free</div>
                         </div>
                         <div className={style.amount}><span>Discound</span>
-                            <span className={style.line}></span><p className={style.colorRed}>-6900 ֏</p>
+                            <div className={style.line}></div><div className={style.colorRed}>-6900 ֏</div>
                         </div>
                         <div className={style.totalPrice}><span>Total Price</span>
-                            <span className={style.line}></span><span>26900 ֏</span>
+                            <div className={style.line}></div><div>26900 ֏</div>
                         </div>
-                        <Link to={"/order"}>
+                        <NavLink to={"/order"}>
                             <button className={style.btnOrder}>PLACE AN ORDER</button>
-                        </Link>
+                    </NavLink>
                         <div className={style.txt}>If there are products in the order, on which there is
                             a promotion, the final value will be confirmed after
                             the order by the employee of theorganization.

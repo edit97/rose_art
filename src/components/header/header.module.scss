@@ -98,9 +98,9 @@ todo
     .basket{
         margin: 14px;
         color: black;
-        :active{
-            color: $firstColor;
-        }
+    }
+    .active:active{
+        color: #A7093C;
     }
     .headerPage{
         color: white;
@@ -109,7 +109,6 @@ todo
         color: white;
     }
 }
-
 
 @media screen and(max-width: 1024px){
     .header{

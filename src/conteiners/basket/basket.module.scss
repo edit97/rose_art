@@ -12,6 +12,10 @@
   @include spaceBetween;
   color: $lightColor;
   margin-bottom: 30px;
+  &:hover{
+    cursor: pointer;
+    color: $firstColor;
+  }
 }
 .product{
   width: 100%;
@@ -54,8 +58,9 @@
     align-items: center;
     .amount{
       width: 280px;
-      height: 40px;
+      height: 50px;
       @include spaceBetween;
+      align-items: center;
       span{
         color: $greyColor;
       }
@@ -63,13 +68,17 @@
 
     .totalPrice{
       width: 280px;
+      height: 60px;
       @include spaceBetween;
-      margin-bottom: 30px;
+      align-items: center;
+      margin: 10px 0 10px 0;
       font-weight: bold;
     }
-    //.line{
-    //  border: dotted 1px $greyColor;
-    //}
+    .line{
+      border: dotted 1px #E1E1E1;
+      width: 40%;
+      height: 0;
+    }
     p{
       font-weight: bold;
     }
@@ -118,6 +127,9 @@
       @include itemsCenter;
     }
 
+  }
+  .orderPlace{
+    width: 100% !important;
   }
 
 }

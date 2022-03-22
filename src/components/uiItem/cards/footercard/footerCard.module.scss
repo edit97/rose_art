@@ -1,2 +1,12 @@
 @import "../../../../assets/styles/varieibls";
 @import "../../../../assets/styles/mixins";
+
+
+.components{
+  color: $greyColor;
+  cursor: pointer;
+  div:hover{
+    color: $pinkColor;
+    transition:none;
+  }
+}
