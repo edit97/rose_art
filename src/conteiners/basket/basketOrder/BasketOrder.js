@@ -79,7 +79,7 @@ function BasketOrder() {
                     <input className={style.checkboxValue} type="checkbox" id="checked"/>
                     <label htmlFor="checked">
                     </label>
-                    I agree to the terms of the sale, the privacy policy.
+                    I agree to the terms of the sale, the <span>privacy policy.</span>
                 </div>
                     <button className={style.btnPayment}>PAYMENT</button>
                 </div>

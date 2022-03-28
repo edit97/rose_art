@@ -47,12 +47,7 @@
 
 .firstRose{
   position: relative;
-  width: 38%;
-  height: 500px;
-  img{
-    width: 100%;
-    height: 500px;
-  }
+  width: calc(43% - 10px);
 }
 .responsivRose{
   display: none;

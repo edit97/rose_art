@@ -2,60 +2,94 @@
 @import "../../../../assets/styles/mixins";
 
 
-.roseGroup{
+.roseCard{
   position: relative;
-  width: 65%;
-  height: 240px;
+  width: calc(65% - 10px);
   img{
     @include widthHeight;
   }
-}
-.roseGroupNew{
-  width: 33%;
-}
-.rosers{
-  position: relative;
-  width: 100%;
-  height: 240px;
-  img{
-    @include widthHeight;
-  }
-
-}
-.text{
-  width: 100%;
-  height: 74px;
-  @include column;
-  position: absolute;
-  bottom: 8px;
-  left: 16px;
-  .btn{
-    cursor: pointer;
+  .rosersCardContent{
+    position: relative;
     width: 100%;
-    margin-top: 5px;
-    @include itemsCenter;
-    border: 0;
-    background-color: transparent;
-    svg{
-      width: 10px;
-      height: 10px;
-      margin-left: 4px;
+    height: 100%;
+    padding-top: 48.78%;
+    img{
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+  }
+  .text{
+    width: 80%;
+    height: 74px;
+    @include column;
+    position: absolute;
+    bottom: 8px;
+    left: 16px;
+    .btn{
+      cursor: pointer;
+      width: 100%;
+      margin-top: 5px;
+      @include itemsCenter;
+      border: 0;
+      background-color: transparent;
+      svg{
+        width: 10px;
+        height: 10px;
+        margin-left: 4px;
+      }
     }
   }
+  .work{
+    font-size: 16px;
+  }
+
+  &.roseCardNew {
+    width: calc(35% - 10px);
+    .rosersCardContent{
+      position: relative;
+      width: 100%;
+      height: 100%;
+      padding-top: 100%;
+      img{
+        //@include widthHeight;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+    }
+
+  }
 }
-.work{
-  font-size: 16px;
-}
+
 @media screen and (max-width: 1024px){
-  .roseGroup:first-child{
-    display: none;
+  //.resCard{
+  //  display: none;
+  //}
+  .roseCardNew{
+    display: flex;
   }
-  .responsivCard{
-    display: none;
-  }
-  .roseGroup{
+  .roseCard{
     width: 100%;
-    margin-left: 10px;
+    height: 220px;
+    margin-left: 20px;
+    .rosersCardContent{
+      width: 100%;
+      height: 100%;
+      padding-top: unset;
+      img{
+        position: unset;
+        width: 100%;
+      }
+    }
     img{
       width: 100%;
     }

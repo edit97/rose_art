@@ -11,20 +11,22 @@ function RoseGroup(){
                      2․ <See/> Փոխել ArrowRight
                   */}
             <RoseCard />
-            <RoseCard isBig={true} className={"responsivCard"}/>
+            <RoseCard isBig={true}  className={"rasCard"}/>
         </div>
         <div className={style.blok1}>
-            <div className={style.sale}>
-                <div className={style.saleTxt}>
-                    <div>горячие скидки</div>
-                    <div className={style.count}>
-                        <span className={style.number}>20</span>
-                        <div className={style.prsent}>
-                            <div className={style.iconPrsent}>% </div>
-                            <div>НА ВСЕ</div>
+            <div className={style.saleWrapper}>
+                <div className={style.sale}>
+                    <div className={style.saleTxt}>
+                        <div>горячие скидки</div>
+                        <div className={style.count}>
+                            <span className={style.number}>20</span>
+                            <div className={style.prsent}>
+                                <div className={style.iconPrsent}>% </div>
+                                <div>НА ВСЕ</div>
+                            </div>
                         </div>
+                        <div>Свадебние цветы</div>
                     </div>
-                    <div>Свадебние цветы</div>
                 </div>
             </div>
             <RoseCard />

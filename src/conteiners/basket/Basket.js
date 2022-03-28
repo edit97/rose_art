@@ -36,7 +36,7 @@ function Basket(){
                         <div className={style.totalPrice}><span>Total Price</span>
                             <div className={style.line}></div><div>26900 ֏</div>
                         </div>
-                        <NavLink to={"/order"}>
+                        <NavLink to={"/basket/order"}>
                             <button className={style.btnOrder}>PLACE AN ORDER</button>
                     </NavLink>
                         <div className={style.txt}>If there are products in the order, on which there is

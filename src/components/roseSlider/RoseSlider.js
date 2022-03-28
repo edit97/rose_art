@@ -16,10 +16,10 @@ function RoseSlider(){
     };
     return  <div className={style.firstRose}>
         <div className={style.textSlider}>
-        <span>дружелюбно</span>
-        <span className={style.workSlider}>Фотоотчет о ходе</span>
-        <div className={style.btnSlider}>посмотреть<ArrowRight/></div>
-    </div>
+            <span>дружелюбно</span>
+            <span className={style.workSlider}>Фотоотчет о ходе</span>
+            <div className={style.btnSlider}>посмотреть<ArrowRight/></div>
+        </div>
         <Slider {...settings}>
             <div className={style.roseSlide}>
                 <div className={style.imgSlider}><img src={Rosers} alt=""/></div>

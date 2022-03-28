@@ -21,9 +21,10 @@ code {
   position: relative;
 }
 .slick-dots{
+  width: unset !important;
   height: 20px;
   position: absolute;
-  left: 190px;
+  right: 10px;
   bottom: 58px;
   transform: rotate(90deg);
 }

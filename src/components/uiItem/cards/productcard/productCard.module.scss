@@ -13,7 +13,7 @@
   border-bottom: $whiteColor solid 1px;
   &:hover{
     overflow: hidden;
-    transition: margin-top 2s;
+    transition: all .3s ease-in-out;
     transform: scale(1.05);
     box-shadow: 3px 10px 7px $whiteColor;
   }

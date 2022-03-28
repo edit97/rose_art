@@ -31,8 +31,11 @@ return <div className={style.headerWrapper}>
                     օրինակ searchLogo փոխել
                 */}
         <div className={style.item}><Search title={''}/>Поиск </div><span> | </span>
-        <div className={style.items}> <IconMan title={''}/>Boйти </div><span> | </span>
-        <NavLink to="/basket">
+        <NavLink to="/signin" className={style.signinLink} >
+            <div className={style.items}> <IconMan title={''}/>Boйти </div>
+        </NavLink>
+        <span> | </span>
+        <NavLink to="/basket" className={style.basketLink} >
             <span className={style.basket}>Корзина </span>
         </NavLink>
          <div className={style.productCount}>0</div>
@@ -45,7 +48,7 @@ return <div className={style.headerWrapper}>
     {click && <div className={style.menu}>
         <div className={style.overlay}/>
         <div className={style.dropdown}>
-            <NavLink to={"/"}>
+            <NavLink to={"/"} className={style.headerLink}>
                 <div className={style.headerPage}>Главный</div>
             </NavLink>
         <div>О нас</div>
@@ -53,9 +56,10 @@ return <div className={style.headerWrapper}>
         <div>Продукт</div>
         <div>Перевозки</div>
         <div className={style.search}><Search title={''}/> Поиск</div>
-        <div className={style.manicon}><Man title={''}/>Boйти</div>
-            <NavLink to={"/basket"}
-            >
+            <NavLink to={"/signin"} className={style.signinNavLink}>
+                <div className={style.manicon}><Man title={''}/>Boйти</div>
+            </NavLink>
+            <NavLink to={"/basket"}  className={style.basketNavLink}>
                 <div className={style.basketPage}>Корзина</div>
             </NavLink>
     </div>

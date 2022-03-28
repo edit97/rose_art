@@ -3,8 +3,7 @@
 
 
 .group{
-  width: 60%;
-  height: 100%;
+  width: calc(57% - 10px) ;
   @include column;
 }
 .blok{
@@ -13,20 +12,31 @@
   padding-bottom: 20px;
 }
 .blok1{
-  @include widthHeight;
+  width: 100%;
   @include spaceBetween;
 }
-.sale{
-  width: 32%;
-  height: 240px;
-  background-color: $firstColor;
-  @include column;
-  color: white;
+.saleWrapper{
+  width:calc(35% - 10px);
+
+  .sale{
+    width: 100%;
+    position: relative;
+    padding-top: 100%;
+    background-color: $firstColor;
+    @include column;
+    color: white;
+    .saleTxt{
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      padding: 10px 0 0 26px;
+    }
+  }
 }
 .count{
   width: 160px;
-  margin-top: 50px;
-  height: 100px;
   @include spaceBetween;
   align-items: center;
   .number{
@@ -36,36 +46,60 @@
     font-size: 40px;
   }
 }
-.saleTxt{
-  padding-top: 20px;
-  margin: 0 auto;
-}
 @media screen and (max-width: 1024px){
+  .roseCard:first-child{
+    display: none;
+  }
+  //.rasCard{
+  //  display:none;
+  //}
+  .group{
+    width: unset;
+  }
   .blok{
     padding: 0;
+    display: none;
   }
 .blok1{
   display: flex;
   flex-direction: column-reverse;
   align-items: center;
   width: 100%;
-  .sale{
+  .saleWrapper{
     width: 100%;
-    margin-left: 10px;
-    margin-top: 20px;
+    .sale{
+      padding-top: unset;
+        width: 100%;
+      height: 220px;
+        margin-left: 10px;
+        margin-top: 20px;
+      .saleTxt{
+        text-align: center;
+        position: unset;
+        .count{
+          text-align: center;
+        }
+      }
+    }
   }
 }
 }
 @media screen and (max-width: 700px){
+
   .group{
     width: 100%;
     margin-top: 20px;
     .blok1{
       display: flex!important;
       flex-direction: initial;
-      align-items: end;
-      .sale{
-        margin: 0;
+      align-items: unset !important;
+        .saleWrapper{
+         width: 100%;
+          height: 240px;
+          .sale{
+            width: 100%;
+            margin: 0;
+          }
       }
     }
   }

@@ -36,6 +36,9 @@ export {ReactComponent as IconMan} from "./icons/icon-man.svg"
 export {ReactComponent as RuIcon} from "./icons/ru.svg"
 export {ReactComponent as UsIcon} from "./icons/us.svg"
 export {ReactComponent as MapIcon} from "./icons/Map-icon.svg"
+export {ReactComponent as Google} from "./icons/googl-ic.svg"
+export {ReactComponent as FacebookIcon} from "./icons/f-icon.svg"
+export {ReactComponent as WatchIcon} from "./icons/wach-ic.svg"
 
 
 
