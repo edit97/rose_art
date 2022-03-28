@@ -1,10 +1,10 @@
 import style from './confirm.module.scss'
-import {Bitmap} from "../../assets/imeges";
+import {Bitmap, RoseLogo} from "../../assets/imeges";
 import {NavLink} from "react-router-dom";
 
 function Confirm() {
     return <div className={style.confirm}>
-        <div className={style.logo}><img src={Bitmap} alt=""/></div>
+        <div className={style.logo}><RoseLogo/></div>
         <div className={style.confirmBlok}>
             <div className={style.confirmGroup}>
                 <div className={style.title}>Confirm your email</div>

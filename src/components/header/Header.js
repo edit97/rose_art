@@ -1,5 +1,5 @@
 import React, {useState} from "react";
-import {Bitmap,Man,Search,Menu,BitmapWhite,IconMan } from "../../assets/imeges";
+import {Bitmap, Man, Search, Menu, BitmapWhite, IconMan, RoseLogo} from "../../assets/imeges";
 import style from "./header.module.scss";
 import {Link, NavLink} from "react-router-dom";
 
@@ -15,7 +15,7 @@ return <div className={style.headerWrapper}>
     <div className={style.navigation}>
         <NavLink to={"/"}>
             <div className={style.responsiveLogo}><img src={BitmapWhite} /></div>
-            <div className={style.logo}><img src={Bitmap} /></div>
+            <div className={style.logo}><RoseLogo/></div>
         </NavLink>
         <div className={style.text}>
             <div>Главный</div>

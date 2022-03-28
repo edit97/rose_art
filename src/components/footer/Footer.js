@@ -9,11 +9,12 @@ import {
     Arr,
     UsIcon,
     RuIcon,
-    ArrowRight
+    ArrowRight, RoseLogo
 } from "../../assets/imeges";
 import style from "./footer.module.scss";
 import { Collapse } from 'antd';
 import { Menu, Dropdown } from 'antd';
+import {NavLink} from "react-router-dom";
 import FooterCard from "../uiItem/cards/footercard/FooterCard";
 
 
@@ -38,7 +39,9 @@ function Footer(){
     return <div className={style.footer}>
         <div className={style.aboutUs}>
             <div className={style.adress}>
-              <img src={Bitmap} alt="logo"/>
+                <NavLink to={"/"}>
+                    <RoseLogo/>
+                </NavLink>
                 <div className={style.place}>
                     <h1 className={style.title}>Address</h1>
                     <div className={style.txt}>Margaryan 1st alley 4/2 building Yerevan Armenia</div>
@@ -126,7 +129,7 @@ function Footer(){
                 <button className={style.btn}>Subscribe</button>
                 </div>
                 <div className={style.responsivSub}>
-                    <div className={style.logo}><img src={Bitmap} alt=""/></div>
+                    <div className={style.logo}><RoseLogo/></div>
                     <h1 className={style.title}>Subscribe</h1>
                     <span>Subscribe, find out about discounts, deals, new products.</span>
                 </div>

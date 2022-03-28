@@ -1,10 +1,10 @@
 import style from './forgotpassword.module.scss'
-import {Bitmap} from "../../assets/imeges";
+import {Bitmap, RoseLogo} from "../../assets/imeges";
 import {NavLink, Link} from "react-router-dom";
 
 function ForgotPassword () {
     return <div className={style.forgotPassword}>
-        <div className={style.logo}><img src={Bitmap} alt=""/></div>
+        <div className={style.logo}><RoseLogo/></div>
         <div className={style.forgotPasswordBlok}>
             <div className={style.forgotPasswordGroup}>
                 <div className={style.title}>Forgot password</div>

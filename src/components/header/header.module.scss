@@ -53,6 +53,12 @@ todo
     .responsiveLogo{
         display: none;
     }
+    .logo{
+        svg{
+            display: flex;
+            align-items: center;
+        }
+    }
 }
 .headerActions{
     width: 35%;
@@ -186,6 +192,12 @@ todo
                     }
                 }
             }
+        }
+        .basketNavLink{
+            color: white;
+        }
+        .signinNavLink{
+            color: white;
         }
     }
     .signinLink{
