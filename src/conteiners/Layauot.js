@@ -12,10 +12,18 @@ import {useEffect, useState} from "react";
 import Confirm from "../components/confirm/Confirm";
 
 function   Layauot () {
+    // const [count, setCount]=useState(8)
+    //
+    // useEffect(() => {
+    //     console.log("useEffect")
+    // }, [count])
     let location = useLocation();
     const shouFooter = (location.pathname !== "/signin" && location.pathname !== "/signup" && location.pathname !== "/forgotpassword" &&location.pathname !== "/confirm")
         return (
             <div className={style.layauot}>
+                {/*<button onClick={() => setCount(count + 1)}>*/}
+                {/*    {count}*/}
+                {/*</button>*/}
                 <Header/>
                 <Routes>
                     <Route path={"/"} element={<Homepage/>}/>

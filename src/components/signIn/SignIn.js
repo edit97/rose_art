@@ -12,7 +12,7 @@ function SignIn(){
                 <div className={style.libe}>Enter your credentials to access your account</div>
                 <input type="email" placeholder={'Enter your email'} className={style.emailInput}/>
                     <div className={style.passwordBlok }>
-                        <input type="password" placeholder={'Enter your password'}  className={style.emailInput}/>
+                        <input type="password" placeholder={'Enter your password'}  className={style.passwordInput}/>
                         <WatchIcon/>
                     </div>
                     <NavLink to={"/forgotpassword"} className={style.forgotPasswordLink}>
