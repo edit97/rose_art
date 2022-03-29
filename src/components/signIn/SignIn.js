@@ -1,12 +1,25 @@
 import style from './signin.module.scss'
-import {RoseLogo, FacebookIcon, Google, WatchIcon, Arr} from "../../assets/imeges";
+import {RoseLogo, FacebookIcon, Google} from "../../assets/imeges";
 import {Link, NavLink} from "react-router-dom";
-import {useEffect, useState} from "react";
+import { useState} from "react";
 
 
 function SignIn(){
-    const [password, setPassword]=useState("")
-    const [email, setEmail]=useState("")
+
+    const [user, setUser]=useState({
+        email:"",
+        password:"",
+    })
+
+    function edit( event) {
+        console.log('name')
+        setUser({
+            ...user,
+        [event]: event.target.name.value
+        });
+    }
+
+
     return <div className={style.signin}>
             <div className={style.logo}><RoseLogo/></div>
             <div className={style.signinBlok}>
@@ -14,18 +27,18 @@ function SignIn(){
                 <div className={style.title}>Welcome </div>
                 <div className={style.libe}>Enter your credentials to access your account</div>
                 <input type="email"
-                       value={email}
-                       onChange={(e) => {setEmail(e.target.value)}}
+                       value={user.email}
+                       name={'email'}
+                       onChange={(event) => {edit(event)}}
                        placeholder={'Enter your email'}
                        className={style.emailInput}/>
                     <div className={style.passwordBlok }>
                         <input type="password"
-                               value={password}
-                               onChange={(e) => {setPassword(e.target.value)}}
+                               value={user.password}
+                               onChange={(event) => {edit('password',event)}}
                                placeholder={'Enter your password'}
                                className={style.passwordInput}/>
-                        <WatchIcon onClick={() =>  {console.log("arr")}}/>
-                        {/*<Arr className={style.arrIcon}/>*/}
+                        {/*<WatchIcon onClick={() =>  />*/}
                     </div>
                     <NavLink to={"/forgotpassword"} className={style.forgotPasswordLink}>
                         <div className={style.text}>Forgot password?</div>
