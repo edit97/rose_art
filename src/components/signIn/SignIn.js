@@ -14,8 +14,8 @@ function SignIn(){
     function edit( event) {
         console.log('name')
         setUser({
-            ...user,
-        [event]: event.target.name.value
+            ...user.name,
+        [event]: event.target.value
         });
     }
 
@@ -35,7 +35,8 @@ function SignIn(){
                     <div className={style.passwordBlok }>
                         <input type="password"
                                value={user.password}
-                               onChange={(event) => {edit('password',event)}}
+                               name={'password'}
+                               onChange={(event) => {edit(event)}}
                                placeholder={'Enter your password'}
                                className={style.passwordInput}/>
                         {/*<WatchIcon onClick={() =>  />*/}
