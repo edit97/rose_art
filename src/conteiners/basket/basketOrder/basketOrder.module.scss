@@ -6,6 +6,9 @@
   @include column;
   margin: 0 auto;
   padding:40px 0;
+  input{
+    padding-left: 10px;
+  }
   .nav{
     width: 300px;
     @include spaceBetween;
@@ -40,7 +43,6 @@
       height: 80px;
       .streetAdress{
         border-radius: 3px;
-        color: $lightColor;
         border: 1px solid $lightColor;
         width: 100%;
         height: 44px;
@@ -88,7 +90,6 @@
       .registrationInput{
         border-radius: 3px;
         width: 100%;
-        color: $lightColor;
         height: 44px;
        border: 1px solid $lightColor;
         :checked{
@@ -145,9 +146,11 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      span{
-        color: #5496f0;
-        cursor: pointer;
+      .checkboxTxt{
+        .textLink{
+          color: #5496f0;
+          cursor: pointer;
+        }
       }
       .checkboxValue{
         position: absolute;
@@ -209,6 +212,9 @@
         }
       }
     }
+    .inputItems{
+      margin: 0 ;
+    }
     .peymantTitle{
       margin:  0 auto;
     }
@@ -225,13 +231,20 @@
       width: 34% !important;
     }
     .peymantSistem{
-      width: 60% !important;
+      width: 90% !important;
     }
     .registration{
-      width: 60% !important;
+      width: 90% !important;
     }
     .btnPayment{
-      width: 60% !important;
+      width: 90% !important;
     }
+  }
+}
+@media screen and (max-width: 700px){
+  .checkboxText{
+    overflow: hidden;
+    height: 50px;
+    margin: 10px;
   }
 }

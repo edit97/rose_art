@@ -9,7 +9,7 @@ function RoseCard(props) {
                 <div className={style.text}>
                     <span>дружелюбно</span>
                     <span  className={style.work}>Фотоотчет о ходе</span>
-                    <div className={style.btn}>посмотреть<ArrowRight/></div>
+                    <div className={style.btn}>посмотреть<ArrowRight title={''}/></div>
                 </div>
             </div>
         </div>

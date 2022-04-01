@@ -6,6 +6,9 @@
   background-color: $greyFirstColor;
  @include column;
   align-items: center;
+  input{
+    padding-left: 10px;
+  }
 }
 .aboutUs{
   width: $contentWidth;
@@ -233,6 +236,7 @@ width: 60px;
 }
 @media screen and (max-width: 600px){
     .date{
+      height: unset;
       @include column;
       align-items: baseline;
     }

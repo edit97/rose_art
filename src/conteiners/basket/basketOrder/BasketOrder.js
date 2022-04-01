@@ -1,10 +1,22 @@
 import style from "./basketOrder.module.scss"
 import { YMaps, Map, Placemark,ZoomControl,GeolocationControl } from "react-yandex-maps";
-import React  from "react";
+import React, {useState} from "react";
 import { Radio } from 'antd';
 
 function BasketOrder() {
-
+    const[paymentSistem,setPaymentSistem]=useState({
+        street:"",
+        addres:"",
+        name:"",
+        email:"",
+        number:""
+    })
+    function edit(event){
+        setPaymentSistem({
+            ...paymentSistem,
+            [event.target.name]:event.target.value
+        })
+    }
     const mapData = {
         center: [40.180843465756496,44.51673113111903],
         zoom: 12,
@@ -24,11 +36,21 @@ function BasketOrder() {
                 <div className={style.title}>Select Shiping Addres</div>
                 <div className={style.addres}>
                     <div className={style.addresTitle}>City , Street</div>
-                    <input type="text" placeholder={"Street"} className={style.streetAdress}/>
+                    <input type="text"
+                            value={paymentSistem.street}
+                           name={'street'}
+                           placeholder={"Street"}
+                           onChange={(event) => {edit(event)}}
+                           className={style.streetAdress}/>
                 </div>
                 <div className={style.addres}>
                     <div className={style.addresTittle}>Delivery Adres</div>
-                    <input type="text" placeholder={"Your addres"} className={style.streetAdress}/>
+                    <input type="text"
+                           value={paymentSistem.addres}
+                           name={'addres'}
+                           placeholder={"Your addres"}
+                           onChange={(event) => {edit(event)}}
+                           className={style.streetAdress}/>
                 </div>
                 <div className={style.map}>
                     <YMaps className={style.orderMap}>
@@ -58,15 +80,30 @@ function BasketOrder() {
                 <div className={style.inputItems}>
                 <div className={style.registration}>
                     <div className={style.nameTitle}>Full Name </div>
-                    <input type="text" placeholder="Name" className={style.registrationInput}/>
+                    <input type="text"
+                           value={paymentSistem.name}
+                           name={'name'}
+                           placeholder="Name"
+                           onChange={(event) => {edit(event)}}
+                           className={style.registrationInput}/>
                 </div>
                 <div className={style.registration}>
                     <div className={style.nameTitle}>E-mail</div>
-                    <input type="email" placeholder="Email" className={style.registrationInput}/>
+                    <input type="email"
+                           value={paymentSistem.email}
+                           name={'email'}
+                           placeholder="Email"
+                           onChange={(event) => {edit(event)}}
+                           className={style.registrationInput}/>
                 </div>
                 <div className={style.registration}>
                     <div className={style.nameTitle}>Phone number</div>
-                    <input type="text" placeholder="Number" className={style.registrationInput}/>
+                    <input type="text"
+                           value={paymentSistem.number}
+                           name={'number'}
+                           placeholder="Number"
+                           onChange={(event) => {edit(event)}}
+                           className={style.registrationInput}/>
                 </div>
                 <div className={style.peymantSistem}>
                     <Radio.Group name="radiogroup" defaultValue={1}>
@@ -79,7 +116,9 @@ function BasketOrder() {
                     <input className={style.checkboxValue} type="checkbox" id="checked"/>
                     <label htmlFor="checked">
                     </label>
-                    I agree to the terms of the sale, the <span>privacy policy.</span>
+                    <span className={style.checkboxTxt}> I agree to the terms of the sale, the
+                        <span className={style.textLink}>privacy policy.</span>
+                    </span>
                 </div>
                     <button className={style.btnPayment}>PAYMENT</button>
                 </div>

@@ -1,7 +1,7 @@
 import React, {useState} from "react";
-import {Bitmap, Man, Search, Menu, BitmapWhite, IconMan, RoseLogo} from "../../assets/imeges";
+import {Man, Search, Menu, BitmapWhite, IconMan, RoseLogo} from "../../assets/imeges";
 import style from "./header.module.scss";
-import {Link, NavLink} from "react-router-dom";
+import { NavLink} from "react-router-dom";
 
 
 function  Header() {
@@ -15,13 +15,15 @@ return <div className={style.headerWrapper}>
     <div className={style.navigation}>
         <NavLink to={"/"}>
             <div className={style.responsiveLogo}><img src={BitmapWhite} /></div>
-            <div className={style.logo}><RoseLogo/></div>
+            <div className={style.logo}><RoseLogo title={''}/></div>
         </NavLink>
         <div className={style.text}>
             <div>Главный</div>
             <div>О нас</div>
             <div>Контакт</div>
-            <div>Продукт</div>
+            <NavLink to={"/products"}>
+                <div>Продукт</div>
+            </NavLink>
             <div>Перевозки</div>
         </div>
     </div>

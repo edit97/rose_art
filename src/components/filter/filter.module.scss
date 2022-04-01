@@ -1,0 +1,10 @@
+@import "../../assets/styles/mixins";
+@import "../../assets/styles/varieibls";
+
+.filter{
+    width: 20%;
+    height: 100%;
+    border: 1px solid $lightColor;
+  display: flex;
+  flex-direction: column;
+}

@@ -104,3 +104,11 @@ code {
 .ant-radio-input:focus + .ant-radio-inner{
   border-color: #A7093C !important;
 }
+@media screen and (max-width: 700px){
+  .ant-radio-group .ant-radio-group-outline{
+    .ant-radio-wrapper .ant-radio-wrapper-checked{
+      display: flex!important;
+      align-items: center!important;
+    }
+  }
+}

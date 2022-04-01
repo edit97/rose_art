@@ -10,6 +10,7 @@ export {default as Rosers2} from "./icons/Rosers2.png";
 export {default as Rosers3} from "./icons/Rosers3.png";
 export {default as RoseWhite} from "./icons/Rose-white.png";
 export {default as Map} from "./icons/map.png";
+export {default as RoseWallepaper} from "./icons/Group 22 Copy.png";
 
  export {ReactComponent as Man} from "./icons/MAN.svg";
  export {ReactComponent as Search} from "./icons/ic_search.svg"
@@ -40,6 +41,9 @@ export {ReactComponent as Google} from "./icons/googl-ic.svg"
 export {ReactComponent as FacebookIcon} from "./icons/f-icon.svg"
 export {ReactComponent as WatchIcon} from "./icons/wach-ic.svg"
 export {ReactComponent as RoseLogo} from "./icons/Bitmap Copy.svg"
-
+export {ReactComponent as SlashEye} from "./icons/eye_slash_fill_icon_185666.svg"
+export {ReactComponent as RedArr} from "./icons/Fill 1 Copy 2.svg"
+export {ReactComponent as BurgerMenu} from "./icons/Menu-icon.svg"
+export {ReactComponent as IconMenu} from "./icons/Combined Shape.svg"
 
 

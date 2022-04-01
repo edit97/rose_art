@@ -1,27 +1,30 @@
 import style from './signin.module.scss'
-import {RoseLogo, FacebookIcon, Google} from "../../assets/imeges";
-import {Link, NavLink} from "react-router-dom";
+import {RoseLogo, FacebookIcon, Google, WatchIcon, Arr, SlashEye} from "../../assets/imeges";
+import { NavLink} from "react-router-dom";
 import { useState} from "react";
+import {type} from "@testing-library/user-event/dist/type";
 
 
 function SignIn(){
-
+    const[showIcon,setShowIcon]=useState(false);
+    const handleClick =()=> {
+        setShowIcon(!showIcon)
+    };
     const [user, setUser]=useState({
         email:"",
         password:"",
     })
 
     function edit( event) {
-        console.log('name')
         setUser({
-            ...user.name,
-        [event]: event.target.value
+            ...user,
+        [event.target.name]: event.target.value,
         });
     }
 
 
     return <div className={style.signin}>
-            <div className={style.logo}><RoseLogo/></div>
+            <div className={style.logo}><RoseLogo title={''}/></div>
             <div className={style.signinBlok}>
                 <div className={style.signingroup}>
                 <div className={style.title}>Welcome </div>
@@ -33,13 +36,20 @@ function SignIn(){
                        placeholder={'Enter your email'}
                        className={style.emailInput}/>
                     <div className={style.passwordBlok }>
-                        <input type="password"
-                               value={user.password}
-                               name={'password'}
-                               onChange={(event) => {edit(event)}}
-                               placeholder={'Enter your password'}
-                               className={style.passwordInput}/>
-                        {/*<WatchIcon onClick={() =>  />*/}
+                        {!showIcon ? <input type="password"
+                                        value={user.password}
+                                        name={'password'}
+                                        onChange={(event) => {edit(event)}}
+                                        placeholder={'Enter your password'}
+                                        className={style.passwordInput}/>
+                            : <input type="text"
+                                     value={user.password}
+                                     name={'password'}
+                                     onChange={(event) => {edit(event)}}
+                                     placeholder={'Enter your password'}
+                                     className={style.passwordInput}/> }
+                        {!showIcon ? <WatchIcon onClick={handleClick} title={''}/> : <SlashEye onClick={handleClick} title={''}/>}
+
                     </div>
                     <NavLink to={"/forgotpassword"} className={style.forgotPasswordLink}>
                         <div className={style.text}>Forgot password?</div>

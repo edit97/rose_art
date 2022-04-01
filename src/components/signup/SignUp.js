@@ -1,24 +1,85 @@
 import style from './signup.module.scss'
-import { RoseLogo, WatchIcon} from "../../assets/imeges";
+import {Arr, RoseLogo, SlashEye, WatchIcon} from "../../assets/imeges";
 import {NavLink} from "react-router-dom";
+import {useState} from "react";
 
 function SignUp() {
+    const[showIcon,setShowIcon]=useState(false)
+    const handleClick =()=> {
+        setShowIcon(!showIcon )
+    };
+    const [showPassword, setShowPassword]=useState(false)
+    const handlerClick =()=> {
+        setShowPassword(!showPassword )
+    };
+    const [user,setUser]=useState({
+        name: "",
+        ['last name']: "",
+        email:"",
+        password:"",
+        ['confirm password']:"",
+    })
+    function edit(event){
+        setUser({
+           ...user,
+            [event.target.name]:event.target.value
+        })
+    }
     return <div className={style.signup}>
-            <div className={style.logo}><RoseLogo/></div>
+            <div className={style.logo}><RoseLogo title={''}/></div>
             <div className={style.signUpBlok}>
                 <div className={style.signUpGroup}>
                     <div className={style.title}>Register</div>
                     <div className={style.libe}>Enter your details to create a new account</div>
-                    <input type="text" placeholder={'Enter name'}  className={style.emailInput}/>
-                    <input type="text" placeholder={'Enter last name'}  className={style.emailInput}/>
-                    <input type="email" placeholder={'Enter your email'} className={style.emailInput}/>
+                    <input type="text"
+                           value={user.name}
+                           name={'name'}
+                           onChange={(event) => {edit(event)}}
+                           placeholder={'Enter name'}
+                           className={style.emailInput}/>
+                    <input type="text"
+                           value={user["last name"]}
+                           name={'last name'}
+                           onChange={(event) => {edit(event)}}
+                           placeholder={'Enter last name'}
+                           className={style.emailInput}/>
+                    <input type="email"
+                           value={user.email}
+                           name={'email'}
+                           onChange={(event) => {edit(event)}}
+                           placeholder={'Enter your email'}
+                           className={style.emailInput}/>
                     <div className={style.passwordBlok }>
-                        <input type="password" placeholder={'Enter your password'}  className={style.passwordInput}/>
-                        <WatchIcon/>
+                        {!showPassword ?
+                            <input type="password"
+                                   value={user.password}
+                                   name={'password'}
+                                   onChange={(event) => {edit(event)}}
+                                   placeholder={'Enter your password'}
+                                   className={style.passwordInput}/>:
+                            <input type="text"
+                                   value={user.password}
+                                   name={'password'}
+                                   onChange={(event) => {edit(event)}}
+                                   placeholder={'Enter your password'}
+                                   className={style.passwordInput}/>}
+                        {!showPassword ? <WatchIcon onClick={handlerClick} title={''}/> : <SlashEye onClick={handlerClick} title={''}/>}
                     </div>
                     <div className={style.passwordBlok }>
-                        <input type="password" placeholder={'Enter your password'}  className={style.passwordInput}/>
-                        <WatchIcon/>
+                        {!showIcon ?
+                            <input type="password"
+                                   value={user["confirm password"]}
+                                   name={'confirm password'}
+                                   onChange={(event) => {edit(event)}}
+                                   placeholder={'Enter your password'}
+                                   className={style.passwordInput}/>:
+                            <input type="text"
+                                   value={user["confirm password"]}
+                                   name={'confirm password'}
+                                   onChange={(event) => {edit(event)}}
+                                   placeholder={'Enter your password'}
+                                   className={style.passwordInput}/>}
+                        {!showIcon ? <WatchIcon onClick={handleClick} title={''}/> : <SlashEye onClick={handleClick} title={''}/>}
                     </div>
                     <div className={style.checkboxText}>
                     <input className={style.checkboxValue} type="checkbox" id="checked"/>

@@ -16,22 +16,32 @@ import { Collapse } from 'antd';
 import { Menu, Dropdown } from 'antd';
 import {NavLink} from "react-router-dom";
 import FooterCard from "../uiItem/cards/footercard/FooterCard";
+import {useState} from "react";
 
 
 const { Panel } = Collapse;
 
 
 function Footer(){
+    const [email,setEmail]=useState({
+        email:""
+    })
+    function edit(event){
+        setEmail({
+            ...email,
+        [event.target.name]:event.target.value
+        })
+    }
     const menu = (
         <Menu>
             <Menu.Item key="0">
                 <div className={style.menuItem}>
-                   <RuIcon/> RU
+                   <RuIcon title={''}/> RU
                 </div>
             </Menu.Item>
             <Menu.Item key="1">
                 <div className={style.menuItem}>
-                   <UsIcon/> EN
+                   <UsIcon title={''}/> EN
                 </div>
             </Menu.Item>
         </Menu>
@@ -40,7 +50,7 @@ function Footer(){
         <div className={style.aboutUs}>
             <div className={style.adress}>
                 <NavLink to={"/"}>
-                    <RoseLogo/>
+                    <RoseLogo title={''}/>
                 </NavLink>
                 <div className={style.place}>
                     <h1 className={style.title}>Address</h1>
@@ -48,7 +58,7 @@ function Footer(){
                     <div className={style.flag}>
                         <Dropdown overlay={menu}>
                             <a className="ant-dropdown-link" onClick={e => e.preventDefault()}>
-                                <div className={style.languageChange}><Flag/>
+                                <div className={style.languageChange}><Flag title={''}/>
                                     <span>HY</span><Arrow/>
                                 </div>
                             </a>
@@ -58,7 +68,7 @@ function Footer(){
             </div>
             <div className={style.comapny}>
                 <div className={style.blok}>
-                    <h1 className={style.title}>Comapny <div className={style.arr}><Arr/></div></h1>
+                    <h1 className={style.title}>Comapny <div className={style.arr}><Arr title={''}/></div></h1>
                     <FooterCard/>
                 </div>
                 <div className={style.blok}>
@@ -66,7 +76,7 @@ function Footer(){
                     <FooterCard/>
                 </div>
                 <div className={style.blok}>
-                    <h1 className={style.title}>Category <div className={style.arr}><Arr/></div></h1>
+                    <h1 className={style.title}>Category <div className={style.arr}><Arr title={''}/></div></h1>
                     <FooterCard/>
                 </div>
             </div>
@@ -125,11 +135,16 @@ function Footer(){
                     <span>Subscribe, find out about discounts, deals, new products.</span>
                 </div>
                 <div className={style.scribe}>
-                <input className={style.input} type="email" placeholder={"E-mail addres"}/>
+                <input className={style.input}
+                       type="email"
+                       value={email.email}
+                       name={'email'}
+                       onChange={(event) => {edit(event)}}
+                       placeholder={"E-mail addres"}/>
                 <button className={style.btn}>Subscribe</button>
                 </div>
                 <div className={style.responsivSub}>
-                    <div className={style.logo}><RoseLogo/></div>
+                    <div className={style.logo}><RoseLogo title={''}/></div>
                     <h1 className={style.title}>Subscribe</h1>
                     <span>Subscribe, find out about discounts, deals, new products.</span>
                 </div>

@@ -1,0 +1,89 @@
+@import "../../assets/styles/mixins";
+@import "../../assets/styles/varieibls";
+
+.products{
+  width: $contentWidth;
+  margin: 0 auto;
+  .nav{
+    width: 300px;
+    @include spaceBetween;
+    color: $lightColor;
+    margin-bottom: 20px;
+    &:hover{
+      cursor: pointer;
+      color: $firstColor;
+    }
+  }
+  .Wallpaper{
+    width: 100%;
+    position: relative;
+    img{
+      width: 100%;
+      height: 100%;
+    }
+    .textGroup{
+      width: 50%;
+      height: 100%;
+      position: absolute;
+      top: 40px;
+      bottom: 0;
+      left: 30px;
+      .textTitle{
+        font-weight: bold;
+        font-size: 30px;
+      }
+      .text{
+        font-size: 15px;
+        margin-top: 20px;
+        width: 70%;
+        height: 30%;
+      }
+      .textBtn{
+        cursor: pointer;
+        width: 100%;
+        margin-top: 5px;
+        display: flex;
+        align-items: center;
+        border: 0;
+        background-color: transparent;
+        color:$firstColor;
+        svg{
+          display: flex;
+          align-items: center;
+          margin-left: 5px;
+          path{
+            fill: #A7093C;
+          }
+        }
+      }
+    }
+  }
+  .selectGroup{
+    width:100%;
+    margin: 0 auto;
+    .filterGroup{
+      margin-top: 30px;
+      width: 100%;
+      height: 100%;
+      border: 1px solid $lightColor;
+      margin-left: 0;
+      display: flex;
+      justify-content: space-between;
+      .sortBlock{
+        width: 80%;
+        height: 100%;
+        border: 1px solid $lightColor;
+        display: flex;
+        flex-direction: column;
+      }
+      .sortGroup{
+        width: 100%;
+        height: 45px;
+        border-bottom: 1px solid $lightColor;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+    }
+  }
+}

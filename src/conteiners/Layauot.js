@@ -10,6 +10,7 @@ import SignUp from "../components/signup/SignUp";
 import ForgotPassword from "../components/forgotpassword/ForgotPassword";
 import {useEffect, useState} from "react";
 import Confirm from "../components/confirm/Confirm";
+import Products from "../components/products/Products";
 
 function   Layauot () {
     // const [count, setCount]=useState(8)
@@ -33,6 +34,7 @@ function   Layauot () {
                     <Route path={"/signup"}  element={<SignUp/>}/>
                     <Route path={"/forgotpassword"}  element={<ForgotPassword/>}/>
                     <Route path={"/confirm"}  element={<Confirm/>}/>
+                    <Route path={"/products"}  element={<Products/>}/>
                 </Routes>
                 { shouFooter && <Footer/> }
             </div>

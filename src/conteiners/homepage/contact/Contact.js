@@ -11,10 +11,11 @@ function Contact (){
     })
 
 
-    function edit(contact, event) {
-        const copy = Object.assign({})
-        copy[contact] = event.target.value;
-        setContact(copy);
+    function edit( event) {
+        setContact({
+            ...contact,
+            [event.target.name]:event.target.value
+        })
     }
 
     const mapData = {
@@ -31,22 +32,26 @@ function Contact (){
                 <h1>Появились вопросы?</h1>
                 <input type={"text"}
                        value={contact.name}
-                       onChange={(event) => {edit('name',event)}}
+                       name={'name'}
+                       onChange={(event) => {edit(event)}}
                        className={style.blok}
                        placeholder={"Ваше имя"}/>
                 <input type={"email"}
                        value={contact.email}
-                       onChange={(event) => {edit('email',event)}}
+                       name={'email'}
+                       onChange={(event) => {edit(event)}}
                        className={style.blok}
                        placeholder={"Электронная почта"}/>
                 <input type={"text"}
                        value={contact.tem}
-                       onChange={(event) => {edit('tem',event)}}
+                       name={'tem'}
+                       onChange={(event) => {edit(event)}}
                        className={style.blok}
                        placeholder={"Тема"}/>
                 <input type={"text"}
                        value={contact.comments}
-                       onChange={(event) => {edit('commant',event)}}
+                       name={'comments'}
+                       onChange={(event) => {edit(event)}}
                        className={style.blok}
                        placeholder={"Комментарий"}/>
                 <button className={style.btn}>Отправить</button>
