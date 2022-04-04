@@ -4,14 +4,14 @@ import {NavLink} from "react-router-dom";
 import {useState} from "react";
 
 function SignUp() {
+    /*
+    * todo
+    *  ['last name'] ուղել
+    *  className={style.emailInput} փոխել
+    *  Փոխել ֆունկցիաների անունները
+    * */
     const[showIcon,setShowIcon]=useState(false)
-    const handleClick =()=> {
-        setShowIcon(!showIcon )
-    };
     const [showPassword, setShowPassword]=useState(false)
-    const handlerClick =()=> {
-        setShowPassword(!showPassword )
-    };
     const [user,setUser]=useState({
         name: "",
         ['last name']: "",
@@ -19,6 +19,13 @@ function SignUp() {
         password:"",
         ['confirm password']:"",
     })
+
+    const handleClick =()=> {
+        setShowIcon(!showIcon )
+    };
+    const handlerClick =()=> {
+        setShowPassword(!showPassword )
+    };
     function edit(event){
         setUser({
            ...user,

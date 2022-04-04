@@ -7,6 +7,7 @@ function ForgotPassword () {
     const [email,setEmail]=useState({
         email:"",
     })
+    /*todo Փոխել ֆունկցիաների անունները*/
   function edit(event){
         setEmail({
             ...email,

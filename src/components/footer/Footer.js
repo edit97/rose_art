@@ -21,6 +21,10 @@ import {useState} from "react";
 
 const { Panel } = Collapse;
 
+/*todo
+   Փոխել ֆունկցիաների անունները
+   FooterCard-ը գտագործել նաև Collapse-ում
+   */
 
 function Footer(){
     const [email,setEmail]=useState({
@@ -151,7 +155,7 @@ function Footer(){
             </div>
             </div>
         </div>
-        <div className={style.line}></div>
+        <div className={style.line}/>
         <div className={style.date}>
             <div className={style.text}>© Copyright 2021 SmartԼife . All Rights Reserved</div>
             <div className={style.iconComapny}><Steps title={''}/></div>
