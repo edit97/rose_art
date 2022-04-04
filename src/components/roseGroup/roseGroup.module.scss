@@ -2,30 +2,34 @@
 @import "../../assets/styles/varieibls";
 
 
-.group{
-  width: calc(57% - 10px) ;
+.group {
+  width: calc(57% - 10px);
   @include column;
 }
-.blok{
+
+.topPart {
   @include widthHeight;
   @include spaceBetween;
   padding-bottom: 20px;
 }
-.blok1{
+
+.bottomPart {
   width: 100%;
   @include spaceBetween;
 }
-.saleWrapper{
-  width:calc(35% - 10px);
 
-  .sale{
+.saleWrapper {
+  width: calc(35% - 10px);
+
+  .sale {
     width: 100%;
     position: relative;
     padding-top: 100%;
     background-color: $firstColor;
     @include column;
     color: white;
-    .saleTxt{
+
+    .saleTxt {
       width: 100%;
       height: 100%;
       position: absolute;
@@ -35,69 +39,70 @@
     }
   }
 }
-.count{
+
+.count {
   width: 160px;
   @include spaceBetween;
   align-items: center;
-  .number{
+
+  .number {
     font-size: 90px;
   }
-  .iconPrsent{
+
+  .iconPrsent {
     font-size: 40px;
   }
 }
-@media screen and (max-width: 1024px){
-  .roseCard:first-child{
-    //display: none;
-  }
-  .group{
-    width: calc(32% - 10px);
+
+@media all and (max-width: 1024px) {
+  .group {
+    width: calc(35% - 10px);
     //flex-direction: unset;
   }
-  .blok{
+  .topPart {
     padding: 0;
-    //display: none;
-    .roseCard{
-      display: none;
-    }
   }
-.blok1{
-  display: flex;
-  flex-direction: column-reverse;
-  align-items: center;
-  width: 100%;
-  .saleWrapper{
+  .bottomPart {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
     width: 100%;
-    .sale{
+
+    .saleWrapper {
+      width: 100%;
+
+      .sale {
         width: 100%;
-      height: 220px;
-        margin-left: 10px;
-        margin-top: 20px;
-      .saleTxt{
-        text-align: center;
-        .count{
+        .saleTxt {
           text-align: center;
+
+          .count {
+            text-align: center;
+          }
         }
       }
     }
   }
 }
-}
-@media screen and (max-width: 700px){
 
-  .group{
+@media all and (max-width: 700px) {
+
+  .group {
     width: 100%;
     margin-top: 20px;
-    .blok1{
-      display: flex!important;
+
+    .bottomPart {
+      display: flex !important;
       flex-direction: initial;
       align-items: unset !important;
-        .saleWrapper{
-         width: 100%;
-          .sale{
-            width: 100%;
-            margin: 0;
-          }
+
+      .saleWrapper {
+        width: 100%;
+
+        .sale {
+          width: 100%;
+          margin: 0;
+        }
       }
     }
   }

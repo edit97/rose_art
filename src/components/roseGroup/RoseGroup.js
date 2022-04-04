@@ -1,19 +1,13 @@
 import RoseCard from "../uiItem/cards/rosecard/RoseCard";
 import style from './roseGroup.module.scss';
 
-function RoseGroup(){
-
+function RoseGroup(props){
     return  <div className={style.group}>
-        <div className={style.blok}>
-            {/*
-                    todo
-                     1․ պետք է լինի առանձին կոմպոնենտ
-                     2․ <See/> Փոխել ArrowRight
-                  */}
+        <div className={style.topPart}>
             <RoseCard />
-            <RoseCard isBig={true}  className={"rasCard"}/>
+            <RoseCard isSquare={true}/>
         </div>
-        <div className={style.blok1}>
+        <div className={style.bottomPart}>
             <div className={style.saleWrapper}>
                 <div className={style.sale}>
                     <div className={style.saleTxt}>

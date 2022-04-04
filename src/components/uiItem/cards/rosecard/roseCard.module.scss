@@ -2,18 +2,21 @@
 @import "../../../../assets/styles/mixins";
 
 
-.roseCard{
-  position: relative;
+.roseCard {
+  //position: relative;
   width: calc(65% - 10px);
-  img{
-    @include widthHeight;
+
+  img {
+    //@include widthHeight;
   }
-  .rosersCardContent{
+
+  .rosersCardContent {
     position: relative;
     width: 100%;
     height: 100%;
     padding-top: 48.78%;
-    img{
+
+    img {
       position: absolute;
       top: 0;
       left: 0;
@@ -23,85 +26,72 @@
     }
 
   }
-  .text{
+
+  .text {
     width: 80%;
     height: 74px;
     @include column;
     position: absolute;
     bottom: 8px;
     left: 16px;
-    .btn{
+
+    .btn {
       cursor: pointer;
       width: 100%;
       margin-top: 5px;
       @include itemsCenter;
       border: 0;
       background-color: transparent;
-      svg{
+
+      svg {
         width: 10px;
         height: 10px;
         margin-left: 4px;
       }
     }
   }
-  .work{
+
+  .work {
     font-size: 16px;
   }
 
-  &.roseCardNew {
+  &.squareRoseCard {
     width: calc(35% - 10px);
-    .rosersCardContent{
-      position: relative;
-      width: 100%;
-      height: 100%;
-      padding-top: 100%;
-      img{
-        //@include widthHeight;
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-      }
 
+    .rosersCardContent {
+      padding-top: 100%;
     }
 
   }
-}
 
-@media screen and (max-width: 1024px){
-  //.resCard{
-  //  display: none;
-  //}
-  .roseCardNew{
-    display: flex;
-  }
-  .roseCard{
-    width: 100%;
-    margin-left: 20px;
-    .rosersCardContent{
+  @media screen and (max-width: 1024px) {
+    display: none;
+
+    &.squareRoseCard {
       width: 100%;
-      padding-top: 100%;
-      img{
+      display: block;
+
+      .rosersCardContent {
         width: 100%;
       }
     }
-    img{
-      width: 100%;
-    }
-  }
-  .text{
-    width: 80%;
-    overflow: hidden;
-    span{
-      width: 100%;
-    }
-    .work{
-      width: 100%;
-    }
-    .btn{
-      width: 100%;
+
+    .text {
+      width: 80%;
+      overflow: hidden;
+
+      span {
+        width: 100%;
+      }
+
+      .work {
+        width: 100%;
+      }
+
+      .btn {
+        width: 100%;
+      }
     }
   }
 }
+

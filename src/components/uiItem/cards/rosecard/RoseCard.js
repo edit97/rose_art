@@ -3,7 +3,7 @@ import style from './roseCard.module.scss'
 
 
 function RoseCard(props) {
-        return <div className={`${style.roseCard} ${style[props.className]} ${props.isBig ? style.roseCardNew : ""}`}>
+        return <div className={`${style.roseCard} ${style[props.className]} ${props.isSquare ? style.squareRoseCard : ""}`}>
             <div className={style.rosersCardContent}>
                 <img src={Rosers1} alt=""/>
                 <div className={style.text}>
