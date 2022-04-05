@@ -6,7 +6,6 @@ import Slider from "react-slick"
 function RoseSlider(){
     const settings = {
         dots: true,
-        // dotsClass:'sliderDots',
         className:'roseSlide',
         infinite: true,
         vertical: true,
@@ -16,7 +15,7 @@ function RoseSlider(){
         slidesToScroll: 1
     };
     /*todo փոխել անունը firstRose-ի*/
-    return  <div className={style.firstRose}>
+    return  <div className={style.roseSlideGroup}>
         <div className={style.textSlider}>
             <span>дружелюбно</span>
             <span className={style.workSlider}>Фотоотчет о ходе</span>

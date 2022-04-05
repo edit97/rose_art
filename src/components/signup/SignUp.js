@@ -14,79 +14,79 @@ function SignUp() {
     const [showPassword, setShowPassword]=useState(false)
     const [user,setUser]=useState({
         name: "",
-        ['last name']: "",
+        lastName: "",
         email:"",
         password:"",
-        ['confirm password']:"",
+        confirmPassword:"",
     })
 
-    const handleClick =()=> {
+    const changeIcon  =()=> {
         setShowIcon(!showIcon )
     };
-    const handlerClick =()=> {
+    const handleClick =()=> {
         setShowPassword(!showPassword )
     };
-    function edit(event){
+    function saveState(event){
         setUser({
            ...user,
             [event.target.name]:event.target.value
         })
     }
-    return <div className={style.signup}>
+    return <div className={style.signUp}>
             <div className={style.logo}><RoseLogo title={''}/></div>
-            <div className={style.signUpBlok}>
+            <div className={style.signUpBlock}>
                 <div className={style.signUpGroup}>
                     <div className={style.title}>Register</div>
-                    <div className={style.libe}>Enter your details to create a new account</div>
+                    <div className={style.head}>Enter your details to create a new account</div>
                     <input type="text"
                            value={user.name}
                            name={'name'}
-                           onChange={(event) => {edit(event)}}
+                           onChange={(event) => {saveState(event)}}
                            placeholder={'Enter name'}
-                           className={style.emailInput}/>
+                           className={style.inputSection}/>
                     <input type="text"
                            value={user["last name"]}
                            name={'last name'}
-                           onChange={(event) => {edit(event)}}
+                           onChange={(event) => {saveState(event)}}
                            placeholder={'Enter last name'}
-                           className={style.emailInput}/>
+                           className={style.inputSection}/>
                     <input type="email"
                            value={user.email}
                            name={'email'}
-                           onChange={(event) => {edit(event)}}
+                           onChange={(event) => {saveState(event)}}
                            placeholder={'Enter your email'}
-                           className={style.emailInput}/>
-                    <div className={style.passwordBlok }>
+                           className={style.inputSection}/>
+                    <div className={style.passwordBlock }>
                         {!showPassword ?
                             <input type="password"
                                    value={user.password}
                                    name={'password'}
-                                   onChange={(event) => {edit(event)}}
+                                   onChange={(event) => {saveState(event)}}
                                    placeholder={'Enter your password'}
                                    className={style.passwordInput}/>:
                             <input type="text"
                                    value={user.password}
                                    name={'password'}
-                                   onChange={(event) => {edit(event)}}
+                                   onChange={(event) => {saveState(event)}}
                                    placeholder={'Enter your password'}
                                    className={style.passwordInput}/>}
-                        {!showPassword ? <WatchIcon onClick={handlerClick} title={''}/> : <SlashEye onClick={handlerClick} title={''}/>}
+                        {!showPassword ? <WatchIcon onClick={handleClick} title={''}/> : <SlashEye onClick={handleClick} title={''}/>}
                     </div>
-                    <div className={style.passwordBlok }>
+                    <div className={style.passwordBlock }>
                         {!showIcon ?
                             <input type="password"
                                    value={user["confirm password"]}
                                    name={'confirm password'}
-                                   onChange={(event) => {edit(event)}}
+                                   onChange={(event) => {saveState(event)}}
                                    placeholder={'Enter your password'}
                                    className={style.passwordInput}/>:
                             <input type="text"
                                    value={user["confirm password"]}
                                    name={'confirm password'}
-                                   onChange={(event) => {edit(event)}}
+                                   onChange={(event) => {saveState(event)}}
                                    placeholder={'Enter your password'}
                                    className={style.passwordInput}/>}
-                        {!showIcon ? <WatchIcon onClick={handleClick} title={''}/> : <SlashEye onClick={handleClick} title={''}/>}
+                        {!showIcon ? <WatchIcon onClick={changeIcon } title={''}/> : <SlashEye onClick={changeIcon} title={''}/>}
                     </div>
                     <div className={style.checkboxText}>
                     <input className={style.checkboxValue} type="checkbox" id="checked"/>
@@ -98,7 +98,7 @@ function SignUp() {
                 </div>
             </div>
             <div className={style.accountText}>Don't have an account yet?
-                <NavLink to={"/signin"}>
+                <NavLink to={"/signIn"}>
                     <span className={style.textLink}>Create an account</span>
                 </NavLink>
             </div>

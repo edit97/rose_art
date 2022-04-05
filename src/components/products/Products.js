@@ -3,11 +3,12 @@ import {BurgerMenu, IconMenu, MapIcon, RedArr, RoseWallepaper} from "../../asset
 import ProductCard from "../uiItem/cards/productcard/ProductCard";
 import Select from "../select/Select";
 import Filter from "../filter/Filter";
+import Sort from "../sort/Sort";
 
 function Products () {
     return <div className={style.products}>
     <div className={style.nav}>Home  /    All rose   /  Rose spray </div>
-        <div className={style.Wallpaper}>
+        <div className={style.wallpaper}>
             <img src={RoseWallepaper} alt=""/>
             <div className={style.textGroup}>
                 <div className={style.textTitle}>
@@ -27,18 +28,7 @@ function Products () {
             <div className={style.filterGroup}>
                 <Filter/>
                 <div className={style.sortBlock}>
-                    <div className={style.sortGroup}>
-                        <div className={style.sort}>
-                            Sort  By default
-                        </div>
-                        <div className={style.sortMenu}>
-                            <BurgerMenu title={''}/>
-                            <IconMenu title={''}/>
-                        </div>
-                    </div>
-                    <div className={style.productsCard}>
-                        <ProductCard/>
-                    </div>
+                   <Sort/>
                 </div>
             </div>
         </div>

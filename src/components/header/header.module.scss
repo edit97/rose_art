@@ -3,7 +3,10 @@
 
 /*
 todo
- 1. hover-ի ժամանակ տալ transition ուղել մնացած բոլոր կոմպոնենտներում
+ 2. էլեմենտների սթայլերը կառուցել child-Ը parent-ի մեջ և ըստ հերթականության
+ 3. ստուգել և բոլոր անհրաժեշտ էլեմենտներին դնել cursor: pointer
+ 4. hover-ի ժամանակ տալ transition
+ բացի 1-ից բոլոր կետերը ուղել մնացած բոլոր կոմպոնենտներում
 */
 .headerWrapper{
     width: $contentWidth;
@@ -23,6 +26,10 @@ todo
     display: none;
 }
 .navigation{
+    /*
+    todo
+     2․ height-ը նաել Փոխել
+    */
     width: 70%;
     height: 100%;
     @include itemsCenter;
@@ -31,16 +38,16 @@ todo
         height: 100%;
         @include aline-items;
         margin-left: 45px;
-        div{
+        .link{
             cursor: pointer;
             height: 100%;
             @include aline-items;
             margin-left: 20px;
             border-bottom:transparent solid 3px;
-        }
-        :hover{
-            border-bottom: $firstColor solid 3px;
-            transition: top 1s ease-out 0.5s;
+            &:hover{
+                border-bottom: $firstColor solid 3px;
+                transition: top 1s ease-out 0.5s;
+            }
         }
     }
     .responsiveLogo{
@@ -59,6 +66,7 @@ todo
     justify-content: flex-end;
     :hover{
         color: #A7093C;
+        transition: top 1s ease-out 0.5s;
         svg{
                 path{
                     fill: $firstColor;
@@ -99,7 +107,7 @@ todo
         color: black;
     }
     .active{
-        color: #A7093C;
+        color:$firstColor;
     }
     .headerPage{
         color: white;
@@ -108,19 +116,36 @@ todo
         color: white;
     }
 }
-.signinLink{
+.signInLink{
     color: black;
     &:active{
-        color: #A7093C;
+        color: $firstColor;
     }
 }
 .basketLink{
     color: black;
     :hover{
-        color: #A7093C;
+        color: $firstColor;
     }
 }
-
+.productLinks{
+    height: 100%;
+    @include aline-items;
+    color: black;
+    &:hover{
+        color: $firstColor;
+        transition: top 1s ease-out 0.5s;
+    }
+}
+.headerLink{
+    @include aline-items;
+    color: black;
+    height: 70px;
+    &:hover{
+        transition: top 1s ease-out 0.5s;
+        color: $firstColor;
+    }
+}
 @media screen and(max-width: 1024px){
     .header{
         width: 100%;
@@ -190,14 +215,14 @@ todo
         .basketNavLink{
             color: white;
         }
-        .signinNavLink{
+        .signInNavLink{
             color: white;
         }
     }
-    .signinLink{
+    .signInLink{
         color:white;
         &:active{
-            color: #A7093C;
+            color: $firstColor;
         }
     }
     .headerActions{
@@ -244,7 +269,7 @@ todo
             color: white;
         }
     }
-    .signinNavLink{
+    .signInNavLink{
         color: white;
     }
     .basketNavLink{

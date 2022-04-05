@@ -14,8 +14,8 @@ function RoseGroup(props){
                         <div>горячие скидки</div>
                         <div className={style.count}>
                             <span className={style.number}>20</span>
-                            <div className={style.prsent}>
-                                <div className={style.iconPrsent}>% </div>
+                            <div className={style.present}>
+                                <div className={style.iconPresent}>% </div>
                                 <div>НА ВСЕ</div>
                             </div>
                         </div>

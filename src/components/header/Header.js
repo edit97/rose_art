@@ -18,13 +18,15 @@ return <div className={style.headerWrapper}>
             <div className={style.logo}><RoseLogo title={''}/></div>
         </NavLink>
         <div className={style.text}>
-            <div>Главный</div>
-            <div>О нас</div>
-            <div>Контакт</div>
-            <NavLink to={"/products"}>
-                <div>Продукт</div>
+            <NavLink to={"/"} className={style.headerLink}>
+               <div className={style.link}> Главный </div>
             </NavLink>
-            <div>Перевозки</div>
+            <div className={style.link}>О нас</div>
+            <div className={style.link}>Контакт</div>
+            <NavLink to={"/products"} className={style.productLinks}>
+                <div className={style.link}> Продукт</div>
+            </NavLink>
+            <div className={style.link}>Перевозки</div>
         </div>
     </div>
     <div className={style.headerActions}>
@@ -35,9 +37,9 @@ return <div className={style.headerWrapper}>
             5.եթե գրվածի տակ ընդգծվում է կանաչով ուրեմն բառը գրված է սխալ, ուղղել
             ուղել մնացած բոլոր կոմպոնենտներում
           */}
-        <div className={style.item}><Search title={''}/>Поиск </div><span> | </span>
-        <NavLink to="/signin" className={style.signinLink} >
-            <div className={style.items}> <IconMan title={''}/>Boйти </div>
+        <div className={style.searchItem}><Search title={''}/>Поиск </div><span> | </span>
+        <NavLink to="/signIn" className={style.signInLink} >
+            <div className={style.sinInItems}> <IconMan title={''}/>Boйти </div>
         </NavLink>
         <span> | </span>
         <NavLink to="/basket" className={style.basketLink} >
@@ -61,8 +63,8 @@ return <div className={style.headerWrapper}>
         <div>Продукт</div>
         <div>Перевозки</div>
         <div className={style.search}><Search title={''}/> Поиск</div>
-            <NavLink to={"/signin"} className={style.signinNavLink}>
-                <div className={style.manicon}><Man title={''}/>Boйти</div>
+            <NavLink to={"/signIn"} className={style.signinNavLink}>
+                <div className={style.manIcon}><Man title={''}/>Boйти</div>
             </NavLink>
             <NavLink to={"/basket"}  className={style.basketNavLink}>
                 <div className={style.basketPage}>Корзина</div>

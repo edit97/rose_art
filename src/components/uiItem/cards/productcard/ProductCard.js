@@ -1,12 +1,12 @@
 import style from "./productCard.module.scss"
-import {Basket, Heart, Rose3} from "../../../../assets/imeges";
+import {Basket, Heart, Rose4} from "../../../../assets/imeges";
 import React from "react";
 
 function ProductCard(){
     return <div className={style.productCard}>
-        <div className={style.blok}>
+        <div className={style.block}>
             <div className={style.heart}><Heart title={''}/></div>
-            <div className={style.rose}><Rose3 title={''}/></div>
+            <div className={style.rose}><Rose4 title={''}/></div>
             <div className={style.text}>
                 <div>Rose pich avalanche for
                     Echo  tery Show 5 in</div>

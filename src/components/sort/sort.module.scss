@@ -1,0 +1,59 @@
+@import "../../assets/styles/mixins";
+@import "../../assets/styles/varieibls";
+
+
+.sort{
+  width: 100%;
+  .sortGroup{
+      width: 100%;
+      height: 45px;
+    padding: 10px;
+      border-bottom: 1px solid $lightColor;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    .sortMenu{
+      width: 40px;
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+  .productsCard{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+  .sortText{
+    font-weight: bold;
+    font-size: 14px;
+    opacity: 65%;
+    color: $greyColor;
+    &:hover{
+      color: black;
+      svg{
+        path{
+          fill: black;
+        }
+      }
+    }
+  }
+  .sortBy{
+    font-size: 14px;
+    color: black;
+    margin: 0 5px;
+    &:hover{
+      color: black;
+    }
+  }
+  .sortDropdown{
+    position: absolute;
+    top: 10px;
+    left: 20px;
+  }
+}
+@media screen and (max-width: 1024px){
+    .sort{
+      width: 100%;
+    }
+}

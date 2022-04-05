@@ -11,7 +11,7 @@ function Contact (){
     })
 
 
-    function edit( event) {
+    function saveState( event) {
         setContact({
             ...contact,
             [event.target.name]:event.target.value
@@ -33,30 +33,30 @@ function Contact (){
                 <input type={"text"}
                        value={contact.name}
                        name={'name'}
-                       onChange={(event) => {edit(event)}}
-                       className={style.blok}
+                       onChange={(event) => {saveState(event)}}
+                       className={style.block}
                        placeholder={"Ваше имя"}/>
                 <input type={"email"}
                        value={contact.email}
                        name={'email'}
-                       onChange={(event) => {edit(event)}}
-                       className={style.blok}
+                       onChange={(event) => {saveState(event)}}
+                       className={style.block}
                        placeholder={"Электронная почта"}/>
                 <input type={"text"}
                        value={contact.tem}
                        name={'tem'}
-                       onChange={(event) => {edit(event)}}
-                       className={style.blok}
+                       onChange={(event) => {saveState(event)}}
+                       className={style.block}
                        placeholder={"Тема"}/>
                 <input type={"text"}
                        value={contact.comments}
                        name={'comments'}
-                       onChange={(event) => {edit(event)}}
-                       className={style.blok}
+                       onChange={(event) => {saveState(event)}}
+                       className={style.block}
                        placeholder={"Комментарий"}/>
                 <button className={style.btn}>Отправить</button>
             </div>
-        <div className={style.bloks}>
+        <div className={style.blocks}>
             <div className={style.map}>
                 <YMaps className={style.mapBlock}>
                     <Map defaultState={mapData}  className={style.mapSize}>
@@ -79,7 +79,7 @@ function Contact (){
                 </YMaps>
             </div>
             <div className={style.bgkRed}>
-                <div className={style.adress}>Адрес: 0010 Goght Kotayk Province, Armenia</div>
+                <div className={style.address}>Адрес: 0010 Goght Kotayk Province, Armenia</div>
             </div>
         </div>
     </div>

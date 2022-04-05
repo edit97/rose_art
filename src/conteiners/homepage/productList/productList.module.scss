@@ -48,10 +48,10 @@
 
 }
 @media screen and (max-width: 840px){
-  .blok3{
+  .block3{
     display: none;
   }
-  .blok,.blok1,.blok2{
+  .block,.block1,.block2{
     margin: 0 auto;
   }
 }
@@ -60,15 +60,15 @@
   .slider{
   @include spaceBetween;
   }
-  .blok2{
+  .block2{
     display: none;
   }
 }
 @media screen and (max-width: 440px){
-  .blok1{
+  .block1{
     display:none;
   }
-  .blok{
+  .block{
    margin: 0 auto;
   }
 }

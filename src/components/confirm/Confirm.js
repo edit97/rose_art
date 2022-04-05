@@ -5,11 +5,11 @@ import {NavLink} from "react-router-dom";
 function Confirm() {
     return <div className={style.confirm}>
         <div className={style.logo}><RoseLogo title={''}/></div>
-        <div className={style.confirmBlok}>
+        <div className={style.confirmBlock}>
             <div className={style.confirmGroup}>
                 <div className={style.title}>Confirm your email</div>
-                <div className={style.libe}>We sent a confirmation email to animxitaryan@gmail.com</div>
-                <div className={style.inputBlok}>
+                <div className={style.head}>We sent a confirmation email to animxitaryan@gmail.com</div>
+                <div className={style.inputBlock}>
                     <input type="text"  className={style.emailInput}/>
                     <input type="text"  className={style.emailInput}/>
                     <input type="text"  className={style.emailInput}/>
@@ -21,7 +21,7 @@ function Confirm() {
             </div>
         </div>
         <div className={style.accountText}>If you do not see it yet?
-            <NavLink to={"/signin"}>
+            <NavLink to={"/signIn"}>
                 <span>You can send your confirmation email again.</span>
             </NavLink>
         </div>

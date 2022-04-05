@@ -8,7 +8,7 @@ function ForgotPassword () {
         email:"",
     })
     /*todo Փոխել ֆունկցիաների անունները*/
-  function edit(event){
+  function saveState(event){
         setEmail({
             ...email,
             [event.target.name]:event.target.value
@@ -16,14 +16,14 @@ function ForgotPassword () {
   }
     return <div className={style.forgotPassword}>
         <div className={style.logo}><RoseLogo title={''}/></div>
-        <div className={style.forgotPasswordBlok}>
+        <div className={style.forgotPasswordBlock}>
             <div className={style.forgotPasswordGroup}>
                 <div className={style.title}>Forgot password</div>
-                <div className={style.libe}>Enter your email. Email: Your Password.to restore</div>
+                <div className={style.head}>Enter your email. Email: Your Password.to restore</div>
                 <input type="email"
                        value={email.email}
                        name={'email'}
-                       onChange={(event) => {edit(event)}}
+                       onChange={(event) => {saveState(event)}}
                        placeholder={'Enter your email'}
                        className={style.emailInput}/>
                 <Link to={"/confirm"}>
@@ -32,7 +32,7 @@ function ForgotPassword () {
             </div>
         </div>
         <div className={style.accountText}>Don't have an account yet?
-            <NavLink to={"/signin"}>
+            <NavLink to={"/signIn"}>
                 <span>Create an account</span>
             </NavLink>
         </div>

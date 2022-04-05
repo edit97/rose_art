@@ -1,7 +1,7 @@
 @import "../../assets/styles/mixins";
 @import "../../assets/styles/varieibls";
 
-.signin{
+.signIn{
   width: 50%;
   height: 640px;
   padding-top: 60px;
@@ -9,12 +9,12 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  .signinBlok {
+  .signInBlock {
     width: 66%;
     margin-top: 20px;
     border-radius: 4px;
-    border: 1px solid $greyFirstColor;
-    .signingroup {
+    border: 1px solid $greyBorderColor;
+    .signInGroup {
       width: 90%;
       padding: 10px;
       margin: 0 auto;
@@ -23,7 +23,7 @@
       input{
         padding-left: 10px;
       }
-      .libe {
+      .head {
         margin: 0 auto;
         padding-bottom: 26px;
       }
@@ -33,7 +33,7 @@
         font-size: 20px;
         font-weight: bold;
       }
-      .emailInput{
+      .inputSection{
         margin-top: 20px;
         border-radius: 3px;
         width: 100%;
@@ -43,11 +43,11 @@
           border: 6px solid black;
         }
       }
-      .emailInput:focus {
+      .inputSection:focus {
         outline: none;
-        border: 2px solid #A7093C;
+        border: 2px solid $firstColor;
       }
-      .passwordBlok{
+      .passwordBlock{
         margin-top: 20px;
         margin-bottom: 16px;
         width: 100%;
@@ -65,13 +65,13 @@
         svg{
           cursor: pointer;
           position: absolute;
-          bottom: 16px;
+          bottom: 10px;
           right: 20px;
         }
       }
       .passwordInput:focus {
         outline: none;
-        border: 2px solid #A7093C;
+        border: 2px solid $firstColor;
       }
 
       input:placeholder-shown {
@@ -94,6 +94,10 @@
         background-color: $firstColor;
         border: 0;
         color: white;
+        &:hover{
+          transition: all 0.3s ease-in-out;
+          transform: scale(1.05);
+        }
       }
       .btnGoogle{
         background-color: transparent;
@@ -129,7 +133,7 @@
           color: white;
         }
       }
-      .googletext{
+      .googleText{
        margin: 0 auto;
         display: flex;
         align-items: center;
@@ -144,34 +148,34 @@
     margin: 16px 0 16px 0;
     font-size: 14px;
     font-weight: bold;
-    color: #B3B3B3;
+    color:$lightColor;
     span{
       cursor: pointer;
-      color: #A7093C;
+      color: $firstColor;
     }
   }
   .forgotPasswordLink{
     color: black;
     :hover{
-      color: #A7093C;
+      color: $firstColor;
     }
   }
 }
 @media screen and (max-width: 1024px){
-  .signin{
+  .signIn{
     width: 80%;
     height: 568px;
     margin-top: 50px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    .signinBlok{
+    .signInBlock{
       width: 90%;
     }
   }
 }
 @media screen and (max-width: 700px){
-  .signin{
+  .signIn{
     width: 100%;
     .accountText{
       width: 80%;

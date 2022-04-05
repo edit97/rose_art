@@ -5,11 +5,10 @@ import {
     Instagram,
     Linkedin,
     Arrow,
-    Bitmap,
     Arr,
     UsIcon,
     RuIcon,
-    ArrowRight, RoseLogo
+    RoseLogo
 } from "../../assets/imeges";
 import style from "./footer.module.scss";
 import { Collapse } from 'antd';
@@ -24,13 +23,13 @@ const { Panel } = Collapse;
 /*todo
    Փոխել ֆունկցիաների անունները
    FooterCard-ը գտագործել նաև Collapse-ում
-   */
+*/
 
 function Footer(){
     const [email,setEmail]=useState({
         email:""
     })
-    function edit(event){
+    function saveState(event){
         setEmail({
             ...email,
         [event.target.name]:event.target.value
@@ -52,7 +51,7 @@ function Footer(){
     )
     return <div className={style.footer}>
         <div className={style.aboutUs}>
-            <div className={style.adress}>
+            <div className={style.address}>
                 <NavLink to={"/"}>
                     <RoseLogo title={''}/>
                 </NavLink>
@@ -75,17 +74,17 @@ function Footer(){
                     <h1 className={style.title}>Comapny <div className={style.arr}><Arr title={''}/></div></h1>
                     <FooterCard/>
                 </div>
-                <div className={style.blok}>
+                <div className={style.block}>
                     <h1 className={style.title}>About us</h1>
                     <FooterCard/>
                 </div>
-                <div className={style.blok}>
+                <div className={style.block}>
                     <h1 className={style.title}>Category <div className={style.arr}><Arr title={''}/></div></h1>
                     <FooterCard/>
                 </div>
             </div>
-            <div className={style.responsivBlok}>
-            <div className={style.responsivCollapse}>
+            <div className={style.responsiveBlock}>
+            <div className={style.responsiveCollapse}>
                     <Collapse bordered={false}
                               defaultActiveKey={['0']}
                               expandIconPosition={'right'}
@@ -95,32 +94,17 @@ function Footer(){
                     >
                         <Panel  header="Comapny" key="1" className={'collapseItme'} >
                             <div className={style.resComponents}>
-                                <div>Home</div>
-                                <div>About</div>
-                                <div>Contact</div>
-                                <div>Blog</div>
-                                <div>Apps</div>
-                                <div>Sine in</div>
+                                <FooterCard/>
                             </div>
                         </Panel>
                         <Panel header="About us" key="2">
                             <div className={style.resComponents}>
-                                <div>Home</div>
-                                <div>About</div>
-                                <div>Contact</div>
-                                <div>Blog</div>
-                                <div>Apps</div>
-                                <div>Sine in</div>
+                                <FooterCard/>
                             </div>
                         </Panel>
                         <Panel header="Category" key="3">
                             <div className={style.resComponents}>
-                                <div>Home</div>
-                                <div>About</div>
-                                <div>Contact</div>
-                                <div>Blog</div>
-                                <div>Apps</div>
-                                <div>Sine in</div>
+                                <FooterCard/>
                             </div>
                         </Panel>
                     </Collapse>
@@ -143,11 +127,11 @@ function Footer(){
                        type="email"
                        value={email.email}
                        name={'email'}
-                       onChange={(event) => {edit(event)}}
-                       placeholder={"E-mail addres"}/>
+                       onChange={(event) => {saveState(event)}}
+                       placeholder={"E-mail address"}/>
                 <button className={style.btn}>Subscribe</button>
                 </div>
-                <div className={style.responsivSub}>
+                <div className={style.responsiveSub}>
                     <div className={style.logo}><RoseLogo title={''}/></div>
                     <h1 className={style.title}>Subscribe</h1>
                     <span>Subscribe, find out about discounts, deals, new products.</span>

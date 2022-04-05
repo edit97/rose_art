@@ -30,9 +30,9 @@ function   Layauot () {
                     <Route path={"/"} element={<Homepage/>}/>
                     <Route path={"/basket"} element={<Basket/> }/>
                     <Route path={"/basket/order"} element={<BasketOrder/>} />
-                    <Route path={"/signin"}  element={<SignIn/>} />
+                    <Route path={"/signIn"}  element={<SignIn/>} />
                     <Route path={"/signup"}  element={<SignUp/>}/>
-                    <Route path={"/forgotpassword"}  element={<ForgotPassword/>}/>
+                    <Route path={"/forgotPassword"}  element={<ForgotPassword/>}/>
                     <Route path={"/confirm"}  element={<Confirm/>}/>
                     <Route path={"/products"}  element={<Products/>}/>
                 </Routes>

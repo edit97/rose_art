@@ -5,7 +5,7 @@
   width: $contentWidth;
   margin: 0 auto;
   .nav{
-    width: 300px;
+    width: 100%;
     @include spaceBetween;
     color: $lightColor;
     margin-bottom: 20px;
@@ -14,7 +14,7 @@
       color: $firstColor;
     }
   }
-  .Wallpaper{
+  .wallpaper{
     width: 100%;
     position: relative;
     img{
@@ -52,7 +52,7 @@
           align-items: center;
           margin-left: 5px;
           path{
-            fill: #A7093C;
+            fill: $firstColor;
           }
         }
       }
@@ -72,17 +72,101 @@
       .sortBlock{
         width: 80%;
         height: 100%;
-        border: 1px solid $lightColor;
+        border-left: 1px solid $lightColor;
         display: flex;
         flex-direction: column;
       }
-      .sortGroup{
+    }
+  }
+}
+
+@media screen  and (max-width: 1024px){
+
+ .products{
+   width: 100%;
+   margin-top: 80px;
+   padding: 20px;
+   .nav{
+     width: 100%;
+   }
+   .wallpaper{
+     width: 100%;
+     .textGroup{
+       width: 50%;
+       height: 100%;
+       position: absolute;
+       top: 10px;
+       bottom: 0;
+       .textTitle{
+         font-size: 30px;
+         height: 40px;
+         overflow: hidden;
+       }
+       .text{
+         margin-top: 6px;
+         height: 66px;
+         overflow: hidden;
+       }
+     }
+   }
+   .sortBlock{
+     width: 70%;
+   }
+ }
+}
+@media screen and (max-width: 700px){
+  .wallpaper{
+    width: 100%;
+    .textGroup{
+      width: 50%;
+      height: 100%;
+      position: absolute;
+      top: 10px;
+      bottom: 0;
+      .textTitle{
+        font-size: 20px!important;
+        height: 24px!important;
+        overflow: hidden;
+      }
+      .text{
+        margin-top: unset;
+        height: 40px!important;
+        overflow: hidden;
+      }
+    }
+  }
+  .products{
+    .selectGroup{
+      .filterGroup{
         width: 100%;
-        height: 45px;
-        border-bottom: 1px solid $lightColor;
         display: flex;
-        justify-content: space-between;
+        flex-direction: column;
         align-items: center;
+        .sortBlock{
+          width: 100%;
+          border-top: 1px solid $greyBorderColor;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 500px){
+  .wallpaper{
+    width: 100%;
+    .textGroup{
+      width: 50%;
+      height: 100%;
+      position: absolute;
+      top: 10px;
+      bottom: 0;
+      .textTitle{
+        font-size: 20px!important;
+        height: 24px!important;
+        overflow: hidden;
+      }
+      .text{
+        display: none;
       }
     }
   }

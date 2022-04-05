@@ -44,12 +44,15 @@
     background-color: transparent;
   }
 }
+.hello{
+  display: none;
+}
 
-.firstRose{
+.roseSlideGroup{
   position: relative;
   width: calc(43% - 10px);
 }
-.responsivRose{
+.responsiveRose{
   display: none;
 }
 .roseItem{
@@ -68,21 +71,21 @@
   .rosers{
     display: none;
   }
-  .blok1{
+  .block1{
     @include column;
   }
   .text{
     width: 80%;
   }
-  .firstRose{
-    width: calc(65% - 10px);
+  .roseSlideGroup{
+    width: calc(70% - 10px);
   }
   .group{
     width: 35%;
     display: flex;
     margin: auto;
   }
-  .responsivRose{
+  .responsiveRose{
     width: 100%;
     margin-top:20px ;
     position: relative;
@@ -91,13 +94,13 @@
       width: 100%;
     }
   }
-  .responsivText{
+  .responsiveText{
     position: absolute;
     height: 74px;
     @include column;
     bottom: 8px;
     left: 16px;
-    .responsivBtn{
+    .responsiveBtn{
       width: 100%;
       height: 70px;
       @include itemsCenter;
@@ -131,10 +134,10 @@
     display: flex;
     width: 50%;
   }
-  .firstRose{
+  .roseSlideGroup{
     width: 100%;
   }
-  .blok{
+  .block{
     width: 50%;
     padding-right: 20px;
     .rose{
@@ -144,7 +147,7 @@
       }
     }
   }
-  .blok1{
+  .block1{
     width: 50%;
     .sale{
       width: 100%;

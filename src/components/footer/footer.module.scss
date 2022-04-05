@@ -3,7 +3,7 @@
 
 .footer{
   width: 100%;
-  background-color: $greyFirstColor;
+  background-color: $greyBackgroundColor;
  @include column;
   align-items: center;
   input{
@@ -17,7 +17,7 @@
   padding: 20px;
   align-items: center;
   @include spaceBetween;
-  .adress{
+  .address{
     width: 20%;
     img{
       margin-bottom: 15px;
@@ -51,10 +51,10 @@
 
 .line{
   width: 100%;
-  border-bottom: 2px solid $greySecondColor;
+  border-bottom: 2px solid $greyBorderColor;
 }
 .underLine{
-  border-bottom: 2px solid $greySecondColor;
+  border-bottom: 2px solid $greyBorderColor;
 }
 
 .subscribe{
@@ -91,7 +91,7 @@
   .follow{
     @include spaceBetween;
     align-items: baseline;
-    border-bottom: 2px solid $greySecondColor;
+    border-bottom: 2px solid $greyBorderColor;
     .icons{
       width: 100px;
       @include spaceBetween;
@@ -102,7 +102,7 @@
           }
           :hover{
             path{
-              fill: #A7093C;
+              fill: $firstColor;
             }
           }
         }
@@ -111,7 +111,7 @@
         cursor: pointer;
         :hover{
           path{
-            fill: #A7093C;
+            fill: $firstColor;
           }
         }
       }
@@ -128,13 +128,13 @@
     color: $greyColor;
   }
 }
-.responsivLine{
+.responsiveLine{
   display: none;
 }
-.responsivSub{
+.responsiveSub{
   display: none;
 }
-.responsivCollapse{
+.responsiveCollapse{
   display: none;
 }
 .menuItem{
@@ -156,7 +156,7 @@ width: 60px;
    .place{
      display: none;
    }
-   .adress{
+   .address{
      display: none;
    }
    .underLine{
@@ -186,17 +186,17 @@ width: 60px;
     width: 100%;
     padding: 20px;
   }
-  .responsivBlok{
+  .responsiveBlock{
     display: flex;
     flex-direction: column-reverse;
     width: 100%;
     padding: 20px;
-    .responsivCollapse{
+    .responsiveCollapse{
       display: flex;
       width: 100%;
       color: $greyColor;
     }
-    .responsivSub{
+    .responsiveSub{
       @include column;
       width: 100%;
     }

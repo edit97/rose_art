@@ -30,7 +30,7 @@
 
 }
 
-  .remov{
+  .remove{
     margin-left: auto;
     color: $redColor;
     padding: 30px;
@@ -43,7 +43,7 @@
   height: 500px;
   @include column;
   border: 1px solid $lightColor;
-  background-color: $greyFirstColor;
+  background-color: $greyBackgroundColor;
   .name{
     font-size: 15px;
     padding: 20px 20px 0;
@@ -114,7 +114,7 @@
     @include column;
     .group{
       width: 100%;
-      .blok{
+      .block{
         width: 100%;
         .text{
           height: 40px;

@@ -4,16 +4,16 @@ import React, {useState} from "react";
 import { Radio } from 'antd';
 
 function BasketOrder() {
-    const[paymentSistem,setPaymentSistem]=useState({
+    const[paymentSystem,setPaymentSystem]=useState({
         street:"",
-        addres:"",
+        address:"",
         name:"",
         email:"",
         number:""
     })
-    function edit(event){
-        setPaymentSistem({
-            ...paymentSistem,
+    function saveState(event){
+        setPaymentSystem({
+            ...paymentSystem,
             [event.target.name]:event.target.value
         })
     }
@@ -31,26 +31,26 @@ function BasketOrder() {
             <div className={style.nav}>Home  /    All rose   /  Rose spray  /  My cart</div>
             <h1 >Payment Details</h1>
         <div className={style.item}>
-            <div className={style.shiping}>
-                <div className={style.orderig}>
-                <div className={style.title}>Select Shiping Addres</div>
-                <div className={style.addres}>
-                    <div className={style.addresTitle}>City , Street</div>
+            <div className={style.shipping}>
+                <div className={style.ordering}>
+                <div className={style.title}>Select Shipping Address</div>
+                <div className={style.address}>
+                    <div className={style.addressTitle}>City , Street</div>
                     <input type="text"
-                            value={paymentSistem.street}
+                            value={paymentSystem.street}
                            name={'street'}
                            placeholder={"Street"}
-                           onChange={(event) => {edit(event)}}
-                           className={style.streetAdress}/>
+                           onChange={(event) => {saveState(event)}}
+                           className={style.streetAddress}/>
                 </div>
-                <div className={style.addres}>
-                    <div className={style.addresTittle}>Delivery Adres</div>
+                <div className={style.address}>
+                    <div className={style.addressTittle}>Delivery Address</div>
                     <input type="text"
-                           value={paymentSistem.addres}
-                           name={'addres'}
-                           placeholder={"Your addres"}
-                           onChange={(event) => {edit(event)}}
-                           className={style.streetAdress}/>
+                           value={paymentSystem.address}
+                           name={'address'}
+                           placeholder={"Your address"}
+                           onChange={(event) => {saveState(event)}}
+                           className={style.streetAddress}/>
                 </div>
                 <div className={style.map}>
                     <YMaps className={style.orderMap}>
@@ -75,37 +75,37 @@ function BasketOrder() {
                 </div>
                 </div>
             </div>
-            <div className={style.peymant}>
-                <div className={style.peymantTitle}>Payment Details</div>
+            <div className={style.payment}>
+                <div className={style.paymentTitle}>Payment Details</div>
                 <div className={style.inputItems}>
                 <div className={style.registration}>
                     <div className={style.nameTitle}>Full Name </div>
                     <input type="text"
-                           value={paymentSistem.name}
+                           value={paymentSystem.name}
                            name={'name'}
                            placeholder="Name"
-                           onChange={(event) => {edit(event)}}
+                           onChange={(event) => {saveState(event)}}
                            className={style.registrationInput}/>
                 </div>
                 <div className={style.registration}>
                     <div className={style.nameTitle}>E-mail</div>
                     <input type="email"
-                           value={paymentSistem.email}
+                           value={paymentSystem.email}
                            name={'email'}
                            placeholder="Email"
-                           onChange={(event) => {edit(event)}}
+                           onChange={(event) => {saveState(event)}}
                            className={style.registrationInput}/>
                 </div>
                 <div className={style.registration}>
                     <div className={style.nameTitle}>Phone number</div>
                     <input type="text"
-                           value={paymentSistem.number}
+                           value={paymentSystem.number}
                            name={'number'}
                            placeholder="Number"
-                           onChange={(event) => {edit(event)}}
+                           onChange={(event) => {saveState(event)}}
                            className={style.registrationInput}/>
                 </div>
-                <div className={style.peymantSistem}>
+                <div className={style.paymentSystem}>
                     <Radio.Group name="radiogroup" defaultValue={1}>
                         <Radio value={1}>Online payment</Radio>
                         <Radio value={2}>Cash payment</Radio>

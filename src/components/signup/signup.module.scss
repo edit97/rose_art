@@ -1,7 +1,7 @@
 @import "../../assets/styles/mixins";
 @import "../../assets/styles/varieibls";
 
-.signup{
+.signUp{
   width: 50%;
   height: 640px;
   padding-top: 10px;
@@ -9,11 +9,11 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  .signUpBlok {
+  .signUpBlock {
     width: 66%;
     margin-top: 20px;
     border-radius: 4px;
-    border: 1px solid $greyFirstColor;
+    border: 1px solid $greyBackgroundColor;
     .signUpGroup {
       width: 90%;
       padding: 10px;
@@ -23,7 +23,7 @@
       input{
         padding-left: 10px;
       }
-      .libe {
+      .head {
         margin: 0 auto;
         padding-bottom: 26px;
       }
@@ -33,7 +33,7 @@
         font-size: 20px;
         font-weight: bold;
       }
-      .emailInput {
+      .inputSection {
         margin-bottom: 16px;
         border-radius: 3px;
         width: 100%;
@@ -45,11 +45,11 @@
         }
       }
 
-      .emailInput:focus {
+      .inputSection:focus {
         outline: none;
-        border: 2px solid #A7093C;
+        border: 2px solid $firstColor;
       }
-      .passwordBlok{
+      .passwordBlock{
         margin-bottom: 16px;
         width: 100%;
         height: 44px;
@@ -65,13 +65,13 @@
         }
         svg{
           position: absolute;
-          bottom: 16px;
+          bottom: 9px;
           right: 20px;
         }
       }
       .passwordInput:focus {
         outline: none;
-        border: 2px solid #A7093C;
+        border: 2px solid $firstColor;
       }
       input:placeholder-shown {
         padding: 8px;
@@ -119,7 +119,7 @@
           background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3e%3cpath fill='%23fff' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z'/%3e%3c/svg%3e");
           text-align: center;
           color: white;
-          background-color: #A7093C;
+          background-color: $firstColor;
         }
       }
       .btnSignUp{
@@ -131,6 +131,10 @@
         background-color: $firstColor;
         border: 0;
         color: white;
+        &:hover{
+          transition: all 0.3s ease-in-out;
+          transform: scale(1.05);
+        }
       }
     }
   }
@@ -138,10 +142,10 @@
     margin: 16px 0 30px 0;
     font-size: 14px;
     font-weight: bold;
-    color: #B3B3B3;
+    color: $lightColor;
     .textLink{
       cursor: pointer;
-      color: #A7093C;
+      color: $firstColor;
     }
   }
 }
@@ -154,7 +158,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    .signUpBlok{
+    .signUpBlock{
       width: 90%;
     }
   }

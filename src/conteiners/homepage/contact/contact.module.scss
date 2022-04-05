@@ -10,7 +10,7 @@
 
 }
 
-.bloks{
+.blocks{
   width: 50%;
   height: 100%;
   padding-top: 20px;
@@ -22,7 +22,7 @@
     height: 300px;
     margin-top: auto;
     background-color: $firstColor;
-    .adress{
+    .address{
       color: white;
       position: absolute;
       bottom: 24px;
@@ -50,18 +50,18 @@
   padding-top: 20px;
   @include column;
   margin-left: calc((100vw - #{$contentWidth}) / 2);
-  .blok{
+  .block{
     background-color: transparent;
     border: 0;
     outline: none;
-    border-bottom: 2px solid $greyТhirdColor;
+    border-bottom: 2px solid $greyBorderColor;
     height: 70px;
     cursor: pointer;
   }
-  .blok:focus{
+  .block:focus{
     border-bottom: 2px solid $blackColor;
   }
-  .blok:focus::placeholder{
+  .block:focus::placeholder{
     color: $blackColor;
     outline: none;
     background-color: transparent;
@@ -74,6 +74,10 @@
     margin-top: 20px;
     border: 0;
     color: white;
+    &:hover{
+      transition: all 0.3s ease-in-out;
+      transform: scale(1.05);
+    }
   }
 
 }
@@ -99,7 +103,7 @@
     padding: 20px;
     margin-left: 0;
   }
-  .bloks {
+  .blocks {
     padding-top: 40px;
     width: 100%;
     .bgkRed{

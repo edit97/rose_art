@@ -1,8 +1,7 @@
 import style from './signin.module.scss'
-import {RoseLogo, FacebookIcon, Google, WatchIcon, Arr, SlashEye} from "../../assets/imeges";
+import {RoseLogo, FacebookIcon, Google, WatchIcon, SlashEye} from "../../assets/imeges";
 import {NavLink} from "react-router-dom";
 import {useState} from "react";
-import {type} from "@testing-library/user-event/dist/type";
 
 
 /*todo
@@ -11,7 +10,7 @@ import {type} from "@testing-library/user-event/dist/type";
    */
 function SignIn() {
     const [showIcon, setShowIcon] = useState(false);
-    const handleClick = () => {
+    const changeIcon = () => {
         setShowIcon(!showIcon)
     };
     const [user, setUser] = useState({
@@ -19,7 +18,7 @@ function SignIn() {
         password: "",
     })
 
-    function edit(event) {
+    function saveState(event) {
         setUser({
             ...user,
             [event.target.name]: event.target.value,
@@ -27,26 +26,26 @@ function SignIn() {
     }
 
 
-    return <div className={style.signin}>
+    return <div className={style.signIn}>
         <div className={style.logo}><RoseLogo title={''}/></div>
-        <div className={style.signinBlok}>
-            <div className={style.signingroup}>
+        <div className={style.signInBlock}>
+            <div className={style.signInGroup}>
                 <div className={style.title}>Welcome</div>
-                <div className={style.libe}>Enter your credentials to access your account</div>
+                <div className={style.head}>Enter your credentials to access your account</div>
                 <input type="email"
                        value={user.email}
                        name={'email'}
                        onChange={(event) => {
-                           edit(event)
+                           saveState(event)
                        }}
                        placeholder={'Enter your email'}
-                       className={style.emailInput}/>
-                <div className={style.passwordBlok}>
+                       className={style.inputSection}/>
+                <div className={style.passwordBlock}>
                     {!showIcon ? <input type="password"
                                         value={user.password}
                                         name={'password'}
                                         onChange={(event) => {
-                                            edit(event)
+                                            saveState(event)
                                         }}
                                         placeholder={'Enter your password'}
                                         className={style.passwordInput}/>
@@ -54,23 +53,23 @@ function SignIn() {
                                  value={user.password}
                                  name={'password'}
                                  onChange={(event) => {
-                                     edit(event)
+                                     saveState(event)
                                  }}
                                  placeholder={'Enter your password'}
                                  className={style.passwordInput}/>}
-                    {!showIcon ? <WatchIcon onClick={handleClick} title={''}/> :
-                        <SlashEye onClick={handleClick} title={''}/>}
+                    {!showIcon ? <WatchIcon onClick={changeIcon } title={''}/> :
+                        <SlashEye onClick={changeIcon} title={''}/>}
 
                 </div>
-                <NavLink to={"/forgotpassword"} className={style.forgotPasswordLink}>
+                <NavLink to={"/forgotPassword"} className={style.forgotPasswordLink}>
                     <div className={style.text}>Forgot password?</div>
                 </NavLink>
                 <button className={style.btnSignIn}>Sign in</button>
                 <button className={style.btnGoogle}>
-                    <div className={style.googletext}><Google title={''}/>Login with Google</div>
+                    <div className={style.googleText}><Google title={''}/>Login with Google</div>
                 </button>
                 <button className={style.btnFacebook}>
-                    <div className={style.googletext}><FacebookIcon title={''}/>Login with Facebook</div>
+                    <div className={style.googleText}><FacebookIcon title={''}/>Login with Facebook</div>
                 </button>
             </div>
         </div>

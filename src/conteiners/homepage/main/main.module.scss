@@ -114,6 +114,10 @@
     background-color: transparent;
     margin-top: 50px;
   }
+  .btnText:hover{
+    transition: all 0.3s ease-in-out;
+    transform: scale(1.05);
+  }
 }
 
 @media screen and (max-width: 1024px){
