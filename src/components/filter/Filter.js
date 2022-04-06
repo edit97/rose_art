@@ -1,13 +1,13 @@
 import style from './filter.module.scss'
 import { Collapse } from 'antd'
-import {Arr,TopIcon} from "../../assets/imeges";
-import { Checkbox, Row, Col } from 'antd';
+import {Arr, TopIcon} from "../../assets/imeges";
+import { Checkbox, Col} from 'antd';
 import { Slider } from 'antd';
+import header from "../header/Header";
 
 const { Panel } = Collapse;
 
 function Filter() {
-
     function onChange(checkedValues) {
         console.log('checked = ', checkedValues);
     }
@@ -15,12 +15,13 @@ function Filter() {
             <div className={style.title}>Filter</div>
             <Collapse bordered={false}
                       defaultActiveKey={['0']}
+                      collapsible={header}
                       expandIconPosition={'right'}
                       className={'collapseFilter'}
                       expandIcon={({ isActive }) =>
                           isActive ? <TopIcon  title={''}/> :  <Arr title={''}/>}
             >
-                <Panel  header="Price" key="1"  className={style.filterPanel}>
+                <Panel  header="Price" key="1">
                     <Slider range={{ draggableTrack: true }}
                             marks={{
                                 12000: `12000`,
@@ -31,14 +32,16 @@ function Filter() {
                             tipFormatter={value => `Դ ${value}`}
                     />
                 </Panel>
-                <Panel  header="Color" key="2" className={style.filterPanel}>
+                <Panel  header="Color" key="2">
 
                 </Panel>
-                <Panel header="Features" key="3"className={style.filterPanel}>
+                <Panel header="Features" key="3">
 
                 </Panel>
-                <Panel header="Accessory Type" key="4" className={style.filterPanel}>
-                    <Checkbox.Group style={{ width: '100%' }} onChange={onChange}>
+                <Panel header="Accessory Type" key="4">
+                    <Checkbox.Group style={{ width: '100%' }}
+                                    onChange={onChange}
+                    >
                             <Col span={8}>
                                 <Checkbox value="A">Power & Battery</Checkbox>
                             </Col>

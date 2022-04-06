@@ -1,7 +1,6 @@
 import style from './sort.module.scss'
-import {Arr, Arrow, BurgerMenu, Flag, IconMenu, RuIcon, UsIcon} from "../../assets/imeges";
-import {Collapse, Dropdown, Menu} from 'antd';
-import { DownOutlined } from '@ant-design/icons';
+import {Arr, BurgerMenu, IconMenu,} from "../../assets/imeges";
+import { Menu, Dropdown } from 'antd';
 import ProductCard from "../uiItem/cards/productcard/ProductCard";
 
 
@@ -22,30 +21,29 @@ function Sort() {
             <div className={style.sort}>
                 <Dropdown overlay={menu} trigger={['click']}
                           overlayClassName={'sortDropdown'}
-                          // overlayStyle={"left: 300px; top: 682px"}
                 >
                     <a className="ant-dropdown-link" onClick={e => e.preventDefault()}>
-                        <div>
+                        <div className={style.dropdownText}>
                             <span className={style.sortText}>Sort  </span>
-                            <span className={style.sortBy}>By default</span><Arr/>
+                            <span className={style.sortBy}>By default</span><Arr title={""}/>
                         </div>
                     </a>
                 </Dropdown>
             </div>
             <div className={style.sortMenu}>
-                <BurgerMenu title={''}/>
-                <IconMenu title={''}/>
+                <div className={style.burgerMenuIcon}><BurgerMenu title={''}/></div>
+                <div className={style.menuIcon}><IconMenu title={''}/></div>
             </div>
         </div>
-        <div className={style.productsCard}>
-            <ProductCard/>
-            <ProductCard/>
-            <ProductCard/>
-            <ProductCard/>
-            <ProductCard/>
-            <ProductCard/>
-            <ProductCard/>
-            <ProductCard/>
+        <div className={style.productsCardBlock}>
+            <div className={style.productCard}><ProductCard/></div>
+            <div className={style.productCard}><ProductCard/></div>
+            <div className={style.productCard}><ProductCard/></div>
+            <div className={style.productCard}><ProductCard/></div>
+            <div className={style.productCard}><ProductCard/></div>
+            <div className={style.productCard}><ProductCard/></div>
+            <div className={style.productCard}><ProductCard/></div>
+            <div className={style.productCard}><ProductCard/></div>
         </div>
     </div>
 }export default Sort

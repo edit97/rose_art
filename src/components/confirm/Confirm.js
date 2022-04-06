@@ -4,7 +4,7 @@ import {NavLink} from "react-router-dom";
 
 function Confirm() {
     return <div className={style.confirm}>
-        <div className={style.logo}><RoseLogo title={''}/></div>
+        <div><RoseLogo title={''}/></div>
         <div className={style.confirmBlock}>
             <div className={style.confirmGroup}>
                 <div className={style.title}>Confirm your email</div>

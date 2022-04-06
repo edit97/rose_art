@@ -27,7 +27,7 @@ function SignIn() {
 
 
     return <div className={style.signIn}>
-        <div className={style.logo}><RoseLogo title={''}/></div>
+        <div><RoseLogo title={''}/></div>
         <div className={style.signInBlock}>
             <div className={style.signInGroup}>
                 <div className={style.title}>Welcome</div>

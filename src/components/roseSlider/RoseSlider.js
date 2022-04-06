@@ -18,7 +18,7 @@ function RoseSlider(){
     return  <div className={style.roseSlideGroup}>
         <div className={style.textSlider}>
             <span>дружелюбно</span>
-            <span className={style.workSlider}>Фотоотчет о ходе</span>
+            <span >Фотоотчет о ходе</span>
             <div className={style.btnSlider}>посмотреть<ArrowRight title={''}/></div>
         </div>
         <Slider {...settings}>

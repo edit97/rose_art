@@ -7,7 +7,7 @@ function Basket(){
     return (
         <div className={style.products}>
             <div className={style.nav}>Home  /    All rose   /  Rose spray  /  My cart</div>
-            <h1 className={style.productTitle}>There are 4 products</h1>
+            <h1 >There are 4 products</h1>
             <div className={style.product}>
                 <div className={style.group}>
                     <div className={style.total}>

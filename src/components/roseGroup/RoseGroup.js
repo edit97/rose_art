@@ -1,7 +1,7 @@
 import RoseCard from "../uiItem/cards/rosecard/RoseCard";
 import style from './roseGroup.module.scss';
 
-function RoseGroup(props){
+function RoseGroup(){
     return  <div className={style.group}>
         <div className={style.topPart}>
             <RoseCard />
@@ -14,7 +14,7 @@ function RoseGroup(props){
                         <div>горячие скидки</div>
                         <div className={style.count}>
                             <span className={style.number}>20</span>
-                            <div className={style.present}>
+                            <div>
                                 <div className={style.iconPresent}>% </div>
                                 <div>НА ВСЕ</div>
                             </div>

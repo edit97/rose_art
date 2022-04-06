@@ -35,7 +35,7 @@ function BasketOrder() {
                 <div className={style.ordering}>
                 <div className={style.title}>Select Shipping Address</div>
                 <div className={style.address}>
-                    <div className={style.addressTitle}>City , Street</div>
+                    <div >City , Street</div>
                     <input type="text"
                             value={paymentSystem.street}
                            name={'street'}
@@ -44,7 +44,7 @@ function BasketOrder() {
                            className={style.streetAddress}/>
                 </div>
                 <div className={style.address}>
-                    <div className={style.addressTittle}>Delivery Address</div>
+                    <div>Delivery Address</div>
                     <input type="text"
                            value={paymentSystem.address}
                            name={'address'}
@@ -53,7 +53,7 @@ function BasketOrder() {
                            className={style.streetAddress}/>
                 </div>
                 <div className={style.map}>
-                    <YMaps className={style.orderMap}>
+                    <YMaps>
                         <Map defaultState={mapData} className={style.yandexMap}>
                             {coordinates.map(coordinate => <Placemark geometry={coordinate} />)}
                             <GeolocationControl options={{
@@ -116,7 +116,7 @@ function BasketOrder() {
                     <input className={style.checkboxValue} type="checkbox" id="checked"/>
                     <label htmlFor="checked">
                     </label>
-                    <span className={style.checkboxTxt}> I agree to the terms of the sale, the
+                    <span> I agree to the terms of the sale, the
                         <span className={style.textLink}>privacy policy.</span>
                     </span>
                 </div>

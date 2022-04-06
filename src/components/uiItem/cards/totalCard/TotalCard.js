@@ -8,7 +8,7 @@ function TotalCard() {
                 <Rose2 title={''}/>
                 <div className={style.text}>
                     <div className={style.priceText}>Stick Up Cam Plug-In </div>
-                    <div className={style.priceNumberBlok}>
+                    <div>
                         <span> 13900֏</span>
                         <span className={style.priceNumber}>1200֏</span></div>
                     </div>

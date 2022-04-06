@@ -10,7 +10,7 @@ function ProductCard(){
             <div className={style.text}>
                 <div>Rose pich avalanche for
                     Echo  tery Show 5 in</div>
-                <div className={style.items}>
+                <div>
                     <span className={style.price}>13900 ֏</span>
                     <span className={style.price2}>12000 ֏</span>
                     <span className={style.sale}>-10%</span>

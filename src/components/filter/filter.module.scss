@@ -57,9 +57,7 @@
       margin: 10px;
       display: flex;
       align-items: center;
-      .clearBtn{
-        margin: 0 auto;
-      }
+      justify-content: flex-end;
     }
   }
 }

@@ -58,7 +58,7 @@ function Contact (){
             </div>
         <div className={style.blocks}>
             <div className={style.map}>
-                <YMaps className={style.mapBlock}>
+                <YMaps>
                     <Map defaultState={mapData}  className={style.mapSize}>
                         {coordinates.map(coordinate => <Placemark geometry={coordinate} />)}
                         <GeolocationControl options={{

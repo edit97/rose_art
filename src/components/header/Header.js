@@ -37,9 +37,9 @@ return <div className={style.headerWrapper}>
             5.եթե գրվածի տակ ընդգծվում է կանաչով ուրեմն բառը գրված է սխալ, ուղղել
             ուղել մնացած բոլոր կոմպոնենտներում
           */}
-        <div className={style.searchItem}><Search title={''}/>Поиск </div><span> | </span>
+        <div ><Search title={''}/>Поиск </div><span> | </span>
         <NavLink to="/signIn" className={style.signInLink} >
-            <div className={style.sinInItems}> <IconMan title={''}/>Boйти </div>
+            <div > <IconMan title={''}/>Boйти </div>
         </NavLink>
         <span> | </span>
         <NavLink to="/basket" className={style.basketLink} >
@@ -52,7 +52,7 @@ return <div className={style.headerWrapper}>
         <button onClick={handleClick} className={style.burgerMenu}><Menu/>
         </button>
 </div>
-    {click && <div className={style.menu}>
+    {click && <div >
         <div className={style.overlay}/>
         <div className={style.dropdown}>
             <NavLink to={"/"} className={style.headerLink}>
@@ -62,9 +62,9 @@ return <div className={style.headerWrapper}>
         <div>Контакт</div>
         <div>Продукт</div>
         <div>Перевозки</div>
-        <div className={style.search}><Search title={''}/> Поиск</div>
+        <div ><Search title={''}/> Поиск</div>
             <NavLink to={"/signIn"} className={style.signinNavLink}>
-                <div className={style.manIcon}><Man title={''}/>Boйти</div>
+                <div ><Man title={''}/>Boйти</div>
             </NavLink>
             <NavLink to={"/basket"}  className={style.basketNavLink}>
                 <div className={style.basketPage}>Корзина</div>

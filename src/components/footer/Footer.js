@@ -70,15 +70,15 @@ function Footer(){
                 </div>
             </div>
             <div className={style.comapny}>
-                <div className={style.blok}>
+                <div>
                     <h1 className={style.title}>Comapny <div className={style.arr}><Arr title={''}/></div></h1>
                     <FooterCard/>
                 </div>
-                <div className={style.block}>
+                <div>
                     <h1 className={style.title}>About us</h1>
                     <FooterCard/>
                 </div>
-                <div className={style.block}>
+                <div>
                     <h1 className={style.title}>Category <div className={style.arr}><Arr title={''}/></div></h1>
                     <FooterCard/>
                 </div>
@@ -92,18 +92,18 @@ function Footer(){
                               expandIcon={({ isActive }) =>
                                   isActive ? <Arr/> :  <Arr className={style.rightArr}/>}
                     >
-                        <Panel  header="Comapny" key="1" className={'collapseItme'} >
-                            <div className={style.resComponents}>
+                        <Panel  header="Company" key="1" className={'collapseItme'} >
+                            <div>
                                 <FooterCard/>
                             </div>
                         </Panel>
                         <Panel header="About us" key="2">
-                            <div className={style.resComponents}>
+                            <div >
                                 <FooterCard/>
                             </div>
                         </Panel>
                         <Panel header="Category" key="3">
-                            <div className={style.resComponents}>
+                            <div >
                                 <FooterCard/>
                             </div>
                         </Panel>
@@ -132,7 +132,7 @@ function Footer(){
                 <button className={style.btn}>Subscribe</button>
                 </div>
                 <div className={style.responsiveSub}>
-                    <div className={style.logo}><RoseLogo title={''}/></div>
+                    <div><RoseLogo title={''}/></div>
                     <h1 className={style.title}>Subscribe</h1>
                     <span>Subscribe, find out about discounts, deals, new products.</span>
                 </div>
@@ -142,7 +142,7 @@ function Footer(){
         <div className={style.line}/>
         <div className={style.date}>
             <div className={style.text}>© Copyright 2021 SmartԼife . All Rights Reserved</div>
-            <div className={style.iconComapny}><Steps title={''}/></div>
+            <div><Steps title={''}/></div>
         </div>
     </div>
 }export default Footer;

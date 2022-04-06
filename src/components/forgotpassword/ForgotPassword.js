@@ -15,7 +15,7 @@ function ForgotPassword () {
         })
   }
     return <div className={style.forgotPassword}>
-        <div className={style.logo}><RoseLogo title={''}/></div>
+        <div ><RoseLogo title={''}/></div>
         <div className={style.forgotPasswordBlock}>
             <div className={style.forgotPasswordGroup}>
                 <div className={style.title}>Forgot password</div>

@@ -33,7 +33,7 @@ function SignUp() {
         })
     }
     return <div className={style.signUp}>
-            <div className={style.logo}><RoseLogo title={''}/></div>
+            <div ><RoseLogo title={''}/></div>
             <div className={style.signUpBlock}>
                 <div className={style.signUpGroup}>
                     <div className={style.title}>Register</div>

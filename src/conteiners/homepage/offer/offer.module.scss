@@ -44,16 +44,10 @@
     background-color: transparent;
   }
 }
-.hello{
-  display: none;
-}
 
 .roseSlideGroup{
   position: relative;
   width: calc(43% - 10px);
-}
-.responsiveRose{
-  display: none;
 }
 .roseItem{
   width: 30%;
@@ -71,9 +65,6 @@
   .rosers{
     display: none;
   }
-  .block1{
-    @include column;
-  }
   .text{
     width: 80%;
   }
@@ -84,29 +75,6 @@
     width: 35%;
     display: flex;
     margin: auto;
-  }
-  .responsiveRose{
-    width: 100%;
-    margin-top:20px ;
-    position: relative;
-    display: flex;
-    img{
-      width: 100%;
-    }
-  }
-  .responsiveText{
-    position: absolute;
-    height: 74px;
-    @include column;
-    bottom: 8px;
-    left: 16px;
-    .responsiveBtn{
-      width: 100%;
-      height: 70px;
-      @include itemsCenter;
-      border: 0;
-      background-color: transparent;
-    }
   }
   .rose{
    @include widthHeight;
@@ -136,25 +104,5 @@
   }
   .roseSlideGroup{
     width: 100%;
-  }
-  .block{
-    width: 50%;
-    padding-right: 20px;
-    .rose{
-      width: 100%;
-      img{
-        width: 100%;
-      }
-    }
-  }
-  .block1{
-    width: 50%;
-    .sale{
-      width: 100%;
-      height: 240px;
-      img{
-        width: 100%;
-      }
-    }
   }
 }
