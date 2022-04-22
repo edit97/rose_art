@@ -1,5 +1,6 @@
 @import "../../../assets/styles/mixins";
 @import "../../../assets/styles/varieibls";
+@import "../../../assets/fonts/fonts";
 
 .basketOrder{
   width: $contentWidth;
@@ -9,7 +10,11 @@
   input{
     padding-left: 10px;
   }
+  .aniTitle{
+    font-family: SF-Bold;
+  }
   .nav{
+    font-family: SF-Medium;
     width: 300px;
     @include spaceBetween;
     color: $lightColor;
@@ -35,12 +40,16 @@
     padding-top: 20px;
     margin: 0 auto;
     .title{
+      font-family: SF-Bold;
       font-weight: bold;
-      font-size: 15px;
+      font-size: 17px;
       margin-bottom: 10px;
     }
     .address{
       height: 80px;
+      .inputTitle{
+        font-family: SF-Medium;
+      }
       .streetAddress{
         border-radius: 3px;
         border: 1px solid $lightColor;
@@ -73,7 +82,7 @@
   border: 1px solid $lightColor;
   .paymentTitle{
     font-size: 15px;
-    font-weight: bold;
+    font-family: SF-Bold;
     padding: 20px 30px 0;
     display: flex;
     justify-content: flex-start;
@@ -98,6 +107,7 @@
       }
 
       .nameTitle{
+        font-family: SF-Medium;
         font-size: 15px;
         height: 20px;
         margin-bottom: 10px;
@@ -121,6 +131,9 @@
         width: 120px;
         @include spaceBetween;
         align-items: center;
+      }
+      .radioText{
+        font-family: SF-Bold;
       }
     }
     .ant-radio-group{

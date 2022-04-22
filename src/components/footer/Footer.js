@@ -120,7 +120,7 @@ function Footer(){
                 </div>
                 <div className={style.sub}>
                     <h1 className={style.title}>Subscribe</h1>
-                    <span>Subscribe, find out about discounts, deals, new products.</span>
+                    <span className={style.someText}>Subscribe, find out about discounts, deals, new products.</span>
                 </div>
                 <div className={style.scribe}>
                 <input className={style.input}

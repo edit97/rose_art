@@ -1,5 +1,6 @@
 @import "../../../assets/styles/mixins";
 @import "../../../assets/styles/varieibls";
+@import "../../../assets/fonts/fonts";
 
 .contact{
   width: 100%;
@@ -7,6 +8,9 @@
   margin-top: 70px;
   background-color: $whiteColor;
  @include spaceBetween;
+  .title{
+    font-family: SF-Heavy;
+  }
 
 }
 
@@ -23,6 +27,7 @@
     margin-top: auto;
     background-color: $firstColor;
     .address{
+      font-family: SF-Heavy;
       color: white;
       position: absolute;
       bottom: 24px;
@@ -61,12 +66,16 @@
   .block:focus{
     border-bottom: 2px solid $blackColor;
   }
+  .block::placeholder{
+    font-family: SF-Heavy;
+  }
   .block:focus::placeholder{
     color: $blackColor;
     outline: none;
     background-color: transparent;
   }
   .btn{
+    font-family: SF-Medium;
     cursor: pointer;
     width: 120px;
     height: 40px;

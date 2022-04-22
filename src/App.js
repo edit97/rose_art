@@ -1,9 +1,9 @@
+import Layout from "./conteiners/Layout";
 
-import Layauot from "./conteiners/Layauot";
 
 function App() {
   return (
-  <Layauot/>
+ <Layout/>
   )
 }export default App;
 

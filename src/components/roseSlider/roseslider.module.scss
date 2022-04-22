@@ -1,5 +1,6 @@
 @import "../../assets/styles/mixins";
 @import "../../assets/styles/varieibls";
+@import "../../../src/assets/fonts/fonts";
 
 .roseSlideGroup{
   .roseSlide{
@@ -20,6 +21,7 @@
     }
   }
   .textSlider{
+    font-family: SF-Regular;
     position: absolute;
     bottom: 30px;
     color: white;

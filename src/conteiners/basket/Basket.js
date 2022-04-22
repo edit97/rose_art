@@ -7,7 +7,7 @@ function Basket(){
     return (
         <div className={style.products}>
             <div className={style.nav}>Home  /    All rose   /  Rose spray  /  My cart</div>
-            <h1 >There are 4 products</h1>
+            <h1 className={style.title}>There are 4 products</h1>
             <div className={style.product}>
                 <div className={style.group}>
                     <div className={style.total}>
@@ -22,10 +22,10 @@ function Basket(){
                     <h1 className={style.name}>Order summary</h1>
                     <div className={style.orderPlace}>
                         <div className={style.amount}><span>All products </span>
-                            <div className={style.line}></div><div>3 product</div>
+                            <div className={style.line}></div><div className={style.colorRed}>3 product</div>
                         </div>
                         <div className={style.amount}><span>Order amount</span>
-                            <div className={style.line}></div><div>36900 ֏</div>
+                            <div className={style.line}></div><div className={style.colorRed}>36900 ֏</div>
                         </div>
                         <div className={style.amount}><span>Shoping</span>
                             <div className={style.line}></div><div className={style.colorRed}>Free</div>

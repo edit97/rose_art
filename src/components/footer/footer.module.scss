@@ -1,5 +1,6 @@
 @import "../../assets/styles/mixins";
 @import "../../assets/styles/varieibls";
+@import "../../../src/assets/fonts/fonts";
 
 .footer{
   width: 100%;
@@ -9,6 +10,9 @@
   input{
     padding-left: 10px;
   }
+}
+.someText{
+  font-family: SF-Regular;
 }
 .aboutUs{
   width: $contentWidth;
@@ -24,8 +28,9 @@
       cursor: pointer;
     }
     .txt{
+      font-family: SF-Regular;
       margin-bottom: 10px;
-      color: $greyColor;
+      color: $darkGrey;
 
     }
     .flag{
@@ -38,7 +43,8 @@
     }
   }
   .title{
-    font-size: 15px;
+    font-family: SF-Bold;
+    font-size: 14px;
     .arr{
       display: none;
     }
@@ -63,7 +69,7 @@
     width: 100%;
     margin: 12px 0;
     span{
-      color: $greyColor;
+      color: $darkGrey;
     }
   }
   .scribe{
@@ -75,6 +81,9 @@
       height: 100%;
       border: 0;
       outline: none;
+    }
+    input::placeholder {
+      font-family: SF-Regular;
     }
     input:placeholder-shown {
      padding: 8px;
@@ -125,7 +134,8 @@
   align-items: center;
   @include spaceBetween;
   .text{
-    color: $greyColor;
+    font-family: SF-Regular;
+    color: $darkGrey;
   }
 }
 .responsiveLine{
@@ -194,7 +204,7 @@ width: 60px;
     .responsiveCollapse{
       display: flex;
       width: 100%;
-      color: $greyColor;
+      color: $darkGrey;
     }
     .responsiveSub{
       @include column;

@@ -8,20 +8,19 @@ import BasketOrder from "./basket/basketOrder/BasketOrder";
 import SignIn from "../components/signIn/SignIn";
 import SignUp from "../components/signup/SignUp";
 import ForgotPassword from "../components/forgotpassword/ForgotPassword";
-import {useEffect, useState} from "react";
 import Confirm from "../components/confirm/Confirm";
 import Products from "../components/products/Products";
 
-function   Layauot () {
+function   Layout () {
     // const [count, setCount]=useState(8)
     //
     // useEffect(() => {
-    //     console.log("useEffect")
+    //     console.log("usEffect")
     // }, [count])
     let location = useLocation();
     const shouFooter = (location.pathname !== "/signin" && location.pathname !== "/signup" && location.pathname !== "/forgotpassword" &&location.pathname !== "/confirm")
         return (
-            <div className={style.layauot}>
+            <div className={style.layout}>
                 {/*<button onClick={() => setCount(count + 1)}>*/}
                 {/*    {count}*/}
                 {/*</button>*/}
@@ -41,4 +40,4 @@ function   Layauot () {
         )
     }
 
-export default Layauot;
+export default Layout;

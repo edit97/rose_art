@@ -1,5 +1,6 @@
 @import "../../../../assets/styles/varieibls";
 @import "../../../../assets/styles/mixins";
+@import "../../../../assets/fonts/fonts";
 
 
 .block{
@@ -23,6 +24,7 @@
     font-size: 18px;
   }
   .btn{
+    font-family: SF-Medium;
     width: 204px;
     height: 36px;
     margin: 15px 0;
@@ -30,20 +32,20 @@
     font-size: 18px;
     @include itemsCenter;
     cursor: pointer;
-    &:hover{
-      background-color: $firstColor;
-      color: white;
-      transition: inherit;
-      svg{
-        path{
-          fill: white;
-        }
-      }
-    }
     svg{
       width:22px;
       height: 22px;
       margin:0 10px 0 40px;
+    }
+  }
+  .btn:hover{
+    background-color: $firstColor;
+    color: white;
+    transition: inherit;
+    svg{
+      path{
+        fill: white;
+      }
     }
   }
   .icon{
@@ -92,6 +94,9 @@
     @include column;
     align-items: baseline;
     margin-top: 30px;
+    .aniText{
+      font-family: SF-Medium;
+    }
     div{
       font-size: 15px;
       font-weight: 500;

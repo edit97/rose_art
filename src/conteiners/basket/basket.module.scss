@@ -1,13 +1,18 @@
 @import "../../assets/styles/mixins";
 @import "../../assets/styles/varieibls";
+@import "../../assets/fonts/fonts";
 
 .products{
   width: $contentWidth;
   @include column;
   margin: 0 auto;
   padding:40px 0;
+  .title{
+    font-family: SF-Bold;
+  }
 }
 .nav{
+  font-family: SF-Medium;
   width: 300px;
   @include spaceBetween;
   color: $lightColor;
@@ -31,6 +36,8 @@
 }
 
   .remove{
+    font-family: SF-Bold;
+    font-weight: bold;
     margin-left: auto;
     color: $redColor;
     padding: 30px;
@@ -45,6 +52,7 @@
   border: 1px solid $lightColor;
   background-color: $greyBackgroundColor;
   .name{
+    font-family: SF-Bold;
     font-size: 15px;
     padding: 20px 20px 0;
   }
@@ -57,12 +65,14 @@
     @include column;
     align-items: center;
     .amount{
+      font-family: SF-Medium;
       width: 280px;
       height: 50px;
       @include spaceBetween;
       align-items: center;
       span{
-        color: $greyColor;
+
+        color: $darkGrey;
       }
     }
 
@@ -83,10 +93,13 @@
       font-weight: bold;
     }
     .colorRed{
-      color: $firstColor;
+     &:hover{
+       color: $firstColor;
+     }
     }
   }
   .btnOrder{
+    font-family: SF-Medium;
     border-radius: 5px;
     cursor: pointer;
     width: 280px;
@@ -96,9 +109,11 @@
     color: white;
   }
   .txt{
-    width: 280px;
+    font-family: SF-Regular;
+    width: 290px;
     color: $greyColor;
-    font-size: 10px;
+    font-weight: bold;
+    font-size: 12px;
     margin-top: 20px;
   }
 }

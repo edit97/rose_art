@@ -6,6 +6,7 @@ import Slider from "react-slick"
 function RoseSlider(){
     const settings = {
         dots: true,
+        arrows:false,
         className:'roseSlide',
         infinite: true,
         vertical: true,

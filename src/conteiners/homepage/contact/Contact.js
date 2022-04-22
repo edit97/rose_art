@@ -29,7 +29,7 @@ function Contact (){
     ];
     return <div className={style.contact}>
             <div className={style.registration}>
-                <h1>Появились вопросы?</h1>
+                <h1 className={style.title}>Появились вопросы?</h1>
                 <input type={"text"}
                        value={contact.name}
                        name={'name'}

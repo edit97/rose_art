@@ -1,5 +1,6 @@
 @import "../../../../assets/styles/varieibls";
 @import "../../../../assets/styles/mixins";
+@import "../../../../assets/fonts/fonts";
 
 
 .roseCard {
@@ -24,6 +25,7 @@
     display: none;
   }
   .text {
+    font-family: SF-Regular;
     width: 80%;
     height: 74px;
     @include column;

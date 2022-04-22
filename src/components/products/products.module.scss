@@ -1,5 +1,6 @@
 @import "../../assets/styles/mixins";
 @import "../../assets/styles/varieibls";
+@import "../../../src/assets/fonts/fonts";
 
 .products{
   width: $contentWidth;
@@ -29,16 +30,18 @@
       bottom: 0;
       left: 30px;
       .textTitle{
-        font-weight: bold;
+        font-family: SF-Bold;
         font-size: 30px;
       }
       .text{
+        font-family: SF-Regular;
         font-size: 15px;
         margin-top: 20px;
         width: 70%;
         height: 30%;
       }
       .textBtn{
+        font-family: SF-Regular;
         cursor: pointer;
         width: 100%;
         margin-top: 5px;

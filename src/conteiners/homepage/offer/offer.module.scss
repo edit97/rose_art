@@ -1,6 +1,7 @@
 @import "../../../assets/styles/mixins";
 @import "../../../assets/styles/varieibls";
 @import "../../../components/roseSlider/roseslider.module";
+@import "../../../assets/fonts/fonts";
 
 .offer{
   width: $contentWidth;
@@ -8,6 +9,9 @@
   padding-top: 40px;
   @include column;
   margin: 0 auto;
+  .title{
+    font-family: SF-Heavy;
+  }
 }
 .list{
   width: $contentWidth;

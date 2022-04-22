@@ -1,9 +1,10 @@
 @import "../../../../assets/styles/varieibls";
 @import "../../../../assets/styles/mixins";
-
+@import "../../../../assets/fonts/fonts";
 
 .components{
-  color: $greyColor;
+  font-family: SF-Regular;
+  color: #75757B;
   cursor: pointer;
   div:hover{
     color: $pinkColor;

@@ -1,5 +1,6 @@
 @import "../../../assets/styles/mixins";
 @import "../../../assets/styles/varieibls";
+@import "../../../assets/fonts/fonts";
 
 .list{
   width:$contentWidth;
@@ -13,11 +14,19 @@
   }
 }
 
-
-.more{
-  display: none;
+.header {
+  display: flex;
+  justify-content: space-between;
+  .heavyTitle{
+    font-family: SF-Heavy;
+  }
+  .more {
+    font-family: SF-Medium;
+    @include itemsCenter;
+    color: $firstColor;
+    font-size: 20px;;
+  }
 }
-
 @media screen and (max-width: 1024px){
     .list{
       @include widthHeight;

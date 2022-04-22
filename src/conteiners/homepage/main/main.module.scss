@@ -1,5 +1,6 @@
 @import "../../../assets/styles/mixins";
 @import "../../../assets/styles/varieibls";
+@import "../../../assets/fonts/fonts";
 
 .main{
   @include column;
@@ -39,6 +40,7 @@
   }
 }
 .mainText{
+  font-family: SF-Regular;
   width:80%;
   height: 100%;
   margin-left: calc((100vw - #{$contentWidth}) / 2);
@@ -102,8 +104,11 @@
 
 .text{
   @include widthHeight;
-  margin:0 0 0 30px;
+  margin:20px 0 0 40px;
   font-size: $secFontsize;
+  .someText{
+    font-family: SF-Regular;
+  }
   .textTitle{
     font-size: $fontSize;
     color: white;

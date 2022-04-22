@@ -7,6 +7,7 @@ import ProductCard from "../../../components/uiItem/cards/productcard/ProductCar
 function ProductList() {
     const settings = {
         dots: false,
+        arrows:false,
         speed: 500,
         slidesToShow: 5,
         responsive: [
@@ -99,7 +100,7 @@ function ProductList() {
     };
     return <div className={style.list}>
         <div className={style.header}>
-            <h1>Новая коллекция</h1>
+            <h1 className={style.heavyTitle}>Новая коллекция</h1>
             <div className={style.more}>Больше</div>
         </div>
 

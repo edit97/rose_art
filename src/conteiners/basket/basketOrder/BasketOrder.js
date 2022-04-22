@@ -29,13 +29,13 @@ function BasketOrder() {
 
     return <div className={style.basketOrder}>
             <div className={style.nav}>Home  /    All rose   /  Rose spray  /  My cart</div>
-            <h1 >Payment Details</h1>
+            <h1 className={style.aniTitle}>Payment Details</h1>
         <div className={style.item}>
             <div className={style.shipping}>
                 <div className={style.ordering}>
                 <div className={style.title}>Select Shipping Address</div>
                 <div className={style.address}>
-                    <div >City , Street</div>
+                    <div  className={style.inputTitle}>City , Street</div>
                     <input type="text"
                             value={paymentSystem.street}
                            name={'street'}
@@ -44,7 +44,7 @@ function BasketOrder() {
                            className={style.streetAddress}/>
                 </div>
                 <div className={style.address}>
-                    <div>Delivery Address</div>
+                    <div className={style.inputTitle}>Delivery Address</div>
                     <input type="text"
                            value={paymentSystem.address}
                            name={'address'}
@@ -107,8 +107,8 @@ function BasketOrder() {
                 </div>
                 <div className={style.paymentSystem}>
                     <Radio.Group name="radiogroup" defaultValue={1}>
-                        <Radio value={1}>Online payment</Radio>
-                        <Radio value={2}>Cash payment</Radio>
+                        <Radio value={1}><span className={style.radioText}>Online payment</span></Radio>
+                        <Radio value={2}><span className={style.radioText}>Cash payment</span></Radio>
                     </Radio.Group>
                 </div>
                 <span className={style.line}></span>

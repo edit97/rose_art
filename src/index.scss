@@ -13,6 +13,7 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+
 }
 .slick-slider{
   width: 100% ;
@@ -92,7 +93,9 @@ code {
   border: 2px solid #A7093C;
   border-color: #A7093C !important;
 }
-
+.slick-prev::before {
+  display: none !important;
+}
 .ant-radio-inner::after{
   background-color: white!important;
 }

@@ -1,5 +1,6 @@
 @import "../../assets/styles/mixins";
 @import "../../assets/styles/varieibls";
+@import "../../../src/assets/fonts/fonts";
 
 .signIn{
   width: 50%;
@@ -24,6 +25,7 @@
         padding-left: 10px;
       }
       .head {
+        font-family: SF-Regular;
         margin: 0 auto;
         padding-bottom: 26px;
       }
@@ -31,7 +33,7 @@
       .title {
         margin: 0 auto;
         font-size: 20px;
-        font-weight: bold;
+        font-family: SF-Bold;
       }
       .inputSection{
         margin-top: 20px;
@@ -77,17 +79,20 @@
       input:placeholder-shown {
         padding: 8px;
       }
+      input::placeholder {
+       font-family: SF-Medium;
+      }
       .text{
         cursor: pointer;
         display: flex;
        justify-content: flex-end;
         margin-bottom: 14px;
-        font-size: 12px;
-        font-weight: bold;
+        font-size: 13px;
+       font-family: SF-Medium;
       }
       .btnSignIn{
         border-radius: 5px;
-        font-weight: bold;
+        font-family: SF-Bold;
         cursor: pointer;
         width: 100%;
         height: 46px;
@@ -102,7 +107,7 @@
       .btnGoogle{
         background-color: transparent;
         display: flex;
-        font-weight: bold;
+        font-family: SF-Bold;
         align-items: center;
         margin: 10px 0 10px 0;
         border-radius: 5px;
@@ -119,7 +124,7 @@
       .btnFacebook{
         background-color: transparent;
         display: flex;
-        font-weight: bold;
+        font-family: SF-Bold;
         align-items: center;
         margin: 10px 0 10px 0;
         border-radius: 5px;
@@ -147,7 +152,7 @@
   .accountText{
     margin: 16px 0 16px 0;
     font-size: 14px;
-    font-weight: bold;
+    font-family: SF-Bold;
     color:$lightColor;
     span{
       cursor: pointer;

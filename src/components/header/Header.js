@@ -52,7 +52,7 @@ return <div className={style.headerWrapper}>
         <button onClick={handleClick} className={style.burgerMenu}><Menu/>
         </button>
 </div>
-    {click && <div >
+    {click && <div  className={style.menu}>
         <div className={style.overlay}/>
         <div className={style.dropdown}>
             <NavLink to={"/"} className={style.headerLink}>

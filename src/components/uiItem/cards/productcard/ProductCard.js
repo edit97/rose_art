@@ -8,7 +8,7 @@ function ProductCard(){
             <div className={style.heart}><Heart title={''}/></div>
             <div className={style.rose}><Rose4 title={''}/></div>
             <div className={style.text}>
-                <div>Rose pich avalanche for
+                <div className={style.aniText}>Rose pich avalanche for
                     Echo  tery Show 5 in</div>
                 <div>
                     <span className={style.price}>13900 ֏</span>
