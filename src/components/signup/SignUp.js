@@ -4,12 +4,6 @@ import {NavLink} from "react-router-dom";
 import {useState} from "react";
 
 function SignUp() {
-    /*
-    * todo
-    *  ['last name'] ուղել
-    *  className={style.emailInput} փոխել
-    *  Փոխել ֆունկցիաների անունները
-    * */
     const[showIcon,setShowIcon]=useState(false)
     const [showPassword, setShowPassword]=useState(false)
     const [user,setUser]=useState({

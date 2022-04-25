@@ -1,3 +1,4 @@
+import {Rosers1, ArrowRight} from "../../../assets/imeges";
 import style from "./offer.module.scss";
 import RoseSlider from "../../../components/roseSlider/RoseSlider";
 import RoseGroup from "../../../components/roseGroup/RoseGroup";

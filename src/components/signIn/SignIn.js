@@ -3,11 +3,6 @@ import {RoseLogo, FacebookIcon, Google, WatchIcon, SlashEye} from "../../assets/
 import {NavLink} from "react-router-dom";
 import {useState} from "react";
 
-
-/*todo
-   Փոխել ֆունկցիաների անունները
-   չօգտագործվող import-նեը ջնջել բոլոր էջերում
-   */
 function SignIn() {
     const [showIcon, setShowIcon] = useState(false);
     const changeIcon = () => {

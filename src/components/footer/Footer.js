@@ -20,11 +20,6 @@ import {useState} from "react";
 
 const { Panel } = Collapse;
 
-/*todo
-   Փոխել ֆունկցիաների անունները
-   FooterCard-ը գտագործել նաև Collapse-ում
-*/
-
 function Footer(){
     const [email,setEmail]=useState({
         email:""

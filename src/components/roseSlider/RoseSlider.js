@@ -15,7 +15,7 @@ function RoseSlider(){
         slidesToShow: 1,
         slidesToScroll: 1
     };
-    /*todo փոխել անունը firstRose-ի*/
+
     return  <div className={style.roseSlideGroup}>
         <div className={style.textSlider}>
             <span>дружелюбно</span>

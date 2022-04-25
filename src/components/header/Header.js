@@ -30,13 +30,6 @@ return <div className={style.headerWrapper}>
         </div>
     </div>
     <div className={style.headerActions}>
-        {/*todo
-            1.className-երը գրել ըստ իմաստի
-            2.camelCase միշտ պահել
-            4.չօգտագործվող className-երը ջնջել
-            5.եթե գրվածի տակ ընդգծվում է կանաչով ուրեմն բառը գրված է սխալ, ուղղել
-            ուղել մնացած բոլոր կոմպոնենտներում
-          */}
         <div ><Search title={''}/>Поиск </div><span> | </span>
         <NavLink to="/signIn" className={style.signInLink} >
             <div > <IconMan title={''}/>Boйти </div>
