@@ -53,11 +53,13 @@ return <div className={style.headerWrapper}>
             </NavLink>
         <div>О нас</div>
         <div>Контакт</div>
-        <div>Продукт</div>
+            <NavLink to={"/products"} className={style.headerLink}>
+                <div>Продукт</div>
+            </NavLink>
         <div>Перевозки</div>
         <div ><Search title={''}/> Поиск</div>
             <NavLink to={"/signIn"} className={style.signinNavLink}>
-                <div ><Man title={''}/>Boйти</div>
+                <div  className={style.color}><Man title={''}/>Boйти</div>
             </NavLink>
             <NavLink to={"/basket"}  className={style.basketNavLink}>
                 <div className={style.basketPage}>Корзина</div>

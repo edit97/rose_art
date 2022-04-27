@@ -1,11 +1,10 @@
 import style from './products.module.scss'
-import {BurgerMenu, IconMenu, MapIcon, RedArr, RoseWallepaper} from "../../assets/imeges";
-import ProductCard from "../uiItem/cards/productcard/ProductCard";
-import Select from "../select/Select";
-import Filter from "../filter/Filter";
-import Sort from "../sort/Sort";
+import { RedArr, RoseWallepaper} from "../../assets/imeges";
+import Select from "../../components/select/Select";
+import Filter from "../../components/filter/Filter";
+import Sort from "../../components/sort/Sort";
 
-function Products () {
+function Products ({products}) {
     return <div className={style.products}>
     <div className={style.nav}>Home  /    All rose   /  Rose spray </div>
         <div className={style.wallpaper}>
@@ -28,7 +27,7 @@ function Products () {
             <div className={style.filterGroup}>
                 <Filter/>
                 <div className={style.sortBlock}>
-                   <Sort/>
+                   <Sort products={products}/>
                 </div>
             </div>
         </div>

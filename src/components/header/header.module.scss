@@ -33,7 +33,7 @@
             cursor: pointer;
             height: 100%;
             @include aline-items;
-            margin-left: 20px;
+            margin-left: 18px;
             border-bottom:transparent solid 3px;
             &:hover{
                 border-bottom: $firstColor solid 3px;
@@ -57,7 +57,7 @@
     @include aline-items;
     justify-content: flex-end;
     :hover{
-        color: #A7093C;
+        color: $firstColor;
         transition: top 1s ease-out 0.5s;
         svg{
                 path{
@@ -189,6 +189,9 @@
             justify-content: right;
             background-color: $firstColor;
             color: white;
+            .color{
+                color: white;
+            }
             div{
                 width: 80px;
                 height: 30px;
@@ -221,10 +224,19 @@
         width: calc(100% - 300px);
         display: flex;
         justify-content:flex-end;
+        :hover{
+            color: white;
+            transition: top 1s ease-out 0.5s;
+            svg{
+                path{
+                    fill: $firstColor;
+                }
+            }
+        }
         .productCount{
             width: 30px;
-            height: 30px;
-            padding: 3px;
+            height: 25px;
+            padding: 2px;
             background-color: white;
             color: black;
             margin-left: 10px;
@@ -261,9 +273,14 @@
         display: none;
     }
     .headerLink{
-        color: white;
+        color: white !important;
         :hover{
             color: white;
+            svg{
+                path{
+                    fill: white;
+                }
+            }
         }
     }
     .signInNavLink{

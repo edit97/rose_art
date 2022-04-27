@@ -22,11 +22,6 @@ function Contact (){
         center: [40.180843465756496,44.51673113111903],
         zoom: 13,
     };
-
-    const coordinates = [
-        [40.180843465756496,44.51673113111903],
-        [40.180843465756496,44.51673113111903],
-    ];
     return <div className={style.contact}>
             <div className={style.registration}>
                 <h1 className={style.title}>Появились вопросы?</h1>
@@ -60,7 +55,16 @@ function Contact (){
             <div className={style.map}>
                 <YMaps>
                     <Map defaultState={mapData}  className={style.mapSize}>
-                        {coordinates.map(coordinate => <Placemark geometry={coordinate} />)}
+                        <Placemark
+                            geometry={[40.180843465756496,44.51673113111903]}
+                            options={{
+                                iconLayout: 'default#image',
+                                iconImageHref: 'https://app.gardenhill.am/admin/files/resources/ic_location.svg',
+                                iconImageSize: [50, 60],
+                                iconImageOffset: [-15, -60]
+                            }}
+
+                        />
                         <GeolocationControl options={{
                             float: 'left',
                             position: {

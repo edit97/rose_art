@@ -75,6 +75,9 @@
   }
 
 }
+input::placeholder{
+  font-family: SF-Medium;
+}
 .payment{
   width: 34%;
   height: 100%;
@@ -226,22 +229,22 @@
     .inputItems{
       margin: 0 ;
     }
-    .peymantTitle{
+    .paymentTitle{
       margin:  0 auto;
     }
     .btnPayment{
       width: 34% !important;
     }
-    .peymantSistem{
+    .paymentSystem{
       width: 34%!important;
     }
-    .peymant{
-      width: 100%;
+    .payment{
+      width: 100% !important;
     }
     .checkboxText{
       width: 34% !important;
     }
-    .peymantSistem{
+    .paymentSystem{
       width: 90% !important;
     }
     .registration{

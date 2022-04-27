@@ -5,7 +5,7 @@ import ProductCard from "../uiItem/cards/productcard/ProductCard";
 
 
 
-function Sort() {
+function Sort({products}) {
     const menu = (
         <Menu>
             <Menu.Item key="0">
@@ -36,14 +36,11 @@ function Sort() {
             </div>
         </div>
         <div className={style.productsCardBlock}>
-            <div className={style.productCard}><ProductCard/></div>
-            <div className={style.productCard}><ProductCard/></div>
-            <div className={style.productCard}><ProductCard/></div>
-            <div className={style.productCard}><ProductCard/></div>
-            <div className={style.productCard}><ProductCard/></div>
-            <div className={style.productCard}><ProductCard/></div>
-            <div className={style.productCard}><ProductCard/></div>
-            <div className={style.productCard}><ProductCard/></div>
+            {products.items?.map((item) => {
+              return  <div className={style.productCard}
+                           key={item.id}>
+                  <ProductCard data={item}/>
+                    </div>})}
         </div>
     </div>
 }export default Sort

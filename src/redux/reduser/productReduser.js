@@ -1,15 +1,21 @@
-import {GET_DATA} from '../constants/constType';
+import {GET_PRODUCTS} from '../constants/index';
 
 export const initialState = {
-    products: ['hhh'],
-};
-
-
+    products: {
+        items: [],
+        count: 0,
+    },
+}
 export default (state = initialState, action) => {
     switch (action.type) {
-        case GET_DATA: {
-            // console.log(action)
-            // return [action.payload.data, ...state]
+        case GET_PRODUCTS: {
+            return {
+               ...state,
+               products:{
+                   items: action.payload.products,
+                   count: action.payload.productsCount,
+               }
+           }
         }
         default:
             return state
