@@ -4,11 +4,11 @@ import RoseSlider from "../../../components/roseSlider/RoseSlider";
 import RoseGroup from "../../../components/roseGroup/RoseGroup";
 import RoseCard from "../../../components/uiItem/cards/rosecard/RoseCard";
 
-function Offer() {
+function Offer({sliders}) {
     return <div className={style.offer}>
         <h1 className={style.title}>Лучшее предложение</h1>
         <div className={style.list}>
-            <RoseSlider/>
+            <RoseSlider sliders={sliders}/>
             <RoseGroup/>
         </div>
         {/*

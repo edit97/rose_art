@@ -11,6 +11,14 @@
     padding-left: 10px;
   }
 }
+.borderTransparent{
+  border-color:transparent;
+}
+.borderRed{
+  border: 1px solid red;
+ border-bottom-left-radius:3px ;
+  border-top-left-radius:3px ;
+}
 .someText{
   font-family: SF-Regular;
 }
@@ -79,7 +87,6 @@
     .input{
       width: 70%;
       height: 100%;
-      border: 0;
       outline: none;
     }
     input::placeholder {

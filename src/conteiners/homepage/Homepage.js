@@ -5,12 +5,12 @@ import Main from "./main/Main";
 import Offer from "./offer/Offer";
 import Contact from "./contact/Contact";
 
-function Homepage({products}) {
+function Homepage({products,sliders,contactsUser}) {
     return <div className={style.homepage}>
         <Main/>
         <ProductList products={products}/>
-        <Offer/>
-        <Contact/>
+        <Offer sliders={sliders}/>
+        <Contact contactsUser={contactsUser}/>
     </div>
 }
 

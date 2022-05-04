@@ -1,17 +1,53 @@
 import {YMaps, Map, Placemark, GeolocationControl, ZoomControl} from "react-yandex-maps";
 import style from "./contact.module.scss";
 import {useState} from "react";
+import isEmail from "validator/es/lib/isEmail";
 
-function Contact (){
+function Contact ({contactsUser}){
     const [contact, setContact]=useState({
         name:"",
         email:"",
-        tem:"",
-        comments:"",
+        phone:"",
+        message:"",
     })
+    const[result,setResult]=useState(false)
+   const [error,setError] = useState({
+       name:false,
+       email:false,
+       phone:false,
+       message:false,
+   })
 
+    function validetion(){
+        let result=false
+        let error={}
+        if(isEmail(contact.email )){
+            console.log('hhhh')
+              error={email:true}
+             return result=true
+        }else  if (contact.phone.length < 9){
+            console.log('fffff')
+            error={phone:false}
+            return  result=true
+        }
+    }
+console.log(validetion(),'jjjj')
+    function handleClick(e) {
+        if(validetion()){
+            console.log(result,'kkkkk')
+            contactsUser(contact).then(() => {
+                setContact({name: "",email: "",phone: "",message: ""})
+            })
+        }else{
+            setError({...error,email: true,phone: true})
+        }
+    }
 
     function saveState( event) {
+        const regex = /^[+\d]\d*$/;
+        if (event.target.name  === 'phone' && !regex.test(event.target.value)) {
+            return;
+        }
         setContact({
             ...contact,
             [event.target.name]:event.target.value
@@ -35,21 +71,21 @@ function Contact (){
                        value={contact.email}
                        name={'email'}
                        onChange={(event) => {saveState(event)}}
-                       className={style.block}
+                       className={`${style.block} ${!error.email ? "" : style.errorBlock}`}
                        placeholder={"Электронная почта"}/>
                 <input type={"text"}
-                       value={contact.tem}
-                       name={'tem'}
+                       value={contact.phone}
+                       name={'phone'}
                        onChange={(event) => {saveState(event)}}
-                       className={style.block}
-                       placeholder={"Тема"}/>
+                       className={`${style.block} ${!error.phone ? "" : style.errorBlock}`}
+                       placeholder={"Номер"}/>
                 <input type={"text"}
-                       value={contact.comments}
-                       name={'comments'}
+                       value={contact.message}
+                       name={'message'}
                        onChange={(event) => {saveState(event)}}
                        className={style.block}
                        placeholder={"Комментарий"}/>
-                <button className={style.btn}>Отправить</button>
+                <button className={style.btn} onClick={handleClick}>Отправить</button>
             </div>
         <div className={style.blocks}>
             <div className={style.map}>

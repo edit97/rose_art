@@ -63,6 +63,12 @@
     height: 70px;
     cursor: pointer;
   }
+  .errorBlock{
+    border-bottom: 1px solid red;
+  }
+  .block::-webkit-inner-spin-button {
+    display: none;
+  }
   .block:focus{
     border-bottom: 2px solid $blackColor;
   }

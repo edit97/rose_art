@@ -1,8 +1,14 @@
 import {combineReducers} from "redux";
 
 // import reducers
-import product from "./productReduser";
+import products from "./productReduser";
+import sliders from "./sliderReduser";
+import subscribe from "./subscribeReduser"
+import contacts from "./contactsReduser"
 
 export default combineReducers({
-    product,
+    products,
+    sliders,
+    subscribe,
+    contacts,
 });

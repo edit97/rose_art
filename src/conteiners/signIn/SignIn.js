@@ -13,7 +13,7 @@ function SignIn() {
         password: "",
     })
 
-    function saveState(event) {
+    function saveState(event){
         setUser({
             ...user,
             [event.target.name]: event.target.value,

@@ -16,17 +16,33 @@ import { Menu, Dropdown } from 'antd';
 import {NavLink} from "react-router-dom";
 import FooterCard from "../uiItem/cards/footercard/FooterCard";
 import {useState} from "react";
+import validator from 'validator'
+import isEmail from "validator/es/lib/isEmail";
+
 
 
 const { Panel } = Collapse;
 
-function Footer(){
-    const [email,setEmail]=useState({
+function Footer({subscribeUser}){
+
+    const [state,setState]=useState({
         email:""
     })
+    const [error,setError] = useState(false)
+    function handleOnClick (event) {
+        subscribeUser(state).then(() => {setState({email: ""})})
+        if( isEmail(state?.email)) {
+            event.preventDefault()
+            setError(false)
+            console.log(error,'lll')
+        }else{
+            setError(true)
+        }
+        console.log(error,'lll')
+    }
     function saveState(event){
-        setEmail({
-            ...email,
+        setState({
+            ...state,
         [event.target.name]:event.target.value
         })
     }
@@ -118,17 +134,20 @@ function Footer(){
                     <span className={style.someText}>Subscribe, find out about discounts, deals, new products.</span>
                 </div>
                 <div className={style.scribe}>
-                <input className={style.input}
-                       type="email"
-                       value={email.email}
+                    {/*<script type="text/javascript">*/}
+                    {/*    validator.isEmail('foo@bar.com');*/}
+                    {/*</script>*/}
+                <input className={`${style.input} ${error===false ?  style.borderTransparent   :   style.borderRed}`}
+                       type="text/javascript"
+                       value={state.email}
                        name={'email'}
                        onChange={(event) => {saveState(event)}}
                        placeholder={"E-mail address"}/>
-                <button className={style.btn}>Subscribe</button>
+                <button className={style.btn} onClick={handleOnClick}>Subscribe</button>
                 </div>
                 <div className={style.responsiveSub}>
                     <div><RoseLogo title={''}/></div>
-                    <h1 className={style.title}>Subscribe</h1>
+                    <h1 className={style.title} >Subscribe</h1>
                     <span>Subscribe, find out about discounts, deals, new products.</span>
                 </div>
             </div>

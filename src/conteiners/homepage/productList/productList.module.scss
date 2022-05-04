@@ -10,7 +10,9 @@
     @include widthHeight;
     display: flex;
     margin-top: 30px;
-
+  .productsCardBlock{
+    width: 100%;
+  }
   }
 }
 
@@ -21,6 +23,7 @@
     font-family: SF-Heavy;
   }
   .more {
+    cursor: pointer;
     font-family: SF-Medium;
     @include itemsCenter;
     color: $firstColor;
@@ -45,9 +48,6 @@
       .slider{
         @include widthHeight;
         padding: 20px;
-        .blok4{
-          display: none;
-        }
       }
       .textSlider{
         width:100%;
@@ -55,29 +55,4 @@
     }
 
 
-}
-@media screen and (max-width: 840px){
-  .block3{
-    display: none;
-  }
-  .block,.block1,.block2{
-    margin: 0 auto;
-  }
-}
-@media screen and(max-width: 640px){
-
-  .slider{
-  @include spaceBetween;
-  }
-  .block2{
-    display: none;
-  }
-}
-@media screen and (max-width: 440px){
-  .block1{
-    display:none;
-  }
-  .block{
-   margin: 0 auto;
-  }
 }

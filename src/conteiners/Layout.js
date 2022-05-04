@@ -12,22 +12,27 @@ import SignUp from "./signup/SignUp";
 import ForgotPassword from "./forgotpassword/ForgotPassword";
 import Confirm from "./confirm/Confirm";
 import Products from "./products/Products";
-import {getProducts} from "../redux/action";
+import {getProducts,getSlider,subscribeUser,contactsUser} from "../redux/action";
 import {getPropsFromState} from "../redux/mapStateToProps";
 import {connect} from "react-redux";
 import {useEffect} from "react";
 
-function Layout({products, getProducts}) {
+function Layout({products, getProducts,getSlider,sliders,subscribeUser,contactsUser }) {
     useEffect(() => {
         getProducts()
+        getSlider()
     },[])
+
     let location = useLocation();
     const shouFooter = (location.pathname !== "/signIn" && location.pathname !== "/signup" && location.pathname !== "/forgotPassword" && location.pathname !== "/confirm")
     return (
         <div className={style.layout}>
             <Header/>
             <Routes>
-                <Route path={"/"} element={<Homepage products={products}/>}/>
+                <Route path={"/"} element={<Homepage products={products}
+                                                     sliders={sliders}
+                                                     contactsUser={contactsUser}
+                />}/>
                 <Route path={"/basket"} element={<Basket/>}/>
                 <Route path={"/basket/order"} element={<BasketOrder/>}/>
                 <Route path={"/signIn"} element={<SignIn/>}/>
@@ -36,19 +41,25 @@ function Layout({products, getProducts}) {
                 <Route path={"/confirm"} element={<Confirm/>}/>
                 <Route path={"/products"} element={<Products products={products}/>}/>
             </Routes>
-            {shouFooter && <Footer/>}
+            {shouFooter && <Footer subscribeUser={subscribeUser}/>}
         </div>
     )
 
 }
 
 const mapDispatchToProps  = {
-    getProducts
+    getProducts,
+    getSlider,
+    subscribeUser,
+    contactsUser,
 }
 
 const mapStateToProps = (state) => {
     return getPropsFromState(state, [
         'products',
+        'sliders',
+        'subscribe',
+        'contacts'
     ])
 };
 

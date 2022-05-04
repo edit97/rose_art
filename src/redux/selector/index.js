@@ -1,8 +1,14 @@
-import {initialState as product} from "../reduser/productReduser";
+import {initialState as products} from "../reduser/productReduser";
+import {initialState as sliders} from "../reduser/sliderReduser";
+import {initialState as subscribe} from "../reduser/subscribeReduser";
+import {initialState as contacts} from "../reduser/contactsReduser";
 
 const reducers = {
-    product,
-};
+    products,
+    sliders,
+    subscribe,
+    contacts,
+}
 export default state => {
     const sData = {};
     Object.keys(reducers).forEach(selectorKey => {
