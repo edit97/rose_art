@@ -1,8 +1,10 @@
 import style from "./basket.module.scss";
 import {NavLink} from "react-router-dom";
 import TotalCard from "../../components/uiItem/cards/totalCard/TotalCard";
+import ProductCard from "../../components/uiItem/cards/productcard/ProductCard";
+import React from "react";
 
-function Basket(){
+function Basket({products}){
 
     return (
         <div className={style.products}>
@@ -11,10 +13,11 @@ function Basket(){
             <div className={style.product}>
                 <div className={style.group}>
                     <div className={style.total}>
-                        <TotalCard/>
-                        <TotalCard/>
-                        <TotalCard/>
-                        <TotalCard/>
+                        {products.items?.map((item) => {
+                            return <div className={style.productsCardBlock} key={item.id}>
+                                <TotalCard data={item}/>
+                            </div>
+                        })}
                     </div>
                     <div className={style.remove}> Clear All Product</div>
                 </div>

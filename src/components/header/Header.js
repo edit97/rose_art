@@ -4,12 +4,13 @@ import style from "./header.module.scss";
 import { NavLink} from "react-router-dom";
 
 
-function  Header() {
+function  Header({isLoggedIn}) {
     const [click, setClick] = useState(false);
     const handleClick =(event)=> {
         event.preventDefault();
         setClick(!click);
     };
+    console.log(isLoggedIn,'rrrrrrs')
 return <div className={style.headerWrapper}>
     <div className={style.header}>
     <div className={style.navigation}>
@@ -30,10 +31,16 @@ return <div className={style.headerWrapper}>
         </div>
     </div>
     <div className={style.headerActions}>
-        <div ><Search title={''}/>Поиск </div><span> | </span>
-        <NavLink to="/signIn" className={style.signInLink} >
-            <div > <IconMan title={''}/>Boйти </div>
-        </NavLink>
+        <div className={style.search}><Search title={''}/>Поиск </div><span> | </span>
+        {isLoggedIn ?
+            <NavLink to="/profile" className={style.signInLink} >
+                <div > <IconMan title={''}/>Профиль </div>
+            </NavLink> :
+            <NavLink to="/signIn" className={style.signInLink} >
+                <div > <IconMan title={''}/>Boйти </div>
+            </NavLink>
+
+        }
         <span> | </span>
         <NavLink to="/basket" className={style.basketLink} >
             <span className={style.basket}>Корзина </span>
@@ -60,6 +67,9 @@ return <div className={style.headerWrapper}>
         <div ><Search title={''}/> Поиск</div>
             <NavLink to={"/signIn"} className={style.signinNavLink}>
                 <div  className={style.color}><Man title={''}/>Boйти</div>
+            </NavLink>
+            <NavLink to="/profile" className={style.basketNavLink} >
+                <div className={style.basketPage}> <IconMan title={''}/>Профиль </div>
             </NavLink>
             <NavLink to={"/basket"}  className={style.basketNavLink}>
                 <div className={style.basketPage}>Корзина</div>

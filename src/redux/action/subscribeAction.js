@@ -1,7 +1,6 @@
 import {_urlSubscribe, request} from "../api";
 
 export const subscribeUser = (data) => {
-    console.log(data,'ffff')
     const requestData =  {
         url: _urlSubscribe,
         method: 'post',

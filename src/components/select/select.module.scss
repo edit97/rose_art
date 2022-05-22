@@ -18,6 +18,8 @@
     .productsNumber{
       font-family: SF-Regular;
       color:$firstColor;
+      display: flex;
+      align-items: center;
     }
   }
   .selectBtn{

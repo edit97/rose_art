@@ -5,6 +5,7 @@ import Filter from "../../components/filter/Filter";
 import Sort from "../../components/sort/Sort";
 
 function Products ({products}) {
+    console.log(products,'hhhh')
     return <div className={style.products}>
     <div className={style.nav}>Home  /    All rose   /  Rose spray </div>
         <div className={style.wallpaper}>
@@ -23,7 +24,7 @@ function Products ({products}) {
             </div>
         </div>
         <div className={style.selectGroup}>
-            <Select/>
+            <Select products={products}/>
             <div className={style.filterGroup}>
                 <Filter/>
                 <div className={style.sortBlock}>

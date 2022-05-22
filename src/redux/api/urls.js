@@ -26,8 +26,9 @@ const {
     ? OFFICIAL_URLS
     : TESTING_URLS;
 
-export const _urlAunt = AUTH_URL + "/jwt";
-export const _urlUser = USER_URL + "/users";
+export const _urlAunt = AUTH_URL + "/jwt/token";
+export const _urlUsers = USER_URL + "/users";
+export const _urlActivation = USER_URL + "/users/activation";
 export const _urlAdmin = ADMIN_URL + "/admin";
 export const _urlFile = FILE_URL + "/file";
 export const _urlShop = SHOP_URL + "/shops";
@@ -36,6 +37,8 @@ export  const _urlSlider = SHOP_URL + "/sliders"
 export const _urlOrder = ORDER_URL + "/order";
 export const _urlNotification = NOTIFICATION_URL;
 export const _urlPayment = PAYMENT_URL + "/payment";
-export const _hostMedia = FILE_URL
 export const _urlSubscribe = USER_URL + "/subscribe";
-export const _urlContacts = USER_URL + "/contacts"
+export const _urlContacts = USER_URL + "/contacts";
+export const _urlForgotPassword = USER_URL + "/users/forgot-password";
+export const _hostMedia = FILE_URL
+

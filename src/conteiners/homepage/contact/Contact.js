@@ -10,7 +10,6 @@ function Contact ({contactsUser}){
         phone:"",
         message:"",
     })
-    const[result,setResult]=useState(false)
    const [error,setError] = useState({
        name:false,
        email:false,
@@ -19,28 +18,35 @@ function Contact ({contactsUser}){
    })
 
     function validetion(){
-        let result=false
-        let error={}
-        if(isEmail(contact.email )){
-            console.log('hhhh')
-              error={email:true}
-             return result=true
-        }else  if (contact.phone.length < 9){
-            console.log('fffff')
-            error={phone:false}
-            return  result=true
+        let result=true
+        let err={}
+        if(contact.name===""){
+            err.name=true
+            result=false
         }
+        if(contact.message===""){
+            err.message=true
+            result=false
+        }
+        if(!isEmail(contact.email )){
+              err.email=true
+              result=false
+        }
+        if(contact.phone.length < 9){
+            err.phone=true
+            result=false
+        }
+        return {result,err}
     }
-console.log(validetion(),'jjjj')
     function handleClick(e) {
-        if(validetion()){
-            console.log(result,'kkkkk')
+        if(validetion().result){
             contactsUser(contact).then(() => {
                 setContact({name: "",email: "",phone: "",message: ""})
             })
-        }else{
-            setError({...error,email: true,phone: true})
+        }else {
+            setError({...error,...validetion().err})
         }
+
     }
 
     function saveState( event) {
@@ -48,12 +54,15 @@ console.log(validetion(),'jjjj')
         if (event.target.name  === 'phone' && !regex.test(event.target.value)) {
             return;
         }
+        setError({
+            ...error,
+        [event.target.name]:false
+        })
         setContact({
             ...contact,
             [event.target.name]:event.target.value
         })
     }
-
     const mapData = {
         center: [40.180843465756496,44.51673113111903],
         zoom: 13,
@@ -65,25 +74,26 @@ console.log(validetion(),'jjjj')
                        value={contact.name}
                        name={'name'}
                        onChange={(event) => {saveState(event)}}
-                       className={style.block}
+                       className={`${style.block} ${error.name ? style.errorBlock : ""}`}
                        placeholder={"Ваше имя"}/>
                 <input type={"email"}
                        value={contact.email}
                        name={'email'}
                        onChange={(event) => {saveState(event)}}
-                       className={`${style.block} ${!error.email ? "" : style.errorBlock}`}
+                       className={`${style.block} ${error.email ? style.errorBlock : ""}`}
                        placeholder={"Электронная почта"}/>
                 <input type={"text"}
                        value={contact.phone}
                        name={'phone'}
+
                        onChange={(event) => {saveState(event)}}
-                       className={`${style.block} ${!error.phone ? "" : style.errorBlock}`}
+                       className={`${style.block} ${error.phone ? style.errorBlock : ""}`}
                        placeholder={"Номер"}/>
                 <input type={"text"}
                        value={contact.message}
                        name={'message'}
                        onChange={(event) => {saveState(event)}}
-                       className={style.block}
+                       className={`${style.block} ${error.message ? style.errorBlock : ""}`}
                        placeholder={"Комментарий"}/>
                 <button className={style.btn} onClick={handleClick}>Отправить</button>
             </div>

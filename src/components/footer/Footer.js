@@ -28,19 +28,30 @@ function Footer({subscribeUser}){
     const [state,setState]=useState({
         email:""
     })
-    const [error,setError] = useState(false)
-    function handleOnClick (event) {
-        subscribeUser(state).then(() => {setState({email: ""})})
-        if( isEmail(state?.email)) {
-            event.preventDefault()
-            setError(false)
-            console.log(error,'lll')
-        }else{
-            setError(true)
+    const [error,setError] = useState({
+        email:false
+    })
+    function valid(){
+        let result=true
+        let err = {}
+        if(!isEmail(state.email)){
+            err.email=true
+            result=false
         }
-        console.log(error,'lll')
+        return{result,err}
+    }
+    function handleOnClick (event) {
+        if(valid().result){
+            subscribeUser(state).then(() => {setState({email: ""})})
+        }else {
+            setError({...error,...valid().err})
+        }
     }
     function saveState(event){
+        setError({
+            ...error,
+            [event.target.name]:false
+        })
         setState({
             ...state,
         [event.target.name]:event.target.value
@@ -134,10 +145,7 @@ function Footer({subscribeUser}){
                     <span className={style.someText}>Subscribe, find out about discounts, deals, new products.</span>
                 </div>
                 <div className={style.scribe}>
-                    {/*<script type="text/javascript">*/}
-                    {/*    validator.isEmail('foo@bar.com');*/}
-                    {/*</script>*/}
-                <input className={`${style.input} ${error===false ?  style.borderTransparent   :   style.borderRed}`}
+                <input className={`${style.input} ${error.email ?   style.borderRed :  style.borderTransparent }`}
                        type="text/javascript"
                        value={state.email}
                        name={'email'}

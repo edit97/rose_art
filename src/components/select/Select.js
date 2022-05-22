@@ -1,10 +1,10 @@
 import style from './select.module.scss'
 
-function Select() {
+function Select({products}) {
     return <div className={style.select}>
         <div className={style.titleBlock}>
             <div className={style.title}>All Roses</div>
-            <div className={style.productsNumber}>148 products</div>
+            <div className={style.productsNumber}>{products.count} products</div>
         </div>
         <div className={style.selectBtn}>
             <button className={style.btn}>Spotlight Cam</button>

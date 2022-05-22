@@ -1,0 +1,29 @@
+@import "../../assets/styles/mixins";
+@import "../../assets/styles/varieibls";
+@import "../../assets/fonts/fonts";
+
+.favorite{
+  //width:100%;
+  //height: 100%;
+  padding:0 0 30px 0;
+  .title{
+    width: 100%;
+    height: 70px;
+    font-family: SF-Bold;
+    font-size: 18px;
+    padding-left: 20px;
+    display: flex;
+    align-items: center;
+    border: 1px solid $greyBorderColor;
+  }
+  .productFavorite{
+    width: 100%;
+    height: 600px;
+    border: 1px solid $greyBorderColor;
+    border-top: 0;
+    overflow: scroll;
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+}

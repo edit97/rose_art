@@ -1,0 +1,189 @@
+@import "../../assets/styles/mixins";
+@import "../../assets/styles/varieibls";
+@import "../../assets/fonts/fonts";
+
+.profile{
+  width: $contentWidth;
+  margin: 0 auto;
+  padding-top: 30px;
+  display: flex;
+  .staticInfo{
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    .userProfile{
+      width: 100%;
+      height: 70px;
+      border: 1px solid $greyBorderColor;
+      border-right: 0;
+      background-color: $greyBackgroundColor;
+      display: flex;
+      align-items: center;
+      padding: 20px;
+      .imgProfile{
+        width: 50px;
+        height: 50px;
+        border: 1px solid $greyBorderColor;
+        border-radius: 3px;
+      }
+      .profileInfo{
+        width: 100px;
+        height: 50px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        margin-left: 10px;
+        .name{
+          font-family: SF-Medium;
+          font-size: 15px;
+        }
+        .email{
+          width: 200px;
+          overflow: hidden;
+          font-family: SF-Regular;
+          color: #A6A7AE;
+        }
+      }
+    }
+    .list{
+      width: 100%;
+      height: 600px;
+      display: flex;
+      flex-direction: column;
+      background-color: $greyBackgroundColor;
+      padding-top: 20px;
+      padding-bottom: 40px;
+      border-bottom: 1px solid $greyBorderColor;
+      border-left: 1px solid $greyBorderColor;
+      .profileBlock{
+        width: 100%;
+        height: 46px;
+        border: 0;
+        color: black;
+        cursor: pointer;
+        font-family: SF-Bold;
+        padding-left: 30px;
+        display: flex;
+        align-items: center;
+        svg{
+          margin-right: 20px;
+          path{
+            fill: #333939;
+          }
+        }
+        &:hover{
+          background-color: $firstColor;
+          color: white;
+          svg{
+            path{
+              fill: white;
+            }
+          }
+        }
+      }
+      .block{
+        width: 100%;
+        height: 46px;
+        border: 0;
+        cursor: pointer;
+        font-family: SF-Bold;
+        padding-left: 30px;
+        display: flex;
+        align-items: center;
+        svg{
+          margin-right: 20px;
+        }
+        &:hover{
+          background-color: $firstColor;
+          color: white;
+          svg{
+            path{
+              fill: white;
+            }
+          }
+        }
+      }
+      .logOut{
+        width: 100%;
+        height: 46px;
+        border: 0;
+        background-color: transparent;
+        cursor: pointer;
+        font-family: SF-Bold;
+        padding-left: 30px;
+        margin-top: 30px;
+        display: flex;
+        align-items: center;
+        svg{
+          margin-right: 20px;
+        }
+        &:hover{
+          background-color: $firstColor;
+          color: white;
+          svg{
+            path{
+              fill: white;
+            }
+          }
+        }
+      }
+    }
+  }
+  .information{
+    width: 75%;
+  }
+  .active{
+    background-color: $firstColor;
+    color: white!important;
+    svg{
+      path{
+        fill: white!important;
+      }
+    }
+  }
+  .transparent{
+    background-color: transparent;
+  }
+}
+@media screen and (max-width: 1024px){
+  .profile{
+    width: 100%;
+    margin-top: 100px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    .staticInfo{
+      width: 100%;
+      ::-webkit-scrollbar{
+        display: none;
+      }
+      .list{
+        height: 50px;
+        flex-direction: row;
+        overflow-x: scroll;
+        overflow-y: hidden;
+        padding: 0;
+        .profileBlock{
+          white-space: nowrap;
+          padding: 0 20px!important;
+          height: 50px;
+        }
+        .logOut{
+          height: 50px;
+          padding: 0 20px!important;
+          white-space: nowrap;
+          margin: 0;
+        }
+        .block{
+          height: 50px;
+          padding: 0 20px!important;
+          white-space: nowrap
+        }
+      }
+    }
+    .information{
+      width: 100%;
+    }
+  }
+}

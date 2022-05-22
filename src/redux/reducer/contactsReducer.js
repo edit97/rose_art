@@ -1,16 +1,15 @@
-import { POST_SUBSCRIBE} from '../constants/index';
+import {POST_CONTACTS} from "../constants";
 
 export const initialState = {
-    subscribe:{}
+    contacts:{}
 }
 
 export default (state = initialState, action) => {
     switch (action.type) {
-        case POST_SUBSCRIBE: {
-            console.log(action.payload,'dddd')
+        case POST_CONTACTS: {
             return {
                 ...state,
-                subscribe:action.payload
+                contacts:action.payload
             }
         }
         default:

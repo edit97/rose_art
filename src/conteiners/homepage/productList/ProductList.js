@@ -2,8 +2,16 @@ import style from "./productList.module.scss"
 import React from "react";
 import Slider from "react-slick"
 import ProductCard from "../../../components/uiItem/cards/productcard/ProductCard";
+import { useNavigate } from 'react-router-dom';
+import FavoriteProductCard from "../../../components/uiItem/cards/favoriteProductCard/FavoriteProductCard";
 
 function ProductList({products}) {
+    // console.log(!products?.isFavorite,'tttt')
+   let navigate = useNavigate()
+    function handleClick(){
+        window.scroll(0,0)
+        navigate("/products")
+    }
     const settings = {
         dots: false,
         arrows:false,
@@ -105,20 +113,21 @@ function ProductList({products}) {
             <>
                 <div className={style.header}>
                     <h1 className={style.heavyTitle}>Новая коллекция</h1>
-                    <div className={style.more}>Больше</div>
+                    <button onClick={handleClick} className={style.more}>Больше</button>
                 </div>
 
                 <div className={style.slider}>
                     <Slider {...settings} >
                         {products.items?.map((item) => {
                             return <div className={style.productsCardBlock} key={item.id}>
-                                <ProductCard data={item} />
+                                <ProductCard data={item}/>
+                                 {/*<FavoriteProductCard data={item}/>*/}
+
                             </div>
                         })}
                     </Slider>
                 </div>
-            </> : ""
-        }
+            </> : ""}
     </div>
 }
 export default ProductList

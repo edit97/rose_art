@@ -23,6 +23,8 @@
     font-family: SF-Heavy;
   }
   .more {
+    border: 0;
+    background-color: transparent;
     cursor: pointer;
     font-family: SF-Medium;
     @include itemsCenter;

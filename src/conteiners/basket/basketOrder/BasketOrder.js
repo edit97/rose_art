@@ -2,8 +2,12 @@ import style from "./basketOrder.module.scss"
 import { YMaps, Map, Placemark,ZoomControl,GeolocationControl } from "react-yandex-maps";
 import React, {useState} from "react";
 import { Radio } from 'antd';
+import { Checkbox } from 'antd';
 
 function BasketOrder() {
+    function onChange(e) {
+        console.log(`checked = ${e.target.checked}`);
+    }
     const[paymentSystem,setPaymentSystem]=useState({
         street:"",
         address:"",
@@ -21,11 +25,6 @@ function BasketOrder() {
         center: [40.180843465756496,44.51673113111903],
         zoom: 12,
     };
-
-    const coordinates = [
-        [40.180843465756496,44.51673113111903],
-        [40.180843465756496,44.51673113111903],
-    ];
 
     return <div className={style.basketOrder}>
             <div className={style.nav}>Home  /    All rose   /  Rose spray  /  My cart</div>
@@ -55,7 +54,16 @@ function BasketOrder() {
                 <div className={style.map}>
                     <YMaps>
                         <Map defaultState={mapData} className={style.yandexMap}>
-                            {coordinates.map(coordinate => <Placemark geometry={coordinate} />)}
+                            <Placemark
+                                geometry={[40.180843465756496,44.51673113111903]}
+                                options={{
+                                    iconLayout: 'default#image',
+                                    iconImageHref: 'https://app.gardenhill.am/admin/files/resources/ic_location.svg',
+                                    iconImageSize: [50, 60],
+                                    iconImageOffset: [-15, -60]
+                                }}
+
+                            />
                             <GeolocationControl options={{
                                 float: 'left',
                                 position: {
@@ -113,12 +121,10 @@ function BasketOrder() {
                 </div>
                 <span className={style.line}></span>
                 <div className={style.checkboxText}>
-                    <input className={style.checkboxValue} type="checkbox" id="checked"/>
-                    <label htmlFor="checked">
-                    </label>
-                    <span> I agree to the terms of the sale, the
+                    <Checkbox onChange={onChange}><span className={style.privacyText}>
+                        I agree to the terms of the sale, the
                         <span className={style.textLink}>privacy policy.</span>
-                    </span>
+                    </span></Checkbox>
                 </div>
                     <button className={style.btnPayment}>PAYMENT</button>
                 </div>
