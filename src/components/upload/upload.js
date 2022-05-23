@@ -1,48 +1,3 @@
-// import React, { useState } from 'react';
-// import { Upload } from 'antd';
-// import ImgCrop from 'antd-img-crop';
-//
-// const Demo = () => {
-//     const [fileList, setFileList] = useState([]);
-//
-//     const onChange = ({ fileList }) => {
-//         console.log(fileList,'fff')
-//         setFileList(fileList);
-//     };
-//
-//     // const onPreview = async file => {
-//     //     let src = file.url;
-//     //     // if (!src) {
-//     //     //     src = await new Promise(resolve => {
-//     //     //         const reader = new FileReader();
-//     //     //         reader.onload = () => resolve(reader.result);
-//     //     //         console.log(resolve,'gggg')
-//     //     //     });
-//     //     // }
-//     //     const image = new Image();
-//     //     image.src = src;
-//     //     const imgWindow = window.open(src);
-//     //     imgWindow.document.write(image.outerHTML);
-//     //     console.log(src,'lllll')
-//     // };
-//
-//     return (
-//         <ImgCrop rotate>
-//             <Upload
-//                 listType="picture-card"
-//                 fileList={fileList}
-//                 onChange={onChange}
-//             >
-//                 {fileList.length < 5 && '+ Upload'}
-//             </Upload>
-//         </ImgCrop>
-//     );
-// };
-//
-// export default Demo;
-
-
-
 import  {useState} from 'react';
 import ImageUploading from 'react-images-uploading';
 import style from "./upload.module.scss"
@@ -54,6 +9,7 @@ export function App() {
 
     const onChange = (imageList) => {
        setImages(imageList)
+        console.log(imageList,'fffff')
     };
 
     return (

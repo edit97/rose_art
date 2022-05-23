@@ -1,4 +1,4 @@
-import {POST_SIGNIN, POST_USER} from "../constants";
+import {GET_PRODUCTS, LOG_OUT, POST_SIGNIN} from "../constants";
 
 export const initialState = {
     user:{},
@@ -14,11 +14,10 @@ export default (state=initialState, action) => {
                    isLoggedIn: true,
                }
             }
-        case POST_USER: {
+         case LOG_OUT: {
             return {
-                ...state,
-                user:action.payload,
-                isLoggedIn: false,
+               user: {},
+                isLoggedIn: false
             }}
         default:
             return state

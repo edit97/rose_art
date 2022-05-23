@@ -1,7 +1,7 @@
 import React, {useState} from "react";
 import {Man, Search, Menu, BitmapWhite, IconMan, RoseLogo} from "../../assets/imeges";
 import style from "./header.module.scss";
-import { NavLink} from "react-router-dom";
+import {NavLink, useLocation} from "react-router-dom";
 
 
 function  Header({isLoggedIn}) {

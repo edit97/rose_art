@@ -19,7 +19,7 @@ import {
     contactsUser,
     usersSignUp,
     signIn,
-    usersActivation
+    usersActivation, logOut,
 } from "../redux/action";
 import {getPropsFromState} from "../redux/mapStateToProps";
 import {connect} from "react-redux";
@@ -29,7 +29,7 @@ import ProfileInformation from "../components/profileInformation/ProfileInformat
 import Favorite from "../components/favorite/Favorite";
 
 function Layout({products, getProducts,getSlider,
-                    sliders,subscribeUser,contactsUser, usersSignUp,signIn,usersActivation ,isLoggedIn}) {
+                    sliders,subscribeUser,contactsUser, usersSignUp,signIn,usersActivation ,isLoggedIn,logOut}) {
 
     useEffect(() => {
         getProducts()
@@ -54,7 +54,9 @@ function Layout({products, getProducts,getSlider,
                 <Route path={"/forgotPassword"} element={<ForgotPassword/>}/>
                 <Route path={"/confirm"} element={<Confirm usersActivation={usersActivation} signIn={signIn} />}/>
                 <Route path={"/products"} element={<Products products={products}/>}/>
-                <Route path={"/profile"} element={<Profile products={products} isLoggedIn={isLoggedIn}/>}/>
+                <Route path={"/profile"} element={<Profile products={products}
+                                                           isLoggedIn={isLoggedIn}
+                                                           logOut={logOut}/>}/>
                 <Route path={"/settings"} element={<ProfileInformation/>}/>
                 <Route path={"/favorite"} element={<Favorite/> }/>
             </Routes>
@@ -72,6 +74,7 @@ const mapDispatchToProps  = {
     usersSignUp,
     signIn,
     usersActivation,
+    logOut,
 }
 
 const mapStateToProps = (state) => {

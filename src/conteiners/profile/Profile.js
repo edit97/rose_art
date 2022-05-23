@@ -2,20 +2,26 @@ import style from "./profile.module.scss"
 import React from "react";
 import { LogOut, NotificationIcon, Order, User, UserHeart} from "../../assets/imeges";
 import ProfileInformation from "../../components/profileInformation/ProfileInformation";
-import {NavLink, useLocation,Link} from "react-router-dom";
+import {useLocation, useNavigate} from "react-router-dom";
 import {useState} from "react";
 import ProfileNotification from "../../components/profilenotification/ProfileNotification";
 import Favorite from "../../components/favorite/Favorite";
 import ProfileOrder from "../../components/profileOrder/ProfileOrder";
 
-function Profile({products,isLoggedIn}) {
-    console.log(isLoggedIn,'ggggg')
+function Profile({products,logOut}) {
+    let navigate=useNavigate()
     const [profile,setProfile]=useState({
         settings:true,
         favorites:false,
         order:false,
         notifications:false,
     })
+
+    function logOutClick() {
+        window.scroll(0, 0)
+        navigate("/")
+        logOut()
+}
 
     function handleClick(event) {
         let val =event.target.value
@@ -65,7 +71,7 @@ function Profile({products,isLoggedIn}) {
                         value={'notifications'}
                         onClick={handleClick}>
                     <NotificationIcon/> Notification</button>
-                <button className={style.logOut} onClick={isLoggedIn ? "" : <NavLink to={'/'}></NavLink>}> <LogOut/>Log out</button>
+                <button className={style.logOut} onClick={logOutClick}> <LogOut/>Log out</button>
             </div>
         </div>
         <div className={style.information}>

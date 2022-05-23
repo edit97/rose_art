@@ -1,5 +1,5 @@
 import {_urlProducts, request} from "../api";
-import {GET_PRODUCTS} from "../constants/index";
+import {GET_PRODUCTS, LOG_OUT} from "../constants/index";
 
 export const getProducts = () => {
     const reqData =  {

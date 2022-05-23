@@ -1,8 +1,14 @@
 import style from "./profileInformation.module.scss"
 import {Edit} from "../../assets/imeges";
 import Demo, {App} from "../upload/upload";
+import {useLocation} from "react-router-dom";
+import {useState} from "react";
 
 function ProfileInformation() {
+    // let location=useLocation()
+    // const [state,setState]=useState({
+    //     email:location.state.username
+    // })
 
     return <div className={style.profileInformation}>
         <div className={style.profileHeader}>
@@ -24,6 +30,7 @@ function ProfileInformation() {
                     />
                     <div className={style.emailEdit}>
                         <input type="email"
+                               // value={location.state.username}
                                placeholder={'Enter your email'}
                                className={style.emailInput}
                         />

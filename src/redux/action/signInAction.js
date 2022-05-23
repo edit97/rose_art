@@ -1,6 +1,6 @@
 import {_urlAunt, request} from "../api";
 import {stringify} from "query-string";
-import {GET_PRODUCTS, POST_SIGNIN} from "../constants";
+import {GET_PRODUCTS, LOG_OUT, POST_SIGNIN} from "../constants";
 
 
 export const signIn = (data) => {
@@ -16,16 +16,15 @@ export const signIn = (data) => {
     return dispatch => {
         return request(requestData)
             .then(result => {
+                console.log(result,'lllll')
                 dispatch({
                     type: POST_SIGNIN,
                     payload: result.data
                 })
-            })
-            .catch(error => {
-                dispatch({
-                    type:POST_SIGNIN,
-                    payload:error.data
-                })
-            })
-    }
+            })}
 }
+ export const logOut = () => {
+    return{
+        type:LOG_OUT,
+    }
+ }
