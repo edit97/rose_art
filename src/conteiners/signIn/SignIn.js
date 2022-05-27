@@ -1,10 +1,14 @@
 import style from './signin.module.scss'
 import {RoseLogo, FacebookIcon, Google, WatchIcon, SlashEye} from "../../assets/imeges";
 import {NavLink, useNavigate} from "react-router-dom";
-import {useState} from "react";
+import {useEffect, useState} from "react";
 import isEmail from "validator/es/lib/isEmail";
 
-function SignIn({signIn}) {
+function SignIn({signIn,userProfile}) {
+
+    // useEffect(() => {
+    //     userProfile()
+    // },[])
     let navigate=useNavigate()
     const [showIcon, setShowIcon] = useState(false);
     const changeIcon = () => {
@@ -33,12 +37,11 @@ function SignIn({signIn}) {
         }
         return {result,err}
     }
-
     function clickSignIn() {
         if(validation().result){
-            signIn(user).then(() => setUser({username: "",password: "",grantType: ""}))
+            signIn(user).then(() => setUser({username:"",password:"",grantType:""}))
             window.scroll(0,0)
-            navigate("/profile",{state:user})
+            navigate("/",{state:user})
         }else {
             setError({...error,...validation().err})
         }

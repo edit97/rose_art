@@ -1,16 +1,10 @@
-import  {useState} from 'react';
 import ImageUploading from 'react-images-uploading';
 import style from "./upload.module.scss"
 import {Upload} from "../../assets/imeges";
 
-export function App() {
-    const [images, setImages] = useState([]);
+export function App({onChange,images}) {
+    // const [images, setImages] = useState([]);
     const maxNumber = 69;
-
-    const onChange = (imageList) => {
-       setImages(imageList)
-        console.log(imageList,'fffff')
-    };
 
     return (
         <div className="App">
@@ -36,8 +30,8 @@ export function App() {
                             style={isDragging ? { color: 'red' } : undefined}
                             onClick={onImageUpload}
                             {...dragProps}
-                            className={style.btnUpload}
-                        >
+                            className={style.btnUpload}>
+
                             <div className={style.overlay}>
                                 <Upload title={''}/>
                                 <span className={style.text}>Upload image</span>

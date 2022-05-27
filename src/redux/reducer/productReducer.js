@@ -1,10 +1,11 @@
-import {GET_PRODUCTS} from '../constants/index';
+import {GET_PRODUCTS, GET_SLIDER} from '../constants/index';
 
 export const initialState = {
     products: {
         items: [],
         count: 0,
     },
+    sliders:[],
 }
 export default (state = initialState, action) => {
     switch (action.type) {
@@ -16,6 +17,12 @@ export default (state = initialState, action) => {
                    count: action.payload.productsCount,
                }
            }
+        }
+        case GET_SLIDER: {
+            return {
+                ...state,
+                sliders: action.payload
+            }
         }
         default:
             return state

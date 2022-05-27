@@ -5,6 +5,7 @@
 .products{
   width: $contentWidth;
   margin: 0 auto;
+  padding-top: 80px;
   .nav{
     width: 100%;
     @include spaceBetween;

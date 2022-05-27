@@ -19,7 +19,7 @@ import {
     contactsUser,
     usersSignUp,
     signIn,
-    usersActivation, logOut,
+    usersActivation, logOut, userProfile, usersUpdate,
 } from "../redux/action";
 import {getPropsFromState} from "../redux/mapStateToProps";
 import {connect} from "react-redux";
@@ -29,7 +29,8 @@ import ProfileInformation from "../components/profileInformation/ProfileInformat
 import Favorite from "../components/favorite/Favorite";
 
 function Layout({products, getProducts,getSlider,
-                    sliders,subscribeUser,contactsUser, usersSignUp,signIn,usersActivation ,isLoggedIn,logOut}) {
+                    sliders,subscribeUser,contactsUser, usersSignUp,signIn,usersActivation ,
+                    isLoggedIn,logOut,user,userError,userProfile,usersUpdate,update}) {
 
     useEffect(() => {
         getProducts()
@@ -45,19 +46,24 @@ function Layout({products, getProducts,getSlider,
             <Routes>
                 <Route path={"/"} element={<Homepage products={products}
                                                      sliders={sliders}
-                                                     contactsUser={contactsUser}
-                />}/>
+                                                     contactsUser={contactsUser}/>}/>
                 <Route path={"/basket"} element={<Basket products={products}/>}/>
                 <Route path={"/basket/order"} element={<BasketOrder/>}/>
-                <Route path={"/signIn"} element={<SignIn signIn={signIn} />}/>
-                <Route path={"/signup"} element={<SignUp usersSignUp={usersSignUp} />}/>
+                <Route path={"/signIn"} element={<SignIn signIn={signIn}/>}/>
+                <Route path={"/signup"} element={<SignUp usersSignUp={usersSignUp}
+                                                         userError={userError}/>}/>
                 <Route path={"/forgotPassword"} element={<ForgotPassword/>}/>
-                <Route path={"/confirm"} element={<Confirm usersActivation={usersActivation} signIn={signIn} />}/>
+                <Route path={"/confirm"} element={<Confirm usersActivation={usersActivation}
+                                                           signIn={signIn} userProfile={userProfile}/>}/>
                 <Route path={"/products"} element={<Products products={products}/>}/>
                 <Route path={"/profile"} element={<Profile products={products}
+                                                           usersUpdate={usersUpdate}
                                                            isLoggedIn={isLoggedIn}
-                                                           logOut={logOut}/>}/>
-                <Route path={"/settings"} element={<ProfileInformation/>}/>
+                                                           logOut={logOut}
+                                                           update={update}
+                                                            user={user}
+                                                           userProfile={userProfile}/>}/>
+                <Route path={"/settings"} element={<ProfileInformation />}/>
                 <Route path={"/favorite"} element={<Favorite/> }/>
             </Routes>
             {shouFooter && <Footer subscribeUser={subscribeUser}/>}
@@ -75,6 +81,8 @@ const mapDispatchToProps  = {
     signIn,
     usersActivation,
     logOut,
+    userProfile,
+    usersUpdate,
 }
 
 const mapStateToProps = (state) => {
@@ -87,6 +95,9 @@ const mapStateToProps = (state) => {
         'signIn',
         'code',
         'isLoggedIn',
+        'user',
+        'userError',
+        'update',
     ])
 };
 

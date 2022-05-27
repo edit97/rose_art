@@ -1,14 +1,18 @@
 import style from "./profile.module.scss"
-import React from "react";
+import React, {useEffect} from "react";
 import { LogOut, NotificationIcon, Order, User, UserHeart} from "../../assets/imeges";
 import ProfileInformation from "../../components/profileInformation/ProfileInformation";
-import {useLocation, useNavigate} from "react-router-dom";
+import { useNavigate} from "react-router-dom";
 import {useState} from "react";
 import ProfileNotification from "../../components/profilenotification/ProfileNotification";
 import Favorite from "../../components/favorite/Favorite";
 import ProfileOrder from "../../components/profileOrder/ProfileOrder";
+import {App} from "../../components/upload/upload";
 
-function Profile({products,logOut}) {
+function Profile({products,logOut,user,userProfile,usersUpdate,update}) {
+    useEffect(() => {
+        userProfile()
+    },[])
     let navigate=useNavigate()
     const [profile,setProfile]=useState({
         settings:true,
@@ -22,6 +26,7 @@ function Profile({products,logOut}) {
         navigate("/")
         logOut()
 }
+
 
     function handleClick(event) {
         let val =event.target.value
@@ -43,19 +48,18 @@ function Profile({products,logOut}) {
         <div className={style.staticInfo}>
             <div className={style.userProfile}>
                 <div className={style.imgProfile}>
-
                 </div>
                 <div className={style.profileInfo}>
-                    <span className={style.name}>Ani Mxitaryan</span>
-                    <span className={style.email}>animnacakanyan@gmail.com</span>
+                    <span className={style.name}>{user.firstName} {user.lastName}</span>
+                    <span className={style.email}>{user.username}</span>
                 </div>
             </div>
             <div className={style.list}>
                 <button className={`${style.profileBlock} 
                 ${profile.settings===true ? style.active : style.transparent}`}
                         onClick={handleClick}
-                        value={'settings'}
-                ><User/> Profile information</button>
+                        value={'settings'}>
+                    <User/> Profile information</button>
                 <button className={`${style.block} 
                 ${profile.favorites===true ? style.active : style.transparent}`}
                         onClick={handleClick}
@@ -75,7 +79,10 @@ function Profile({products,logOut}) {
             </div>
         </div>
         <div className={style.information}>
-            {profile.settings===true? <ProfileInformation/> : ""}
+            {profile.settings===true? <ProfileInformation user={user}
+                                                          usersUpdate={usersUpdate}
+                                                          update={update}
+                                                          userProfile={userProfile}/> : ""}
             {profile.favorites===true  ? <Favorite products={products}/> : ""}
             {profile.order===true ? <ProfileOrder/> : ""}
             {profile.notifications===true ? <ProfileNotification/> : ""}

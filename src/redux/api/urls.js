@@ -39,6 +39,8 @@ export const _urlNotification = NOTIFICATION_URL;
 export const _urlPayment = PAYMENT_URL + "/payment";
 export const _urlSubscribe = USER_URL + "/subscribe";
 export const _urlContacts = USER_URL + "/contacts";
+export const _urlProfile = USER_URL + "/users/current";
 export const _urlForgotPassword = USER_URL + "/users/forgot-password";
+export const _urlUserUpdate = USER_URL + "/users/current";
 export const _hostMedia = FILE_URL
 

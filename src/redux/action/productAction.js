@@ -1,5 +1,5 @@
-import {_urlProducts, request} from "../api";
-import {GET_PRODUCTS, LOG_OUT} from "../constants/index";
+import {_urlProducts, _urlSlider, request} from "../api";
+import {GET_PRODUCTS, GET_SLIDER,} from "../constants/index";
 
 export const getProducts = () => {
     const reqData =  {
@@ -13,6 +13,24 @@ export const getProducts = () => {
                 dispatch({
                     type: GET_PRODUCTS,
                     payload: res.data
+                })
+            })
+
+    }
+}
+
+export const getSlider = () => {
+    const requestData =  {
+        url: _urlSlider,
+        method: 'get',
+        languageFlag: true,
+    }
+    return dispatch => {
+        return request(requestData)
+            .then(result => {
+                dispatch({
+                    type: GET_SLIDER,
+                    payload: result.data
                 })
             })
 

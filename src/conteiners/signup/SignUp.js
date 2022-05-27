@@ -5,7 +5,8 @@ import {useState} from "react";
 import isEmail from "validator/es/lib/isEmail";
 import { Checkbox } from 'antd';
 
-function SignUp({usersSignUp}) {
+function SignUp({usersSignUp,userError}) {
+    console.log(userError,"ERROR")
     let navigate = useNavigate()
     function onChange(e) {
         console.log(`checked = ${e.target.checked}`);
@@ -57,15 +58,15 @@ function SignUp({usersSignUp}) {
         return {result,err}
     }
     function sineUp() {
-        let signDete = {...user}
-        delete signDete.confirmPassword
-        if(valid().result ){
-            usersSignUp(signDete).then(() => setUser(
+        let signDate = {...user}
+        delete signDate.confirmPassword
+        if(valid().result){
+            usersSignUp(signDate).then(() => setUser(
                 {firstName: "",lastName: "",username: "",password: "",confirmPassword: ""}))
             window.scroll(0,0)
             navigate("/confirm",{state:user})
         } else {
-            setError({...error,...valid().err})
+           setError({...error,...valid().err})
         }
 
     }

@@ -1,1 +1,2 @@
+export const POST_CONTACTS = 'POST_CONTACTS';
 export const POST_SUBSCRIBE = 'POST_SUBSCRIBE';

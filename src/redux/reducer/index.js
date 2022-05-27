@@ -2,21 +2,11 @@ import {combineReducers} from "redux";
 
 // import reducers
 import products from "./productReducer";
-import sliders from "./sliderReducer";
-import subscribe from "./subscribeReducer";
-import contacts from "./contactsReducer";
-import users from "./userReducer";
-import signIn from "./signInReducer"
-import code from "./activationReducer"
-import isLoggedIn from "./logeDoneReducer"
+import register from "./registerReduser";
+import auth from "./authReducer";
 
 export default combineReducers({
     products,
-    sliders,
-    subscribe,
-    contacts,
-    users,
-    signIn,
-    code,
-    isLoggedIn,
+    register,
+    auth,
 });

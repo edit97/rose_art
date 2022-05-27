@@ -36,6 +36,7 @@
         &:hover{
           transition: top 1s ease-out 0.5s;
           outline: none;
+          border: 0;
           color: $firstColor;
           border-bottom: 2px solid $firstColor;
         }

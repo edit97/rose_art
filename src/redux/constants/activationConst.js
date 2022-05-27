@@ -1,1 +1,0 @@
-export const USERS_ACTIVATION = 'USERS_ACTIVATION';

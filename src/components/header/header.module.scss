@@ -2,8 +2,18 @@
 @import "../../assets/styles/varieibls";
 @import "../../../src/assets/fonts/fonts";
 
+.headerComponents{
+    width: 100%;
+    overflow: hidden;
+    background-color: white;
+    position: fixed;
+    z-index: 999;
+    top: 0;
+}
+
 .headerWrapper{
     width: $contentWidth;
+    position: relative;
     margin: 0 auto;
 }
 .header{
@@ -193,7 +203,7 @@
                 color: white;
             }
             div{
-                width: 80px;
+                width: 82px;
                 height: 30px;
                 margin: 10px;
                 margin-left: auto;
