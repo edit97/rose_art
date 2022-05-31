@@ -42,5 +42,6 @@ export const _urlContacts = USER_URL + "/contacts";
 export const _urlProfile = USER_URL + "/users/current";
 export const _urlForgotPassword = USER_URL + "/users/forgot-password";
 export const _urlUserUpdate = USER_URL + "/users/current";
+export const _urlFavorites = SHOP_URL + "/products/favorites";
 export const _hostMedia = FILE_URL
 

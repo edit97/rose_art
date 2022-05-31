@@ -86,7 +86,7 @@ export const usersActivation = (data) => {
 export const usersUpdate = (data) => {
     const requestData =  {
         url: _urlUserUpdate,
-        method: 'patch',
+        method:'patch',
         data:stringify(data),
         customHeaders: {
             "Content-Type": "application/x-www-form-urlencoded",

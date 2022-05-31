@@ -2,9 +2,12 @@ import style from "./profileInformation.module.scss"
 import {Edit} from "../../assets/imeges";
 import {App} from "../upload/upload";
 import {useEffect, useState} from "react";
+import {store} from "../../redux/store";
+import {userProfile, usersUpdate} from "../../redux/action";
+import {connect} from "react-redux";
+import {getPropsFromState} from "../../redux/mapStateToProps";
 
-function ProfileInformation({user,usersUpdate,userProfile,}) {
-    // console.log(user,"ppppp")
+function ProfileInformation({user, usersUpdate}) {
     const [information,setInformation]= useState( {
         firstName:"",
         lastName:"",
@@ -26,7 +29,7 @@ function ProfileInformation({user,usersUpdate,userProfile,}) {
             profilePicturePath:user.profilePicturePath
 
         })
-    },[user.phone])
+    },[])
 
     function validation() {
         let result = true
@@ -39,7 +42,6 @@ function ProfileInformation({user,usersUpdate,userProfile,}) {
       }
         return {result,val}
     }
-    // console.log(validation().result)
     function updateClick() {
         console.log("CLICK")
         if(validation().result){
@@ -101,7 +103,7 @@ function ProfileInformation({user,usersUpdate,userProfile,}) {
                 <div className={style.inputSecondBlock}>
                     <div className={style.inputPhone}>
                         <span className={style.phoneCode}>+347</span>
-                        <input type="number"
+                        <input type="text"
                                placeholder={'Phone number'}
                                value={information.phone}
                                name={"phone"}
@@ -132,4 +134,13 @@ function ProfileInformation({user,usersUpdate,userProfile,}) {
 
     </div>
 
-}export  default ProfileInformation
+}
+const mapDispatchToProps = {
+    usersUpdate,
+}
+const mapStateToProps = (state) => {
+    return getPropsFromState(state,[
+        'user'
+    ])
+};
+export default connect(mapStateToProps, mapDispatchToProps)(ProfileInformation);

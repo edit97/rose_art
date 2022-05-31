@@ -28,9 +28,11 @@ function Products ({products}) {
             <div className={style.filterGroup}>
                 <Filter/>
                 <div className={style.sortBlock}>
-                   <Sort products={products}/>
+                   <Sort products={products} />
                 </div>
             </div>
         </div>
     </div>
+
+
 }export default Products

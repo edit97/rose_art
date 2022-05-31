@@ -30,7 +30,7 @@ import Favorite from "../components/favorite/Favorite";
 
 function Layout({products, getProducts,getSlider,
                     sliders,subscribeUser,contactsUser, usersSignUp,signIn,usersActivation ,
-                    isLoggedIn,logOut,user,userError,userProfile,usersUpdate,update}) {
+                    isLoggedIn,logOut,user,userError,userProfile,usersUpdate,update,favorites}) {
 
     useEffect(() => {
         getProducts()
@@ -55,16 +55,12 @@ function Layout({products, getProducts,getSlider,
                 <Route path={"/forgotPassword"} element={<ForgotPassword/>}/>
                 <Route path={"/confirm"} element={<Confirm usersActivation={usersActivation}
                                                            signIn={signIn} userProfile={userProfile}/>}/>
-                <Route path={"/products"} element={<Products products={products}/>}/>
-                <Route path={"/profile"} element={<Profile products={products}
-                                                           usersUpdate={usersUpdate}
-                                                           isLoggedIn={isLoggedIn}
+                <Route path={"/products"} element={<Products products={products}
+                                                             favorites={favorites}/>}/>
+                <Route path={"/profile"} element={<Profile isLoggedIn={isLoggedIn}
                                                            logOut={logOut}
-                                                           update={update}
                                                             user={user}
                                                            userProfile={userProfile}/>}/>
-                <Route path={"/settings"} element={<ProfileInformation />}/>
-                <Route path={"/favorite"} element={<Favorite/> }/>
             </Routes>
             {shouFooter && <Footer subscribeUser={subscribeUser}/>}
         </div>
@@ -83,6 +79,7 @@ const mapDispatchToProps  = {
     logOut,
     userProfile,
     usersUpdate,
+
 }
 
 const mapStateToProps = (state) => {
@@ -98,6 +95,7 @@ const mapStateToProps = (state) => {
         'user',
         'userError',
         'update',
+        'favorites'
     ])
 };
 

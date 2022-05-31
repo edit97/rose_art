@@ -56,5 +56,6 @@ export {ReactComponent as Edit} from "./icons/edit-icon.svg"
 export {ReactComponent as Upload} from "./icons/upload-icon.svg"
 export {ReactComponent as Close} from "./icons/ic_close copy.svg"
 export {ReactComponent as BasketWhite} from "./icons/basket_ic.svg"
+export {ReactComponent as RedHeart} from "./icons/ic_heartfill.svg"
 
 

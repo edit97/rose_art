@@ -1,4 +1,5 @@
-import {GET_PRODUCTS, GET_SLIDER} from '../constants/index';
+import {GET_FAVORITES, GET_PRODUCTS, GET_SLIDER, POST_FAVORITES, REMOVE_FAVORITES} from '../constants/index';
+import products from "../../conteiners/products/Products";
 
 export const initialState = {
     products: {
@@ -6,6 +7,7 @@ export const initialState = {
         count: 0,
     },
     sliders:[],
+    favorites:[],
 }
 export default (state = initialState, action) => {
     switch (action.type) {
@@ -22,6 +24,37 @@ export default (state = initialState, action) => {
             return {
                 ...state,
                 sliders: action.payload
+            }
+        }
+        case GET_FAVORITES: {
+            return {
+                ...state,
+                favorites: action.payload
+            }
+        }
+        case POST_FAVORITES: {
+            console.log('postFavorites')
+            const id = action.payload
+            return {
+                ...state,
+                products:{
+                    ...state.products,
+                    items:state.products.items.map((products) => {
+                        return  products.id === id ? {...products,isFavorite:true} : products
+                    })
+                }
+            }
+        }
+        case REMOVE_FAVORITES: {
+            const id= action.payload;
+            return {
+                ...state,
+                products: {
+                    ...state.products,
+                    items:state.products.items.map((item) => {
+                        return item.id ===id ? {...item,isFavorite:false} : item
+                    })
+                }
             }
         }
         default:

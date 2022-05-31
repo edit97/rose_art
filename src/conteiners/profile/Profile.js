@@ -7,9 +7,8 @@ import {useState} from "react";
 import ProfileNotification from "../../components/profilenotification/ProfileNotification";
 import Favorite from "../../components/favorite/Favorite";
 import ProfileOrder from "../../components/profileOrder/ProfileOrder";
-import {App} from "../../components/upload/upload";
 
-function Profile({products,logOut,user,userProfile,usersUpdate,update}) {
+function Profile({logOut,user,userProfile}) {
     useEffect(() => {
         userProfile()
     },[])
@@ -79,11 +78,8 @@ function Profile({products,logOut,user,userProfile,usersUpdate,update}) {
             </div>
         </div>
         <div className={style.information}>
-            {profile.settings===true? <ProfileInformation user={user}
-                                                          usersUpdate={usersUpdate}
-                                                          update={update}
-                                                          userProfile={userProfile}/> : ""}
-            {profile.favorites===true  ? <Favorite products={products}/> : ""}
+            {profile.settings===true? <ProfileInformation/> : ""}
+            {profile.favorites===true  ? <Favorite/> : ""}
             {profile.order===true ? <ProfileOrder/> : ""}
             {profile.notifications===true ? <ProfileNotification/> : ""}
         </div>
