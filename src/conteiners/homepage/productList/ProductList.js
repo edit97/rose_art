@@ -109,16 +109,17 @@ function ProductList({products}) {
         ]
     };
     return <div className={style.list}>
-        {products.items.length !== 0 ?
+        {products?.items?.length !== 0 ?
             <>
                 <div className={style.header}>
                     <h1 className={style.heavyTitle}>Новая коллекция</h1>
                     <button onClick={handleClick} className={style.more}>Больше</button>
                 </div>
 
+
                 <div className={style.slider}>
                     <Slider {...settings} >
-                        {products.items?.map((item) => {
+                        {products?.items?.map((item) => {
                             return <div className={style.productsCardBlock} key={item.id}>
                                 <ProductCard data={item}/>
                                  {/*<FavoriteProductCard data={item}/>*/}

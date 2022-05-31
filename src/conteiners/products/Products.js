@@ -5,7 +5,7 @@ import Filter from "../../components/filter/Filter";
 import Sort from "../../components/sort/Sort";
 
 function Products ({products}) {
-    console.log(products,'hhhh')
+    // console.log(products,'hhhh')
     return <div className={style.products}>
     <div className={style.nav}>Home  /    All rose   /  Rose spray </div>
         <div className={style.wallpaper}>

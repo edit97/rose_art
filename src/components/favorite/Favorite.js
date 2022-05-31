@@ -5,7 +5,7 @@ import {getPropsFromState} from "../../redux/mapStateToProps";
 import {connect} from "react-redux";
 import {getFavorite} from "../../redux/action";
 
-function Favorite({products,getFavorite,favorites}) {
+function Favorite({getFavorite,favorites}) {
     useEffect(() => {
         getFavorite()
     },[])
@@ -15,7 +15,7 @@ function Favorite({products,getFavorite,favorites}) {
             Favorite
         </div>
         <div className={style.productFavorite}>
-            {products.items?.map((item) => {
+            {favorites?.map((item) => {
                 return <div className={style.productsCardBlock} key={item.id}>
                     <FavoriteProductCard data={item}/>
                 </div>
@@ -31,7 +31,6 @@ const mapDispatchToProps = {
 const mapStateToProps = (state) => {
     return getPropsFromState(state,[
         'favorites',
-        'products',
     ])
 };
 
