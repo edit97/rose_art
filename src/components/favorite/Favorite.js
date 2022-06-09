@@ -3,21 +3,21 @@ import FavoriteProductCard from "../uiItem/cards/favoriteProductCard/FavoritePro
 import React, {useEffect} from "react";
 import {getPropsFromState} from "../../redux/mapStateToProps";
 import {connect} from "react-redux";
-import {getFavorite} from "../../redux/action";
+import {getFavorite, postFavorite, removeFavorite} from "../../redux/action";
 
-function Favorite({products,getFavorite,favorites}) {
+function Favorite({removeFavorite,getFavorite,favorites}) {
     useEffect(() => {
         getFavorite()
     },[])
-    // console.log(favorites,"XXXXX")
     return <div className={style.favorite}>
         <div className={style.title}>
             Favorite
         </div>
         <div className={style.productFavorite}>
-            {products.items?.map((item) => {
+            {favorites?.elected?.map((item) => {
                 return <div className={style.productsCardBlock} key={item.id}>
-                    <FavoriteProductCard data={item}/>
+                    <FavoriteProductCard data={item}
+                                         removeFavorite={removeFavorite}/>
                 </div>
             })}
         </div>
@@ -27,11 +27,12 @@ function Favorite({products,getFavorite,favorites}) {
 
 const mapDispatchToProps = {
     getFavorite,
+    postFavorite,
+    removeFavorite,
 }
 const mapStateToProps = (state) => {
     return getPropsFromState(state,[
         'favorites',
-        'products',
     ])
 };
 

@@ -19,22 +19,22 @@ import {
     contactsUser,
     usersSignUp,
     signIn,
-    usersActivation, logOut, userProfile, usersUpdate,
+    usersActivation, logOut, userProfile, usersUpdate, getFavorite,
 } from "../redux/action";
 import {getPropsFromState} from "../redux/mapStateToProps";
 import {connect} from "react-redux";
 import {useEffect} from "react";
 import Profile from "./profile/Profile";
-import ProfileInformation from "../components/profileInformation/ProfileInformation";
-import Favorite from "../components/favorite/Favorite";
+
 
 function Layout({products, getProducts,getSlider,
                     sliders,subscribeUser,contactsUser, usersSignUp,signIn,usersActivation ,
-                    isLoggedIn,logOut,user,userError,userProfile,usersUpdate,update,favorites}) {
+                    isLoggedIn,logOut,user,userError,userProfile, getFavorite,favorites}) {
 
     useEffect(() => {
         getProducts()
         getSlider()
+        getFavorite()
     },[])
 
     let location = useLocation();
@@ -79,7 +79,7 @@ const mapDispatchToProps  = {
     logOut,
     userProfile,
     usersUpdate,
-
+    getFavorite,
 }
 
 const mapStateToProps = (state) => {

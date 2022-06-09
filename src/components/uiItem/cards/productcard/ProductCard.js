@@ -2,11 +2,12 @@ import style from "./productCard.module.scss"
 import {Basket, Heart, RedHeart, UserHeart} from "../../../../assets/imeges";
 import React from "react";
 import {generateMemberMediaUrl} from "../../../../utils/generateMediaUrl";
-import {postFavorites, removeFavorite} from "../../../../redux/action";
+import {postFavorite, removeFavorite} from "../../../../redux/action";
 import {connect} from "react-redux";
 import {getPropsFromState} from "../../../../redux/mapStateToProps";
+import {useEffect} from "react";
 
-function ProductCard({data,postFavorites,removeFavorite}){
+function ProductCard({data,postFavorite,removeFavorite}){
     // console.log(data,"UUUUUU")
     //
     let prices  = data?.oldPrice - data?.price
@@ -17,7 +18,7 @@ function ProductCard({data,postFavorites,removeFavorite}){
                 <button className={style.heart} onClick={() => removeFavorite(data?.id)}>
                     <RedHeart title={''}/>
                 </button> :
-                <button className={style.heart} onClick={() => postFavorites(data?.id)}>
+                <button className={style.heart} onClick={() => postFavorite(data?.id)}>
                     <UserHeart title={''}/>
                 </button>
             }
@@ -39,7 +40,7 @@ function ProductCard({data,postFavorites,removeFavorite}){
 
 }
 const mapDispatchToProps = {
-    postFavorites,
+    postFavorite,
     removeFavorite,
 };
 

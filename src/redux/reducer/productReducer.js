@@ -7,7 +7,9 @@ export const initialState = {
         count: 0,
     },
     sliders:[],
-    favorites:[],
+    favorites:{
+        elected:[],
+    },
 }
 export default (state = initialState, action) => {
     switch (action.type) {
@@ -26,14 +28,7 @@ export default (state = initialState, action) => {
                 sliders: action.payload
             }
         }
-        case GET_FAVORITES: {
-            return {
-                ...state,
-                favorites: action.payload
-            }
-        }
         case POST_FAVORITES: {
-            console.log('postFavorites')
             const id = action.payload
             return {
                 ...state,
@@ -49,11 +44,24 @@ export default (state = initialState, action) => {
             const id= action.payload;
             return {
                 ...state,
+                favorites: {
+                    ...state.favorites,
+                    elected:state.favorites.elected.filter((list) => list.id !== id)
+                },
                 products: {
                     ...state.products,
                     items:state.products.items.map((item) => {
                         return item.id ===id ? {...item,isFavorite:false} : item
                     })
+                }
+            }
+        }
+        case GET_FAVORITES: {
+            return {
+                ...state,
+                favorites:{
+                    ...state.favorites,
+                    elected:action.payload
                 }
             }
         }

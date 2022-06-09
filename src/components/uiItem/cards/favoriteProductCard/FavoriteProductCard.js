@@ -1,8 +1,9 @@
 import style from "./FavoriteProductCard.module.scss"
-import {Basket, BasketWhite, Heart} from "../../../.././assets/imeges/index"
+import {Basket, BasketWhite, RedHeart} from "../../../.././assets/imeges/index"
 import {generateMemberMediaUrl} from "../../../../utils/generateMediaUrl";
+import React from "react";
 
-function FavoriteProductCard({data}){
+function FavoriteProductCard({data,removeFavorite}){
     let prices  = data?.oldPrice - data?.price
     let percent = (prices * 100) / data?.oldPrice
 
@@ -21,7 +22,9 @@ function FavoriteProductCard({data}){
             </div>
         </div>
         <div className={style.favBlock}>
-            <div className={style.heart}><Heart title={''}/></div>
+                <button className={style.heart} onClick={() => removeFavorite(data?.id)}>
+                    <RedHeart title={''}/>
+                </button>
             <button className={style.btn}><BasketWhite title={''}/> в корзину</button>
         </div>
     </div>

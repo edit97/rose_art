@@ -38,7 +38,7 @@ export const getSlider = () => {
     }
 }
 
-export const postFavorites = (data) => {
+export const postFavorite = (data) => {
     const requestData =  {
         url:`${ _urlProducts}/${data}/add-to-favorites`,
         method:'post',
@@ -93,7 +93,7 @@ export const getFavorite = () => {
         return request(reqData)
             .then(result => {
                 dispatch({
-                    type: GET_FAVORITES,
+                    type:GET_FAVORITES,
                     payload: result.data
                 })
             })
