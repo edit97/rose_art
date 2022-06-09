@@ -1,0 +1,258 @@
+@import "../../assets/styles/mixins";
+@import "../../assets/styles/varieibls";
+@import "../../../src/assets/fonts/fonts";
+
+.footer{
+  width: 100%;
+  background-color: $greyBackgroundColor;
+ @include column;
+  align-items: center;
+  input{
+    padding-left: 10px;
+  }
+}
+.borderTransparent{
+  border-color:transparent;
+}
+.borderRed{
+  border: 1px solid red;
+}
+.someText{
+  font-family: SF-Regular;
+}
+.aboutUs{
+  width: $contentWidth;
+  margin: 0 auto;
+  height: 100%;
+  padding: 20px;
+  align-items: center;
+  @include spaceBetween;
+  .address{
+    width: 20%;
+    img{
+      margin-bottom: 15px;
+      cursor: pointer;
+    }
+    .txt{
+      font-family: SF-Regular;
+      margin-bottom: 10px;
+      color: $darkGrey;
+
+    }
+    .flag{
+      width: 70px;
+      @include spaceBetween;
+      align-items: center;
+      svg{
+        cursor: pointer;
+      }
+    }
+  }
+  .title{
+    font-family: SF-Bold;
+    font-size: 14px;
+    .arr{
+      display: none;
+    }
+  }
+  .comapny{
+    width: 35%;
+    @include spaceBetween;
+  }
+}
+
+.line{
+  width: 100%;
+  border-bottom: 2px solid $greyBorderColor;
+}
+.underLine{
+  border-bottom: 2px solid $greyBorderColor;
+}
+
+.subscribe{
+  width: 100%;
+  .sub{
+    width: 100%;
+    margin: 12px 0;
+    span{
+      color: $darkGrey;
+    }
+  }
+  .scribe{
+    width: 100%;
+    height: 40px;
+    display: flex;
+    .input{
+      width: 70%;
+      height: 100%;
+      outline: none;
+    }
+    input::placeholder {
+      font-family: SF-Regular;
+    }
+    input:placeholder-shown {
+     padding: 8px;
+    }
+    .btn{
+      cursor: pointer;
+      width: 30%;
+      height: 100%;
+      background-color: $firstColor;
+      border: 0;
+      color: white;
+    }
+  }
+  .follow{
+    @include spaceBetween;
+    align-items: baseline;
+    border-bottom: 2px solid $greyBorderColor;
+    .icons{
+      width: 100px;
+      @include spaceBetween;
+      .iconFacebook{
+        svg{
+          path{
+            fill: #171A1E;
+          }
+          :hover{
+            path{
+              fill: $firstColor;
+            }
+          }
+        }
+      }
+      svg{
+        cursor: pointer;
+        :hover{
+          path{
+            fill: $firstColor;
+          }
+        }
+      }
+    }
+  }
+}
+.date{
+  width: $contentWidth;
+  margin: auto;
+  height: 70px;
+  align-items: center;
+  @include spaceBetween;
+  .text{
+    font-family: SF-Regular;
+    color: $darkGrey;
+  }
+}
+.responsiveLine{
+  display: none;
+}
+.responsiveSub{
+  display: none;
+}
+.responsiveCollapse{
+  display: none;
+}
+.menuItem{
+width: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  svg{
+    width: 30px;
+  }
+}
+.rightArr{
+  transform: rotate(-90deg)!important;
+}
+@media screen and (max-width: 1024px){
+ .footer{
+   width: 100%;
+   @include column;
+   .place{
+     display: none;
+   }
+   .address{
+     display: none;
+   }
+   .underLine{
+     display: none;
+   }
+
+   .sub{
+     display: none;
+   }
+   .components{
+     display: none;
+   }
+   .comapny{
+     display: none;
+     .title{
+       display: none;
+     }
+   }
+   .arr{
+     display: flex;
+   }
+   .aboutUs{
+    @include widthHeight;
+   }
+ }
+  .date{
+    width: 100%;
+    padding: 20px;
+  }
+  .responsiveBlock{
+    display: flex;
+    flex-direction: column-reverse;
+    width: 100%;
+    padding: 20px;
+    .responsiveCollapse{
+      display: flex;
+      width: 100%;
+      color: $darkGrey;
+    }
+    .responsiveSub{
+      @include column;
+      width: 100%;
+    }
+    .subscribe{
+      width: 100%;
+      display: flex;
+      flex-direction: column-reverse;
+    }
+    .ant-collapse {
+      width: 100%;
+    }
+    .follow{
+      height: 60px;
+      border-bottom: 1px solid #dadada;
+    }
+    .scribe{
+      height: 50px;
+      margin-top: 16px;
+    }
+    .title{
+      margin-top: 20px;
+      font-weight: bold;
+    }
+  }
+  .line{
+    margin-top: 40px;
+  }
+}
+.languageChange{
+  width: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  span{
+    color: black;
+  }
+}
+@media screen and (max-width: 600px){
+    .date{
+      height: unset;
+      @include column;
+      align-items: baseline;
+    }
+}

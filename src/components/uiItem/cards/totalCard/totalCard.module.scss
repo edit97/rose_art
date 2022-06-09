@@ -1,0 +1,105 @@
+@import "../../../../assets/styles/varieibls";
+@import "../../../../assets/styles/mixins";
+@import "../../../../assets/fonts/fonts";
+
+.block{
+  @include spaceBetween;
+  border-bottom: 1px solid $lightColor;
+  height: 86px;
+  width: 100%;
+  .rose{
+    width: 34%;
+    @include itemsCenter;
+    @include spaceBetween;
+    .img{
+      margin-left: 20px;
+      width: 60px;
+      height: 60px;
+      img{
+        width: 100%;
+        height: 100%;
+      }
+    }
+    .text{
+      width: 160px;
+      font-weight: bold;
+      .priceNumber{
+        color: #A7A7A7;
+        text-decoration:line-through;
+        margin-left: 4px;
+      }
+      .priceText{
+        height: 50px;
+        overflow: hidden;
+      }
+    }
+  }
+  .delete{
+    width: 50%;
+    @include spaceBetween;
+    @include itemsCenter;
+    margin-right: 10px;
+    .number{
+      background-color: $greyBackgroundColor;
+      width: 140px;
+      height: 40px;
+      @include itemsCenter;
+      padding: 10px;
+      svg{
+        cursor: pointer;
+      }
+      span{
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        font-weight: bold;
+        font-size: 18px;
+      }
+    }
+    .price{
+      color: $firstColor;
+    }
+    .icon{
+      font-size: 12px;
+      cursor: pointer;
+      svg{
+        path{
+          fill:#B3B3B3;
+        }
+      }
+      &:hover{
+        svg{
+          path{
+            fill: #FF4E4E;
+          }
+        }
+      }
+    }
+
+  }
+}
+@media screen and (max-width: 1024px){
+  .priceText{
+    height: 20px;
+    overflow: hidden;
+  }
+}
+@media screen and(max-width: 460px){
+  .rose{
+    width: 60%!important;
+    svg{
+      margin: 0!important;
+      width: 40px!important;
+      height: 40px!important;
+    }
+  }
+  .delete{
+    width: 60%;
+    display: flex;
+    flex-direction: column-reverse;
+    .number{
+      width: 100%!important;
+      height: 30px!important;
+    }
+  }
+}

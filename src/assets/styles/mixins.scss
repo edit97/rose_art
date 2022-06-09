@@ -1,0 +1,21 @@
+
+@mixin spaceBetween{
+  display: flex;
+  justify-content: space-between;
+}
+@mixin column{
+  display: flex;
+  flex-direction: column;
+}
+@mixin aline-items{
+  display: flex;
+  align-items: center;
+}
+@mixin widthHeight{
+  width: 100%;
+  height: 100%;
+}
+@mixin itemsCenter{
+  display: flex;
+  align-items: center;
+}

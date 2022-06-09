@@ -1,0 +1,325 @@
+@import "../../assets/styles/mixins";
+@import "../../assets/styles/varieibls";
+@import "../../../src/assets/fonts/fonts";
+
+.headerComponents{
+    width: 100%;
+    overflow: hidden;
+    background-color: white;
+    position: fixed;
+    z-index: 999;
+    top: 0;
+}
+
+.headerWrapper{
+    width: $contentWidth;
+    position: relative;
+    margin: 0 auto;
+}
+.header{
+    width:$contentWidth;
+    margin: 0 auto;
+    height: 70px;
+    @include spaceBetween;
+    align-items: center;
+    .dropdown{
+        display: none;
+    }
+}
+.burgerMenu{
+    display: none;
+}
+.navigation{
+    width: 70%;
+    height: 100%;
+    @include itemsCenter;
+    .text{
+        font-family: SF-Medium;
+        width: 60%;
+        height: 100%;
+        @include aline-items;
+        margin-left: 45px;
+        .link{
+            cursor: pointer;
+            height: 100%;
+            @include aline-items;
+            margin-left: 18px;
+            border-bottom:transparent solid 3px;
+            &:hover{
+                border-bottom: $firstColor solid 3px;
+                transition: top 1s ease-out 0.5s;
+            }
+        }
+    }
+    .responsiveLogo{
+        display: none;
+    }
+    .logo{
+        svg{
+            display: flex;
+            align-items: center;
+        }
+    }
+}
+.headerActions{
+    font-family: SF-Regular;
+    width: 35%;
+    @include aline-items;
+    justify-content: flex-end;
+    :hover{
+        color: $firstColor;
+        transition: top 1s ease-out 0.5s;
+        svg{
+                path{
+                    fill: $firstColor;
+                }
+        }
+    }
+    button{
+        display: none;
+    }
+    div{
+        cursor: pointer;
+        margin: 14px;
+        height: 100%;
+        @include spaceBetween;
+        svg{
+            height: 20px;
+            margin-right: 10px;
+        }
+        span{
+            margin: 0 10px;
+        }
+    }
+
+    .productCount{
+        background-color:$firstColor;
+        display: flex;
+        justify-content: center;
+        margin-left: 10px;
+        padding: 3px;
+        color: white;
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+
+    }
+    .basket{
+        margin: 14px;
+        color: black;
+    }
+    .active{
+        color:$firstColor;
+    }
+    .headerPage{
+        color: white;
+    }
+    .basketPage{
+        color: white;
+    }
+}
+.signInLink{
+    color: black;
+    &:active{
+        color: $firstColor;
+    }
+}
+.basketLink{
+    color: black;
+    :hover{
+        color: $firstColor;
+    }
+}
+.productLinks{
+    height: 100%;
+    @include aline-items;
+    color: black;
+    &:hover{
+        color: $firstColor;
+        transition: top 1s ease-out 0.5s;
+    }
+}
+.headerLink{
+    @include aline-items;
+    color: black;
+    height: 70px;
+    &:hover{
+        transition: top 1s ease-out 0.5s;
+        color: $firstColor;
+    }
+}
+@media screen and(max-width: 1024px){
+    .header{
+        width: 100%;
+        @include itemsCenter;
+        color: white;
+       background-color: $firstColor;
+       position: fixed;
+        z-index: 8;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+    }
+    .navigation{
+        margin-left: 30px;
+      div{
+          display: none;
+      }
+        .logo{
+            display: none;
+        }
+        .responsiveLogo{
+            width: 200px;
+            height: 75px;
+            @include aline-items;
+        }
+        .text{
+            display: none;
+        }
+    }
+    .menu{
+       @include widthHeight;
+        cursor: pointer;
+        position: fixed;
+        z-index: 8;
+        top: 70px;
+        .overlay{
+            width: calc(100% - 300px);
+            height: calc(100vh - 70px);
+            position: fixed;
+            background-color: black;
+            opacity: 0.4;
+        }
+        .dropdown{
+            width: 300px;
+            margin-left: auto;
+            height: calc(100vh - 70px);
+            @include column;
+            justify-content: right;
+            background-color: $firstColor;
+            color: white;
+            .color{
+                color: white;
+            }
+            div{
+                width: 82px;
+                height: 30px;
+                margin: 10px;
+                margin-left: auto;
+                svg{
+                    width: 15px;
+                    height: 15px;
+                    margin-right: 5px;
+                    path{
+                        fill: #F3F4F6;
+                    }
+                }
+            }
+        }
+        .basketNavLink{
+            color: white;
+        }
+        .signInNavLink{
+            color: white;
+        }
+    }
+    .signInLink{
+        color:white;
+        &:active{
+            color: $firstColor;
+        }
+    }
+    .headerActions{
+        width: calc(100% - 300px);
+        display: flex;
+        justify-content:flex-end;
+        :hover{
+            color: white;
+            transition: top 1s ease-out 0.5s;
+            svg{
+                path{
+                    fill: white;
+                }
+            }
+        }
+        .productCount{
+            width: 28px;
+            height: 27px;
+            padding: 2px;
+            background-color: white;
+            color: black;
+            margin-left: 10px;
+        }
+        button{
+            display: flex;
+            margin: 20px;
+            border: 0;
+            background-color: $firstColor;
+            svg{
+                path{
+                    fill: #F3F4F6 !important;
+                }
+            }
+        }
+        .items{
+            path{
+                fill: white;
+            }
+        }
+        .basket{
+            color: white;
+        }
+        div{
+            svg{
+                path{
+                    fill: white;
+                }
+            }
+        }
+    }
+
+    .burgerMenu {
+        display: none;
+    }
+    .headerLink{
+        color: white !important;
+        :hover{
+            color: white;
+            svg{
+                path{
+                    fill: white;
+                }
+            }
+        }
+    }
+    .signInNavLink{
+        color: white;
+    }
+    .basketNavLink{
+        color: white;
+    }
+}
+@media screen and (max-width: 700px){
+    .header{
+        width: 100%;
+        @include spaceBetween;
+        background-color: $firstColor;
+
+    }
+    .headerActions{
+        display: none;
+    }
+    .burgerMenu{
+            cursor: pointer;
+            border: 0;
+            background-color: $firstColor;
+            display: flex;
+            margin: 20px;
+        svg{
+            display: flex;
+        }
+    }
+}
+
+

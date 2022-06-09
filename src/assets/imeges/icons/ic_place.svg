@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="50px" height="158px" viewBox="0 0 50 158" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Group 2</title>
+    <defs>
+        <rect id="path-1" x="-6.11066753e-13" y="7.10542736e-14" width="43.3333333" height="43.3333333" rx="5.77777778"></rect>
+        <filter x="-11.5%" y="-9.2%" width="123.1%" height="123.1%" filterUnits="objectBoundingBox" id="filter-2">
+            <feOffset dx="0" dy="1" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="1.5" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0.564705882   0 0 0 0 0.564705882   0 0 0 0 0.564705882  0 0 0 0.451349432 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+        <rect id="path-3" x="1.8189894e-12" y="0" width="43.3333333" height="43.3333333" rx="5.77777778"></rect>
+        <filter x="-11.5%" y="-9.2%" width="123.1%" height="123.1%" filterUnits="objectBoundingBox" id="filter-4">
+            <feOffset dx="0" dy="1" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="1.5" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0.564705882   0 0 0 0 0.564705882   0 0 0 0 0.564705882  0 0 0 0.451349432 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+        <rect id="path-5" x="1.8189894e-12" y="0" width="43.3333333" height="43.3333333" rx="5.77777778"></rect>
+        <filter x="-11.5%" y="-9.2%" width="123.1%" height="123.1%" filterUnits="objectBoundingBox" id="filter-6">
+            <feOffset dx="0" dy="1" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="1.5" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0.564705882   0 0 0 0 0.564705882   0 0 0 0 0.564705882  0 0 0 0.451349432 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="my-cart-copy" transform="translate(-154.000000, -495.000000)">
+            <g id="Group-2" transform="translate(157.000000, 497.000000)">
+                <g id="Rectangle" transform="translate(0.333333, 108.333333)">
+                    <use fill="black" fill-opacity="1" filter="url(#filter-2)" xlink:href="#path-1"></use>
+                    <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-1"></use>
+                </g>
+                <g id="Rectangle-Copy-23" transform="translate(0.000000, 54.000000)">
+                    <use fill="black" fill-opacity="1" filter="url(#filter-4)" xlink:href="#path-3"></use>
+                    <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-3"></use>
+                </g>
+                <g id="Rectangle-Copy-23">
+                    <use fill="black" fill-opacity="1" filter="url(#filter-6)" xlink:href="#path-5"></use>
+                    <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-5"></use>
+                </g>
+                <g id="ic_block" transform="translate(22.384776, 20.384776) rotate(-315.000000) translate(-22.384776, -20.384776) translate(16.384776, 14.384776)" fill="#808080">
+                    <polygon id="Path" points="1.80711385 0.38767212 5.99938717 4.58008244 10.1923541 0.387140095 11.6128599 1.80764587 7.41930473 6 11.6123279 10.1928862 10.1923541 11.6128599 5.99938717 7.41991756 1.80764587 11.6128599 0.387140095 10.1923541 4.57946962 6 0.387140095 1.80764587"></polygon>
+                </g>
+                <rect id="Rectangle" fill="#808080" x="15.4561636" y="74.3754963" width="14" height="2.00646376"></rect>
+                <g id="Group" transform="translate(10.000000, 118.000000)">
+                    <g id="Group-5" transform="translate(4.000000, 4.000000)">
+                        <path d="M15.1409,0.0715 L8.4509,7.1515 L0.1709,5.7315 C-0.0391,5.7015 -0.0591,5.4225 0.1309,5.3515 L14.9309,0.0115 C15.0109,-0.0185 15.1009,0.0115 15.1409,0.0715" id="Fill-1" fill="#666666"></path>
+                        <path d="M15.1907,0.2717 L9.8207,14.9517 C9.7517,15.1517 9.4617,15.1217 9.4307,14.9117 L8.4507,7.1517 L15.1407,0.0717 C15.2007,0.1217 15.2207,0.1917 15.1907,0.2717" id="Fill-3" fill="#535353"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,144 @@
+@import "../../../../assets/styles/varieibls";
+@import "../../../../assets/styles/mixins";
+@import "../../../../assets/fonts/fonts";
+
+
+.block{
+  width:100%;
+  height: 100%;
+  @include column;
+  align-items: center;
+  padding: 10px;
+  border-right: $whiteColor solid 1px;
+  border-top: $whiteColor solid 1px;
+  border-bottom: $whiteColor solid 1px;
+  &:hover{
+    overflow: hidden;
+    transition: all .3s ease-in-out;
+    margin-bottom: 4px;
+    margin-top: 4px;
+    transform: scale(1.02);
+    padding-bottom: 10px;
+    box-shadow: 3px 10px 7px $whiteColor;
+  }
+  .price3{
+    font-size: 18px;
+  }
+  .btn{
+    font-family: SF-Medium;
+    width: 204px;
+    height: 36px;
+    margin: 15px 0;
+    border: 0;
+    font-size: 18px;
+    @include itemsCenter;
+    cursor: pointer;
+    svg{
+      width:22px;
+      height: 22px;
+      margin:0 10px 0 40px;
+    }
+  }
+  .btn:hover{
+    background-color: $firstColor;
+    color: white;
+    transition: inherit;
+    svg{
+      path{
+        fill: white;
+      }
+    }
+  }
+  .icon{
+    width: 100%;
+    height: 40px;
+    margin-top: 18px;
+    position: relative;
+    @include spaceBetween;
+    .heart2{
+      svg{
+        position: absolute;
+        right: 20px;
+        width: 20px;
+        height: 20px;
+      }
+    }
+    .news{
+      width: 70px;
+      height: 21px;
+      position: absolute;
+      background-color:$greenColor;
+      color: white;
+      padding-left: 10px;
+    }
+  }
+  .heart {
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
+    margin-top: 18px;
+    position: relative;
+    border: 0;
+    left: 75px;
+    background-color: transparent;
+    display: flex;
+    align-items: flex-end;
+    svg{
+      width: 20px;
+      height: 20px;
+      position: absolute;
+      //right: 20px;
+    }
+  }
+  .rose{
+    width: 160px;
+    height: 160px;
+    img{
+      width: 100%;
+      height: 100%;
+    }
+  }
+  .text{
+    width: 204px;
+    height: 90px;
+    @include column;
+    align-items: baseline;
+    margin-top: 30px;
+    .aniText{
+      font-family: SF-Medium;
+    }
+    div{
+      font-size: 15px;
+      font-weight: 500;
+      margin-bottom: 10px;
+    }
+    .oldPrice{
+      color: $redColor;
+      font-size: 20px;
+    }
+    .price{
+      color: black;
+      font-size: 20px;
+    }
+
+    .price2{
+      color: #A7A7A7;
+      text-decoration:line-through;
+      margin-left: 4px;
+    }
+    .sale{
+      background-color: $redColor;
+      margin-left: 10px;
+      padding: 3px;
+      width: 30px;
+      height: 15px;
+      color: $secondColor;
+    }
+  }
+}
+
+@media screen and (max-width: 400px){
+  .blok{
+    margin: 0 auto;
+  }
+}
