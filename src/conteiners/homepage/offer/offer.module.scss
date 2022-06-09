@@ -1,0 +1,112 @@
+@import "../../../assets/styles/mixins";
+@import "../../../assets/styles/varieibls";
+@import "../../../components/roseSlider/roseslider.module";
+@import "../../../assets/fonts/fonts";
+
+.offer{
+  width: $contentWidth;
+  height: 100%;
+  padding-top: 40px;
+  @include column;
+  margin: 0 auto;
+  .title{
+    font-family: SF-Heavy;
+  }
+}
+.list{
+  width: $contentWidth;
+  @include spaceBetween;
+}
+
+.rose{
+  position: relative;
+  width: 33%;
+  img{
+    width: 100%;
+    height: 240px;
+  }
+}
+
+.txt{
+  position: absolute;
+  bottom: 8px;
+  right: 10px;
+  width: 100%;
+  @include spaceBetween;
+  height: 74px;
+  color: white;
+
+  .icon{
+    margin-left: auto;
+  }
+  .seeBtn{
+    width: 100%;
+    height: 70px;
+    margin-top: 7px;
+    @include itemsCenter;
+    border: 0;
+    background-color: transparent;
+  }
+}
+
+.roseSlideGroup{
+  position: relative;
+  width: calc(43% - 10px);
+}
+.roseItem{
+  width: 30%;
+
+}
+@media screen and(max-width: 1024px){
+  .offer{
+    width: 100%;
+    padding: 20px;
+    margin: 0 auto;
+  }
+  .list{
+    width: 100%;
+  }
+  .rosers{
+    display: none;
+  }
+  .text{
+    width: 80%;
+  }
+  .roseSlideGroup{
+    width: calc(70% - 10px);
+  }
+  .group{
+    width: 35%;
+    display: flex;
+    margin: auto;
+  }
+  .rose{
+   @include widthHeight;
+  }
+  .sale{
+    width: 100%;
+    height: 240px;
+  }
+  .roseGroup{
+    display: none;
+  }
+}
+@media screen and (max-width: 700px){
+  .list{
+    width: 100%;
+   @include column;
+  }
+  .group{
+    @include spaceBetween;
+    flex-direction: row;
+    margin-top: 20px;
+    width: 100%;
+  }
+  .sale{
+    display: flex;
+    width: 50%;
+  }
+  .roseSlideGroup{
+    width: 100%;
+  }
+}

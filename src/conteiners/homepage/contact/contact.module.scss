@@ -1,0 +1,130 @@
+@import "../../../assets/styles/mixins";
+@import "../../../assets/styles/varieibls";
+@import "../../../assets/fonts/fonts";
+
+.contact{
+  width: 100%;
+  height: 500px;
+  margin-top: 70px;
+  background-color: $whiteColor;
+ @include spaceBetween;
+  .title{
+    font-family: SF-Heavy;
+  }
+
+}
+
+.blocks{
+  width: 50%;
+  height: 100%;
+  padding-top: 20px;
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+  .bgkRed{
+    width:64%;
+    height: 300px;
+    margin-top: auto;
+    background-color: $firstColor;
+    .address{
+      font-family: SF-Heavy;
+      color: white;
+      position: absolute;
+      bottom: 24px;
+      right: 61px;
+    }
+  }
+  .map{
+    width: 90%;
+    height: calc(100% - 100px);
+    display: flex;
+    justify-content: right;
+    position: absolute;
+    top:30px;
+    left: 0;
+    img{
+      @include widthHeight;
+    }
+
+  }
+}
+
+.registration{
+  width: 30%;
+  height: 430px;
+  padding-top: 20px;
+  @include column;
+  margin-left: calc((100vw - #{$contentWidth}) / 2);
+  .block{
+    background-color: transparent;
+    border: 0;
+    outline: none;
+    border-bottom: 2px solid $greyBorderColor;
+    height: 70px;
+    cursor: pointer;
+  }
+  .errorBlock{
+    border-bottom: 1px solid red;
+  }
+  .block::-webkit-inner-spin-button {
+    display: none;
+  }
+  .block:focus{
+    border-bottom: 2px solid $blackColor;
+  }
+  .block::placeholder{
+    font-family: SF-Heavy;
+  }
+  .block:focus::placeholder{
+    color: $blackColor;
+    outline: none;
+    background-color: transparent;
+  }
+  .btn{
+    font-family: SF-Medium;
+    cursor: pointer;
+    width: 120px;
+    height: 40px;
+    background-color: $firstColor;
+    margin-top: 20px;
+    border: 0;
+    color: white;
+    &:hover{
+      transition: all 0.3s ease-in-out;
+      transform: scale(1.05);
+    }
+  }
+
+}
+.mapSize{
+  width: 100%;
+  height: 100%;
+  .iconMap{
+    position: relative;
+    bottom: 20px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .contact {
+    @include widthHeight;
+    border: 0;
+    margin: 0 auto;
+    @include column;
+    align-items: center;
+  }
+  .registration {
+    width: 100%;
+    padding: 20px;
+    margin-left: 0;
+  }
+  .blocks {
+    padding-top: 40px;
+    width: 100%;
+    .bgkRed{
+      width: calc(100% - 150px);
+      margin-bottom: 80px;
+    }
+  }
+
+}

@@ -1,7 +1,9 @@
-function App() {
-  return <div className="App">
-     <h1>Rose Art</h1>
-    </div>
-}
+import Layout from "./conteiners/Layout";
 
-export default App;
+
+function App() {
+  return (
+ <Layout/>
+  )
+}export default App;
+

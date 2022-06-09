@@ -1,0 +1,60 @@
+@import "../../../assets/styles/mixins";
+@import "../../../assets/styles/varieibls";
+@import "../../../assets/fonts/fonts";
+
+.list{
+  width:$contentWidth;
+  height: 100%;
+  margin: 0 auto;
+  .slider{
+    @include widthHeight;
+    display: flex;
+    margin-top: 30px;
+  .productsCardBlock{
+    width: 100%;
+  }
+  }
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  .heavyTitle{
+    font-family: SF-Heavy;
+  }
+  .more {
+    border: 0;
+    background-color: transparent;
+    cursor: pointer;
+    font-family: SF-Medium;
+    @include itemsCenter;
+    color: $firstColor;
+    font-size: 20px;;
+  }
+}
+@media screen and (max-width: 1024px){
+    .list{
+      @include widthHeight;
+      margin: 0 auto;
+      .header{
+        @include widthHeight;
+        padding: 20px;
+        @include spaceBetween;
+        align-items: baseline;
+        .more{
+          @include itemsCenter;
+          color: $firstColor;
+          font-size: 20px;
+        }
+      }
+      .slider{
+        @include widthHeight;
+        padding: 20px;
+      }
+      .textSlider{
+        width:100%;
+      }
+    }
+
+
+}

@@ -1,0 +1,40 @@
+@import "../../../../assets/styles/varieibls";
+@import "../../../../assets/styles/mixins";
+@import "../../../../assets/fonts/fonts";
+
+
+.orderCard{
+  width: 100%;
+  height: 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px;
+  border-bottom: 1px solid $greyBorderColor;
+  .orderInfo{
+    font-family: SF-Medium;
+    width: 50%;
+    .orderId{
+      .text{
+      color: $greyTextColor;
+      }
+    }
+  }
+  .conditionBlock{
+    .completed{
+      width: 100px;
+      height: 30px;
+      border-radius: 3px;
+      font-family: SF-Medium;
+      background-color: #CAEBDB;
+      color: #14A660;
+      //background-color: #F9C5C5;
+      //color: #E60000;
+      //background-color: #FEDFC9;
+      //color: #F97410;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+}
