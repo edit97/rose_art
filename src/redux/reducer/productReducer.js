@@ -40,6 +40,7 @@ export default (state = initialState, action) => {
                 }
             }
         }
+
         case REMOVE_FAVORITES: {
             const id= action.payload;
             return {
